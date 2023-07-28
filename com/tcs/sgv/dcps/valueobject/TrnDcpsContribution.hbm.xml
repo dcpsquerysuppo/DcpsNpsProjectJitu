@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.TrnDcpsContribution" table="TRN_DCPS_CONTRIBUTION" >
+  	<id name="dcpsContributionId" type="long">
+            <column name="DCPS_CONTRIBUTION_ID"  />
+            <generator class="assigned" />
+    </id>
+    
+    <property name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID"  />
+  	</property>
+  	
+    <property name="treasuryCode" type="long">
+            <column name="TREASURY_CODE"  />
+  	</property>
+  	<property name="ddoCode" type="string">
+            <column name="DDO_CODE" />
+  	</property>
+  	<property name="dcpsDdoBillGroupId" type="long">
+            <column name="BILL_GROUP_ID"/>
+    </property>
+   	<property name="schemeCode" type="string">
+            <column name="SCHEME_CODE"/>
+  	</property>
+  		<property name="payCommission" type="string">
+            <column name="PAY_COMMISSION"/>
+  	</property>
+  	<property name="typeOfPayment" type="string">
+            <column name="TYPE_OF_PAYMENT" />
+  	</property>
+  	<property name="finYearId" type="long">
+            <column name="FIN_YEAR_ID" />
+  	</property>
+  	<property name="monthId" type="long">
+            <column name="MONTH_ID"  />
+  	</property>
+  	<property name="basicPay" type="double">
+            <column name="BASIC_PAY" />
+  	</property>
+  	<property name="DP" type="double">
+            <column name="DP"  />
+  	</property>
+  	<property name="DA" type="double">
+            <column name="DA"  />
+  	</property>
+  	<property name="contribution" type="double">
+            <column name="CONTRIBUTION" />
+  	</property>
+  	<property name="contributionEmplr" type="double">
+            <column name="CONTRIBUTION_EMPLR" />
+  	</property>
+  	<property name="regStatus" type="long">
+            <column name="REG_STATUS" />
+  	</property>
+  	<property name="langId" type="long">
+            <column name="LANG_ID" />
+  	</property>
+  	<property name="locId" type="long">
+            <column name="LOC_ID"  not-null="false" />
+  	</property>
+  	<property name="dbId" type="long">
+            <column name="DB_ID"  not-null="false" />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  </property>
+  <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" />
+  </property>
+  <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  </property>
+  <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" not-null="false" />
+  </property>
+  <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  not-null="false" />
+  </property>
+  <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID"   not-null="false" />
+  </property>
+  <property name="startDate" type="date">
+            <column name="startDate"   not-null="false" />
+  </property>
+  <property name="endDate" type="date">
+            <column name="endDate"   not-null="false" />
+  </property>
+  <property name="rltContriVoucherId" type="long">
+            <column name="rlt_contri_voucher_id"  />
+  </property>
+  <property name="employerContriFlag" type="char">
+            <column name="EMPLOYER_CONTRI_FLAG"  />
+ </property>
+  <property name="delayedFinYearId" type="long">
+            <column name="DELAYED_FIN_YEAR_ID" />
+  </property>
+  <property name="delayedMonthId" type="long">
+            <column name="DELAYED_MONTH_ID"  />
+  </property>
+  <property name="status" type="char">
+            <column name="STATUS"  />
+  </property>
+  <property name="voucherNo" type="long">
+       	    <column name="VOUCHER_NO"  />
+  </property>
+  <property name="voucherDate" type="timestamp">
+     	    <column name="VOUCHER_DATE"  />
+  </property>
+  <property name="isChallan" type="char">
+            <column name="IS_CHALLAN"  />
+  </property>
+  <property name="isArrears" type="char">
+            <column name="IS_ARREARS"  />
+  </property>
+  <property name="isMissingCredit" type="char">
+            <column name="IS_MISSING_CREDIT"  />
+  </property>
+  
+  <property name="emplrBillNo" type="string">
+	         <column name="emplr_bill_no"  />
+  </property>
+  <property name="emplrYearId" type="long">
+	         <column name="emplr_year_id"  />
+  </property>
+  <property name="postEmplrContriStatus" type="long">
+            <column name="post_emplr_contri_status"  />
+  </property>
+  <property name="missingCreditApprovalDate" type="timestamp">
+            <column name="MISSING_CREDIT_APPROVAL_DATE"  />
+  </property>
+  <property name="isDeputation" type="char">
+            <column name="IS_DEPUTATION"  />
+            </property>
+             <property name="isApprovedBySrka" type="char">
+            <column name="APPROVED_BY_SRKA"  />
+            </property>
+            <property name="srkaApprovalDate" type="timestamp">
+            <column name="SRKA_APPROVAL_DATE"  />
+  </property>
+  </class>
+</hibernate-mapping>
+
+	
+			
+
+			

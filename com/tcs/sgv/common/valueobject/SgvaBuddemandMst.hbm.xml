@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 9, 2007 11:57:28 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaBuddemandMst" table="sgva_buddemand_mst" >
+    <cache usage="read-only" region="budgetCache"/>
+        <comment></comment>
+        <id name="demandId" type="long">
+            <column name="DEMAND_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="demandCode" type="string">
+            <column name="DEMAND_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="demandDesc" type="string">
+            <column name="DEMAND_DESC" length="1000">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="string">
+            <column name="LANG_ID" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="string">
+            <column name="LOC_ID" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="12">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdDt" type="date">
+            <column name="LST_UPD_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdUsr" type="string">
+            <column name="LST_UPD_USR" length="12">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="terminatedYrId" type="java.lang.Long">
+            <column name="TERMINATED_YR_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="demandType" type="string">
+            <column name="DEMAND_TYPE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="bpncode" type="string">
+            <column name="BPNCODE" length="3">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="incharge" type="string">
+            <column name="INCHARGE" length="4000">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finYrId" type="java.lang.Long">
+            <column name="FIN_YR_ID">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

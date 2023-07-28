@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+
+<class name="com.tcs.sgv.dcps.valueobject.MstBrokenPeriodPay" table="mst_dcps_broken_period_pay">
+  
+  <id name="brokenPeriodId" type="long">
+            <column name="broken_Period_Id"  />
+            <generator class="assigned" />
+  </id>
+  
+  <property name="eisEmpId" type="long">
+            <column name="eis_Emp_Id" />
+  </property>
+  	
+  <property name="monthId" type="long">
+            <column name="month_Id"  />
+  </property>
+  
+  <property name="yearId" type="long">
+            <column name="year_Id"  />
+  </property>
+
+  <property name="fromDate" type="timestamp">
+            <column name="from_date"  />
+  </property>
+  
+  <property name="toDate" type="timestamp">
+            <column name="to_date"  />
+  </property>
+  
+  <property name="noOfDays" type="long">
+            <column name="no_Of_Days"  />
+  </property>
+  
+  <property name="basicPay" type="long">
+            <column name="basic_Pay"  />
+  </property>
+  
+  <property name="netPay" type="long">
+            <column name="net_Pay"  />
+  </property>
+        
+  <property name="reason" type="java.lang.String">
+            <column name="reason"  />
+  </property>
+  
+  <property name="remarks" type="java.lang.String">
+            <column name="remarks"  />
+  </property>
+  
+  <property name="langId" type="long">
+            <column name="LANG_ID" />
+  </property>
+  
+  <property name="locId" type="long">
+            <column name="LOC_ID" />
+  </property>
+  
+  <property name="dbId" type="long">
+            <column name="DB_ID"/>
+  </property>
+  
+  <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  </property>
+  
+  <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" />
+  </property>
+  
+  <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  </property>
+ 
+  <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE"/>
+  </property>
+  
+  <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" />
+  </property>
+  
+  <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" />
+  </property>
+  
+  <property name="typeOfBill" type="java.lang.String">
+			<column name="TYPE_OF_BILL" />
+		</property>
+  
+ <!--  <many-to-one name="cmnLookupMst"
+			class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+			<column name="BILL_TYPE" precision="20" scale="0"></column>
+  </many-to-one>-->
+  	
+	</class>
+</hibernate-mapping>

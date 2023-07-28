@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.dcps.valueobject.TickerMessage" table="MST_DCPS_TICKER_MSG">
+  	
+  	<id name="dcpsTickerMessageIdPk" type="long">
+            <column name="DCPS_TICKER_MESSAGE_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+     </id>
+     
+    <property name="message1" type="string">
+            <column name="MESSAGE1"  />
+  	</property>
+  	<property name="message2" type="string">
+            <column name="MESSAGE2"  />
+  	</property>
+  	<property name="message3" type="string">
+            <column name="MESSAGE3"  />
+  	</property>
+  	<property name="PostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  	</property>
+  	<property name="UserId" type="long">
+            <column name="CREATED_USER_ID"  />
+  	</property>
+  	<property name="CreatedDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  	</property>
+  	
+  	<property name="UpdatedPostId" type="long">
+            <column name="UPDATED_POST_ID"  />
+  	</property>
+  	<property name="UpdatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  />
+  	</property>
+  	<property name="UpdatedDate" type="timestamp">
+            <column name="UPDATED_DATE"  />
+  	</property>
+  	<property name="startDate" type="timestamp">
+            <column name="start_Date"  />
+  	</property>
+  	<property name="endDate" type="timestamp">
+            <column name="end_Date"  />
+  	</property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 28, 2008 3:36:54 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnPensionOtherPartyPayment" table="TRN_PENSION_OTHER_PARTY_PAYMENT">
+        <id name="otherPartyPaymentId" type="long">
+            <column name="OTHER_PARTY_PAYMENT_id" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="otherPartyType" type="long">
+            <column name="OTHER_PARTY_TYPE" length="20" not-null="true" />
+        </property>
+		<property name="partyName" type="string">
+            <column name="PARTY_NAME" length="50" not-null="true" />
+        </property>
+         <property name="partyAmnt" type="big_decimal">
+            <column name="PARTY_AMNT" precision="20" default="0" not-null="true" />
+        </property>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" not-null="true" />
+        </property>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" not-null="true" />
+        </property>
+        <property name="pensionerName" type="string">
+            <column name="PENSIONER_NAME" length="50" not-null="true" />
+        </property>
+        <property name="billNo" type="long">
+            <column name="BILL_NO" length="20" />
+        </property>
+        <property name="billDate" type="timestamp">
+            <column name="BILL_DATE" length="7" />
+        </property>
+       <property name="rejected" type="java.lang.Integer">
+            <column name="REJECTED" precision="1" scale="0" default="0" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true" />
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

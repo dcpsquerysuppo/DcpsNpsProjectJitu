@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 21, 2007 7:19:54 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.RltBillCheque" table="rlt_bill_cheque" dynamic-update="true">
+        <comment></comment>
+        <id name="billChequeId" type="long">
+            <column name="BILL_CHEQUE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="chequeId" type="long">
+            <column name="CHEQUE_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billNo" type="long">
+            <column name="BILL_NO" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="partyAmt" type="big_decimal">
+            <column name="PARTY_AMT" precision="20">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+    <sql-query name="billproc.duplicate.billchq">
+    	<![CDATA[
+    		SELECT DISTINCT TK_NO FROM
+				(
+             
+					SELECT MIN(BL.TOKEN_NUM) TK_NO, SUM(BL.BILL_NET_AMOUNT), CQ.CHEQUE_AMT 
+					FROM TRN_BILL_REGISTER BL 
+					JOIN RLT_BILL_CHEQUE BLCQ ON BL.BILL_NO = BLCQ.BILL_NO 
+					JOIN TRN_CHEQUE_DTLS CQ ON BLCQ.CHEQUE_ID = CQ.CHEQUE_ID AND CQ.CHQ_CANCEL_DT IS NULL
+					WHERE BL.BILL_NO IN (:BILLLIST)
+					AND   1 < (SELECT COUNT(1) FROM RLT_BILL_CHEQUE BLCQ1 
+					           WHERE BLCQ1.CHEQUE_ID = CQ.CHEQUE_ID)
+					GROUP BY CQ.CHEQUE_ID, CQ.CHEQUE_AMT
+					HAVING SUM(BL.BILL_NET_AMOUNT) != CQ.CHEQUE_AMT
+					UNION ALL
+          
+					SELECT BL.TOKEN_NUM, BL.BILL_NET_AMOUNT, SUM(CQ.CHEQUE_AMT)
+					FROM TRN_BILL_REGISTER BL 
+					JOIN RLT_BILL_CHEQUE BLCQ ON BL.BILL_NO = BLCQ.BILL_NO 
+					JOIN TRN_CHEQUE_DTLS CQ ON BLCQ.CHEQUE_ID = CQ.CHEQUE_ID AND CQ.CHQ_CANCEL_DT IS NULL
+					WHERE BL.BILL_NO IN (:BILLLIST)
+					AND   1 = (SELECT COUNT(1) FROM RLT_BILL_CHEQUE BLCQ1 
+					           WHERE BLCQ1.CHEQUE_ID = CQ.CHEQUE_ID)
+					GROUP BY BL.TOKEN_NUM, BL.BILL_NET_AMOUNT
+					HAVING BL.BILL_NET_AMOUNT != SUM(CQ.CHEQUE_AMT) 
+				) cheqList
+    	]]>
+    </sql-query>
+    <sql-query name="tbp.billchq.billCombination">
+    	<return-scalar column="CNT1" type="java.lang.Long" />
+    	<![CDATA[
+    		SELECT COUNT(DISTINCT TEMPTABLE.CNT)CNT1 FROM
+    		(SELECT BL.BILL_NO CNT
+    		FROM TRN_BILL_REGISTER BL
+			WHERE BL.BILL_NO IN (:DATA_LIST)
+			UNION ALL
+    		SELECT BC2.BILL_NO CNT
+			FROM RLT_BILL_CHEQUE BC1
+			JOIN RLT_BILL_CHEQUE BC2 ON BC2.CHEQUE_ID = BC1.CHEQUE_ID
+			JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC2.CHEQUE_ID AND CQ.CHQ_CANCEL_DT IS NULL
+			WHERE BC1.BILL_NO IN (:DATA_LIST) AND BC1.LOCATION_CODE = :LOCATION AND BC2.LOCATION_CODE = :LOCATION
+			AND CQ.LOCATION_CODE = :LOCATION) TEMPTABLE
+    	]]>
+    </sql-query>
+    <sql-query name="tbp.billchq.chequeCombination">
+    <return-scalar column="CNT" type="java.lang.Long" />
+    	<![CDATA[
+    		SELECT COUNT(DISTINCT BC2.CHEQUE_ID) CNT
+			FROM RLT_BILL_CHEQUE BC1
+			JOIN RLT_BILL_CHEQUE BC2 ON BC2.Bill_No = BC1.BILL_NO
+			JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC2.CHEQUE_ID AND CQ.CHQ_CANCEL_DT IS NULL
+			WHERE BC1.CHEQUE_ID IN (:DATA_LIST) AND BC1.LOCATION_CODE = :LOCATION AND BC2.LOCATION_CODE = :LOCATION
+			AND CQ.LOCATION_CODE = :LOCATION
+    	]]>
+    </sql-query>
+    <query name="tbp.billchq.getAllBillsByChqId">
+    	<![CDATA[
+    		SELECT DISTINCT bl
+    		FROM TrnBillRegister bl, RltBillCheque bc
+    		WHERE bl.billNo = bc.billNo AND bc.chequeId IN (:CHQ_LIST)
+    	]]>
+    </query>
+    <sql-query name="tbp.billchq.getBillNoAndChqIdByBillNos">
+    	<return-scalar column="BNO" type="java.lang.Long" />
+    	<return-scalar column="CID" type="java.lang.Long" />
+    	<![CDATA[
+    		SELECT BC.BILL_NO BNO, CQ.CHEQUE_ID CID
+			FROM RLT_BILL_CHEQUE BC
+			JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID AND CQ.CHQ_CANCEL_DT IS NULL
+			WHERE BC.BILL_NO IN (:BILL_LIST)
+    	]]>
+    </sql-query>
+    <sql-query name="tbp.billchq.getChqIdsByBillNos">
+    	<return-scalar column="CID" type="java.lang.Long" />
+    	<![CDATA[
+    		SELECT DISTINCT CQ.CHEQUE_ID CID
+			FROM RLT_BILL_CHEQUE BC
+			JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID AND CQ.CHQ_CANCEL_DT IS NULL
+			WHERE BC.BILL_NO IN (:BILL_LIST)
+    	]]>
+    </sql-query>
+</hibernate-mapping>

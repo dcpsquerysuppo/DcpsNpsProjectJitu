@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.tcs.sgv.pensionproc.valueobject.TrnPnsnprocPnsnrpay" table="trn_pnsnproc_pnsnrpay"  dynamic-update="true">
+  		<id name="pensionerPayId" type="java.lang.Long">
+            <column name="pensionerpay_id" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="dbId" type="java.lang.Long">
+            <column name="db_id" precision="20" scale="0"  />
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="location_code" precision="20" scale="0"  />
+        </property>
+       <property name="pensionerdtlId" type="java.lang.Long">
+            <column name="PENSIONERDTL_ID" precision="20" scale="0" >
+            </column>
+        </property>
+        <property name="inwardPensionId" type="java.lang.Long" >
+            <column name="inward_pension_id" precision="20" scale="0" >
+            </column>
+        </property>
+        
+        <property name="lastPayScale" type="java.lang.Long">
+            <column name="last_pay_scale" precision="20" scale="0"  />
+        </property>
+        <property name="gradePay" type="big_decimal">
+            <column name="grade_pay" precision="20" scale="0"  />
+        </property>
+        <property name="basicPay" type="big_decimal">
+            <column name="basic_pay" precision="20" scale="0"  />
+        </property>
+         <property name="dpRate" type="big_decimal">
+            <column name="dp_rate" precision="20" scale="0"  />
+        </property>       
+        
+        <property name="srvcRenderdFlag" type="char">
+            <column name="srvc_renderd_flag" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnCntrbtnFlag" type="char">
+            <column name="pnsn_cntrbtn_flag" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnCntrbtnFromDate" type="date">
+            <column name="pnsn_cntrbtn_from_date" length="7"  />
+        </property>
+        <property name="pnsnCntrbtnToDate" type="date">
+            <column name="pnsn_cntrbtn_to_date" length="7"  />
+        </property>
+        <property name="pnsnCntrbtnAmount" type="big_decimal">
+            <column name="pnsn_cntrbtn_amount" precision="20" scale="0"  />
+        </property>
+        <property name="prvsnlGratuityFlag" type="char">
+            <column name="prvsnl_gratuity_flag" precision="20" scale="0"  />
+        </property>
+        <property name="prvsnlGratuityDate" type="date">
+            <column name="prvsnl_gratuity_date" length="7"  />
+        </property>
+         <property name="prvsnlGratuityVoucherno" type="java.lang.Long">
+            <column name="prvsnl_gratuity_voucherno" precision="20" scale="0"  />
+        </property>
+        <property name="prvsnlGratuityAmount" type="big_decimal">
+            <column name="prvsnl_gratuity_amount" precision="20" scale="0"  />
+        </property> 
+        <property name="totalServiceBreak" type="java.lang.Long">
+            <column name="total_service_break" precision="20" scale="0"  />
+        </property>
+         <property name="qualifyingService" type="java.lang.Long">
+            <column name="qualifying_service" precision="20" scale="0"  />
+        </property>
+         <property name="actualService" type="java.lang.Long">
+            <column name="actual_service" precision="20" scale="0"  />
+        </property>
+        <property name="nonQualifyingService" type="java.lang.Long">
+            <column name="non_qualifying_service" precision="20" scale="0"  />
+        </property>
+        <property name="grandTotal" type="big_decimal">
+            <column name="grand_total" precision="20" scale="0"  />
+        </property> 
+        <property name="averagePay" type="big_decimal">
+            <column name="average_pay" precision="20" scale="0"  />
+        </property> 
+         <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+		</property>	
+		<property name="prvsnlPnsnpaidFlag" type="char">
+            <column name="prvsnl_pnsnpaid_flag" precision="20" scale="0"  />
+        </property>
+        <property name="prvsnlPnsnpaidAuthNo" type="string">
+			<column name="prvsnl_pnsnpaid_authno" precision="20" scale="0"></column>
+		</property>
+		<property name="prvsnlPnsnpaidAuthName" type="string">
+			<column name="prvsnl_pnsnpaid_authname" precision="20" scale="0"></column>
+		</property>	
+		<property name="prvsnlPnsnpaidFromDate" type="timestamp">
+			<column name="PRVSNL_PNSNPAID_FROM_DATE" precision="20" scale="0"></column>
+		</property>
+		<property name="prvsnlPnsnpaidToDate" type="timestamp">
+			<column name="PRVSNL_PNSNPAID_TO_DATE" precision="20" scale="0"></column>
+		</property>	
+		<property name="brkYear" type="integer">
+			<column name="BRK_YEAR" scale="0"></column>
+		</property>	
+		<property name="brkMonth" type="integer">
+			<column name="BRK_MONTH" scale="0"></column>
+		</property>	
+		<property name="brkDay" type="integer">
+			<column name="BRK_DAY" scale="0"></column>
+		</property>	
+		<property name="actualYear" type="integer">
+			<column name="ACTUAL_YEAR" scale="0"></column>
+		</property>	
+		<property name="actualMonth" type="integer">
+			<column name="ACTUAL_MONTH" scale="0"></column>
+		</property>	
+		<property name="actualDay" type="integer">
+			<column name="ACTUAL_DAY" scale="0"></column>
+		</property>	
+		<property name="qulifyYear" type="integer">
+			<column name="QULIFY_YEAR" scale="0"></column>
+		</property>	
+		<property name="qulifyMonth" type="integer">
+			<column name="QULIFY_MONTH" scale="0"></column>
+		</property>	
+		<property name="qulifyDay" type="integer">
+			<column name="QULIFY_DAY" scale="0"></column>
+		</property>	
+		<property name="foreignPayInfo" type="string">
+			<column name="FOREIGN_PAY_INFO" scale="0"></column>
+		</property>	
+  </class>
+</hibernate-mapping>

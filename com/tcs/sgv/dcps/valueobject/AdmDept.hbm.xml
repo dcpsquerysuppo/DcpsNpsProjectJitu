@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.dcps.valueobject.AdmDept" table="ADM_DEPT">
+  	
+  	<id name="admDeptCd" type="long">
+            <column name="ADM_DEPT_CD" precision="20" scale="0" />
+            <generator class="assigned" />
+    </id>
+    
+    <property name="admBdgtCd" type="string">
+            <column name="ADM_BDGT_CD"  />
+  	</property>
+    <property name="locId" type="long">
+            <column name="loc_id"  />
+  	</property>
+  	
+  </class>
+</hibernate-mapping>

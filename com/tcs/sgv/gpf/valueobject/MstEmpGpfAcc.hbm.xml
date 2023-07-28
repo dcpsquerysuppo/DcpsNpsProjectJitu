@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.gpf.valueobject">
+  <class name="com.tcs.sgv.gpf.valueobject.MstEmpGpfAcc" table="Mst_Emp_Gpf_Acc">
+  		<id name="mstEmpGpfAccId" type="long">
+            <column name="MST_EMP_GPF_ACC_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="gpfAccNo" type="string">
+            <column name="GPF_ACC_NO" />
+        </property>
+        <property name="sevaarthId" type="string">
+            <column name="SEVAARTH_ID" />
+        </property>
+        <property name="mstGpfEmpId" type="long">
+            <column name="MST_GPF_EMP_ID" />
+        </property>
+        <property name="currentBalance" type="double">
+            <column name="CURRENT_BALANCE" length="50" />
+        </property>
+        <property name="monthlySubscription" type="double">
+            <column name="MONTHLY_SUBSCRIPTION" length="50" />
+        </property>
+        <property name="ddoCode" type="string">
+            <column name="DDO_CODE"/>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_POST_ID" precision="10"   />
+        </property>
+        <property name="createdPostId" type="long"  >
+            <column name="CREATED_USER_ID" precision="10"  />
+        </property>
+        <property name="createdDate" type="timestamp" >
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="long"  >
+            <column name="UPDATED_POST_ID" precision="10" />
+        </property>
+        <property name="updatedPostId" type="long"  >
+            <column name="UPDATED_USER_ID" precision="10" />
+        </property>
+        <property name="updatedDate" type="timestamp" >
+            <column name="UPDATED_DATE" />
+        </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2011 6:54:12 PM by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.StgFamily" table="STG_FAMILY">
+        <id name="stgFamilyId" type="long">
+            <column name="STG_FAMILY_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="delvId" type="long">
+            <column name="DELV_ID" not-null="true" />
+        </property>
+        <property name="caseStatus" type="string">
+            <column name="CASE_STATUS" length="20" />
+        </property>
+        <property name="pnsrFileNo" type="string">
+            <column name="PNSR_FILE_NO" length="25" />
+        </property>
+        <property name="applnNo" type="string">
+            <column name="APPLN_NO" length="25" />
+        </property>
+        <property name="relationship" type="string">
+            <column name="RELATIONSHIP" length="30" />
+        </property>
+        <property name="apfName" type="string">
+            <column name="APF_NAME" length="50" />
+        </property>
+        <property name="dob" type="string">
+            <column name="DOB" length="10" />
+        </property>
+        <property name="apfHandicap" type="string">
+            <column name="APF_HANDICAP" length="3" />
+        </property>
+        <property name="efpFromDate" type="string">
+            <column name="EFP_FROM_DATE" length="10" />
+        </property>
+        <property name="fpFromDate" type="string">
+            <column name="FP_FROM_DATE" length="10" />
+        </property>
+        <property name="apaEfp" type="string">
+            <column name="APA_EFP" length="15" />
+        </property>
+        <property name="apaFp" type="string">
+            <column name="APA_FP" length="15" />
+        </property>
+        <property name="apfGrdnName" type="string">
+            <column name="APF_GRDN_NAME" length="50" />
+        </property>
+        <property name="gdrnReltn" type="string">
+            <column name="GDRN_RELTN" length="30" />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="26" not-null="true" />
+        </property>
+        <property name="updatedBy" type="long">
+            <column name="UPDATED_BY" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="26" />
+        </property>
+    </class>
+</hibernate-mapping>

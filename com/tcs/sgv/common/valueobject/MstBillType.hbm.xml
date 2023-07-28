@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 12, 2007 4:44:36 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.MstBillType" table="mst_bill_type" dynamic-update="true">
+    	<cache usage="nonstrict-read-write" region="ddoCache"/>
+        <comment></comment>
+        <id name="billTypeId" type="long">
+            <column name="BILL_TYPE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="subjectId" type="java.lang.Long">
+            <column name="SUBJECT_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="subjectDesc" type="string">
+            <column name="SUBJECT_DESC" length="200">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="reqFlag" type="java.lang.Long">
+            <column name="REQ_FLAG">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="java.lang.Short">
+            <column name="LANG_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="activateFlag" type="java.lang.Short">
+            <column name="ACTIVATE_FLAG">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="START_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="END_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>        
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billTypeCode" type="string">
+            <column name="BILL_TYPE_CODE" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true">
+            </column>
+        </property>
+        <property name="shortName" type="string">
+            <column name="SHORT_NAME" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billShrtCode" type="java.lang.String">
+            <column name="BILL_SHRT_CODE" length="20">
+            </column>
+        </property>
+        <property name="displayForDdo" type="java.lang.String">
+            <column name="DISPLAY_FOR_DDO" length="1">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

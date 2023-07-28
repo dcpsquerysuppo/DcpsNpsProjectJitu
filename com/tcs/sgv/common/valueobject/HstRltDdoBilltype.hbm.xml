@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2009 6:42:54 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.HstRltDdoBilltype" table="HST_RLT_DDO_BILLTYPE" dynamic-update="true">
+        <composite-id name="id" class="com.tcs.sgv.common.valueobject.HstRltDdoBilltypeId">
+            <key-property name="rltDdobilltypeId" type="java.lang.Long">
+                <column name="RLT_DDOBILLTYPE_ID" precision="20" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" precision="11" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="ddoCode" type="string">
+            <column name="DDO_CODE" length="15" not-null="true" />
+        </property>
+        <property name="subjectId" type="java.lang.Long">
+            <column name="SUBJECT_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdBy" type="java.lang.Long">
+            <column name="CREATED_BY" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdByPost" type="java.lang.Long">
+            <column name="CREATED_BY_POST" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID" precision="20" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

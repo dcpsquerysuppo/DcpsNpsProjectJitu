@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2007 5:12:32 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvcFinYearMst" table="sgvc_fin_year_mst" >
+    <cache usage="read-only" region="budgetCache"/>
+        <comment></comment>
+        <id name="finYearId" type="long">
+            <column name="FIN_YEAR_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="fromDate" type="date">
+            <column name="FROM_DATE" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="toDate" type="date">
+            <column name="TO_DATE" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="string">
+            <column name="LANG_ID" length="5" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="string">
+            <column name="LOC_ID" length="5" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdDt" type="date">
+            <column name="LST_UPD_DT" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdUsr" type="string">
+            <column name="LST_UPD_USR" length="12" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="12" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finYearDesc" type="string">
+            <column name="FIN_YEAR_DESC" length="12" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finYearType" type="string">
+            <column name="FIN_YEAR_TYPE" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finYearCode" type="string">
+            <column name="FIN_YEAR_CODE" length="12" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="prevFinYearId" type="java.lang.Long">
+            <column name="PREV_FIN_YEAR_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="nextFinYearId" type="java.lang.Long">
+            <column name="NEXT_FIN_YEAR_ID">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

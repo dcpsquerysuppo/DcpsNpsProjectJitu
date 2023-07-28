@@ -1,0 +1,855 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 25, 2007 12:25:26 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnChequeDtls" table="trn_cheque_dtls" dynamic-update="true" >
+        <comment></comment>
+        <id name="chequeId" type="long">
+            <column name="CHEQUE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="chequeAmt" type="big_decimal">
+            <column name="CHEQUE_AMT" precision="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fromDt" type="date">
+            <column name="FROM_DT" length="10" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="toDt" type="date">
+            <column name="TO_DT" length="10" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="partyName" type="string">
+            <column name="PARTY_NAME" length="200" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="clearedDt" type="date">
+            <column name="CLEARED_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="chequeNo" type="java.lang.Long">
+            <column name="CHEQUE_NO">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="printDate" type="date">
+            <column name="PRINT_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="printUser" type="java.lang.Long">
+            <column name="PRINT_USER">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="adviceNo" type="java.lang.Long">
+            <column name="ADVICE_NO">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="status" type="java.lang.Short">
+            <column name="STATUS" length="3" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finYearId" type="java.lang.Long">
+            <column name="FIN_YEAR_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="chequeType" type="string">
+            <column name="CHEQUE_TYPE" length="30">
+                <comment></comment>
+            </column>
+        </property>        
+        <property name="ddoParty" type="string">
+            <column name="DDO_PARTY" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="1000">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="statusDate" type="date">
+            <column name="STATUS_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10">
+                <comment></comment>
+            </column>
+        </property> 
+         <property name="adviceGenByPost" type="java.lang.Long">
+            <column name="ADVICE_GEN_BY_POST" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="chqDsptchDate" type="java.util.Date">
+            <column name="CHQ_DSPTCH_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="groupId" type="java.lang.Long">
+            <column name="GROUP_ID">
+                <comment></comment>
+            </column>
+        </property>        
+        <property name="chqDuplicateDt" type="java.util.Date">
+            <column name="CHQ_DUPLICATE_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>  
+        <property name="chqRevalidateDt" type="java.util.Date">
+            <column name="CHQ_REVALIDATE_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="chqRenameDt" type="java.util.Date">
+            <column name="CHQ_RENAME_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="chqCancelDt" type="java.util.Date">
+            <column name="CHQ_CANCEL_DT" length="10">
+                <comment></comment>
+            </column>
+        </property> 
+        <property name="chqReprintDt" type="java.util.Date">
+            <column name="CHQ_REPRINT_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="adviceGenByUser" type="java.lang.Long">
+            <column name="ADVICE_GEN_BY_USER" length="20">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="isAccounted" type="java.lang.Boolean">
+            <column name="IS_ACCOUNTED">
+            </column>
+        </property> 
+        <property name="authorityDate" type="java.util.Date">
+            <column name="AUTHORITY_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="adviceDt" type="date">
+            <column name="ADVICE_DT" length="10" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="printDateTime" type="java.util.Date">
+            <column name="PRINT_DATETIME">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="acceptDt" type="date">
+            <column name="ACCEPT_DT" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="rejectedDt" type="date">
+            <column name="REJECTED_DT" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="verifyDt" type="date">
+            <column name="VERIFY_DT" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="scrollStatus" type="java.lang.Integer">
+            <column name="SCROLL_STATUS">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="paymentDate" type="date">
+          <column name="PAYMENT_DATE" length="10">
+                <comment></comment>
+            </column>
+         </property>
+        <property name="settlementDate" type="date">
+            <column name="SETTLEMENT_DATE" length="10">
+                 <comment></comment>
+            </column>
+        </property>
+    </class>
+    <query name="tbp.cheque.geChequeVOsByChequeIDs">
+    	<![CDATA[
+	    	FROM TrnChequeDtls WHERE chequeId In (:CHQ_LIST)
+		]]>
+    </query>
+    <sql-query name="tbp.chq.getLockOnChequesByChequeIds">
+    	<![CDATA[
+	    	SELECT * FROM TRN_CHEQUE_DTLS WHERE CHEQUE_ID IN (:CHQ_LIST) FOR UPDATE
+		]]>
+    </sql-query>
+    <query name="tbp.chq.getChequeVOsByChequeIds">
+    	<![CDATA[
+	    	FROM TrnChequeDtls WHERE chequeId IN (:CHQ_LIST) AND chequeNo IS NULL
+		]]>
+    </query>
+    <sql-query name="tbp.chq.getLockOnChequesByChequeIdsAndStatus">
+    	<![CDATA[
+	    	SELECT * FROM TRN_CHEQUE_DTLS WHERE CHEQUE_ID IN (:BILL_LIST) AND STATUS = :STATUS FOR UPDATE
+		]]>
+    </sql-query>
+    <!-- 
+    <sql-query name="tbp.chq.rpt.form18.getOpBal">
+    	<return-scalar column="CHQID" type="java.lang.Long" />
+		<![CDATA[
+			SELECT DISTINCT CHQID 
+			FROM (
+			SELECT CQ.CHEQUE_ID CHQID
+				FROM TRN_BILL_MVMNT BM
+				JOIN RLT_BILL_CHEQUE BC ON BC.BILL_NO = BM.BILL_NO
+				JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID AND CQ.CHQ_CANCEL_DT IS NULL
+				AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.PRINT_DATE IS NOT NULL
+				WHERE BM.LOCATION_CODE = :strLocationCode AND BM.CREATED_DATE < :inputDate AND BM.CREATED_DATE > :decDate
+				AND BM.MVMNT_STATUS = 120
+				AND BM.MOVEMNT_ID = (
+				    SELECT MAX(BM1.MOVEMNT_ID) FROM TRN_BILL_MVMNT BM1 WHERE BM1.BILL_NO = BM.BILL_NO
+				    AND BM1.CREATED_DATE < :inputDate AND BM1.CREATED_DATE > :decDate AND BM1.LOCATION_CODE= :strLocationCode
+				)
+			UNION ALL
+			SELECT CQ.CHEQUE_ID CHQID
+			FROM TRN_BILL_REGISTER BL
+			JOIN TRN_BILL_MVMNT BM ON BM.BILL_NO = BL.BILL_NO 
+			JOIN RLT_BILL_CHEQUE BC ON BC.BILL_NO = BL.BILL_NO
+			JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID
+			WHERE BL.BILL_NO IN (7710112589,7710112590,7710112591,7710112592,7710112593,7710112594,7710112595)
+			      AND BL.AUDIT_STATUS = 1 AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.LOCATION_CODE = :strLocationCode
+			      AND CQ.CHQ_CANCEL_DT IS NULL AND BM.LOCATION_CODE = :strLocationCode
+			      AND (CQ.CHQ_DSPTCH_DATE IS NULL OR CQ.CHQ_DSPTCH_DATE >= :inputDate)
+			)T
+		]]>
+    </sql-query>
+    <sql-query name="tbp.chq.rpt.form18.getHandedOver">
+    	<return-scalar column="CNT" type="java.lang.Long" />
+    	<![CDATA[
+	    	SELECT count(DISTINCT A.CID) CNT
+			  FROM (SELECT C.CHEQUE_ID CID
+			          FROM TRN_BILL_REGISTER BL, TRN_BILL_MVMNT    BL_MV, TRN_CHEQUE_DTLS   C, RLT_BILL_CHEQUE   BC
+			         WHERE BL_MV.CREATED_DATE >= :inputDate AND BL_MV.CREATED_DATE < :toDate AND
+			               BL_MV.MVMNT_STATUS = 120 AND BL.TSRY_OFFICE_CODE = :strLocationCode AND
+			               BL.TC_BILL IN ('Regular', 'Regular/Challan') AND BL_MV.BILL_NO = BL.BILL_NO AND BL.BILL_NO = BC.BILL_NO AND
+			               BC.CHEQUE_ID = C.CHEQUE_ID AND C.CHQ_CANCEL_DT IS NULL AND
+			               C.CHEQUE_TYPE = 'T Cheque' AND BL.AUDIT_STATUS != 2 AND
+			               NOT EXISTS
+			         (SELECT Cd.CHEQUE_ID CID
+			                  FROM TRN_BILL_REGISTER BL, TRN_BILL_MVMNT    BL_MV, TRN_CHEQUE_DTLS   Cd, RLT_BILL_CHEQUE   BC
+			                 WHERE BL_MV.CREATED_DATE < :inputDate AND BL_MV.CREATED_DATE > :decDate AND
+			                       BL_MV.MVMNT_STATUS = 120 AND BL.TSRY_OFFICE_CODE = :strLocationCode AND
+			                       BL.TC_BILL IN ('Regular', 'Regular/Challan') AND BL_MV.BILL_NO = BL.BILL_NO AND BL.BILL_NO = BC.BILL_NO AND
+			                       BC.CHEQUE_ID = Cd.CHEQUE_ID AND Cd.CHQ_CANCEL_DT IS NULL AND Cd.CHEQUE_TYPE = 'T Cheque' AND
+			                       BL_MV.MOVEMNT_ID = (SELECT MAX(BL_MV1.MOVEMNT_ID)
+			                          FROM TRN_BILL_MVMNT BL_MV1
+			                         WHERE BL_MV1.BILL_NO = BL_MV.BILL_NO AND BL_MV1.LOCATION_CODE=:strLocationCode
+			                               AND BL_MV1.CREATED_DATE < :inputDate AND BL_MV1.CREATED_DATE > :decDate) and
+			                       Cd.CHEQUE_ID = C.CHEQUE_NO)) a
+		]]>
+    </sql-query>
+    <sql-query name="tbp.chq.rpt.form18.getPrepared">
+    	<return-scalar column="CNT" type="java.lang.Long" />
+    	<![CDATA[
+	    	SELECT COUNT(DISTINCT CQ.CHEQUE_ID) CNT
+			FROM TRN_CHEQUE_DTLS CQ
+			WHERE CQ.PRINT_DATE >= :inputDate AND CQ.PRINT_DATE < :toDate 
+			      AND CQ.LOCATION_CODE = :strLocationCode AND CQ.CHEQUE_TYPE = 'T Cheque'
+		]]>
+    </sql-query>
+    <sql-query name="tbp.chq.rpt.form18.getDispatched">
+    	<return-scalar column="CNT" type="java.lang.Long" />
+    	<![CDATA[
+	    	SELECT COUNT(DISTINCT CQ.CHEQUE_ID) CNT
+			FROM TRN_CHEQUE_DTLS CQ
+			WHERE CQ.CHQ_DSPTCH_DATE >= :inputDate AND CQ.CHQ_DSPTCH_DATE < :toDate 
+			      AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.LOCATION_CODE = :strLocationCode
+		]]>
+    </sql-query>
+    <sql-query name="tbp.chq.rpt.form18.getNotHandedOver">
+    	<return-scalar column="CNT" type="java.lang.Long" />
+ 		<![CDATA[
+	    	SELECT COUNT(DISTINCT CQ.CHEQUE_ID) CNT   
+	    	FROM TRN_BILL_MVMNT BM    
+	    	JOIN RLT_BILL_CHEQUE BC ON BC.BILL_NO = BM.BILL_NO 
+	    	JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID       
+	    	WHERE BM.CREATED_DATE < :toDate and BM.CREATED_DATE > :decDate AND    
+	    	 BM.MVMNT_STATUS IN (100, 110) AND  CQ.CHQ_CANCEL_DT IS NULL 
+	    	 AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.PRINT_DATE IS NOT NULL AND BM.LOCATION_CODE = :strLocationCode
+	    	 AND  BM.MOVEMNT_ID =(SELECT MAX(BM1.MOVEMNT_ID) FROM TRN_BILL_MVMNT BM1 
+	    	 WHERE BM1.BILL_NO = BM.BILL_NO AND BM1.CREATED_DATE < :toDate AND BM.CREATED_DATE > :decDate
+	    	 AND BM1.LOCATION_CODE= :strLocationCode)
+		]]>
+    </sql-query> -->
+
+     <sql-query name="tbp.chqrpt.form18.getOpBal">
+    	<return-scalar column="C1" type="java.lang.String" />
+    	<return-scalar column="CNT" type="java.lang.Long" />
+		<![CDATA[
+			SELECT 'A' C1, COUNT(DISTINCT CHQID) CNT 
+			FROM (
+			SELECT CQ.CHEQUE_ID CHQID
+				FROM TRN_BILL_REGISTER BR  			
+				JOIN TRN_BILL_MVMNT BM ON BR.BILL_NO = BM.BILL_NO
+				JOIN TRN_BILL_MVMNT BM2 ON BM2.BILL_NO = BM.BILL_NO
+				JOIN RLT_BILL_CHEQUE BC ON BC.BILL_NO = BM.BILL_NO
+				JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID AND (CQ.CHQ_CANCEL_DT IS NULL OR CQ.CHQ_CANCEL_DT >= :inputDate)
+				AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.PRINT_DATE < :inputDate
+				WHERE BM.LOCATION_CODE = :strLocationCode AND BM.CREATED_DATE < :inputDate AND BM.CREATED_DATE > :decDate
+				AND (BM2.MOVEMNT_ID =  BM.MOVEMNT_ID - 1 AND BM2.MVMNT_STATUS != 80)
+				AND BR.TOKEN_NUM > 0
+				AND BM.MVMNT_STATUS = 120
+				AND BM.MOVEMNT_ID = (
+				    SELECT MAX(BM1.MOVEMNT_ID) FROM TRN_BILL_MVMNT BM1 WHERE BM1.BILL_NO = BM.BILL_NO
+				    AND BM1.CREATED_DATE < :inputDate AND BM1.CREATED_DATE > :decDate AND BM1.LOCATION_CODE= :strLocationCode
+				)
+			UNION ALL
+			SELECT CQ.CHEQUE_ID CHQID
+			FROM TRN_BILL_REGISTER BL
+			JOIN TRN_BILL_MVMNT BM ON BM.BILL_NO = BL.BILL_NO 
+			JOIN RLT_BILL_CHEQUE BC ON BC.BILL_NO = BL.BILL_NO
+			JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID
+			WHERE BL.BILL_NO IN (7710116300,99100542,991010670,991011519,991011659,7710106550,7710106551,7710112589,7710112590,7710112591,7710112592,7710112593,7710112594,7710112635,7710116299,9910106101,9910116900,9910116993,77101106866,77101138953,77101178457,77101227549,77101227550,77101227551,77101227552,77101227553,77101227554,77101227555,77101227556,77101227557,77101227558,77101227559,77101227562,77101227563,77101227564,77101227565,77101227566,77101227567,77101227569,77101227571,77101227572,77101227599,77101227631,77101229004,77101229005,77101229006,77101229007,77101229008,77101229009,77101229010,77101229011,77101229012,77101229013,77101229014,77101229015,77101229016,99100554763,99100554764,99100554765,99100554766,99100554767,99100554768,99100554769,99100554770,99100554771,99100554772,99100554773,99100554774,99100558250,99100558289,99101124259,99101125121,99101126070,99101126071,99101126857,99101159671,99101162085,99101162282,99101162283,99101162284,99101162285,99101162286,99101162287,99101162288,99101162289,99101162290,99101162291,99101205946,99101205949,771010911287,771010911288,771010911289,771010911290,771010911291,771010911292,991005511133,991005511134,991005511135,991005511136,991005511137,991005511138,991005511139,991005511140,991005511141,991005511142,991005511200,991005511201,991005511202,991005511203,991005511204,991005511205,991005511206,991005511207,991005511208,991005511209,991005511210,991005511211,991005511212,991005511213,991005511214,991005511258,991005511259,991005511260,991005511261,991005511262,991005511263,991005511264,991005511440,991005516403,991005516441,991005516472,991005516627,991005516707,991005516708,991005516710,991005516713,991005516714,991005516715,991005516895,991005516920,991005516921,991005516922,991005516999,991005517010,991005517936,991005518202,991005518456,991005518457,991005518458,991005518459,991005523447,991005523455,991005523472,991005523473,991005523491,991005523495,991005523496,991005525277,991005525412,991005525414,991005525415,991005525420,991005525477,991005525560,991005538716,991005538741,991005538742,991005544296,991005544523,991005544524,991005544586,991005544619,991005544625,991005544629,991005544643,991005544644,991005544648,991005544653,991005544660,991005544663,991005544675,991005544713,991005545962,991005546083,991011512796,991011512800,991011512814,991011512815)
+			      AND BL.AUDIT_STATUS = 1 AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.LOCATION_CODE = :strLocationCode
+			      AND CQ.CHQ_CANCEL_DT IS NULL AND BM.LOCATION_CODE = :strLocationCode
+			      AND (CQ.CHQ_DSPTCH_DATE IS NULL OR CQ.CHQ_DSPTCH_DATE >= :inputDate)
+			UNION ALL
+			SELECT CQ.CHEQUE_ID CHQID
+				FROM TRN_BILL_MVMNT BM				
+				JOIN RLT_BILL_CHEQUE BC ON BC.BILL_NO = BM.BILL_NO
+				JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID AND (CQ.CHQ_CANCEL_DT IS NULL OR CQ.CHQ_CANCEL_DT >= :inputDate)
+				AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.PRINT_DATE < :inputDate
+				WHERE BM.LOCATION_CODE = :strLocationCode AND BM.CREATED_DATE < :inputDate AND BM.CREATED_DATE > :decDate				
+				AND BM.MVMNT_STATUS = 120
+				AND BM.MVMNT_STATUS = (SELECT MIN(BM2.MVMNT_STATUS) FROM TRN_BILL_MVMNT BM2 WHERE BM2.BILL_NO = BM.BILL_NO
+				    AND BM2.LOCATION_CODE= :strLocationCode)
+				AND BM.MOVEMNT_ID = (
+				    SELECT MAX(BM1.MOVEMNT_ID) FROM TRN_BILL_MVMNT BM1 WHERE BM1.BILL_NO = BM.BILL_NO
+				    AND BM1.CREATED_DATE < :inputDate AND BM1.CREATED_DATE > :decDate AND BM1.LOCATION_CODE= :strLocationCode
+				)			      
+			)T
+			UNION ALL	
+			SELECT 'B' C1, COUNT(DISTINCT RCM.CHEQUE_ID) CNT
+			FROM HST_TRN_CHEQUE_REQUEST HTCR
+			JOIN RLT_CHEQUE_MAPPING RCM ON RCM.REQUEST_ID = HTCR.REQUEST_ID
+			JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = RCM.CHEQUE_ID
+			WHERE HTCR.STATUS = 3 AND HTCR.UPDATED_DATE < :inputDate AND HTCR.UPDATED_DATE > :decDate
+			      AND HTCR.LOCATION_CODE = :strLocationCode AND HTCR.DISPATCHED_CASE = 1 AND RCM.CHEQUE_ID != RCM.PARENT_CHEQUE_ID
+			      AND cq.print_date < :inputDate
+			      AND HTCR.TRN_COUNTER = (
+			          SELECT MAX(HTCR1.TRN_COUNTER) FROM HST_TRN_CHEQUE_REQUEST HTCR1
+			          WHERE HTCR1.REQUEST_ID = HTCR.REQUEST_ID
+			          AND HTCR1.UPDATED_DATE < :inputDate AND HTCR1.UPDATED_DATE > :decDate
+			      )
+		]]>
+    </sql-query>
+    <sql-query name="tbp.chqrpt.form18.getPrepared">
+    	<return-scalar column="CNT" type="java.lang.Long" />
+    	<![CDATA[
+	    	SELECT COUNT(DISTINCT CQ.CHEQUE_ID) CNT
+			FROM TRN_CHEQUE_DTLS CQ
+			WHERE CQ.PRINT_DATE >= :inputDate AND CQ.PRINT_DATE < :toDate 
+			      AND CQ.LOCATION_CODE = :strLocationCode AND CQ.CHEQUE_TYPE = 'T Cheque'
+		]]>
+    </sql-query>
+    <sql-query name="tbp.chqrpt.form18.getHandedOver">
+    	<return-scalar column="C1" type="java.lang.String" />
+    	<return-scalar column="CNT" type="java.lang.Long" />
+		<![CDATA[
+			
+			SELECT 'A' C1, COUNT(DISTINCT CQ.CHEQUE_ID) CNT
+			FROM TRN_BILL_REGISTER BL
+			JOIN TRN_BILL_MVMNT BM ON BM.BILL_NO = BL.BILL_NO
+			JOIN TRN_BILL_MVMNT BM2 ON BM2.BILL_NO = BM.BILL_NO
+			JOIN RLT_BILL_CHEQUE BC ON BC.BILL_NO = BL.BILL_NO
+			JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID
+			WHERE BL.TC_BILL IN ('Regular', 'Regular/Challan') AND BL.AUDIT_STATUS = 1
+			      AND BL.TSRY_OFFICE_CODE = :strLocationCode AND (CQ.CHQ_CANCEL_DT IS NULL OR (CQ.CHQ_CANCEL_DT >= :inputDate AND CQ.STATUS>=120 AND CQ.CHQ_CANCEL_DT >= BM.CREATED_DATE))
+			      AND CQ.PRINT_DATE <= :inputDate
+			      AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.LOCATION_CODE = :strLocationCode
+			      AND BM.CREATED_DATE >= :inputDate AND BM.CREATED_DATE < :toDate
+			      AND BM.MVMNT_STATUS = 120 AND (BM2.MOVEMNT_ID =  BM.MOVEMNT_ID - 1 AND BM2.MVMNT_STATUS not in (80,120))
+			      AND BL.TOKEN_NUM > 0
+			UNION ALL
+			SELECT 'B' C1, COUNT(DISTINCT RCID) CNT 		
+			FROM(
+			     SELECT RCM.CHEQUE_ID  RCID
+			     FROM HST_TRN_CHEQUE_REQUEST HTCR JOIN RLT_CHEQUE_MAPPING RCM ON RCM.REQUEST_ID = HTCR.REQUEST_ID
+			     JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = RCM.CHEQUE_ID
+					 WHERE HTCR.STATUS = 3 AND HTCR.updated_date >= :inputDate AND HTCR.updated_date < :toDate
+					 AND CQ.PRINT_DATE < :toDate
+			           AND HTCR.LOCATION_CODE = :strLocationCode AND (CQ.CHQ_CANCEL_DT IS NULL OR CQ.CHQ_CANCEL_DT >= :toDate)
+				      	 AND RCM.CHEQUE_ID != RCM.PARENT_CHEQUE_ID
+							   AND HTCR.DISPATCHED_CASE = 1
+			UNION ALL
+			  SELECT RCM.CHEQUE_ID RCID  
+			     FROM HST_TRN_CHEQUE_REQUEST HTCR JOIN RLT_CHEQUE_MAPPING RCM ON RCM.REQUEST_ID = HTCR.REQUEST_ID
+			     JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = RCM.CHEQUE_ID
+					 WHERE HTCR.STATUS = 0 AND HTCR.updated_date >= :inputDate AND HTCR.updated_date < :toDate
+					 AND CQ.PRINT_DATE < :toDate
+			           AND HTCR.LOCATION_CODE = :strLocationCode AND (CQ.CHQ_CANCEL_DT IS NULL OR CQ.CHQ_CANCEL_DT >= :toDate)
+				      	 AND RCM.CHEQUE_ID != RCM.PARENT_CHEQUE_ID
+							   AND HTCR.DISPATCHED_CASE = 0	AND rcm.cheque_id IN
+							   (
+							   SELECT CQ.CHEQUE_ID CHID FROM TRN_BILL_REGISTER BL
+								JOIN TRN_BILL_MVMNT BM ON BM.BILL_NO = BL.BILL_NO
+								JOIN TRN_BILL_MVMNT BM2 ON BM2.BILL_NO = BM.BILL_NO
+								JOIN RLT_BILL_CHEQUE BC ON BC.BILL_NO = BL.BILL_NO
+								JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID
+								WHERE BL.LOCATION_CODE = :strLocationCode AND BL.TC_BILL IN ('Regular','Regular/Challan')
+								      AND BL.AUDIT_STATUS = 1 AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.LOCATION_CODE = :strLocationCode
+								      AND CQ.PRINT_DATE < :toDate
+								      AND (CQ.CHQ_CANCEL_DT IS NULL OR (CQ.CHQ_CANCEL_DT >= :toDate AND CQ.STATUS>=120 AND CQ.CHQ_CANCEL_DT >= BM.CREATED_DATE)) AND BM.LOCATION_CODE = :strLocationCode AND BM.MVMNT_STATUS = 120
+								      AND BM.CREATED_DATE < :toDate AND BM.CREATED_DATE > :decDate
+								      AND BL.TOKEN_NUM > 0
+								      AND (BM2.MOVEMNT_ID =  BM.MOVEMNT_ID - 1 AND BM2.MVMNT_STATUS != 80)
+					            AND BM.MOVEMNT_ID = (
+					      			    SELECT MAX(BM1.MOVEMNT_ID) FROM TRN_BILL_MVMNT BM1 WHERE BM1.BILL_NO = BM.BILL_NO
+					      			    AND BM1.CREATED_DATE < :toDate AND BM1.CREATED_DATE > :decDate
+					      			    AND BM1.LOCATION_CODE= :strLocationCode
+					      			)
+							   )	
+		)T1					   
+		]]>
+    </sql-query>
+    <sql-query name="tbp.chqrpt.form18.getDispatched">
+    	<return-scalar column="CNT" type="java.lang.Long" />
+    	<![CDATA[
+	    	SELECT COUNT(DISTINCT CQ.CHEQUE_ID) CNT
+			FROM TRN_CHEQUE_DTLS CQ
+			WHERE CQ.CHQ_DSPTCH_DATE >= :inputDate AND CQ.CHQ_DSPTCH_DATE < :toDate 
+			      AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.LOCATION_CODE = :strLocationCode
+		]]>
+    </sql-query>
+   <sql-query name="tbp.chqrpt.form18.getUndelivered">
+    	<return-scalar column="C1" type="java.lang.String" />
+    	<return-scalar column="CNT" type="java.lang.Long" />
+    	
+		<![CDATA[
+			SELECT 'A' C1, COUNT(DISTINCT CHID) CNT
+			FROM 
+			(SELECT CQ.CHEQUE_ID CHID FROM TRN_BILL_REGISTER BL
+			JOIN TRN_BILL_MVMNT BM ON BM.BILL_NO = BL.BILL_NO
+			JOIN TRN_BILL_MVMNT BM2 ON BM2.BILL_NO = BM.BILL_NO
+			JOIN RLT_BILL_CHEQUE BC ON BC.BILL_NO = BL.BILL_NO
+			JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID
+			WHERE BL.LOCATION_CODE = :strLocationCode AND BL.TC_BILL IN ('Regular','Regular/Challan')
+			      AND BL.AUDIT_STATUS = 1 AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.LOCATION_CODE = :strLocationCode
+			      AND CQ.PRINT_DATE < :toDate
+			      AND (CQ.CHQ_CANCEL_DT IS NULL OR (CQ.CHQ_CANCEL_DT >= :toDate AND CQ.STATUS>=120)) AND BM.LOCATION_CODE = :strLocationCode AND BM.MVMNT_STATUS = 120
+			      AND BM.CREATED_DATE < :toDate AND BM.CREATED_DATE > :decDate
+			      AND BL.TOKEN_NUM > 0
+			      AND (BM2.MOVEMNT_ID =  BM.MOVEMNT_ID - 1 AND BM2.MVMNT_STATUS != 80)
+            AND BM.MOVEMNT_ID = (
+      			    SELECT MAX(BM1.MOVEMNT_ID) FROM TRN_BILL_MVMNT BM1 WHERE BM1.BILL_NO = BM.BILL_NO
+      			    AND BM1.CREATED_DATE < :toDate AND BM1.CREATED_DATE > :decDate
+      			    AND BM1.LOCATION_CODE= :strLocationCode
+      			)
+      		UNION ALL
+      		SELECT CQ.CHEQUE_ID CHQID
+				FROM TRN_BILL_MVMNT BM				
+				JOIN RLT_BILL_CHEQUE BC ON BC.BILL_NO = BM.BILL_NO
+				JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID AND CQ.CHQ_CANCEL_DT IS NULL
+				AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.PRINT_DATE < :toDate
+				WHERE BM.LOCATION_CODE = :strLocationCode AND BM.CREATED_DATE < :toDate AND BM.CREATED_DATE > :decDate				
+				AND BM.MVMNT_STATUS = 120
+				AND BM.MVMNT_STATUS = (SELECT MIN(BM2.MVMNT_STATUS) FROM TRN_BILL_MVMNT BM2 WHERE BM2.BILL_NO = BM.BILL_NO
+				    AND BM2.LOCATION_CODE= :strLocationCode)
+				AND BM.MOVEMNT_ID = (
+				    SELECT MAX(BM1.MOVEMNT_ID) FROM TRN_BILL_MVMNT BM1 WHERE BM1.BILL_NO = BM.BILL_NO
+				    AND BM1.CREATED_DATE < :toDate AND BM1.CREATED_DATE > :decDate AND BM1.LOCATION_CODE= :strLocationCode
+				)
+			)      			
+			UNION ALL 
+			SELECT 'B' C1, COUNT(DISTINCT RCM.CHEQUE_ID) CNT
+			FROM HST_TRN_CHEQUE_REQUEST HTCR 
+			JOIN RLT_CHEQUE_MAPPING RCM ON RCM.REQUEST_ID = HTCR.REQUEST_ID JOIN trn_cheque_dtls cd ON rcm.cheque_id = cd.cheque_id
+			WHERE HTCR.STATUS = 3 AND HTCR.UPDATED_DATE < :toDate AND HTCR.UPDATED_DATE > :decDate
+			AND RCM.CHEQUE_ID != RCM.PARENT_CHEQUE_ID AND HTCR.LOCATION_CODE = :strLocationCode
+			AND cd.print_date < :toDate
+			AND HTCR.DISPATCHED_CASE = 1 AND HTCR.TRN_COUNTER = (
+			          SELECT MAX(HTCR1.TRN_COUNTER) FROM HST_TRN_CHEQUE_REQUEST HTCR1
+			          WHERE HTCR1.REQUEST_ID = HTCR.REQUEST_ID
+			          AND HTCR1.UPDATED_DATE < :toDate AND HTCR1.UPDATED_DATE > :decDate
+			      )
+		]]>
+    </sql-query>
+   
+    <sql-query name="tbp.chqrpt.form18.getNotHandedOver">
+    	<return-scalar column="CNT" type="java.lang.Long" />
+ 		<![CDATA[
+	    	SELECT COUNT(DISTINCT CQ.CHEQUE_ID) CNT
+			FROM TRN_BILL_REGISTER BL
+			JOIN TRN_BILL_MVMNT BM ON BM.BILL_NO = BL.BILL_NO
+			JOIN RLT_BILL_CHEQUE BC ON BC.BILL_NO = BL.BILL_NO
+			JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID
+			WHERE BL.LOCATION_CODE = :strLocationCode AND BL.TC_BILL IN ('Regular','Regular/Challan')
+			      AND BL.AUDIT_STATUS = 1 AND CQ.CHEQUE_TYPE = 'T Cheque' AND CQ.LOCATION_CODE = :strLocationCode
+			      AND CQ.PRINT_DATE <= :inputDate
+			      AND (CQ.CHQ_CANCEL_DT IS NULL OR CQ.CHQ_CANCEL_DT > :inputDate ) AND BM.LOCATION_CODE = :strLocationCode AND BM.MVMNT_STATUS IN (100,110)
+			      AND BM.CREATED_DATE < :toDate AND BM.CREATED_DATE > :decDate AND BM.MOVEMNT_ID = (
+			          SELECT MAX(BM1.MOVEMNT_ID) FROM TRN_BILL_MVMNT BM1 WHERE BM1.BILL_NO = BM.BILL_NO
+			          AND BM1.CREATED_DATE < :toDate AND BM1.CREATED_DATE > :decDate  AND BM1.LOCATION_CODE= :strLocationCode
+			      )
+			      AND BL.TOKEN_NUM > 0
+		]]>
+ 
+    </sql-query>
+    <sql-query name="tbp.chq.bulkUpdateForChequeStatus">
+    	<![CDATA[
+	    	UPDATE TRN_CHEQUE_DTLS  
+			SET STATUS = :UPD_STATUS, 
+			   STATUS_DATE = :UPD_DATE,
+			   UPDATED_USER_ID = :UPD_USER,
+			   UPDATED_POST_ID = :UPD_POST,
+			   UPDATED_DATE = :UPD_DATE
+			WHERE CHEQUE_ID IN (:CHQ_LIST)
+		]]>
+    </sql-query>
+    <sql-query name="tbp.chq.getChequesForVito">
+    	<return-scalar column="CID" type="java.lang.Long" />
+    	<return-scalar column="CNO" type="java.lang.Long" />
+    	<return-scalar column="CNT" type="java.lang.Short" />
+    	<![CDATA[
+			SELECT TMP.C1 CID, TMP.C2 CNO, SUM(TMP.C3) CNT
+			FROM (SELECT DISTINCT CV.CHEQUE_ID C1, CQ.CHEQUE_NO C2, COALESCE(CV.VITO_TYPE, 0) C3
+				FROM RLT_BILL_CHEQUE BC
+				JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = BC.CHEQUE_ID AND CQ.CHQ_CANCEL_DT IS NULL
+				LEFT OUTER JOIN CHEQUE_VITO_REGISTER CV ON CV.CHEQUE_ID = CQ.CHEQUE_ID
+				WHERE BC.BILL_NO IN (:BILL_LIST)) TMP
+			GROUP BY TMP.C1
+			HAVING SUM(TMP.C3) NOT IN (3,12)
+		]]>
+    </sql-query>
+	<sql-query name="tbp.chqrpt.form17.getUndeliveredChqNo">
+    	<return-scalar column="CNO" type="java.lang.Long" />
+ 		<![CDATA[
+	    	SELECT DISTINCT CQ.CHEQUE_NO CNO
+			FROM TRN_CHEQUE_DTLS CQ JOIN RLT_BILL_CHEQUE BC ON BC.CHEQUE_ID = CQ.CHEQUE_ID
+			WHERE (CQ.CHQ_DSPTCH_DATE IS NULL OR CQ.CHQ_DSPTCH_DATE >= :toDate)
+			      AND ((CQ.CHQ_CANCEL_DT IS NULL OR (CQ.CHQ_CANCEL_DT >= :toDate AND CQ.STATUS>=120)))
+			      AND CQ.PRINT_DATE < :toDate AND CQ.LOCATION_CODE = :strLocationCode
+			      AND CQ.CHEQUE_NO IS NOT NULL AND CQ.CHEQUE_NO <> 0 AND CQ.CHEQUE_TYPE = 'T Cheque'
+			ORDER BY CQ.CHEQUE_NO
+		]]>
+    </sql-query>
+    <sql-query name="tbp.chqrpt.cwr.formA.PAOObjectedBills">
+    	<return-scalar column="branchName" type="java.lang.String" />
+    	<return-scalar column="branchId" type="java.lang.Long" />
+    	<return-scalar column="OBJBILLS" type="java.lang.Long" />
+ 		<![CDATA[
+	    	SELECT cbm.branch_name branchName,cbm.branch_id branchId,
+	    	 SUM(CASE WHEN T1.AUDIT_STATUS = 2 THEN 1 ELSE 0 END) OBJBILLS
+  				FROM TRN_BILL_REGISTER T1 
+  			join org_post_details_rlt opdr on opdr.post_id=t1.aud_post_id
+  			left outer join cmn_branch_mst cbm on opdr.branch_id = cbm.branch_id
+  			INNER JOIN (SELECT DISTINCT BILL_NO FROM TRN_BILL_MVMNT TBM1
+      			WHERE TBM1.CREATED_DATE >=:cDate
+        			AND TBM1.CREATED_DATE < :incDate
+        			AND TBM1.LOCATION_CODE = :locCode AND TBM1.MVMNT_STATUS = 120) AS TBM1
+ 				WHERE T1.TSRY_OFFICE_CODE = :locCode AND TBM1.BILL_NO = T1.BILL_NO AND
+       				T1.AUDIT_STATUS =2 group by opdr.branch_id order by cbm.branch_name
+		]]>
+    </sql-query>
+    <sql-query name="tbp.chqrpt.cwr.formA.PAOPassedBills">
+    	<return-scalar column="branchName" type="java.lang.String" />
+    	<return-scalar column="branchId" type="java.lang.Long" />
+    	<return-scalar column="PassedBills" type="java.lang.Long" />
+ 		<![CDATA[
+	    	SELECT CBM.BRANCH_NAME branchName, cbm.branch_id branchId, 
+	    	count(distinct BL_MV.BILL_NO) PassedBills FROM TRN_BILL_MVMNT BL_MV
+  				JOIN TRN_BILL_REGISTER TBR ON TBR.BILL_NO=BL_MV.BILL_NO
+  				JOIN ORG_POST_DETAILS_RLT OPDR ON OPDR.POST_ID=TBR.AUD_POST_ID
+  				LEFT OUTER JOIN CMN_BRANCH_MST CBM ON CBM.BRANCH_ID=OPDR.BRANCH_ID
+  			WHERE BL_MV.LOCATION_CODE = :locCode AND BL_MV.CREATED_DATE >= :cDate
+    			AND BL_MV.CREATED_DATE < :incDate AND BL_MV.MVMNT_STATUS IN (85, 90, 100)
+    			AND NOT EXISTS(SELECT BL_MV1.BILL_NO FROM TRN_BILL_MVMNT BL_MV1
+  			WHERE BL_MV.LOCATION_CODE = :locCode AND (BL_MV1.CREATED_DATE) < :cDate
+    			AND (BL_MV1.CREATED_DATE) > :decDate AND BL_MV1.MVMNT_STATUS IN (85, 90, 100) 
+    			AND BL_MV1.MOVEMNT_ID =(SELECT MAX(BL_MV2.MOVEMNT_ID) FROM TRN_BILL_MVMNT BL_MV2
+  					WHERE BL_MV2.BILL_NO = BL_MV1.BILL_NO AND BL_MV1.LOCATION_CODE = :locCode
+	  					AND (BL_MV2.CREATED_DATE) < :cDate AND (BL_MV2.CREATED_DATE) > :decDate)
+						AND BL_MV1.BILL_NO = BL_MV.BILL_NO) GROUP BY CBM.BRANCH_ID order by branchName
+		]]>
+    </sql-query>
+    <sql-query name="tbp.chqrpt.cwr.formA.OpeningBalance">
+   		<return-scalar column="CNT" type="java.lang.Long" />
+		<!-- <![CDATA[
+    	SELECT COUNT(DISTINCT BM.BILL_NO) CNT FROM TRN_BILL_MVMNT BM 
+ 				LEFT OUTER JOIN RLT_BILL_CHEQUE RB ON RB.BILL_NO = BM.BILL_NO 
+ 				LEFT OUTER JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = RB.CHEQUE_ID AND CQ.LOCATION_CODE = :locCode 
+ 					 AND CQ.CHEQUE_TYPE = 'T Cheque'
+				WHERE BM.CREATED_DATE < :cDate AND BM.CREATED_DATE > :decDate AND
+      				BM.MVMNT_STATUS IN (85, 90, 100) AND BM.LOCATION_CODE = :locCode AND
+      				BM.MOVEMNT_ID =(SELECT MAX(BL_MV1.MOVEMNT_ID) FROM TRN_BILL_MVMNT BL_MV1
+        				WHERE BL_MV1.BILL_NO = BM.BILL_NO AND BL_MV1.CREATED_DATE < :cDate AND
+              			BL_MV1.CREATED_DATE > :decDate AND BL_MV1.LOCATION_CODE = :locCode)
+              			AND (CQ.PRINT_DATE IS NULL OR CQ.PRINT_DATE >= :cDate)
+		]]> -->
+		<![CDATA[
+			SELECT COUNT(DISTINCT BM.BILL_NO) CNT
+			  FROM TRN_BILL_MVMNT BM 
+			  JOIN (SELECT BL_MV1.BILL_NO, MAX(BL_MV1.MOVEMNT_ID) MOVEMNT_ID
+			         FROM TRN_BILL_MVMNT BL_MV1
+			        WHERE BL_MV1.CREATED_DATE < :cDate AND
+			              BL_MV1.CREATED_DATE > :decDate AND
+			              BL_MV1.LOCATION_CODE = :locCode
+			        GROUP BY BL_MV1.BILL_NO) T ON BM.BILL_NO = T.BILL_NO AND BM.MOVEMNT_ID = T.MOVEMNT_ID 
+			        LEFT JOIN RLT_BILL_CHEQUE RB ON RB.BILL_NO = BM.BILL_NO 
+			        LEFT JOIN TRN_CHEQUE_DTLS CQ ON CQ.CHEQUE_ID = RB.CHEQUE_ID AND CQ.LOCATION_CODE = :locCode AND CQ.CHEQUE_TYPE = 'T Cheque'
+			 WHERE BM.CREATED_DATE < :incDate AND
+			       BM.CREATED_DATE > :decDate AND
+			       BM.MVMNT_STATUS IN (85, 90, 100) AND BM.LOCATION_CODE = :locCode AND
+			       (CQ.PRINT_DATE IS NULL OR CQ.PRINT_DATE >= :cDate)
+		]]>
+   </sql-query>
+    <sql-query name="tbp.chqrpt.cwr.formA.passBills">
+   		<return-scalar column="A" type="java.lang.Long" />
+		<![CDATA[
+    		SELECT COUNT(DISTINCT BL_MV.BILL_NO) A FROM TRN_BILL_MVMNT BL_MV
+ 			WHERE BL_MV.LOCATION_CODE = :locCode AND BL_MV.CREATED_DATE >= :cDate AND
+       			BL_MV.CREATED_DATE < :incDate AND BL_MV.MVMNT_STATUS IN (85, 90, 100) AND NOT EXISTS
+ 				(SELECT BL_MV1.BILL_NO  FROM TRN_BILL_MVMNT BL_MV1
+         			WHERE BL_MV.LOCATION_CODE = :locCode AND (BL_MV1.CREATED_DATE) < :cDate 
+         				AND (BL_MV1.CREATED_DATE) > :decDate AND BL_MV1.MVMNT_STATUS IN (85, 90, 100) 
+         				AND BL_MV1.MOVEMNT_ID = (SELECT MAX(BL_MV2.MOVEMNT_ID)  FROM TRN_BILL_MVMNT BL_MV2
+                 	WHERE BL_MV2.BILL_NO = BL_MV1.BILL_NO AND  BL_MV1.LOCATION_CODE = :locCode AND
+                    	(BL_MV2.CREATED_DATE) < :cDate AND  (BL_MV2.CREATED_DATE) > :decDate) AND
+                         BL_MV1.BILL_NO = BL_MV.BILL_NO)
+	]]>
+   </sql-query>
+    <sql-query name="tbp.chqrpt.cwr.formA.tcObjBills">
+   		<return-scalar column="TCBILLS" type="java.lang.Long" />
+   		<return-scalar column="OBJBILLS" type="java.lang.Long" />
+		<![CDATA[
+    		 SELECT SUM(CASE WHEN (T1.TC_BILL IN ('TC', 'Nil') AND T1.AUDIT_STATUS = 1) THEN 1 ELSE 0 END) TCBILLS,
+       			SUM(CASE WHEN T1.AUDIT_STATUS = 2 THEN 1 ELSE 0 END) OBJBILLS
+  					FROM TRN_BILL_REGISTER T1 INNER JOIN (SELECT DISTINCT BILL_NO FROM TRN_BILL_MVMNT TBM1
+        			WHERE TBM1.CREATED_DATE >= :cDate AND TBM1.CREATED_DATE < :incDate 
+              			AND TBM1.LOCATION_CODE = :locCode AND TBM1.MVMNT_STATUS = 120) TBM1 ON TBM1.BILL_NO = T1.BILL_NO
+ 					WHERE T1.TSRY_OFFICE_CODE = :locCode AND 
+       					T1.AUDIT_STATUS IN (1, 2)
+	]]>
+   </sql-query>
+   <sql-query name="tbp.chqrpt.cwr.formA.chqsCount">
+   		<return-scalar column="chqType" type="java.lang.String" />
+   		<return-scalar column="cnt" type="java.lang.Long" />
+		<![CDATA[
+    		 SELECT T.CHEQUE_TYPE chqType, COUNT(DISTINCT R.BILL_NO) cnt FROM RLT_BILL_CHEQUE R 
+				  JOIN TRN_CHEQUE_DTLS T ON t.cheque_id=r.cheque_id 
+				  JOIN TRN_BILL_REGISTER TBR ON TBR.BILL_NO=R.BILL_NO AND TBR.TOKEN_NUM IS NOT NULL AND TBR.TOKEN_NUM>0 
+			WHERE T.CHEQUE_ID = R.CHEQUE_ID AND T.LOCATION_CODE = :locCode AND T.CHEQUE_TYPE IN ('T Cheque', 'ECS') 
+				AND T.PRINT_DATE = :cDate GROUP BY T.CHEQUE_TYPE
+	]]>
+   </sql-query>
+   <sql-query name="tbp.chqrpt.cwr.formA.pendingBills">
+   		<return-scalar column="A" type="java.util.Date" />
+   		<return-scalar column="B" type="java.lang.Long" />
+   		<return-scalar column="BILL_NET_AMOUNT" type="java.math.BigDecimal" />
+		<!-- <![CDATA[
+    		SELECT A.A, COUNT(1) B, SUM(A.BILL_NET_AMOUNT) BILL_NET_AMOUNT
+  				FROM (SELECT DISTINCT BL.BILL_NO,BL.INWARD_DT A,BL.BILL_NET_AMOUNT BILL_NET_AMOUNT
+          		FROM TRN_BILL_REGISTER BL 
+          	JOIN TRN_BILL_MVMNT BL_MV ON BL_MV.BILL_NO = BL.BILL_NO 
+          	LEFT OUTER JOIN RLT_BILL_CHEQUE RBC ON RBC.BILL_NO = BL.BILL_NO 
+          	LEFT OUTER JOIN TRN_CHEQUE_DTLS TCD ON RBC.CHEQUE_ID = TCD.CHEQUE_ID AND TCD.LOCATION_CODE = :locCode 
+ 					 AND TCD.CHEQUE_TYPE = 'T Cheque'
+         	WHERE BL_MV.CREATED_DATE < :incDate AND	BL_MV.CREATED_DATE > :decDate AND BL_MV.MVMNT_STATUS IN (85, 90, 100) 
+         		AND BL.TSRY_OFFICE_CODE = :locCode AND BL_MV.LOCATION_CODE = :locCode 
+         		AND (TCD.PRINT_DATE IS NULL OR TCD.PRINT_DATE >= :incDate) 
+         		AND BL.TC_BILL IN ('Regular', 'Regular/Challan') AND BL_MV.MOVEMNT_ID =
+               		(SELECT MAX(BL_MV1.MOVEMNT_ID) FROM TRN_BILL_MVMNT BL_MV1
+                 WHERE BL_MV1.BILL_NO = BL_MV.BILL_NO AND BL_MV1.CREATED_DATE < :incDate 
+                 	AND BL_MV1.CREATED_DATE > :decDate AND BL_MV1.LOCATION_CODE = :locCode)) A
+ 				GROUP BY A.A ORDER BY A.A
+		]]> -->
+		<![CDATA[
+			SELECT A.A, COUNT(1) B, SUM(A.BILL_NET_AMOUNT) BILL_NET_AMOUNT
+			  FROM (SELECT DISTINCT BL.BILL_NO,
+			                        BL.INWARD_DT A,
+			                        BL.BILL_NET_AMOUNT BILL_NET_AMOUNT
+			          FROM TRN_BILL_REGISTER BL JOIN TRN_BILL_MVMNT BM ON BL.BILL_NO = BM.BILL_NO 
+			          JOIN (SELECT BL_MV1.BILL_NO, MAX(BL_MV1.MOVEMNT_ID) MOVEMNT_ID
+			            FROM TRN_BILL_MVMNT BL_MV1
+			           WHERE BL_MV1.CREATED_DATE < :incDate AND BL_MV1.CREATED_DATE > :decDate 
+			           AND BL_MV1.LOCATION_CODE = :locCode
+			           GROUP BY BL_MV1.BILL_NO) T ON BM.BILL_NO = T.BILL_NO AND BM.MOVEMNT_ID = T.MOVEMNT_ID 
+			           LEFT OUTER JOIN RLT_BILL_CHEQUE RBC ON RBC.BILL_NO = BL.BILL_NO 
+			           LEFT OUTER JOIN TRN_CHEQUE_DTLS TCD ON RBC.CHEQUE_ID = TCD.CHEQUE_ID 
+			         WHERE BM.CREATED_DATE < :incDate AND BM.CREATED_DATE > :decDate AND
+				       (TCD.PRINT_DATE IS NULL OR TCD.PRINT_DATE >= :incDate) AND 
+			               BM.LOCATION_CODE = :locCode AND BM.MVMNT_STATUS IN (85, 90, 100) AND
+			               BL.TSRY_OFFICE_CODE = :locCode AND BL.TC_BILL IN ('Regular', 'Regular/Challan')) A
+			 GROUP BY A.A
+			 ORDER BY A.A
+		]]>
+	</sql-query>
+	<sql-query name="tbp.chqrpt.cwr.formA.returnedBills">
+   		<return-scalar column="A" type="java.lang.Long" />   		
+		<![CDATA[
+    		SELECT COUNT(BN) A FROM TRN_BILL_REGISTER BR, (SELECT BM2.BILL_NO BN, MAX(BM2.MVMNT_STATUS) MS
+          	FROM TRN_BILL_MVMNT BM2,(SELECT BM.BILL_NO BN, (BM.MOVEMNT_ID) MID FROM TRN_BILL_MVMNT BM
+            WHERE (BM.MOVEMNT_ID - 1) = (SELECT MAX(BM1.MOVEMNT_ID) FROM TRN_BILL_MVMNT BM1
+              WHERE BM1.BILL_NO = BM.BILL_NO AND BM1.LOCATION_CODE = :locCode AND BM1.MVMNT_STATUS = 85 
+              	AND BM1.CREATED_DATE < :incDate) AND BM.CREATED_DATE >= :cDate AND BM.CREATED_DATE < :incDate) TEMP
+         	  WHERE BM2.CREATED_DATE >= :cDate AND BM2.CREATED_DATE < :incDate AND BM2.BILL_NO = TEMP.BN 
+         	  	AND BM2.LOCATION_CODE = :locCode AND BM2.MOVEMNT_ID >= TEMP.MID GROUP BY BM2.BILL_NO) OUTERBILL
+ 			  WHERE BR.token_num>0			
+ 			  AND OUTERBILL.BN = BR.BILL_NO AND (OUTERBILL.MS < 85 OR (BR.AUDIT_DATE >= :cDate AND BR.AUDIT_DATE < :incDate 
+ 			  	AND BR.AUDIT_STATUS = 2))
+		]]>
+	</sql-query>
+	<sql-query name="tbp.chqrpt.cwr.formA.reviseCaseChqCorcn">
+   		<return-scalar column="COUNTTYPE" type="java.lang.String" />
+   		<return-scalar column="TOTALCOUNT" type="java.lang.Long" />
+		<![CDATA[
+    		SELECT TEMPCOUNT.CNTTYPE COUNTTYPE, TEMPCOUNT.CNT TOTALCOUNT 
+    		FROM (SELECT 'ChqsForCorcn' CNTTYPE, COUNT(DISTINCT CM.CHEQUE_ID) CNT FROM TRN_CHEQUE_DTLS CQ 
+    		JOIN RLT_CHEQUE_MAPPING CM ON CM.CHEQUE_ID = CQ.CHEQUE_ID
+         	WHERE CQ.PRINT_DATE >= :cDate AND CQ.PRINT_DATE < :incDate AND CM.CHEQUE_ID != CM.PARENT_CHEQUE_ID 
+         		AND CQ.LOCATION_CODE = :locCode AND CQ.CHEQUE_TYPE = 'T Cheque'
+        	UNION ALL
+        	SELECT 'reviseCase' CNTTYPE, COUNT(DISTINCT RC.BILL_NO) CNT
+          	FROM TRN_CHEQUE_DTLS CQ JOIN RLT_BILL_CHEQUE RC ON CQ.CHEQUE_ID = RC.CHEQUE_ID 
+          	JOIN trn_bill_register tbr ON tbr.bill_no = rc.bill_no AND tbr.token_num>0
+          	JOIN RLT_CHEQUE_MAPPING CM ON CM.CHEQUE_ID = CQ.CHEQUE_ID 
+          	JOIN TRN_CHEQUE_DTLS CQ1 ON CQ1.CHEQUE_ID = CM.PARENT_CHEQUE_ID
+         	WHERE CM.CHEQUE_ID != CM.PARENT_CHEQUE_ID AND (CM.CHEQUE_ID = CQ.CHEQUE_ID 
+         		AND CQ1.CHEQUE_ID = CM.PARENT_CHEQUE_ID) AND CQ1.LOCATION_CODE = :locCode AND CQ.PRINT_DATE = :cDate 
+         		AND CQ1.CHEQUE_TYPE = 'T Cheque' AND CQ.PRINT_DATE != CQ1.PRINT_DATE) TEMPCOUNT
+		]]>
+	</sql-query>
+	<sql-query name="tbp.chqrpt.cwr.formA.empWiseChqBillCount">
+   		<return-scalar column="CHQTYPE" type="java.lang.String" />
+   		<return-scalar column="EMP_NAME" type="java.lang.String" />
+   		<return-scalar column="CHQIDCNT" type="java.lang.Long" />
+   		<return-scalar column="BILLNOCNT" type="java.lang.Long" />
+		<![CDATA[
+    		SELECT T.CHEQUE_TYPE CHQTYPE,CONCAT(RTRIM(CAST(E.EMP_FNAME AS CHAR(20))), 
+    			CONCAT(CONCAT(' ', RTRIM(CAST(E.EMP_MNAME AS CHAR(20)))),CONCAT(' ', RTRIM(CAST(E.EMP_LNAME AS CHAR(20)))))) EMP_NAME,
+       		COUNT(DISTINCT R.CHEQUE_ID) CHQIDCNT,COUNT(DISTINCT R.BILL_NO) BILLNOCNT
+  			FROM RLT_BILL_CHEQUE R JOIN TRN_BILL_REGISTER TBR ON TBR.BILL_NO = R.BILL_NO 
+  			JOIN TRN_CHEQUE_DTLS T ON T.CHEQUE_ID = R.CHEQUE_ID 
+  			JOIN ORG_EMP_MST E ON E.USER_ID = T.PRINT_USER
+			WHERE T.LOCATION_CODE = :locCode AND T.CHEQUE_TYPE IN ('T Cheque', 'ECS') 
+				AND (TBR.TOKEN_NUM > 0 AND TBR.TOKEN_NUM IS NOT NULL) AND T.PRINT_DATE = :cDate
+ 			GROUP BY T.PRINT_USER,E.EMP_FNAME,E.EMP_MNAME,E.EMP_LNAME,T.CHEQUE_TYPE ORDER BY E.EMP_FNAME, E.EMP_MNAME, E.EMP_LNAME
+		]]>
+	</sql-query>
+	<sql-query name="tbp.chqrpt.getPrematuredTimebarred">
+   		<return-scalar column="C1" type="java.util.Date" />
+   		<return-scalar column="C2" type="java.lang.Long" />
+   		<return-scalar column="C3" type="java.lang.Long" />
+   		<return-scalar column="C4" type="java.lang.String" />
+   		<return-scalar column="C5" type="java.math.BigDecimal" />
+   		<return-scalar column="C6" type="java.math.BigDecimal" />
+   		<return-scalar column="C7" type="java.lang.Long" />
+   		<return-scalar column="C8" type="java.lang.String" />
+   		<return-scalar column="C9" type="java.lang.String" />
+   		<return-scalar column="C10" type="java.util.Date" />
+		<![CDATA[
+    		SELECT DISTINCT CQ.FROM_DT C1, CQ.ADVICE_NO C2, CQ.CHEQUE_NO C3, CQ.PARTY_NAME C4, BL.BILL_NET_AMOUNT C5, 
+			       CQ.CHEQUE_AMT C6, BL.VOUCHER_NO C7, BL.BUDMJR_HD C8, BHM.BUDMJRHD_DESC_LONG C9, CQ.AUTHORITY_DATE C10
+			FROM TRN_CHEQUE_DTLS CQ
+			     JOIN RLT_BILL_CHEQUE BC ON BC.CHEQUE_ID = CQ.CHEQUE_ID
+			     JOIN TRN_BILL_REGISTER BL ON BL.BILL_NO = BC.BILL_NO
+			     JOIN SGVA_BUDMJRHD_MST BHM ON BHM.DEMAND_CODE = BL.DEMAND_CODE AND BHM.BUDMJRHD_CODE = BL.BUDMJR_HD 
+			          AND BHM.STATUS = 'Active' AND BHM.FIN_YR_ID = :FIN_YR AND BHM.LANG_ID = :LANG_CODE
+			     JOIN RLT_CHEQUE_REQUEST RR ON RR.CHEQUE_ID = CQ.CHEQUE_ID AND RR.REQUEST_TYPE = 1
+			     JOIN TRN_CHEQUE_REQUEST CR ON CR.REQUEST_ID = RR.REQUEST_ID AND CR.DISPATCHED_CASE = 1
+			     LEFT OUTER JOIN RLT_CHEQUE_MAPPING CM ON CM.PARENT_CHEQUE_ID = RR.CHEQUE_ID
+			WHERE CQ.STATUS = 130 AND CQ.CLEARED_DT IS NULL 
+			      AND CQ.CHQ_CANCEL_DT >= :DT_FROM  AND CQ.CHQ_CANCEL_DT < :DT_TO
+			      AND CQ.CHEQUE_TYPE IN ('T Cheque', 'Other') AND CM.CHEQUE_ID IS NULL
+			      AND (CQ.LOCATION_CODE = :LOC_CODE OR CQ.LOCATION_CODE IN (
+			          SELECT LOC2.LOCATION_CODE
+			          FROM CMN_LOCATION_MST LOC1
+			               JOIN CMN_LOCATION_MST LOC2 ON LOC2.PARENT_LOC_ID = LOC1.LOC_ID
+			          WHERE LOC1.LOCATION_CODE = :LOC_CODE AND LOC1.LANG_ID = :LANG_ID
+			      ))
+		]]>
+	</sql-query>
+	<sql-query name="tbp.chqrpt.getPrematuredSubTimebarred">
+   		<return-scalar column="C1" type="java.lang.String" />
+   		<return-scalar column="C2" type="java.lang.String" />
+   		<return-scalar column="C3" type="java.math.BigDecimal" />
+		<![CDATA[
+    		SELECT TMP.MJ C1, MAX(BHM2.BUDMJRHD_DESC_LONG) C2, SUM(TMP.AMT) C3
+			FROM SGVA_BUDMJRHD_MST BHM2
+			JOIN          
+			(
+			  SELECT DISTINCT BL.BUDMJR_HD MJ, CQ.CHEQUE_NO CNO, CQ.CHEQUE_AMT AMT, BL.DEMAND_CODE DMD
+				FROM TRN_CHEQUE_DTLS CQ
+				     JOIN RLT_BILL_CHEQUE BC ON BC.CHEQUE_ID = CQ.CHEQUE_ID
+				     JOIN TRN_BILL_REGISTER BL ON BL.BILL_NO = BC.BILL_NO
+				     JOIN SGVA_BUDMJRHD_MST BHM ON BHM.DEMAND_CODE = BL.DEMAND_CODE AND BHM.BUDMJRHD_CODE = BL.BUDMJR_HD 
+				          AND BHM.STATUS = 'Active' AND BHM.FIN_YR_ID = :FIN_YR AND BHM.LANG_ID = :LANG_CODE
+				     JOIN RLT_CHEQUE_REQUEST RR ON RR.CHEQUE_ID = CQ.CHEQUE_ID AND RR.REQUEST_TYPE = 1
+				     JOIN TRN_CHEQUE_REQUEST CR ON CR.REQUEST_ID = RR.REQUEST_ID AND CR.DISPATCHED_CASE = 1
+				     LEFT OUTER JOIN RLT_CHEQUE_MAPPING CM ON CM.PARENT_CHEQUE_ID = RR.CHEQUE_ID
+				WHERE CQ.STATUS = 130 AND CQ.CLEARED_DT IS NULL  AND CM.CHEQUE_ID IS NULL
+				      AND CQ.CHQ_CANCEL_DT >= :DT_FROM  AND CQ.CHQ_CANCEL_DT < :DT_TO
+				      AND CQ.CHEQUE_TYPE IN ('T Cheque', 'Other') AND CM.CHEQUE_ID IS NULL
+				      AND (CQ.LOCATION_CODE = :LOC_CODE OR CQ.LOCATION_CODE IN (
+				          SELECT LOC2.LOCATION_CODE
+				          FROM CMN_LOCATION_MST LOC1
+				               JOIN CMN_LOCATION_MST LOC2 ON LOC2.PARENT_LOC_ID = LOC1.LOC_ID
+				          WHERE LOC1.LOCATION_CODE = :LOC_CODE AND LOC1.LANG_ID = :LANG_ID
+			      ))
+			  )TMP ON TMP.MJ = BHM2.BUDMJRHD_CODE AND TMP.DMD = BHM2.DEMAND_CODE
+			WHERE BHM2.LANG_ID = :LANG_CODE AND BHM2.FIN_YR_ID = :FIN_YR AND BHM2.STATUS = 'Active'
+			GROUP BY TMP.MJ ORDER BY TMP.MJ
+		]]>
+	</sql-query>
+</hibernate-mapping>

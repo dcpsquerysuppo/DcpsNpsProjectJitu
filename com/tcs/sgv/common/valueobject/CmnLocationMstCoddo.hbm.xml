@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 14, 2009 5:45:07 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.CmnLocationMstCoddo" table="CMN_LOCATION_MST_CODDO" dynamic-update="true">
+        <comment></comment>
+        <id name="locId" type="java.lang.Long">
+            <column name="loc_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="locName" type="string">
+            <column name="loc_name" length="150" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locShortName" type="string">
+            <column name="loc_short_name" length="15" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="java.lang.Byte">
+            <column name="lang_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="departmentId" type="java.lang.Long">
+            <column name="department_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="parentLocId" type="java.lang.Long">
+            <column name="parent_loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locAddr1" type="string">
+            <column name="loc_addr_1" length="50">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locAddr2" type="string">
+            <column name="loc_addr_2" length="50">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locCityId" type="java.lang.Long">
+            <column name="loc_city_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locDistrictId" type="java.lang.Long">
+            <column name="loc_district_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locStateId" type="java.lang.Long">
+            <column name="loc_state_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locPin" type="string">
+            <column name="loc_pin" length="10" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="typeLookupId" type="java.lang.Long">
+            <column name="type_lookup_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="start_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="end_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="activateFlag" type="java.lang.Integer">
+            <column name="activate_flag" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdByPost" type="java.lang.Integer">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedBy" type="java.lang.Integer">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedByPost" type="java.lang.Integer">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="location_code" length="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locTalukaId" type="java.lang.Long">
+            <column name="loc_taluka_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="officeCode" type="string">
+            <column name="office_code" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locCategoryId" type="java.lang.Long">
+            <column name="LOC_CATEGORY_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="trn_counter" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

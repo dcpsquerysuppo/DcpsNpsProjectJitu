@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.dcps.valueobject.PostEmpContri" table="MST_DCPS_POST_EMPLOYER_CONTRI">
+  	
+  	<id name="dcpsPostEmpContriIdPk" type="long">
+            <column name="DCPS_POST_EMP_CONTRI_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+     </id>
+     
+    <property name="finYear" type="long">
+            <column name="FIN_YEAR"  />
+  	</property>
+  	<property name="billNo" type="string">
+            <column name="BILL_NO"  />
+  	</property>
+  	<property name="billAmount" type="long">
+            <column name="BILL_AMOUNT"  />
+  	</property>
+  		<property name="expenditureTillDate" type="long">
+            <column name="EXPENDITURE_TILL_DT"  />
+  	</property>
+  	<property name="excessExpenditure" type="long">
+            <column name="EXCESS_EXPENSE"  />
+  	</property>
+  	<property name="voucherNo" type="long">
+            <column name="VOUCHER_NO"  />
+  	</property>
+  	<property name="voucherDate" type="timestamp">
+            <column name="VOUCHER_DATE"  />
+  	</property>
+  	<property name="statusFlag" type="char">
+            <column name="STATUS_FLAG"  />
+  	</property>
+  	<property name="PostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  	</property>
+  	<property name="UserId" type="long">
+            <column name="CREATED_USER_ID"  />
+  	</property>
+  	<property name="CreatedDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  	</property>
+  	<property name="UpdatedPostId" type="long">
+            <column name="UPDATED_POST_ID"  />
+  	</property>
+  	<property name="UpdatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  />
+  	</property>
+  	<property name="UpdatedDate" type="timestamp">
+            <column name="UPDATED_DATE"  />
+  	</property>
+  	<property name="generateBill" type="string">
+            <column name="GENERATE_BILL"  />
+  	</property>
+  	<property name="fromDate" type="timestamp">
+            <column name="FROM_DATE"  />
+  	</property>
+  	<property name="toDate" type="timestamp">
+            <column name="TO_DATE"  />
+  	</property>
+  	<property name="acDcpsMaintainedBy" type="string">
+            <column name="AC_DCPS_MAINTAINED_BY" />
+  	</property> 
+  </class>
+</hibernate-mapping>

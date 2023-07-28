@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 6, 2009 11:44:28 AM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnPensionCorrectionDtls" table="TRN_PENSION_CORRECTION_DTLS">
+        <id name="correctionId" type="long">
+            <column name="CORRECTION_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="fieldType" type="string">
+            <column name="FIELD_TYPE" length="100" />
+        </property>
+        <property name="approvalStatus" type="string">
+            <column name="APPROVAL_STATUS" length="5" />
+        </property>
+        <property name="pensionerCode" type="long">
+            <column name="PENSIONER_CODE" precision="20" scale="0" />
+        </property>
+        <property name="approvedPostId" type="long">
+            <column name="APPROVED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="prvsFieldValue" type="string">
+            <column name="PRVS_FIELD_VALUE" length="150" />
+        </property>
+        <property name="crntFieldValue" type="string">
+            <column name="CRNT_FIELD_VALUE" length="150" />
+        </property>
+        
+        <property name="approvedDate" type="timestamp">
+            <column name="APPROVED_DATE" length="7" />
+        </property>
+        
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="approvedUserId" type="long">
+            <column name="APPROVED_USER_ID" precision="20" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

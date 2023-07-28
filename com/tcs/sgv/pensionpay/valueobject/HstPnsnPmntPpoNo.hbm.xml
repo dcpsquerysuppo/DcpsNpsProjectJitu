@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.pensionpay.valueobject">
+  <class name="HstPnsnPmntPpoNo" table="HST_PNSNPMNT_PPONO" dynamic-update="true" >
+  	<id name="hstpnsnpmntId" type="long">
+		 	<column name="HST_PNSNPMNT_ID" precision="20" scale="0" />
+		      <generator class="assigned" />
+		</id>
+ 		<property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE"  />
+        </property>
+        <property name="oldppoNo" type="string">
+            <column name="OLD_PPO_NO"  />
+        </property>
+         <property name="newppoNo" type="string">
+            <column name="NEW_PPO_NO"  />
+        </property>
+         <property name="remarks" type="string">
+            <column name="REMARKS"  />
+        </property>
+      	<property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7"  not-null="true"/>
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="db_id" length="6" not-null="true" />
+        </property>
+        <property name="locationCode" type="long">
+            <column name="location_code" precision="20" scale="0" />
+        </property>      
+  </class>
+</hibernate-mapping>

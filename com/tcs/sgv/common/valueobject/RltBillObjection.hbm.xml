@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 6, 2007 9:17:11 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.RltBillObjection" table="rlt_bill_objection" dynamic-update="true">
+        <comment></comment>
+        <id name="billObjcId" type="long">
+            <column name="BILL_OBJC_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="objectionCode" type="java.lang.String">
+            <column name="OBJECTION_CODE">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billNo" type="java.lang.Long">
+            <column name="BILL_NO">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>        
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="objFlag" type="string">
+            <column name="OBJ_FLAG" length="2">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

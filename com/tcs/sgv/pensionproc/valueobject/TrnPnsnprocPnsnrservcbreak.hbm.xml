@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.pensionproc.valueobject">
+  <class name="TrnPnsnprocPnsnrservcbreak" table="trn_pnsnproc_pnsnrservcbreak"  dynamic-update="true">
+ 		 <id name="pnsnrServcBreakId" type="java.lang.Long">
+            <column name="pnsnrservcbreak_id" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="dbId" type="java.lang.Long">
+            <column name="db_id" precision="6" scale="0"  />
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="location_code" precision="20" scale="0"  />
+        </property>
+       <property name="pensionerdtlId" type="java.lang.Long">
+            <column name="PENSIONERDTL_ID" precision="20" scale="0" >
+            </column>
+        </property>
+        <property name="inwardPensionId" type="java.lang.Long" >
+            <column name="inward_pension_id" precision="20" scale="0" >
+            </column>
+        </property>
+       
+         <property name="serviceBreaktypeLookupId" type="java.lang.Long">
+            <column name="service_breaktype_lookupid" precision="20" scale="0"  />
+        </property>       
+        <property name="breakFromDate" type="date">
+            <column name="break_from_date" precision="20" scale="0"  />
+        </property>
+        <property name="breakToDate" type="date">
+            <column name="break_to_date" precision="20" scale="0"  />
+        </property>
+         <property name="breakPeriod" type="integer">
+            <column name="break_period" precision="20" scale="0"  />
+        </property>  
+         <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+		</property>
+		<property name="srvcBrkOtherReason" type="string">
+			<column name="SRVC_BRK_OTHER_REASON" ></column>
+		</property>
+  
+  </class>
+</hibernate-mapping>

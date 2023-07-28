@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.lna.valueobject">
+	<class name="com.tcs.sgv.lna.valueobject.MstLnaMonthly" table="MST_LNA_MONTHLY">
+		<id name="lnaMonthlyId" type="long">
+			<column name="LNA_MONTHLY_ID" />
+			<generator class="assigned" />
+		</id>
+		<property name="billgroupId" type="long">
+			<column name="BILLGROUP_ID" />
+		</property>
+		<property name="sevaarthId" type="string">
+			<column name="SEVAARTH_ID" />
+		</property>
+		<property name="transactionId" type="string">
+			<column name="TRANSACTION_ID" />
+		</property>
+		<property name="advanceType" type="long">
+			<column name="ADVANCE_TYPE" />
+		</property>
+		<property name="advanceSubType" type="long">
+			<column name="ADVANCE_SUB_TYPE" />
+		</property>
+		<property name="finYearId" type="long">
+			<column name="FIN_YEAR_ID" />
+		</property>
+		<property name="monthId" type="long">
+			<column name="MONTH_ID" />
+		</property>
+		<property name="openingBalance" type="long">
+			<column name="OPENING_BALANCE" />
+		</property>
+		<property name="installmentAmount" type="long">
+			<column name="INSTALLMENT_AMOUNT" />
+		</property>
+		<property name="instNo" type="integer">
+			<column name="INST_NO" />
+		</property>
+		<property name="totalInst" type="integer">
+			<column name="TOTAL_INST" />
+		</property>
+		<property name="prePayOfAdvance" type="long">
+			<column name="PRE_PAY_OF_ADVANCE" />
+		</property>
+		<property name="deputationChallan" type="long">
+			<column name="DEPUTATION_CHALLAN" />
+		</property>
+		<property name="closingBalance" type="long">
+			<column name="CLOSING_BALANCE" />
+		</property>
+		<property name="status" type="string">
+			<column name="STATUS" />
+		</property>
+			<property name="prinOrInterestAmount" type="string">
+            <column name="PRIN_OR_INTEREST_AMOUNT"  />
+  		</property>
+		<property name="voucherNo" type="string">
+			<column name="VOUCHER_NO" />
+		</property>
+		<property name="treasuryId" type="string">
+			<column name="TREASURY_ID" />
+		</property>
+		<property name="voucherDate" type="timestamp">
+			<column name="VOUCHER_DATE" />
+		</property>
+		<property name="paybillGenerated" type="integer">
+			<column name="paybill_generated" />
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" />
+		</property>
+		<property name="createdUserId" type="long">
+			<column name="CREATED_USER_ID" />
+		</property>
+		<property name="createdPostId" type="long">
+			<column name="CREATED_POST_ID" />
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE"  />
+		</property>
+		<property name="updatedUserId" type="long">
+			<column name="UPDATED_USER_ID"  />
+		</property>
+		<property name="updatedPostId" type="long">
+			<column name="UPDATED_POST_ID"  />
+		</property>
+		<property name="isPayrollData" type="string">
+			<column name="IS_PAYROLL_DATA" />
+		</property>
+
+	</class>
+</hibernate-mapping>

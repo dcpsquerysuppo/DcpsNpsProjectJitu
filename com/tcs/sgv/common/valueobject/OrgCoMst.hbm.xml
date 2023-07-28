@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 16, 2009 11:48:11 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.OrgCoMst" table="ORG_CO_MST" dynamic-update="true" >
+        <id name="officerId" type="long">
+            <column name="OFFICER_ID" precision="15" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="officerCode" type="string">
+            <column name="OFFICER_CODE" length="15" not-null="true" />
+        </property>
+        <property name="officerName" type="string">
+            <column name="OFFICER_NAME" not-null="true" />
+        </property>
+        <property name="officerNo" type="string">
+            <column name="OFFICER_NO" length="15" />
+        </property>
+        <property name="postId" type="java.lang.Long">
+            <column name="POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="deptId" type="string">
+            <column name="DEPT_ID" length="12" />
+        </property>
+        <property name="langId" type="java.lang.Long">
+            <column name="LANG_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="START_DATE" length="7" not-null="true" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="7" />
+        </property>
+        <property name="activateFlag" type="java.lang.Long">
+            <column name="ACTIVATE_FLAG" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdBy" type="java.lang.Long">
+            <column name="CREATED_BY" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdByPost" type="java.lang.Long">
+            <column name="CREATED_BY_POST" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedBy" type="java.lang.Long">
+            <column name="UPDATED_BY" precision="20" scale="0" />
+        </property>
+        <property name="updatedByPost" type="java.lang.Long">
+            <column name="UPDATED_BY_POST" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER" precision="11" scale="0" />
+        </property>
+        <property name="officeCode" type="string">
+            <column name="OFFICE_CODE" length="20" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="20" />
+        </property>
+        <property name="deptLocCode" type="string">
+            <column name="DEPT_LOC_CODE" length="20" />
+        </property>
+        <property name="shortName" type="string">
+            <column name="SHORT_NAME" />
+        </property>
+    </class>
+</hibernate-mapping>

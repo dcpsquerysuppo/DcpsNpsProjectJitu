@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.gpf.valueobject.MstGpfMonthly" table="MST_GPF_MONTHLY" >
+  	<id name="mstGpfMonthlyId" type="long">
+            <column name="MST_GPF_MONTHLY_ID"  />
+            <generator class="assigned" />
+     </id>
+      <property name="billgroupId" type="long">
+            <column name="BILLGROUP_ID"  />
+  	</property>
+     <property name="gpfAccNo" type="string">
+            <column name="GPF_ACC_NO"  />
+  	</property>
+    
+    <property name="finYearId" type="long">
+            <column name="FIN_YEAR_ID"  />
+  	</property>
+  	<property name="monthId" type="long">
+            <column name="MONTH_ID"  />
+  	</property>
+  	<property name="openingBalance" type="double">
+            <column name="OPENING_BALANCE"  />
+  	</property>
+  	<property name="regularSubscription" type="double">
+            <column name="REGULAR_SUBSCRIPTION"  />
+  	</property>
+  	<property name="advanceRecovery" type="double">
+            <column name="ADVANCE_RECOVERY"  />
+  	</property>
+  	
+  	<property name="advanceTrnId" type="string">
+            <column name="ADVANCE_TRN_ID"  />
+  	</property>
+  	<property name="instNo" type="int">
+            <column name="INST_NO"  />
+  	</property>
+  	<property name="totalInst" type="int">
+            <column name="TOTAL_INST"  />
+  	</property>
+  	<property name="arrearAmount" type="double">
+            <column name="ARREAR_AMOUNT"  />
+  	</property>
+  	<property name="advanceSanctioned" type="double">
+            <column name="ADVANCE_SANCTIONED"  />
+  	</property>
+  	<property name="excessPayment" type="double">
+            <column name="EXCESS_PAYMENT"  />
+  	</property>
+  	<property name="prePayOfAdvance" type="double">
+            <column name="PRE_PAY_OF_ADVANCE"  />
+  	</property>
+  	<property name="deputationChallan" type="double">
+            <column name="DEPUTATION_CHALLAN"  />
+  	</property>
+  	<property name="closingBalance" type="double">
+            <column name="CLOSING_BALANCE"  />
+  	</property>
+  	<property name="status" type="string">
+            <column name="STATUS"  />
+  	</property>
+  	<property name="voucherNo" type="string">
+            <column name="VOUCHER_NO"  />
+  	</property>
+  	<property name="voucherDate" type="timestamp">
+            <column name="VOUCHER_DATE"  />
+  	</property>
+  	<property name="paybillGenerated" type="integer">
+            <column name="paybill_generated"  />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	</property>
+  <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" />
+  </property>
+  <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  </property>
+  <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" not-null="false" />
+  </property>
+  <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  not-null="false" />
+  </property>
+  <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID"   not-null="false" />
+  </property>
+  <property name="dataEntry" type="string">
+            <column name="DATA_ENTRY" />
+ 	</property>
+   </class>
+</hibernate-mapping>

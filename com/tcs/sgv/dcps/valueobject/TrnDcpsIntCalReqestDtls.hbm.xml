@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+
+<class name="com.tcs.sgv.dcps.valueobject.TrnDcpsIntCalReqestDtls" table="TRN_DCPS_INT_CALC_REQUEST_DTLS">
+  
+  <id name="requestDtlsId" type="long">
+            <column name="REQUEST_DTLS_ID"  />
+            <generator class="assigned" />
+  </id>
+             
+  <property name="requestId" type="java.lang.String">
+            <column name="REQUEST_ID"  />
+  </property>
+
+    <property name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID" />
+  </property>
+  
+  <property name="status" type="long">
+            <column name="STATUS" />
+  </property>
+  	
+  <property name="reason" type="java.lang.String">
+            <column name="REASON"  />
+  </property>
+  
+    <property name="srkaRemarks" type="java.lang.String">
+            <column name="SRKA_REMARKS"  />
+  </property>
+  
+  <property name="attachmentId" type="long">
+            <column name="ATTACHMENT_ID"  />
+  </property>
+  
+    <property name="locId" type="long">
+            <column name="LOC_ID"  />
+  </property>
+ 
+  <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  </property>
+  
+  <property name="createdPost" type="long">
+            <column name="CREATED_POST"  />
+  </property>
+ 
+  <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE"/>
+  </property>
+
+  <property name="updatedPost" type="long">
+            <column name="UPDATED_POST" />
+  </property>
+  
+</class>
+</hibernate-mapping>

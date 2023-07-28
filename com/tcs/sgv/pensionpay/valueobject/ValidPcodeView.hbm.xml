@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 8, 2009 3:23:17 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.ValidPcodeView" table="VALID_PCODE_VIEW">
+        <id name="pensionRequestId" type="long">
+            <column name="PENSION_REQUEST_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="branchCode" type="string">
+            <column name="BRANCH_CODE" length="20" />
+        </property>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" />
+        </property>
+        <property name="seenFlag" type="string">
+            <column name="SEEN_FLAG" length="1" />
+        </property>
+        <property name="headCode" type="long">
+            <column name="HEAD_CODE" precision="20" scale="0" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="30" />
+        </property>
+        <property name="schemeType" type="string">
+            <column name="SCHEME_TYPE" length="30" />
+        </property>
+        <property name="isRop" type="string">
+            <column name="IS_ROP" length="5" />
+        </property>
+        <property name="basicPensionAmount" type="big_decimal">
+            <column name="BASIC_PENSION_AMOUNT" precision="10" />
+        </property>
+        <property name="fp1Date" type="date">
+            <column name="FP1_DATE" length="7" />
+        </property>
+        <property name="fp1Amount" type="big_decimal">
+            <column name="FP1_AMOUNT" precision="10" />
+        </property>
+        <property name="fp2Date" type="date">
+            <column name="FP2_DATE" length="7" />
+        </property>
+        <property name="fp2Amount" type="big_decimal">
+            <column name="FP2_AMOUNT" precision="10" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="7" />
+        </property>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length= "20" />
+        </property>
+        <property name="calcType" type="string">
+            <column name="CALC_TYPE" length="5" />
+        </property>
+        <property name="dpPercent" type="big_decimal">
+            <column name="DP_PERCENT" precision="5" />
+        </property>
+        <property name="tiPercent" type="big_decimal">
+            <column name="TI_PERCENT" precision="5" />
+        </property>
+        <property name="medicalAllowenceAmount" type="big_decimal">
+            <column name="MEDICAL_ALLOWENCE_AMOUNT" precision="6" />
+        </property>
+        <property name="orgBf11156" type="big_decimal">
+            <column name="ORG_BF_1_11_56" precision="10" />
+        </property>
+        <property name="orgAf11156" type="big_decimal">
+            <column name="ORG_AF_1_11_56" precision="10" />
+        </property>
+        <property name="orgAf10560" type="big_decimal">
+            <column name="ORG_AF_1_05_60" precision="10" />
+        </property>
+        <property name="personalPension" type="big_decimal">
+            <column name="PERSONAL_PENSION" precision="10" />
+        </property>
+        <property name="ir" type="big_decimal">
+            <column name="IR" precision="10" />
+        </property>
+        <property name="cvpMonthlyAmount" type="big_decimal">
+            <column name="CVP_MONTHLY_AMOUNT" precision="8" />
+        </property>
+        <property name="paidDate" type="timestamp">
+            <column name="PAID_DATE" length="7" />
+        </property>
+        <property name="acountNo" type="string">
+            <column name="ACOUNT_NO" length="20" />
+        </property>
+        <property name="pnsnrPrefix" type="string">
+            <column name="PNSNR_PREFIX" length="10" />
+        </property>
+        <property name="dateOfDeath" type="date">
+            <column name="DATE_OF_DEATH" length="7" />
+        </property>
+        <property name="dateOfRetirement" type="date">
+            <column name="DATE_OF_RETIREMENT" length="7" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="FIRST_NAME" />
+        </property>
+        <property name="middleName" type="string">
+            <column name="MIDDLE_NAME" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="LAST_NAME" />
+        </property>
+         <property name="redBf11156" type="big_decimal">
+            <column name="RED_BF_1_11_56" precision="10" />
+        </property>
+        <property name="redAf11156" type="big_decimal">
+            <column name="RED_AF_1_11_56" precision="10" />
+        </property>
+        <property name="cvpDate" type="timestamp">
+            <column name="CVP_DATE" length="7" />
+        </property>
+        <property name="ppoDate" type="timestamp">
+            <column name="PPO_DATE" length="7" />
+        </property>
+        <property name="appliedDate" type="timestamp">
+            <column name="APPLIED_DATE" length="7" />
+        </property>
+        <property name="commensionDate" type="date">
+            <column name="COMMENSION_DATE" length="7" />
+        </property>
+        <property name="pensionType" type="string">
+            <column name="PENSION_TYPE" />
+        </property>
+        <property name="omrType" type="string">
+            <column name="OMR_TYPE" />
+        </property>
+        <property name="dpFlag" type="string">
+            <column name="dp_Flag" />
+        </property>
+        <property name="cvpEffectiveMonth" type="integer">
+			<column name="CVP_EFFECTIVE_MONTH" length="6" />
+		</property>
+		<property name="caseStatus" type="string">
+            <column name="CASE_STATUS" length="10" />
+        </property>
+        <property name="dateOfBirth" type="date">
+            <column name="DATE_OF_BIRTH" length="7" />
+        </property>
+        <property name="lastPaidDate" type="timestamp">
+			<column name="LAST_PAID_DATE" length="7" />
+        </property>
+        <property name="bankCode" type="string">
+            <column name="BANK_CODE" length="20" />
+        </property>
+         <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="20" />
+        </property>
+         <property name="ledgerNo" type="string">
+            <column name="LEDGER_NO" length="25" />
+        </property>
+         <property name="pageNo" type="string">
+            <column name="PAGE_NO" length="10" />
+        </property>
+        <property name="isFp1datechange" type="string">
+            <column name="IS_FP1DATECHANGE" length="2" />
+        </property>
+        <property name="orgBf11136" type="big_decimal">
+            <column name="ORG_BF_1_11_36" precision="10" />
+        </property>
+        <property name="orgAfZp" type="big_decimal">
+            <column name="ORG_ZP_AF" precision="10" />
+        </property>
+        <property name="ropType" type="string">
+            <column name="rop_type" length="25" />
+        </property>
+        <property name="arrearAmount" type="big_decimal">
+            <column name="arrear_amount" precision="10" />
+        </property>
+        <property name="reEmploymentFromDate" type="date">
+            <column name="RE_EMPLOYMENT_FROM_DATE"  />
+        </property>
+        <property name="reEmploymentToDate" type="date">
+            <column name="RE_EMPLOYMENT_TO_DATE"  />
+        </property>
+        <property name="daInPensionSalary" type="string">
+            <column name="DA_IN_PENSION_SALARY"  />
+        </property>
+        <property name="reEmploymentFlag" type="string">
+            <column name="RE_EMPLOYMENT_FLAG"  />
+        </property>
+        <property name="peonAllowanceAmount" type="big_decimal">
+            <column name="peon_allowance_amount" precision="10" />
+        </property>
+         <property name="other1" type="big_decimal">
+            <column name="other_1" precision="10" />
+        </property>
+         <property name="other2" type="big_decimal">
+            <column name="other_2" precision="10" />
+        </property>
+         <property name="daRateForState" type="long">
+            <column name="DA_RATE_FOR_STATE" precision="20" />
+        </property>
+         <property name="pensionCutAmount" type="big_decimal">
+            <column name="PENSION_CUT_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+         <property name="orgBf10436Percent" type="big_decimal">
+            <column name="ORG_BF_1_04_36_PERCENT" precision="10" default="0" />
+        </property>
+         <property name="orgAf10436Percent" type="big_decimal">
+            <column name="ORG_AF_1_04_36_PERCENT" precision="10" default="0" />
+        </property>
+         <property name="orgAf11156Percent" type="big_decimal">
+            <column name="ORG_AF_1_11_56_PERCENT" precision="10" default="0" />
+        </property>
+         <property name="orgAf10560Percent" type="big_decimal">
+            <column name="ORG_AF_1_05_60_PERCENT" precision="10" default="0" />
+        </property>
+         <property name="orgZpAfPercent" type="big_decimal">
+            <column name="ORG_ZP_AF_PERCENT" precision="10" default="0" />
+        </property>
+        <property name="pensionCutMonthyear" type="integer">
+            <column name="PENSION_CUT_MONTHYEAR" precision="6" default="0" />
+        </property>
+    </class>
+</hibernate-mapping>

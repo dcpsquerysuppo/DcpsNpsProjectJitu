@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.gpf.valueobject">
+  <class name="com.tcs.sgv.gpf.valueobject.MstGpfChallanDtls" table="MST_GPF_CHALLAN_DTLS" >
+  	<id name="mstGpfChallanDtlsId" type="long">
+            <column name="MST_GPF_CHALLAN_DTLS_ID"  />
+            <generator class="assigned" />
+     </id>
+     <property name="gpfAccNo" type="string">
+            <column name="GPF_ACC_NO"  />
+  	</property>
+    
+    <property name="challanType" type="long">
+            <column name="CHALLAN_TYPE"  />
+  	</property>
+  	<property name="challanNo" type="string">
+            <column name="CHALLAN_NO"  />
+  	</property>
+     <property name="challanDate" type="timestamp">
+            <column name="CHALLAN_DATE"  />
+  	</property>
+  	<property name="amount" type="double">
+            <column name="AMOUNT" />
+ 	</property>
+  	<property name="advanceTrnId" type="string">
+            <column name="ADVANCE_TRN_ID"  />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	</property>
+	<property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" />
+	</property>
+	<property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID"  />
+	</property>
+	<property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" not-null="false" />
+	</property>
+	<property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  not-null="false" />
+	</property>
+	<property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID"   not-null="false" />
+	</property>
+	<property name="instFrom" type="int">
+            <column name="INST_FROM"  />
+  	</property>
+  	<property name="instTo" type="int">
+            <column name="INST_TO"  />
+  	</property>
+  	<property name="statusFlag" type="string">
+            <column name="STATUS_FLAG"  />
+  	</property>
+   <property name="dataEntry" type="string">
+            <column name="DATA_ENTRY" />
+ 	</property>
+   </class>
+</hibernate-mapping>

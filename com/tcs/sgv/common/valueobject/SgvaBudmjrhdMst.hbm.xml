@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 18, 2007 11:07:34 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaBudmjrhdMst" table="SGVA_BUDMJRHD_MST" >
+    <cache usage="read-only" region="budgetCache"/>
+        <id name="budmjrhdId" type="long">
+            <column name="BUDMJRHD_ID" precision="15" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="budmjrhdCode" type="string">
+            <column name="BUDMJRHD_CODE" length="15" />
+        </property>
+        <property name="budmjrhdDescLong" type="string">
+            <column name="BUDMJRHD_DESC_LONG" />
+        </property>
+        <property name="budmjrhdDescShort" type="string">
+            <column name="BUDMJRHD_DESC_SHORT" />
+        </property>
+        <property name="budmjrhdtype" type="string">
+            <column name="BUDMJRHDTYPE" length="1" />
+        </property>
+        <property name="budmjrhdsubtype" type="string">
+            <column name="BUDMJRHDSUBTYPE" length="2" />
+        </property>
+        <property name="bpnCode" type="string">
+            <column name="BPN_CODE" length="25" />
+        </property>
+        <property name="demandCode" type="string">
+            <column name="DEMAND_CODE" length="25" />
+        </property>
+        <property name="sectorCode" type="string">
+            <column name="SECTOR_CODE" length="25" />
+        </property>
+        <property name="subsectorCode" type="string">
+            <column name="SUBSECTOR_CODE" length="25" />
+        </property>
+        <property name="subsubsectorCode" type="string">
+            <column name="SUBSUBSECTOR_CODE" length="25" />
+        </property>
+        <property name="langId" type="string">
+            <column name="LANG_ID" length="5" />
+        </property>
+        <property name="locId" type="string">
+            <column name="LOC_ID" length="5" />
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="7" />
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="12" />
+        </property>
+        <property name="lstUpdDt" type="date">
+            <column name="LST_UPD_DT" length="7" />
+        </property>
+        <property name="lstUpdUsr" type="string">
+            <column name="LST_UPD_USR" length="12" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="15" />
+        </property>
+        <property name="terminatedYrId" type="java.lang.Long">
+            <column name="TERMINATED_YR_ID" precision="15" scale="0" />
+        </property>
+        <property name="finYrId" type="java.lang.Long">
+            <column name="FIN_YR_ID" precision="15" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

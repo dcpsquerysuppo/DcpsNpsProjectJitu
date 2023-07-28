@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 19, 2007 11:16:57 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.TrnBillRegister" table="trn_bill_register" dynamic-update="true">
+        <comment></comment>
+        <id name="billNo" type="long">
+            <column name="BILL_NO" />
+            <generator class="assigned" />
+        </id>
+        <property name="billCntrlNo" type="string">
+            <column name="BILL_CNTRL_NO" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billDate" type="date">
+            <column name="BILL_DATE" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="subjectId" type="long">
+            <column name="SUBJECT_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="tokenNum" type="java.lang.Long">
+            <column name="TOKEN_NUM">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="tcBill" type="string">
+            <column name="TC_BILL" length="30">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="phyBill" type="java.lang.Short">
+            <column name="PHY_BILL" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="demandCode" type="string">
+            <column name="DEMAND_CODE" length="3">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budmjrHd" type="string">
+            <column name="BUDMJR_HD" length="4">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="inwardDt" type="date">
+            <column name="INWARD_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="prevBillNo" type="java.lang.Long">
+            <column name="PREV_BILL_NO">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billGrossAmount" type="big_decimal">
+            <column name="BILL_GROSS_AMOUNT" precision="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billNetAmount" type="big_decimal">
+            <column name="BILL_NET_AMOUNT" precision="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="principle" type="big_decimal">
+            <column name="PRINCIPLE" precision="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="grossInterest" type="big_decimal">
+            <column name="GROSS_INTEREST" precision="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="incomeTax" type="big_decimal">
+            <column name="INCOME_TAX" precision="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>        
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="exempted" type="string">
+            <column name="EXEMPTED" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billCode" type="string">
+            <column name="BILL_CODE" length="30">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="goNgo" type="string">
+            <column name="GO_NGO" length="30">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="currBillStatus" type="java.lang.Short">
+            <column name="CURR_BILL_STATUS" length="3">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finYearId" type="string">
+            <column name="FIN_YEAR_ID" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="audPostId" type="java.lang.Long">
+            <column name="AUD_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="attachmentId" type="java.lang.Long">
+            <column name="ATTACHMENT_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="ddoCode" type="string">
+            <column name="DDO_CODE" length="15" />
+        </property>
+        <property name="currBillStatusDate" type="timestamp">
+            <column name="CURR_BILL_STATUS_DATE" length="20" />
+        </property>
+        <property name="grantAmount" type="big_decimal">
+            <column name="GRANT_AMOUNT" precision="20" not-null="true"/>
+        </property>
+        <property name="deptCode" type="string">
+            <column name="DEPT_CODE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="tsryOfficeCode" type="string">
+            <column name="TSRY_OFFICE_CODE" length="10">
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true">
+            </column>
+        </property>
+        <property name="refNum" type="java.lang.Long">
+            <column name="REF_NUM" length="6" >
+            </column>
+        </property>
+        <property name="scannedDocId" type="java.lang.Long">
+            <column name="SCANNED_DOC_ID"></column>
+        </property>
+        <property name="auditorNetAmount" type="big_decimal">
+            <column name="AUDITOR_NET_AMOUNT" precision="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50">
+            </column>
+        </property>
+        <property name="receivedFlag" type="java.lang.Short">
+            <column name="RECEIVED_FLAG" length="5">
+            </column>
+        </property>
+		<property name="bpnNo" type="string">
+            <column name="BPN_NO" length="45">
+            </column>        
+        </property>
+        <property name="budSubmjrHd" type="string">
+            <column name="BUD_SUBMJR_HD" length="2">
+            </column>
+        </property>
+        <property name="budMinHd" type="string">
+            <column name="BUD_MIN_HD" length="3">
+            </column>
+        </property>
+        <property name="budSubHd" type="string">
+            <column name="BUD_SUB_HD" length="45">
+            </column>
+        </property>
+        <property name="budDtlHd" type="string">
+            <column name="BUD_DTL_HD" length="45">
+            </column>
+        </property>
+         <property name="schemeNo" type="string">
+            <column name="SCHEME_NO" length="45">
+            </column>
+        </property>  
+         <property name="fund" type="string">
+            <column name="FUND" length="32">
+            </column>
+        </property> 
+        <property name="clsExp" type="string">
+            <column name="CLS_EXP" length="32">
+            </column>
+        </property> 
+         <property name="budType" type="java.lang.Short">
+            <column name="BUD_TYPE" length="2">
+            </column>
+        </property>
+        <property name="voucherNo" type="java.lang.Long">
+            <column name="VOUCHER_NO" length="20">
+            </column>
+        </property>
+        <property name="voucherDate" type="java.util.Date">
+            <column name="VOUCHER_DATE" length="10">
+            </column>
+        </property>
+        <property name="auditDate" type="java.util.Date">
+            <column name="AUDIT_DATE" length="10">
+            </column>
+        </property>
+        <property name="cardexNo" type="java.lang.Long">
+            <column name="CARDEX_NO"></column>
+        </property>
+        <property name="cardexVer" type="java.lang.Short">
+            <column name="CARDEX_VER" length="1">
+            </column>
+        </property>
+        <property name="hierarchyRefId" type="java.lang.Long">
+            <column name="HIERARCHY_REF_ID" length="10">
+            </column>
+        </property>
+        <property name="auditStatus" type="java.lang.Short">
+            <column name="AUDIT_STATUS" length="1" default="0">
+            </column>
+        </property>
+        <property name="inwardedPost" type="java.lang.Long">
+            <column name="INWARDED_POST">
+            </column>
+        </property>
+        <property name="deductionA" type="big_decimal">
+            <column name="DEDUCTION_A" precision="20"  not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="deductionB" type="big_decimal">
+            <column name="DEDUCTION_B" precision="20"  not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billDispDate" type="date">
+            <column name="BILL_DISP_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="tcAdvice" type="java.lang.Long">
+            <column name="TC_ADVICE">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="isAudit" type="java.lang.Short">
+            <column name="IS_AUDIT" length="1" default="0">
+            </column>
+        </property>
+         <property name="subtrsyVouchNo" type="java.lang.Long">
+            <column name="SUBTRSY_VOUCH_NO" length="20">
+            </column>
+        </property>
+         <property name="isArchieved" type="java.lang.Short">
+            <column name="IS_ARCHIEVED" length="1" default="0">
+            </column>
+        </property>
+        <property name="audUserId" type="java.lang.Long">
+            <column name="AUD_USER_ID" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="inwardUserId" type="java.lang.Long">
+            <column name="INWARD_USER_ID" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="pensionHeadCode" type="java.lang.Integer">
+            <column name="PENSION_HEAD_CODE" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="branchCode" type="java.lang.String">
+            <column name="BRANCH_CODE" length="6">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="postAuditDate" type="date">
+        	<column name="POST_AUDIT_DATE" length="10">
+            	<comment></comment>
+          	</column>
+      	</property>
+      	<property name="postAuditUser" type="java.lang.Long">
+        	<column name="POST_AUDIT_USER" length="20">
+            	<comment></comment>
+          	</column>
+      	</property>
+      	<property name="postAuditPost" type="java.lang.Long">
+        	<column name="POST_AUDIT_POST" length="20">
+            	<comment></comment>
+          	</column>
+      	</property>
+      	<property name="releasedGrant" type="big_decimal">
+            <column name="RELEASED_GRANT" precision="20" />
+        </property>
+        <property name="totalExp" type="big_decimal">
+            <column name="TOTAL_EXP" precision="20" />
+        </property>
+        <property name="postAuditRecvDt" type="date">
+            <column name="POST_AUDIT_RECV_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="payMode" type="string">
+            <column name="PAY_MODE" length="20" />
+        </property>
+         <property name="forMonth" type="java.lang.Integer">
+            <column name="FOR_MONTH"  precision="6" scale="0" />
+        </property>
+    </class>
+    
+    <query name="tbp.bill.geBillVOsByBillNos">
+    	<![CDATA[
+	    	FROM TrnBillRegister WHERE billNo In (:BILL_LIST)
+		]]>
+    </query>
+    <sql-query name="tbp.bill.getLockOnBillsByBillNosAndStatus">
+    	<![CDATA[
+	    	SELECT * FROM TRN_BILL_REGISTER WHERE BILL_NO IN (:BILL_LIST) AND CURR_BILL_STATUS = :STATUS FOR UPDATE
+		]]>
+    </sql-query>
+    <sql-query name="tbp.bill.getLockOnBillsByPostLocStatus">
+    	<![CDATA[
+	    	SELECT * FROM TRN_BILL_REGISTER TBR
+			JOIN WF_JOB_MST JB ON JB.JOB_REF_ID_NUM = TBR.BILL_NO AND TBR.BILL_NO IN (:BILL_LIST) AND JB.DOC_ID IN (210004,100003,110001) AND TBR.CURR_BILL_STATUS IN (:STATUS) AND TBR.TSRY_OFFICE_CODE=:LOCATION AND JB.JOB_STATUS='Active' AND (JB.LST_ACT_POST_ID = :POST OR JB.GROUP_STATUS = 'C')
+			JOIN WF_HIERACHY_POST_MPG HP ON HP.HIERACHY_REF_ID = JB.HIERACHY_REF_ID AND HP.LEVEL_ID=JB.LEVEL_ID AND HP.LOC_ID=JB.LOC_ID AND HP.ACTIVATE_FLAG=1 AND HP.POST_ID=:POST FOR UPDATE
+		]]>
+    </sql-query>
+    
+    <sql-query name="tbp.bill.getLockOnBillsByBillNosAndStatus_2">
+    	<![CDATA[
+	    	SELECT * FROM TRN_BILL_REGISTER WHERE BILL_NO IN (:BILL_LIST) AND CURR_BILL_STATUS IN (:STATUS , :STATUS2) FOR UPDATE
+		]]>
+    </sql-query>
+    <sql-query name="tbp.bill.bulkUpdateForBillStatus">
+    	<![CDATA[
+	    	UPDATE TRN_BILL_REGISTER  
+			SET CURR_BILL_STATUS = :UPD_STATUS, 
+			   CURR_BILL_STATUS_DATE = :UPD_DATE,
+			   UPDATED_USER_ID = :UPD_USER,
+			   UPDATED_POST_ID = :UPD_POST,
+			   UPDATED_DATE = :UPD_DATE
+			WHERE BILL_NO IN (:BILL_LIST)
+		]]>
+    </sql-query>
+         <sql-query name="tbp.showBill.getBillDetails">
+    	<![CDATA[
+	    	SELECT T.BILL_NO,T.REF_NUM,T.BILL_DATE,T.TC_BILL,T.TOKEN_NUM,T.CARDEX_NO,T.DDO_CODE,O.DDO_NO,
+			       O.SHORT_NAME,T.BUD_TYPE,L.LOOKUP_DESC,T.SCHEME_NO,T.DEMAND_CODE,T.BUDMJR_HD,T.BUD_SUBMJR_HD,
+			       T.BUD_MIN_HD,T.BUD_SUB_HD,T.BUD_DTL_HD,T.SUBJECT_ID,M.BILL_SHRT_CODE,M.SUBJECT_DESC,T.GO_NGO,
+			       T.AUD_POST_ID,T.CURR_BILL_STATUS,T.BILL_GROSS_AMOUNT,T.BILL_NET_AMOUNT,T.EXEMPTED,
+			       T.ATTACHMENT_ID,T.BILL_CODE,L1.LOOKUP_DESC,T.BILL_CNTRL_NO,T.IS_AUDIT,T.GRANT_AMOUNT,
+			       CLM.LOC_NAME,OBJCOUNT,T.DEDUCTION_A,T.DEDUCTION_B,T.PHY_BILL,EMP.EMP_PREFIX,EMP.EMP_FNAME,
+			       EMP.EMP_MNAME,EMP.EMP_LNAME,TBM.BILL_REMARKS,TBM.OBJ_REMARKS,T.FIN_YEAR_ID,T.FUND, T.TOTAL_EXP,T.RELEASED_GRANT,
+			       T.CLS_EXP
+			  FROM TRN_BILL_REGISTER T 
+			  LEFT OUTER JOIN CMN_LOOKUP_MST L1 ON L1.LOOKUP_SHORT_NAME = T.BILL_CODE AND L1.PARENT_LOOKUP_ID = :billCodeLookup AND L1.LANG_ID = :langId 
+			  LEFT OUTER JOIN CMN_LOOKUP_MST L ON L.LOOKUP_SHORT_NAME = T.BUD_TYPE AND L.PARENT_LOOKUP_ID = :budTypeLookup AND L.LANG_ID = :langId 
+			  LEFT OUTER JOIN (SELECT RBO.MASTER_ID,COUNT(RBO.OBJECTION_CODE) OBJCOUNT FROM RLT_OBJECTION RBO WHERE RBO.OBJ_FLAG = :objFlag
+			     AND RBO.MODULE_NAME =:moduleName AND RBO.MASTER_ID =:billNo GROUP BY RBO.MASTER_ID) RBO ON RBO.MASTER_ID = T.BILL_NO,
+			       ORG_DDO_MST       O,
+			       MST_BILL_TYPE     M,
+			       CMN_LOCATION_MST  CLM,
+			       ORG_EMP_MST       EMP,
+			       ORG_USERPOST_RLT  UP,
+			       TRN_BILL_MVMNT    TBM
+			 WHERE M.LANG_ID = :langId AND O.LANG_ID = :langId AND T.BILL_NO = :billNo AND
+			       O.DDO_CODE = T.DDO_CODE AND M.SUBJECT_ID = T.SUBJECT_ID AND
+			       CLM.LOCATION_CODE = T.TSRY_OFFICE_CODE AND CLM.LANG_ID = :langId AND
+			       EMP.USER_ID = UP.USER_ID AND UP.POST_ID = T.AUD_POST_ID AND
+			       UP.activate_flag=1 AND
+			       TBM.MOVEMNT_ID = :mvmntID AND TBM.BILL_NO = T.BILL_NO
+		]]>
+    </sql-query>
+    
+     <sql-query name="tbp.showBill.getGPFChqDetails">
+    	<![CDATA[
+	    	SELECT C.CHEQUE_NO, C.PARTY_NAME
+  			FROM TRN_CHEQUE_DTLS C, RLT_BILL_CHEQUE R
+ 			WHERE R.CHEQUE_ID = C.CHEQUE_ID AND
+       		R.BILL_NO = :billNo AND C.CHEQUE_TYPE = :chqType AND C.LOCATION_CODE = :locationCode
+		]]>
+    </sql-query>
+    <sql-query name="tbp.showBill.getEMDChallanDtls">
+    	<![CDATA[
+			SELECT RBEC.CHLN_SR_NO,RBEC.TRN_EMD_CHALLAN_DETL_ID,RBEC.CHL_AMOUNT 
+			FROM RLT_BILL_EMD_CHALLAN rbec WHERE rbec.bill_no= :billNo
+		]]>
+    </sql-query>
+    <sql-query name="tbp.showBill.getAttachmentCount">
+    	<![CDATA[
+			SELECT COUNT(1)
+  			FROM CMN_ATTACHMENT_MPG CAM, TRN_BILL_REGISTER TBR
+ 			WHERE TBR.ATTACHMENT_ID = CAM.ATTACHMENT_ID AND TBR.BILL_NO = :billNo
+ 			GROUP BY CAM.ATTACHMENT_ID
+		]]>
+    </sql-query>
+    <sql-query name="tbp.showBill.getCnfData">
+    	<![CDATA[
+			SELECT cnf_no,cnf_date FROM trn_conti_bill_detls WHERE bill_no=:billNo
+		]]>
+    </sql-query>
+     <!-- /*~~~~slo~~~~*/ --> 
+    <sql-query name="tbp.showBill.getSloDtls">
+    	<![CDATA[
+    		SELECT SUM(testTable.tmp) FROM
+			(SELECT COUNT(1) tmp FROM TRN_SLO_DLTS tsd WHERE tsd.bill_no=:billNo
+			UNION
+			SELECT COUNT(1) tmp FROM trn_adv_bill_recovery_dtls WHERE bill_no=:billNo AND register_type IN(:otherFlag,:flyLeafFlag)) testTable;
+		]]>
+    </sql-query>
+    <!-- /*~~~~slo~~~~*/ -->
+    <!-- /*~~~~slo~~~~*/ -->    
+    <sql-query name="tbp.showBill.updateHierchyRefId">
+    	<![CDATA[
+    		UPDATE WF_JOB_MST j SET j.hierachy_ref_id=:hierchyRefId WHERE j.job_ref_id=:jobRefId 
+    			AND j.job_status='Active' AND j.job_title='Bill' AND j.loc_id=:locId
+		]]>
+    </sql-query>
+    <sql-query name="tbp.wf.getWFPoolGroupData">
+    	<return-scalar column="C1" type="java.lang.Long" />
+    	<return-scalar column="C2" type="java.lang.Integer" />
+    	<![CDATA[
+		   SELECT TMP1.C1, TMP1.C2
+			FROM 
+			(SELECT JG.JOB_SEQ_ID C1, MAX(JG.GRP_SEQ) C2
+			  FROM WF_JOB_MST JB JOIN WF_JOB_GRP_MST JG ON JG.JOB_SEQ_ID = JB.JOB_SEQ_ID
+			 WHERE JB.HIERACHY_REF_ID IN (:REF_ID) AND JB.LEVEL_ID = :LEVEL_ID AND
+			       JB.DOC_ID = 100003 AND JB.LOC_ID = :LOC_ID AND JB.GROUP_STATUS = 'C' AND
+			       JG.ACTIVE_GRP_FLAG = 1 AND JB.JOB_STATUS='Active'
+			 GROUP BY JG.JOB_SEQ_ID) TMP1
+			LEFT OUTER JOIN  
+			(SELECT JG.JOB_SEQ_ID C1, MAX(JG.GRP_SEQ) C2
+			  FROM WF_JOB_MST JB JOIN WF_JOB_GRP_MST JG ON JG.JOB_SEQ_ID = JB.JOB_SEQ_ID
+			 WHERE JB.HIERACHY_REF_ID IN (:REF_ID) AND JB.LEVEL_ID = :LEVEL_ID AND
+			       JB.DOC_ID = 100003 AND JB.LOC_ID = :LOC_ID AND JB.GROUP_STATUS = 'C' AND
+			       JG.ACTIVE_GRP_FLAG = 1 AND JG.POST_ID = :POST_ID AND JB.JOB_STATUS='Active'
+			 GROUP BY JG.JOB_SEQ_ID) TMP2 ON TMP1.C1 = TMP2.C1 AND TMP1.C2 = TMP2.C2
+			WHERE TMP2.C1 IS NULL AND TMP2.C2 IS NULL
+	 	]]>
+    </sql-query>
+     <sql-query name="tbp.pao.cnfRegister.getData">    	
+    	<![CDATA[
+		   SELECT tbr.token_num, tbr.inward_dt, tbr.bill_net_amount,tcb.cnf_no, tcb.cnf_date FROM trn_bill_register tbr
+			JOIN trn_conti_bill_detls tcb ON tbr.bill_no = tcb.bill_no
+			WHERE tbr.tsry_office_code= :locCode AND tbr.inward_dt>=:fromDate AND tbr.inward_dt<=:toDate
+			AND tbr.fund='Contigancy'
+	 	]]>
+    </sql-query>
+        <sql-query name="tbp.pao.savingRegister.getData">
+    	<return-scalar column="majorHead" type="java.lang.String"/>
+    	<return-scalar column="tokenNum" type="java.lang.String"/>
+    	<return-scalar column="inwardDate" type="java.util.Date"/>
+    	<return-scalar column="oldAmnt" type="java.lang.String"/>
+    	<return-scalar column="newAmnt" type="java.lang.String"/>
+    	<return-scalar column="billType" type="java.lang.String"/>    	
+    	<return-scalar column="fname" type="java.lang.String"/>
+    	<return-scalar column="mname" type="java.lang.String"/>
+    	<return-scalar column="lname" type="java.lang.String"/> 	
+    	<return-scalar column="savings" type="java.lang.String"/>    	
+    	<![CDATA[
+		   SELECT tbr.budmjr_hd majorHead,tbr.token_num tokenNum,tbr.inward_dt inwardDate,tbr1.bill_net_amount oldAmnt,
+				tbr.bill_net_amount newAmnt, mbt.subject_desc billType,
+				oem.emp_fname fname,oem.emp_mname mname,oem.emp_lname lname,
+				(tbr1.bill_net_amount-tbr.bill_net_amount) savings
+				 FROM trn_bill_register tbr
+				JOIN trn_bill_register tbr1 ON tbr.prev_bill_no=tbr1.bill_no
+				JOIN mst_bill_type mbt ON tbr.subject_id=mbt.subject_id
+				JOIN org_userpost_rlt oum ON tbr.aud_post_id=oum.post_id	
+				JOIN org_emp_mst oem ON oum.user_id=oem.user_id
+				WHERE tbr.tsry_office_code=:locCode AND mbt.lang_id=:langId
+				AND tbr.inward_dt>=:fromDate AND tbr.inward_dt<=:toDate
+	 	]]>
+    </sql-query>        
+    <sql-query name="tbp.pao.flyLeafRegister.getData">    	
+    	<![CDATA[
+		   SELECT tbr.token_num,tbr.inward_dt, tbr.cardex_no, odm.short_name,tab.employee_name,tab.designation,
+			tab.register_date,tab.days_encashed, tbr.bill_net_amount, 
+			oem.emp_fname, oem.emp_mname, oem.emp_lname, tab.purpose_remarks
+ 			FROM trn_bill_register tbr
+			JOIN trn_adv_bill_recovery_dtls tab ON tab.bill_no=tbr.bill_no
+			JOIN org_userpost_rlt up ON tbr.aud_post_id = up.post_id
+			JOIN org_emp_mst oem ON oem.user_id = up.user_id
+			JOIN org_ddo_mst odm ON odm.ddo_code = tbr.ddo_code
+			WHERE tbr.tsry_office_code=:locCode AND tbr.inward_dt>=:fromDate AND tbr.inward_dt<=:toDate 
+			AND register_type=:flyLeafRegType AND odm.lang_id=:langId AND up.activate_flag=1 AND oem.lang_id=:langId
+	 	]]>
+    </sql-query>
+</hibernate-mapping>

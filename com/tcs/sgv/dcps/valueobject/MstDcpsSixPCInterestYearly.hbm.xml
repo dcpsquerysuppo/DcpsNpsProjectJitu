@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.MstDcpsSixPCInterestYearly" table="mst_dcps_sixpc_interest_yearly" >
+  
+  	<id name="dcpsSixPCInterestYearlyId" type="long">
+            <column name="mst_dcps_sixpc_interest_yearly_id"  />
+            <generator class="assigned" />
+    </id>
+    
+    <property name="dcpsId" type="string">
+            <column name="dcps_id"  />
+  	</property>
+    <property name="yearId" type="long">
+            <column name="year_id"  />
+  	</property>
+  	<property name="curTreasuryCD" type="long">
+            <column name="CUR_TREASURY_CD" />
+  	</property>
+  	<property name="curDdoCD" type="string">
+            <column name="CUR_DDO_CD"  />
+  	</property>
+  	<property name="openBalance" type="double">
+            <column name="OPEN_BALANCE"  />
+  	</property>
+  	<property name="arrearAmount" type="double">
+            <column name="ARREAR_AMOUNT"  />
+  	</property>
+  	<property name="interest" type="double">
+            <column name="INTEREST"  />
+  	</property>
+  	<property name="openInterest" type="double">
+            <column name="OPEN_INTEREST"  />
+  	</property>
+  	<property name="closeBalance" type="double">
+            <column name="CLOSE_BALANCE"  />
+  	</property>
+    <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+    </property>
+    <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" />
+    </property>
+    <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID"  />
+    </property>
+    <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" not-null="false" />
+    </property>
+    <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  not-null="false" />
+    </property>
+    <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID"   not-null="false" />
+    </property>
+  
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.pensionpay.valueobject">
+  <class name="TrnFinYearLetterNo" table="TRN_FINYEAR_LETTER_NO" dynamic-update="true">
+  	   <id name="trnFinYearLetterNoId" type="long">
+            <column name="TRN_FINYEAR_LETTER_NO_ID" precision="19" scale="0" />
+            <generator class="assigned" />
+       </id>
+       <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" not-null="true" />
+        </property>
+         <property name="ppoNo" type="string">
+            <column name="PPO_NO" not-null="true" />
+        </property> 
+        <property name="letterType" type="string">
+            <column name="LETTER_TYPE" not-null="true" />
+        </property>
+        <property name="finYearId" type="integer">
+            <column name="FIN_YEAR_ID" not-null="true" />
+        </property>
+        <property name="letterNo" type="long">
+            <column name="LETTER_NO" not-null="true" />
+        </property>
+        <property name="locationCode" type="integer">
+            <column name="LOCATION_CODE" not-null="true" />
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" />
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" />
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" />
+        </property>        
+  </class>
+</hibernate-mapping>

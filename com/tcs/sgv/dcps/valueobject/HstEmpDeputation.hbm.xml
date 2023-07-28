@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 24, 2011 2:41:24 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.dcps.valueobject.HstEmpDeputation" table="hst_dcps_emp_deputation">
+        <id name="hstdcpsEmpDeptnId" type="java.lang.Long">
+            <column name="HST_DCPS_EMPDEPTN_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="dbId" type="java.lang.Long">
+            <column  name="DB_ID"  />
+        </property>
+        <property name="locId" type="java.lang.Long">
+            <column name="location_code" />
+        </property>
+        <property name="officeCode" type="java.lang.String">
+            <column name="OFF_CODE" />
+        </property>
+        <many-to-one name="dcpsEmpId" class="com.tcs.sgv.dcps.valueobject.MstEmp" fetch="join">
+            <column name="DCPS_EMP_ID" />
+        </many-to-one>
+        <property name="attachDate" type="java.util.Date">
+            <column name="ATTACH_DATE" />
+        </property>
+        <property name="detachDate" type="java.util.Date">
+            <column name="DETACH_DATE" />
+        </property>
+        <property name="remarksDetach" type="java.lang.String">
+            <column name="REMARKS_DETACH" />
+        </property>
+         <property name="reasonDetach" type="java.lang.String">
+            <column name="REASON_DETACH" />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" />
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" />
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" />
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="UPDATED_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

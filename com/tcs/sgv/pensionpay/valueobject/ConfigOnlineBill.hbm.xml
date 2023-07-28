@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 24, 2008 10:47:22 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.ConfigOnlineBill" table="CONFIG_ONLINE_BILL" dynamic-update="true">
+        <id name="configOnlineBillId" type="long">
+            <column name="CONFIG_ONLINE_BILL_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="subjectId" type="long">
+            <column name="SUBJECT_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="isConfigured" type="string">
+            <column name="IS_CONFIGURED" length="1" not-null="true" />
+        </property>
+        <property name="rqstSrvc" type="string">
+            <column name="RQST_SRVC" />
+        </property>
+        <property name="jspPath" type="string">
+            <column name="JSP_PATH" />
+        </property>
+        <property name="vogen" type="string">
+            <column name="VOGEN" />
+        </property>
+        <property name="saveBillSrvc" type="string">
+            <column name="SAVE_BILL_SRVC" />
+        </property>
+        <property name="fetchBillDataSrvc" type="string">
+            <column name="FETCH_BILL_DATA_SRVC" />
+        </property>
+        <property name="gtrFormatView" type="string">
+            <column name="GTR_FORMAT_VIEW" />
+        </property>
+        <property name="voMapkeyPkmethod" type="string">
+            <column name="VO_MAPKEY_PKMETHOD" length="4000" />
+        </property>
+        <property name="crtFrmScrtchSrvc" type="string">
+            <column name="CRT_FRM_SCRTCH_SRVC" />
+        </property>
+    </class>
+</hibernate-mapping>

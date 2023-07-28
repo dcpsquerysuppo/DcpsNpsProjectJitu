@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+    <class name="com.tcs.sgv.dcps.valueobject.MstDcpsSchemes" table="MST_DCPS_SCHEMES">
+
+	<id name="schemeDcpsId" type="java.lang.Long">
+            <column name="SCHEME_DCPS_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+    </id>
+	
+	<property name="schemeCode" type="string">
+            <column name="SCHEME_CODE"  />
+  	</property>
+  	
+  	<property name="schemeName" type="string">
+            <column name="SCHEME_NAME"  />
+  	</property>
+  
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.TrnTerminalDtls" table="TERN_TERMINATION_DTLS" >
+  
+  	<id name="terminationId" type="long">
+            <column name="TERMINATION_DTLS"  />
+            <generator class="assigned" />
+    </id>
+    
+    <property name="sevarthId" type="string">
+            <column name="SEVARTH_ID"  />
+  	</property>
+  	<property name="dateOfTermination" type="timestamp">
+            <column name="TERMINATION_DATE"  />
+  	</property>
+  	<property name="reasonOfTermination" type="long">
+            <column name="REASON_OF_TERMINATION"/>
+    </property>
+    	<property name="curAddress" type="string">
+	            <column name="CUR_ADDRESS" />
+	</property>
+		<property name="dsgn" type="long">
+            <column name=" DESIGNATION"/>
+    </property>
+    <property name="statusFlag" type="long">
+            <column name=" STATUS"/>
+    </property>
+    <property name="ddoCode" type="string">
+            <column name="DDO_CODE" />
+  	</property>
+  	  <property name="locCode" type="string">
+            <column name="LOC_CODE" />
+  	</property>
+   	 <property name="transactionId" type="string">
+            <column name="TRANSACTION_ID" />
+  	</property>
+  	   	 <property name="reasonOfTOReject" type="string">
+            <column name="REASON_OF_TO_REJECT" />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	</property>
+	
+	<property name="createdPostId" type="long">
+	            <column name="CREATED_BY_POST"  />
+	</property>
+	<property name="updatedDate" type="timestamp">
+	            <column name="UPDATED_DATE"/>
+	</property>
+	
+	<property name="updatedPostId" type="long">
+	            <column name="UPDATED_BY_POST" />
+	</property>
+	
+	<property name="formAGenDate" type="timestamp">
+	            <column name="FORMA_GEN_DATE" />
+	</property>
+	
+	
+  </class>
+</hibernate-mapping>

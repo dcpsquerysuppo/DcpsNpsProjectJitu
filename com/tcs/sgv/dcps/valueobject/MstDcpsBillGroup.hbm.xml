@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.dcps.valueobject.MstDcpsBillGroup" table="MST_DCPS_BILL_GROUP">
+  
+  <id name="dcpsDdoBillGroupId" type="long">
+            <column name="BILL_GROUP_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+  </id>
+  
+  <property name="dcpsDdoCode" type="string">
+            <column name="DDO_CODE"  />
+  </property>
+  
+  <property name="dcpsDdoBillDescription" type="string">
+            <column name="DESCRIPTION"  />
+  </property>
+  
+  <property name="dcpsDdoBillSchemeName" type="string">
+            <column name="SCHEME_NAME"  />
+  </property>
+  
+  <property name="dcpsDdoSchemeCode" type="string">
+            <column name="SCHEME_CODE"  />
+  </property>
+  
+  <property name="dcpsDdoBillTypeOfPost" type="string">
+            <column name="TYPE_OF_POST"  />
+  </property>
+  
+  <property name="subBGOrNot" type="long">
+            <column name="SUB_BG_OR_NOT"  />
+  	</property>
+  
+  <property name="LangId" type="long">
+            <column name="LANG_ID"  />
+  	</property>
+  	
+  	<property name="LocId" type="long">
+            <column name="LOC_ID"  />
+  	</property>
+  	
+  	<property name="DbId" type="long">
+            <column name="DB_ID"  />
+  	</property>
+  	
+  	<property name="PostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  	</property>
+  	
+  	<property name="UserId" type="long">
+            <column name="CREATED_USER_ID"  />
+  	</property>
+  	
+  	<property name="CreatedDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  	</property>
+  	
+  	<property name="UpdatedPostId" type="long">
+            <column name="UPDATED_POST_ID"  />
+  	</property>
+  	
+  	<property name="UpdatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  />
+  	</property>
+  	
+  	<property name="UpdatedDate" type="timestamp">
+            <column name="UPDATED_DATE"  />
+  	</property>
+  	
+  	<property name="billNo" type="long">
+            <column name="bill_no"  />
+  	</property>
+  	
+  	<property name="billDeleted" type="java.lang.Character">
+            <column name="bill_deleted" />
+  	</property>
+  	
+  	<property name="billDcps" type="java.lang.Character">
+            <column name="bill_dcps" />
+  	</property>
+  	
+  	<property name="typeOfBill" type="java.lang.String">
+			<column name="TYPE_OF_BILL_GROUP" />
+		</property>
+  	
+  	
+  </class>
+</hibernate-mapping>

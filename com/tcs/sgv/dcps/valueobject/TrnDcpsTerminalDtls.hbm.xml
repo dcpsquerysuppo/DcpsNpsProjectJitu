@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.TrnDcpsTerminalDtls" table="TRN_DCPS_TERMINAL_DTLS" >
+  
+  	<id name="terminalId" type="long">
+            <column name="TERMINAL_ID"  />
+            <generator class="assigned" />
+    </id>
+    
+    <property name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID"  />
+  	</property>
+  	<property name="dateOfTermination" type="timestamp">
+            <column name="DATE_OF_TERMINATION"  />
+  	</property>
+  	<property name="reasonOfTermination" type="long">
+            <column name="REASON_OF_TERMINATION"/>
+    </property>
+    <property name="statusFlag" type="long">
+            <column name="STATUS_FLAG"/>
+    </property>
+    <property name="ddoCode" type="string">
+            <column name="DDO_CODE" />
+  	</property>
+   	<property name="treasuryCode" type="long">
+            <column name="TREASURY_CODE"/>
+  	</property>
+  	<property name="formA_attachId" type="long">
+            <column name="FORMA_ATTACHID"/>
+  	</property>
+  	<property name="deathCerti_attachId" type="long">
+            <column name="DEATHCERTI_ATTACHID" />
+  	</property>
+  	<property name="r3_attachId" type="long">
+            <column name="R3_ATTACHID" />
+  	</property>
+  	<property name="langId" type="long">
+            <column name="LANG_ID" />
+  	</property>
+  	<property name="locId" type="long">
+            <column name="LOC_ID" />
+  	</property>
+  	<property name="dbId" type="long">
+            <column name="DB_ID" />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	</property>
+	<property name="createdUserId" type="long">
+	         <column name="CREATED_USER_ID" />
+	</property>
+	<property name="createdPostId" type="long">
+	            <column name="CREATED_POST_ID"  />
+	</property>
+	<property name="updatedDate" type="timestamp">
+	            <column name="UPDATED_DATE"/>
+	</property>
+	<property name="updatedUserId" type="long">
+	            <column name="UPDATED_USER_ID" />
+	</property>
+	<property name="updatedPostId" type="long">
+	            <column name="UPDATED_POST_ID" />
+	</property>
+	<property name="orderNo" type="string">
+	            <column name="ORDER_NO" />
+	</property>
+	<property name="orderDate" type="timestamp">
+	            <column name="ORDER_DATE" />
+	</property>
+	<property name="authorityLetterNo" type="string">
+	            <column name="AUTHORITY_LETTER_NO" />
+	</property>
+	<property name="remarksSrka" type="string">
+	            <column name="REMARKS_SRKA" />
+	</property>
+	<property name="openingBalance" type="double">
+	            <column name="OPENING_BALANCE" />
+	</property>
+	<property name="empContriCurrYear" type="double">
+	            <column name="EMP_CONTRI_CURR_YEAR" />
+	</property>
+	<property name="emplrContriCurrYear" type="double">
+	            <column name="EMPLR_CONTRI_CURR_YEAR" />
+	</property>
+	<property name="interestContri" type="double">
+	            <column name="INTEREST_CONTRI" />
+	</property>
+	<property name="tier2Contri" type="double">
+	            <column name="TIER2_CONTRI" />
+	</property>
+	<property name="tier2Interest" type="double">
+	            <column name="TIER2_INTEREST" />
+	</property>
+	<property name="payableAmount" type="long">
+	            <column name="PAYABLE_AMOUNT" />
+	</property>
+	<property name="missingCreditEmployerContriFlag" type="char">
+	            <column name="MISSING_CREDIT_EMPLOYER_CONTRI_FLAG" />
+	</property>
+	
+	
+	<property name="curropeningBalance" type="double">
+	            <column name="CURR_OPENING_BALANCE" />
+	</property>
+	<property name="currempContriCurrYear" type="double">
+	            <column name="CURR_EMP_CONTRI_CURR_YEAR" />
+	</property>
+	<property name="curremplrContriCurrYear" type="double">
+	            <column name="CURR_EMPLR_CONTRI_CURR_YEAR" />
+	</property>
+	<property name="currinterestContri" type="double">
+	            <column name="CURR_INTEREST_CONTRI" />
+	</property>
+	<property name="currtier2Contri" type="double">
+	            <column name="CURR_TIER2_CONTRI" />
+	</property>
+	<property name="currtier2Interest" type="double">
+	            <column name="CURR_TIER2_INTEREST" />
+	</property>
+	<property name="currpayableAmount" type="long">
+	            <column name="CURR_PAYABLE_AMOUNT" />
+	</property>
+	<property name="prvr3gen" type="char">
+	            <column name="prv_r3_gen" />
+	</property>
+	
+	
+  </class>
+</hibernate-mapping>

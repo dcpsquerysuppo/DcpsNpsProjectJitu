@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.tcs.sgv.gpf.valueobject.MstGpfArrearsYearly" table="MST_GPF_ARREARS_YEARLY">
+		<id name="gpfArrearsYearlyId" type="long">
+			<column name="GPF_ARREARS_YEARLY_ID" precision="30" scale="0" />
+			<generator class="assigned" />
+		</id>
+		<property name="gpfAccNo" type="string">
+			<column name="GPF_ACC_NO" length="30" />
+		</property>
+		<property name="yearId" type="long">
+			<column name="YEAR_ID" length="30" />
+		</property>
+		<property name="monthId" type="long">
+			<column name="MONTH_ID" length="30" />
+		</property>
+		<property name="ddoCode" type="string">
+			<column name="DDO_CODE" length="30" />
+		</property>
+		<property name="totalAmount" type="double">
+			<column name="TOTAL_AMOUNT" length="30" />
+		</property>
+		<property name="openBalance" type="double">
+			<column name="OPEN_BALANCE" length="30" />
+		</property>
+		<property name="arrearAmount" type="double">
+			<column name="ARREAR_AMOUNT" length="30" />
+		</property>
+		<property name="installmentNo" type="int">
+			<column name="INSTALLMENT_NO" length="30" />
+		</property>
+		<property name="interestrate" type="float">
+			<column name="INTERESTRATE" length="30" />
+		</property>
+		<property name="closeBalance" type="double">
+			<column name="CLOSE_BALANCE" length="30" />
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" />
+		</property>
+		<property name="createdUserId" type="long">
+			<column name="CREATED_USER_ID" />
+		</property>
+		<property name="createdPostId" type="long">
+			<column name="CREATED_POST_ID" />
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE" />
+		</property>
+		<property name="updatedUserId" type="long">
+			<column name="UPDATED_USER_ID" />
+		</property>
+		<property name="updatedPostId" type="long">
+			<column name="UPDATED_POST_ID" />
+		</property>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.lna.valueobject">
+  <class name="com.tcs.sgv.lna.valueobject.MstLnaOrderReq" table="MST_LNA_ORDER_REQ">
+  		<id name="orderId" type="long">
+            <column name="ORDER_REQ_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" />
+        </property>        
+        <property name="orderNo" type="string">
+            <column name="ORDER_NO" />
+        </property>    
+        <property name="createdUserId" type="long">
+            <column name="CREATED_POST_ID" precision="10"   />
+        </property>
+        <property name="createdPostId" type="long"  >
+            <column name="CREATED_USER_ID" precision="10"  />
+        </property>
+        <property name="createdDate" type="timestamp" >
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="long"  >
+            <column name="UPDATED_POST_ID" precision="10" />
+        </property>
+        <property name="updatedPostId" type="long"  >
+            <column name="UPDATED_USER_ID" precision="10" />
+        </property>
+        <property name="updatedDate" type="timestamp" >
+            <column name="UPDATED_DATE" />
+        </property>
+  </class>
+</hibernate-mapping>

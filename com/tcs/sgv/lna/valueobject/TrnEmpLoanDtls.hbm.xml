@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.lna.valueobject">
+	<class name="com.tcs.sgv.lna.valueobject.TrnEmpLoanDtls" table="trn_emp_loan_dtls">
+		<id name="empLoanDtlsId" type="long">
+			<column name="EMP_LOAN_DTLS_ID" />
+			<generator class="assigned" />
+		</id>
+		<property name="sevaarthId" type="string">
+			<column name="SEVAARTH_ID" />
+		</property>
+		<property name="empName" type="string">
+			<column name="EMP_NAME" />
+		</property>
+		<property name="compAdvance" type="string">
+			<column name="COMP_ADVANCE" />
+		</property>
+		<property name="houseAdvance" type="string">
+			<column name="HOUSE_ADVANCE" />
+		</property>
+		<property name="motorAdvance" type="string">
+			<column name="MOTOR_ADVANCE" />
+		</property>
+		<property name="status" type="string">
+			<column name="STATUS" />
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" />
+		</property>
+		<property name="createdUserId" type="long">
+			<column name="CREATED_USER_ID" />
+		</property>
+		<property name="createdPostId" type="long">
+			<column name="CREATED_POST_ID" />
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE"  />
+		</property>
+		<property name="updatedUserId" type="long">
+			<column name="UPDATED_USER_ID"  />
+		</property>
+		<property name="updatedPostId" type="long">
+			<column name="UPDATED_POST_ID"  />
+		</property>
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--
+		Generated Aug 2, 2007 10:45:40 AM by Hibernate Tools 3.2.0.beta8
+	-->
+<hibernate-mapping>
+	<class name="com.tcs.sgv.common.valueobject.RltBankBranchPay"
+		table="rlt_bank_branch_pay" dynamic-update="true">
+		<comment></comment>
+		<id name="branchId" type="long">
+			<column name="BRANCH_ID" />
+			<generator class="assigned" />
+		</id>
+		<property name="bankCode" type="long">
+			<column name="BANK_CODE" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="micrCode" type="string">
+			<column name="micr_Code">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="bsrCode" type="string">
+			<column name="bsr_Code">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="branchName" type="string">
+			<column name="BRANCH_NAME" length="100" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="branchAddress" type="string">
+			<column name="BRANCH_ADDRESS" length="200">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="branchCode" type="java.lang.Long">
+			<column name="BRANCH_CODE">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="headOff" type="java.lang.Long">
+			<column name="HEAD_OFF">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="createdUserId" type="long">
+			<column name="CREATED_USER_ID" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="createdPostId" type="long">
+			<column name="CREATED_POST_ID" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="createdDate" type="date">
+			<column name="CREATED_DATE" length="10" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="UPDATED_USER_ID">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="UPDATED_POST_ID">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="updatedDate" type="date">
+			<column name="UPDATED_DATE" length="10">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="dbId" type="java.lang.Long">
+			<column name="DB_ID">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="locationCode" type="string">
+			<column name="LOCATION_CODE" length="10" not-null="true">
+			</column>
+		</property>
+		<property name="langId" type="java.lang.Long">
+			<column name="LANG_ID">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="reportingBranchCode" type="java.lang.Long">
+			<column name="REPORTING_BRANCH_CODE">
+				<comment></comment>
+			</column>
+		</property>
+		 
+		<property name="ifscCode" type="string">
+			<column name="IFSC_CODE" length="30">
+				<comment></comment>
+			</column>
+		</property>
+		 
+	</class>
+</hibernate-mapping>

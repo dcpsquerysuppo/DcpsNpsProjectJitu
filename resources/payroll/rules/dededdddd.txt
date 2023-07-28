@@ -1,0 +1,345 @@
+
+
+
+String city = payBill.getCity();
+boolean isHandicapped = payBill.isHandicapped();
+double startAmt = payBill.getScale_start_amt();
+int grade = payBill.getGrade();
+long designation=payBill.getDesignation();
+
+int uniformAvailed = 0;
+if(payBill.getUniformAvailed()==1) uniformAvailed = 1;
+
+int quarter_id = 0;
+
+List quaterDaysList = payBill.getQuaterDaysList();
+List quaterIdList = payBill.getQuaterIdList();
+List lstQuarterRate = payBill.getLstQuarterRate();
+
+String sis1979Flag=payBill.getSis1979Flag();
+
+double Sis1979=0;
+
+
+System.out.println(""+Sis1979+"******************Sis1979*****************"+sis1979Flag);
+
+if(sis1979Flag.equals("y"))
+Sis1979=5;
+
+
+System.out.println(""+Sis1979+"******************Sis1979*****************"+sis1979Flag);
+
+double CLLeaveTaken = payBill.getCLLeaveTaken();
+double CLLeaveBal = payBill.getCLLeaveBal();
+double basic = payBill.getBasic();
+long vpf = payBill.getVpf();
+double LeaveExcess=payBill.getLeaveExcess();
+double leave_ded = 0, leave_sal = 0;
+
+long empType = payBill.getEmpType();
+
+int monthGiven =0;
+int yearGiven=0;
+
+monthGiven= payBill.getMonth();
+yearGiven = payBill.getYear();
+
+int ZerovpfMonths=payBill.getZerovpfMonths();
+Date doj=payBill.getDoj();
+Date EmpSrvcExpDate=payBill.getEmpSrvcExp();
+
+int monthofDate=0;
+SimpleDateFormat sdfObj = new SimpleDateFormat("MM");
+String days = sdfObj.format(EmpSrvcExpDate);
+monthofDate=Integer.parseInt(days);
+
+int yearofDate=0;
+sdfObj = new SimpleDateFormat("yyyy");
+days = sdfObj.format(EmpSrvcExpDate);
+yearofDate=Integer.parseInt(days);
+
+if(ZerovpfMonths==3)
+monthofDate-=3;
+else
+monthofDate-=6;
+
+if(monthofDate<=0)
+{
+monthofDate+=12;
+yearofDate--;
+}
+
+boolean ZeroVPFFlag=false;
+
+if(yearGiven>yearofDate||(yearGiven==yearofDate&&monthofDate<monthGiven))
+ZeroVPFFlag=true;
+
+
+
+Calendar cal = Calendar.getInstance();
+cal.set(Calendar.YEAR, yearGiven);
+cal.set(Calendar.MONTH,(monthGiven-1));
+cal.set(Calendar.DAY_OF_MONTH, 1);
+
+int getMaxDays = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+System.out.println("No of Days in Month are " + getMaxDays);
+
+
+
+PaybillOutputVO payBillOut = new PaybillOutputVO();
+
+payBillOut.setDeduc9580(Sis1979);
+
+
+//by manoj for misc recovery
+double miscRecovery=payBill.getMiscRecovery();
+payBillOut.setDeduc9910(miscRecovery);
+//end by manoj for misc recovery
+
+
+
+
+
+System.out.println("No of leaves taken = " + CLLeaveTaken + " And Avail Leaves is = " + CLLeaveBal);
+
+//if( CLLeaveTaken > CLLeaveBal) leave_ded = (basic/getMaxDays) * (CLLeaveTaken - CLLeaveBal);
+ if( LeaveExcess> 0) leave_ded =Double.parseDouble(""+ Math.round((basic/getMaxDays) * (LeaveExcess)));
+if(  LeaveExcess> 0) leave_sal = Double.parseDouble(""+Math.round((basic/getMaxDays) * (CLLeaveTaken-LeaveExcess)));
+else leave_sal = Double.parseDouble(""+Math.round((basic/getMaxDays) * (CLLeaveTaken)));
+System.out.println("salary is " + basic);
+System.out.println("Leave Deduction is " + leave_ded);
+System.out.println("Leave Salary is " + leave_sal);
+System.out.println("LeaveExcess " + LeaveExcess);
+double originalBasic = basic;
+basic = basic - leave_ded;
+
+
+
+// for leave  > 30
+double basicafterTRAdedeuc = basic -(basic/getMaxDays)*payBill.getTRAExcess();
+double basicafterHRAdedeuc = basic -(basic/getMaxDays)*payBill.getHRAExcess();
+double basicafterCLAdedeuc = basic -(basic/getMaxDays)*payBill.getCLAExcess();
+double basicafterMAdedeuc =  basic -(basic/getMaxDays)*payBill.getMAExcess();
+double basicafterWAdedeuc =  basic -(basic/getMaxDays)*payBill.getWAExcess();
+
+if(payBill.getTRAExcess()>0)
+basicafterTRAdedeuc=0;
+if(payBill.getHRAExcess()>0)
+basicafterHRAdedeuc=0;
+if(payBill.getMAExcess()>0)
+basicafterMAdedeuc=0;
+if(payBill.getWAExcess()>0)
+basicafterWAdedeuc=0;
+
+
+
+
+
+
+
+double dp = calculateDP(empType);
+
+// for leave  > 30
+double salary = (basic * (dp/100)) + basic;
+double originalSalaryAndDP = (originalBasic * (dp/100)) + originalBasic;
+
+double salaryCLA = (basicafterCLAdedeuc * (dp/100)) + basicafterCLAdedeuc;
+
+// for leave  > 30
+//double ta = calculateTA(startAmt,city, isHandicapped);
+
+
+double taDist=payBill.getTaDistance();
+boolean isVehAvial =payBill.isVechAvailed();
+
+double ta = 0;
+if(basic>0)
+ta = calculateTA(startAmt,city, isHandicapped,empType,isVehAvial,taDist)*basicafterTRAdedeuc/basic;
+
+// for leave  > 30
+//double cla = calculateCLA(salary, city);
+double cla = calculateCLA(salaryCLA, city,empType);
+if(payBill.getCLAExcess()>0)
+cla=0;
+
+
+// for leave  > 30
+//double hra = calculateHRA(city,quarter_id);
+double hra = 0;
+
+double da = calculateDA(empType);
+double wa = 0;
+double ma = 0;
+
+// for leave  > 30
+//ma = calculateMA(payBill.getMedAllowance());
+if(basic>0)
+ma = calculateMA(payBill.getMedAllowance(),empType)*basicafterMAdedeuc/basic;
+
+
+// for leave  > 30
+//wa = calculateWA(uniformAvailed);
+if(basic>0)
+wa = calculateWA(uniformAvailed,grade,designation,empType)*basicafterWAdedeuc/basic;
+
+System.out.println("Wasing Allowance is " + wa);
+System.out.println("Medical Allowance is " + ma);
+
+double totAllowance = ta + cla + hra + da + dp;
+double totAdvances = payBill.getFest_Adv() + payBill.getFood_adv() + payBill.getPay_recv();
+double grossPay = payBill.getBasic() + totAllowance - totAdvances;
+
+
+double pf = 0;
+double CPF=0;
+int gpfAcctFlag=0;
+gpfAcctFlag = payBill.getGpfAccountFlag();
+
+System.out.println("VPF in Rule Engine is " + vpf);
+System.out.println("gpfAcctFlag in Rule Engine is " +gpfAcctFlag );
+if(vpf == 0)
+{
+ System.out.println("VPF is zero");
+ if(gpfAcctFlag!=0)
+  pf = calculatePF(empType,doj);
+
+ if(salary>0 )
+ CPF = calculateCPF(empType,doj) ; 
+
+}
+else 
+{
+ System.out.println("VPF not zero");
+ if(salary>0 && gpfAcctFlag!=0 && !CheckCPFFlag(doj))
+ pf = (Double.valueOf(Long.toString(vpf)) / originalSalaryAndDP) * 100;
+ else if(salary>0 && gpfAcctFlag!=0 && CheckCPFFlag(doj))
+ CPF = (Double.valueOf(Long.toString(vpf)) / originalSalaryAndDP)/1.47 * 100;
+}
+
+if(ZeroVPFFlag)
+pf=0;
+
+
+payBillOut.setDeduc9534(CPF); //CPF
+
+System.out.println("PF in Rule Engine " + pf);
+
+double sisIns = calculateSISInsurance(startAmt,grade,empType,sis1979Flag);
+double sisSav = calculateSISSavings(startAmt,grade,empType,sis1979Flag);
+double aisIns = calculateAISInsurance(grade,empType);
+double aisSav = calculateAISSavings(grade,empType);
+
+double hrr =0;
+long qtrRateType;
+long totalhrrDays=0;
+
+for(int count=0;count<quaterDaysList.size();count++)
+{
+  System.out.println("quaterIdList.get(count) " + quaterIdList.get(count).getClass()+" quaterDaysList.get(count)  "+quaterDaysList.get(count).getClass());
+  quarter_id = ((Integer)quaterIdList.get(count)).intValue();
+  long quaterDays=((Long)quaterDaysList.get(count)).longValue();
+  double quater_days = ((Long)quaterDays).doubleValue();
+  
+  totalhrrDays=totalhrrDays+quaterDays;
+  qtrRateType = ((Long)lstQuarterRate.get(count)).longValue();
+  double value = calculateHRR(quarter_id,0,qtrRateType);
+//0 is for the emp Type means hrr will be calculated for all type of users.
+   
+  System.out.println("hrr in Rule Engine " + value+" and quarter days is "+quater_days+" for quarter_id "+quarter_id);
+ 
+  hrr+= (value/getMaxDays)*quater_days;  
+} 
+System.out.println("hrr in Rule Engine " + hrr);
+
+
+if(totalhrrDays<getMaxDays)
+{
+ quarter_id=0;
+}
+
+
+if(basic>0)
+ hra = calculateHRA(city,quarter_id,empType)*basicafterHRAdedeuc/basic;
+System.out.println("hra in Rule Engine " + hra);
+double pt = calculatePT(grossPay,empType,isHandicapped);
+
+System.out.println("House Rent Recovery is " + hrr + " for quarter id " + quarter_id);
+payBillOut.setAllow0119(dp);//DP
+if(quarter_id == 0 ) payBillOut.setAllow0110(hra);//HRA
+else payBillOut.setAllow0110(0);//HRA
+payBillOut.setAllow0111(cla);//CLA
+payBillOut.setAllow1301(wa);//WA
+payBillOut.setAllow0107(ma);//MA
+payBillOut.setAllow0113(ta);//TA
+payBillOut.setAllow0103(da);//DA
+
+if(grade==getCode("AISGradeCode")) 
+{
+ payBillOut.setDeduc9550(0);//RentB
+ payBillOut.setDeduc9560(hrr);//HRR
+}
+else
+{
+ payBillOut.setDeduc9550(hrr);//RentB
+ payBillOut.setDeduc9560(0);//HRR
+}
+payBillOut.setDeduc9530(0);//PLI
+payBillOut.setDeduc9570(pt);//PT
+
+if(grade==getCode("AISGradeCode")) 
+{
+payBillOut.setDeduc9583(aisIns);//aisIF
+payBillOut.setDeduc9584(aisSav);//aisSF
+}
+else
+{
+payBillOut.setDeduc9581(sisIns);//SisIF
+payBillOut.setDeduc9582(sisSav);//SisSF
+}
+System.out.println("pf pf pf is " + getCode("GradeCode4")+" "+grade);
+if(grade==getCode("GradeCode4"))
+{
+payBillOut.setDeduc9531(pf); //GPF Class 4
+System.out.println("pf class IV is " + pf);
+
+}
+else if(grade==getCode("AISGradeCode"))
+{
+payBillOut.setDeduc9620(pf); //GPF AIS
+System.out.println("pf class AIS is " + pf);
+
+}
+else 
+{
+ payBillOut.setDeduc9670(pf);//GPF
+System.out.println("other than class IV " + pf);
+
+}
+
+payBillOut.setAdv5701(payBill.getFest_Adv());//Fes.Adv
+payBillOut.setAdv5801(payBill.getFood_adv());//Food Adv
+payBillOut.setAdv0101(payBill.getPay_recv());//PayRecovery
+
+payBillOut.setGrossAmt(grossPay);
+payBillOut.setLeaveSalary(leave_sal);
+if(grade==getCode("GradeCode3") || grade==getCode("GradeCode4"))
+{
+ if(basic-leave_sal>=0) 
+  payBillOut.setBasic0102(basic-leave_sal);
+ else
+  payBillOut.setBasic0102(0);  
+ payBillOut.setBasic0101(0);
+}
+else
+{
+ if(basic-leave_sal>=0)  
+  payBillOut.setBasic0101(basic-leave_sal);
+ else
+  payBillOut.setBasic0101(0);
+ payBillOut.setBasic0102(0);
+}
+
+payBillOut.setRevisedBasic(payBillOut.getBasic0101()+payBillOut.getBasic0102()+leave_sal);
+
+
+return payBillOut;

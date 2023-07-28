@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 23, 2008 12:42:34 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnMonthlyPensionRecoveryDtls" table="TRN_MONTHLY_PENSION_RECOVERY_DTLS" dynamic-update="true">
+        <id name="trnMonthlyPensionRecoveryDtls" type="long">
+            <column name="TRN_MONTHLY_PENSION_RECOVERY_DTLS" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" not-null="true" />
+        </property>
+        <property name="recoveryFromFlag" type="string">
+            <column name="RECOVERY_FROM_FLAG" length="7" />
+        </property>
+        <property name="recoveryType" type="string">
+            <column name="RECOVERY_TYPE" length="30" />
+        </property>
+        <property name="accountNumber" type="string">
+            <column name="ACCOUNT_NUMBER" length="20" />
+        </property>
+         <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="12" default="0" not-null="true" />
+        </property>
+        <property name="forMonth" type="java.lang.Integer">
+            <column name="FOR_MONTH" precision="6" scale="0" />
+        </property>
+        <property name="bankCode" type="string">
+            <column name="BANK_CODE" length="20" />
+        </property>
+        <property name="branchCode" type="string">
+            <column name="BRANCH_CODE" length="20" />
+        </property>
+         <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="billNo" type="long">
+            <column name="BILL_NO" length="20" />
+        </property>
+         <property name="trnCounter" type="integer">
+            <column name="TRN_COUNTER" precision="11" scale="0" />
+        </property>
+		<property name="noOfInstallments" type="integer">
+            <column name="no_of_installments" precision="11" scale="0" />
+        </property>
+        <property name="nature" type="string">
+            <column name="nature" length="60" />
+        </property>
+        <property name="schemeCode" type="string">
+            <column name="scheme_code" length="20" />
+        </property>
+         <property name="ppoNo" type="string">
+            <column name="ppo_no" length="20" />
+        </property>
+        <property name="locationCode" type="java.lang.Integer">
+            <column name="location_code" precision="6" scale="0" />
+        </property>
+        <property name="dbId" type="java.lang.Integer">
+            <column name="db_id" precision="6" scale="0" />
+        </property>
+        <property name="changeRqstId" type="long">
+            <column name="CHANGE_RQST_ID" precision="20" scale="0" />
+        </property>
+          <property name="changeStmntStatus" type="string">
+            <column name="change_stmnt_status" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2008 1:03:26 PM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.MstCardexPath" table="MST_CARDEX_PATH" dynamic-update="true">
+        <id name="locId" type="java.lang.Long">
+            <column name="LOC_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="cardexPath" type="string">
+            <column name="CARDEX_PATH" length="300" />
+        </property>
+    </class>
+</hibernate-mapping>

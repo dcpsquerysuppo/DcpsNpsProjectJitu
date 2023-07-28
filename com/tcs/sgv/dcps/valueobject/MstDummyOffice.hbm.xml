@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 12, 2011 5:05:19 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.dcps.valueobject.MstDummyOffice" table="MST_DCPS_DUMMY_OFFICE">
+    
+        <composite-id>
+	      <key-property name="dummyOfficeId" column="DUMMYOFFICE_ID"/>
+	      <key-property name="treasury" column="TREASURY"/>
+   		</composite-id>
+        
+        <property name="dbId" type="java.lang.Long">
+           <column name="DB_ID" />
+        </property>
+        <property name="dummyOfficeName" type="java.lang.String">
+            <column name="DUMMYOFFICE_NAME" />
+        </property>
+        <property name="adminDept" type="java.lang.Long">
+            <column name="ADMINDEPT" />
+        </property>
+        <property name="offAddr1" type="java.lang.String">
+            <column name="OFFADDR1" />
+        </property>
+        <property name="offAddr2" type="java.lang.String">
+            <column name="OFFADDR2" />
+        </property>
+        <property name="district" type="java.lang.Long">
+            <column name="DISTRICT" />
+        </property>
+        <property name="taluka" type="java.lang.Long">
+            <column name="TALUKA" />
+        </property>
+        <property name="town" type="java.lang.Long">
+            <column name="TOWN" />
+        </property>
+        <property name="village" type="java.lang.String">
+            <column name="VILLAGE" />
+        </property>
+        <property name="pinCode" type="java.lang.Long">
+            <column name="PINCODE" />
+        </property>
+        <property name="telNo1" type="java.lang.String">
+            <column name="TELNO1" />
+        </property>
+        <property name="telNo2" type="java.lang.String">
+            <column name="TELNO2" />
+        </property>
+        <property name="faxNo" type="java.lang.String">
+            <column name="FAXNO" />
+        </property>
+        <property name="emailAddr" type="java.lang.String">
+            <column name="EMAILADDR" />
+        </property>
+        <property name="statusFlag" type="java.lang.Character">
+            <column name="STATUSFLAG" />
+        </property>
+        <property name="langId" type="java.lang.Long">
+            <column name="LANGID" />
+        </property>
+        <property name="locId" type="java.lang.Long">
+            <column name="LOC_ID" />
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" />
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" />
+        </property>
+        <property name="isWithoutEmplrContri" type="java.lang.Character">
+            <column name="IS_WITHOUT_EMPLR_CONTRI" />
+        </property>
+    </class>
+</hibernate-mapping>

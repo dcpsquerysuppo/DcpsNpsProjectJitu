@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.pensionpay.valueobject">  
+  <class name="com.tcs.sgv.pensionpay.valueobject.StgPnsnBankAcNo" table="STG_PNSN_BANK_AC_NO">
+  		<id name="stgPnsnBankAcNoId" type="long">
+            <column name="STG_PNSN_BANK_AC_NO_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="delvId" type="long">
+            <column name="DELV_ID" />
+        </property>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" />
+        </property>
+         <property name="ppoNo" type="string">
+            <column name="PPO_NO"/>
+        </property>
+        <property name="firstName" type="string">
+            <column name="FIRST_NAME"/>
+        </property>
+        <property name="bankName" type="string">
+            <column name="BANK_NAME"/>
+        </property>
+        <property name="branchName" type="string">
+            <column name="BRANCH_NAME" />
+        </property>
+        <property name="oldAccountNo" type="string">
+            <column name="OLD_ACCOUNT_NO" />
+        </property>
+        <property name="newAccountNo" type="string">
+            <column name="NEW_ACCOUNT_NO" />
+        </property> 
+         <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" />
+        </property>       
+        <property name="createdUserId" type="long">
+            <column name="CREATED_POST_ID"    />
+        </property>
+        <property name="createdPostId" type="long"  >
+            <column name="CREATED_USER_ID"   />
+        </property>
+        <property name="createdDate" type="timestamp" >
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="long"  >
+            <column name="UPDATED_POST_ID"  />
+        </property>
+        <property name="updatedPostId" type="long"  >
+            <column name="UPDATED_USER_ID"  />
+        </property>
+        <property name="updatedDate" type="timestamp" >
+            <column name="UPDATED_DATE" />
+        </property>       
+  </class>
+</hibernate-mapping>

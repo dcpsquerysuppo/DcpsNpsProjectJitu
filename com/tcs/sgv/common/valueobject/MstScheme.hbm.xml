@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.common.valueobject">
+    <class name="com.tcs.sgv.common.valueobject.MstScheme" table="MST_SCHEME" >
+
+
+   <id name="schemeId" type="long">
+            <column name="scheme_Id" />
+            <generator class="assigned" />
+       </id>
+     <property name="schemeCode" type="string">
+            <column name="scheme_Code" length="20" >
+                <comment></comment>
+            </column>
+     </property>  
+     <property name="schemeName" type="string">
+            <column name="scheme_Name" length="20" >
+                <comment></comment>
+            </column>
+     </property> 
+     <property name="demandCode" type="string">
+            <column name="demand_Code" length="20" >
+                <comment></comment>
+            </column>
+     </property> 
+     
+     <property name="majorHead" type="string">
+            <column name="major_Head" length="20" >
+                <comment></comment>
+            </column>
+     </property> 
+     <property name="subMajorHead" type="string">
+            <column name="sub_Major_Head" length="20" >
+                <comment></comment>
+            </column>
+     </property> 
+     <property name="minorHead" type="string">
+            <column name="minor_Head" length="20" >
+                <comment></comment>
+            </column>
+     </property> 
+      <property name="subMinorHead" type="string">
+            <column name="sub_Minor_Head" length="20" >
+                <comment></comment>
+            </column>
+     </property>
+      <property name="subHead" type="string">
+            <column name="sub_Head" length="20" >
+                <comment></comment>
+            </column>
+     </property>
+      <property name="charged" type="string">
+            <column name="charged" length="20" >
+                <comment></comment>
+            </column>
+     </property>
+      <property name="plan" type="string">
+            <column name="plan" length="20" >
+                <comment></comment>
+            </column>
+     </property>
+      <property name="schemeType" type="string">
+            <column name="scheme_Type" length="20" >
+                <comment></comment>
+            </column>
+     </property>
+      <property name="deptId" type="string">
+            <column name="dept_Id" length="20" >
+                <comment></comment>
+            </column>
+     </property>
+      <property name="status" type="string">
+            <column name="status" length="20" >
+                <comment></comment>
+            </column>
+     </property>
+     <property name="langId" type="string">
+            <column name="lang_id" length="20" >
+                <comment></comment>
+            </column>
+     </property>
+     <property name="finYrId" type="long">
+            <column name="fin_Yr_Id" length="20" >
+                <comment></comment>
+            </column>
+     </property>
+     
+  </class>
+</hibernate-mapping>

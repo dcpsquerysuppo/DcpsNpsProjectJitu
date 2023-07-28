@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 24, 2007 1:08:53 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.MstStatusLiability" table="MST_STATUS_LIABILITY" dynamic-update="true">
+        <comment></comment>
+        <id name="statusId" type="long">
+            <column name="STATUS_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="statusCode" type="string">
+            <column name="STATUS_CODE" length="45" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="statusName" type="string">
+            <column name="STATUS_NAME" length="100" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="liabilityId" type="long">
+            <column name="LIABILITY_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="statusDesc" type="string">
+            <column name="STATUS_DESC" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="big_decimal">
+            <column name="LOC_ID" precision="20" scale="0">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="DB_ID" precision="20" scale="0">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

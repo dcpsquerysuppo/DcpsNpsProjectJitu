@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.dcps.valueobject.MstDcpsTreasurynetData" table="mst_dcps_treasurynet_data">
+  	
+  	<id name="dcpsTreasurynetDataId" type="long">
+            <column name="MST_DCPS_TREASURYNET_DATA_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+     </id>
+     
+    <property name="treasuryCode" type="long">
+            <column name="treasury_code"  />
+  	</property>
+    <property name="ddoCode" type="string">
+            <column name="ddo_code"  />
+  	</property>
+  	<property name="vorc" type="java.lang.Character">
+            <column name="vorc"  />
+  	</property>
+  	 <property name="yearDesc" type="string">
+            <column name="year_desc"  />
+  	</property>
+  	<property name="billNo" type="long">
+            <column name="bill_no"  />
+  	</property>
+  	<property name="billDate" type="timestamp">
+            <column name="bill_date"  />
+  	</property>
+  	<property name="billAmount" type="double">
+            <column name="bill_amount"  />
+  	</property>
+  	<property name="voucherNo" type="long">
+            <column name="voucher_no"  />
+  	</property>
+  	<property name="voucherDate" type="timestamp">
+            <column name="voucher_date"  />
+  	</property>
+  	<property name="fromScheme" type="string">
+            <column name="from_scheme"  />
+  	</property>
+   	<property name="toScheme" type="string">
+            <column name="to_scheme"  />
+  	</property>
+  	<property name="dcpsAmount" type="double">
+            <column name="dcps_amount"  />
+  	</property>
+  	 <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  </property>
+  <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" />
+  </property>
+  <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  </property>
+  <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE"/>
+  </property>
+  <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" />
+  </property>
+  <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" />
+  </property>
+  
+  
+  </class>
+</hibernate-mapping>

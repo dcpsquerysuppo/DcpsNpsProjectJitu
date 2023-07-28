@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.tcs.sgv.dcps.valueobject.CityMaster" table="MST_CITY">
+		<id name="cId" type="long">
+			<column name="CITY_ID" />
+			<generator class="increment" />
+		</id>
+		<property name="cName" type="string">
+			<column name="CITY_NAME" />
+		</property>
+		<property name="cAddress" type="string">
+			<column name="CITY_ADDRESS" />
+		</property>
+		<property name="cEmailId" type="string">
+			<column name="CITY_EMAIL" />
+		</property>
+		<!-- 
+		<property name="img" type="blob">            
+        <column name="CITY_IMAGE"/>        
+        </property>
+		<property name="img" type="Blob">
+			<column name="CITY_IMAGE" />
+		</property>
+		 -->
+	</class>
+</hibernate-mapping>

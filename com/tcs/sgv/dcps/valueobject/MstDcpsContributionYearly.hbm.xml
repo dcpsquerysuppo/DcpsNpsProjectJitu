@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.MstDcpsContributionYearly" table="MST_DCPS_CONTRIBUTION_YEARLY" >
+  
+  	<id name="dcpsContributionYearlyId" type="long">
+            <column name="mst_dcps_contribution_yearly_id"  />
+            <generator class="assigned" />
+    </id>
+    
+    <property name="dcpsId" type="string">
+            <column name="dcps_id"  />
+  	</property>
+    <property name="yearId" type="long">
+            <column name="year_id"  />
+  	</property>
+  	<property name="curTreasuryCD" type="long">
+            <column name="CUR_TREASURY_CD" />
+  	</property>
+  	<property name="curDdoCD" type="string">
+            <column name="CUR_DDO_CD"  />
+  	</property>
+  	<property name="openNet" type="double">
+            <column name="OPEN_NET"  />
+  	</property>
+  	<property name="openEmp" type="double">
+            <column name="OPEN_EMPLOYEE"  />
+  	</property>
+  	<property name="openEmplr" type="double">
+            <column name="OPEN_EMPLOYER"  />
+  	</property>
+  	<property name="openTier2" type="double">
+            <column name="OPEN_TIER2"  />
+  	</property>
+  	<property name="contribEmp" type="double">
+            <column name="CONTRIB_EMPLOYEE"  />
+  	</property>
+  	<property name="contribEmplr" type="double">
+            <column name="CONTRIB_EMPLOYER"  />
+  	</property>
+  	<property name="contribTier2" type="double">
+            <column name="CONTRIB_TIER2"  />
+  	</property>
+  	<property name="intContribEmp" type="double">
+            <column name="INT_CONTRB_EMPLOYEE"  />
+  	</property>
+  	<property name="intContribEmplr" type="double">
+            <column name="INT_CONTRB_EMPLOYER"  />
+  	</property>
+  	<property name="intContribTier2" type="double">
+            <column name="INT_CONTRB_TIER2"  />
+  	</property>
+  	<property name="openInt" type="double">
+            <column name="OPEN_INT"  />
+  	</property>
+  	<property name="closeEmp" type="double">
+            <column name="CLOSE_EMPLOYEE"  />
+  	</property>
+  	<property name="closeEmplr" type="double">
+            <column name="CLOSE_EMPLOYER"  />
+  	</property>
+  	<property name="closeTier2" type="double">
+            <column name="CLOSE_TIER2"  />
+  	</property>
+  	<property name="closeNet" type="double">
+            <column name="CLOSE_NET"  />
+  	</property>
+	  <property name="createdDate" type="timestamp">
+	            <column name="CREATED_DATE"  />
+	  </property>
+	  <property name="createdUserId" type="long">
+	            <column name="CREATED_USER_ID" />
+	  </property>
+	  <property name="createdPostId" type="long">
+	            <column name="CREATED_POST_ID"  />
+	  </property>
+	  <property name="updatedDate" type="timestamp">
+	            <column name="UPDATED_DATE" not-null="false" />
+	  </property>
+	  <property name="updatedUserId" type="long">
+	            <column name="UPDATED_USER_ID"  not-null="false" />
+	  </property>
+	  <property name="updatedPostId" type="long">
+	            <column name="UPDATED_POST_ID"   not-null="false" />
+	  </property>
+	  <property name="closeMissingCredit" type="double">
+            <column name="CLOSE_MISSING_CREDIT"  />
+  	  </property>
+  	  <property name="contribTotalMissingCredit" type="double">
+            <column name="CONTRIB_TOTAL_MISSING_CREDIT"  />
+  	  </property>
+  <property name="openIntEmp" type="double">
+            <column name="OPEN_INT_EMP"  />
+  	</property>
+  	  	<property name="openIntEmplr" type="double">
+            <column name="OPEN_INT_EMPLR"  />
+  	</property>
+  </class>
+</hibernate-mapping>

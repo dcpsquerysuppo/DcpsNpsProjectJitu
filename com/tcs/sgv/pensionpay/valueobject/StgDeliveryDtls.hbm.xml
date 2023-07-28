@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2011 6:54:12 PM by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.StgDeliveryDtls" table="STG_DELIVERY_DTLS" dynamic-update="true">
+       <id name="fileId" type="long">
+            <column name="FILE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="delvId" type="long">
+            <column name="DELV_ID" not-null="true"/>
+        </property>
+        <property name="delvType" type="long">
+            <column name="DELV_TYPE" not-null="true" />
+        </property>
+        <property name="uploadDate" type="timestamp">
+            <column name="UPLOAD_DATE" length="26" not-null="true" />
+        </property>
+        <property name="uploadBy" type="long">
+            <column name="UPLOAD_BY" />
+        </property>
+        <property name="delvStatus" type="string">
+            <column name="DELV_STATUS" length="20" />
+        </property>
+        <property name="fileAttachmentId" type="long">
+            <column name="FILE_ATTACHMENT_ID" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

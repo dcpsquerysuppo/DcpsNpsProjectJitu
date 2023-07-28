@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.pensionproc.valueobject.TrnPnsnprocFamilydtls" table="trn_pnsnproc_familydtls"  dynamic-update="true">
+		<id name="pnsnrFamilyId" type="java.lang.Long">
+            <column name="pnsnrfamily_Id" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+  		 <property name="dbId" type="java.lang.Long">
+            <column name="db_id" precision="20" scale="0"  />
+        </property>
+         <property name="locationCode" type="java.lang.Long">
+            <column name="location_code" precision="20" scale="0"  />
+        </property>
+         <property name="pensionerDtlId" type="java.lang.Long">
+            <column name="pensionerdtl_Id" precision="20" scale="0" >
+            </column>
+        </property>
+        <property name="inwardPensionId" type="java.lang.Long">
+            <column name="inward_pension_id" precision="20" scale="0" >
+            </column>
+        </property>
+         <property name="name" type="string">
+            <column name="NAME" precision="20" scale="0"  />
+        </property>
+        <property name="relation" type="string">
+            <column name="RELATION" precision="20" scale="0"  />
+        </property>
+        <property name="birthDate" type="date">
+            <column name="birth_date" length="10"/>
+        </property>
+         <property name="age" type="integer">
+            <column name="age" precision="20" scale="0"  />
+        </property>
+        <property name="addrSameFlag" type="string">
+            <column name="addr_same_flag" precision="20" scale="0"  />
+        </property>
+        <property name="state" type="java.lang.Long">
+            <column name="state" precision="20" scale="0"  />
+        </property>
+        <property name="district" type="java.lang.Long">
+            <column name="district" precision="20" scale="0"  />
+        </property>
+        <property name="area" type="string">
+            <column name="area" precision="20" scale="0"  />
+        </property>
+        <property name="road" type="string">
+            <column name="road" precision="20" scale="0"  />
+        </property>
+        <property name="flateNo" type="string">
+            <column name="flat_no" precision="20" scale="0"  />
+        </property>
+         <property name="pincode" type="integer">
+            <column name="pincode" precision="20" scale="0"  />
+        </property>
+        <property name="landLineNo" type="string">
+            <column name="landlineno" precision="20" scale="0"  />
+        </property>
+        <property name="mobileNo" type="string">
+            <column name="mobileno" precision="20" scale="0"  />
+        </property>
+        <property name="emailId" type="string">
+            <column name="email_id" precision="20" scale="0"  />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+		</property>
+		 <property name="deathDate" type="timestamp">
+            <column name="DATE_OF_DEATH" length="7" />
+        </property>
+        <property name="minorFlag" type="string">
+            <column name="MINOR_FLAG" length="1" />
+        </property>
+        <property name="salary" type="big_decimal">
+            <column name="SALARY" precision="12" default="0" not-null="true"/>
+        </property>
+        <property name="handicapeFlag" type="string">
+            <column name="HANDICAPE_FLAG" length="1" />
+        </property>
+        <property name="guardianName" type="string">
+            <column name="GUARDIAN_NAME" length="100" />
+        </property>
+        <property name="percentage" type="long">
+            <column name="PERCENTAGE" precision="5" />
+        </property>
+        <property name="marriedFlag" type="string">
+            <column name="MARRIED_FLAG" length="1" />
+        </property>
+      
+  </class>
+</hibernate-mapping>

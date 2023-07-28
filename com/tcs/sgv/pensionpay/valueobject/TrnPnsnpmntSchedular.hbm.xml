@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.tcs.sgv.pensionpay.valueobject.TrnPnsnpmntSchedular" table="trn_pnsnpmnt_schedular">
+  		<id name="schedularId" type="java.lang.Long">
+            <column name="schedular_id" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="callDate" type="java.util.Date">
+            <column name="call_date"  />
+        </property>
+        <property name="slotNo" type="long" >
+            <column name="slot_no"  />
+        </property>
+        <property name="slotTime" type="string">		<!--  to be changed to pk of pensioner pay table -->
+            <column name="slot_time" length="20" />
+        </property>
+        <property name="auditorPostId" type="long">
+            <column name="auditor_post_id"  />
+        </property>
+        <property name="pensionerCode" type="java.lang.Long">		<!--  to be changed to pk of pensioner pay table -->
+            <column name="pensioner_code" precision="20" scale="0" />
+        </property>
+        <property name="createdUserId" type="long" >
+            <column name="created_user_id"  />
+        </property>
+        <property name="createdPostId" type="long" >
+            <column name="created_post_id"  />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="created_date"  />
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="updated_user_id"  />
+        </property>
+        <property name="updatedPostId" type="long" >
+            <column name="updated_post_id"  />
+        </property>
+         <property name="updatedDate" type="java.util.Date">
+            <column name="updated_date" length="50" />
+        </property>
+        <property name="dbId" type="java.lang.Long" >
+            <column name="db_id" precision="20" scale="0" />
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="location_code" precision="20" scale="0" />
+        </property>
+        <property name="scheduleStatus" type="string">
+            <column name="schedule_status" precision="20" scale="0" />
+        </property>
+  </class>
+</hibernate-mapping>

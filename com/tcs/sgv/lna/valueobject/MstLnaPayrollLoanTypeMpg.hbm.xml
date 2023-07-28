@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.lna.valueobject">
+  <class name="com.tcs.sgv.lna.valueobject.MstLnaPayrollLoanTypeMpg" table="MST_LNA_PAYROLL_LOAN_TYPE_MPG">
+  		<id name="lnaPayrollLoanTypeMpgId" type="long">
+            <column name="LNA_PAYROLL_LOAN_TYPE_MPG_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="lnaLoanId" type="long">
+            <column name="LNA_LOAN_ID" />
+        </property>
+        <property name="payrollPriLoanId" type="long">
+            <column name="PAYROLL_PRI_LOAN_ID" />
+        </property>
+        <property name="payrollIntLoanId" type="long">
+            <column name="PAYROLL_INT_LOAN_ID"/>
+        </property>
+  </class>
+</hibernate-mapping>

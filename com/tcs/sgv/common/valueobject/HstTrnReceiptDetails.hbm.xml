@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 20, 2007 5:26:27 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.HstTrnReceiptDetails" table="hst_trn_receipt_details" dynamic-update="true">
+        <comment></comment>
+        <composite-id name="id" class="com.tcs.sgv.common.valueobject.HstTrnReceiptDetailsId">
+            <key-property name="receiptDetailId" type="long">
+                <column name="receipt_detail_id" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="trn_counter" />
+            </key-property>
+        </composite-id>
+        <property name="receiptNo" type="string">
+            <column name="receipt_no" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="receiptType" type="string">
+            <column name="receipt_type" length="32">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="amount" type="java.math.BigDecimal">
+            <column name="amount" precision="12" scale="0" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="majorHead" type="string">
+            <column name="major_head" length="45" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="depositorName" type="string">
+            <column name="depositor_name" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="bankCode" type="string">
+            <column name="bank_code" length="32">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="bankBranchCode" type="string">
+            <column name="bank_branch_code" length="32">
+                <comment></comment>
+            </column>
+        </property>
+       
+        
+        <property name="perticulars" type="string">
+            <column name="perticulars" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="cardexNo" type="string">
+            <column name="cardex_no" length="45">
+                <comment></comment>
+            </column>
+        </property>
+       
+        <property name="clsExp" type="string">
+            <column name="cls_exp" length="32">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budType" type="string">
+            <column name="bud_type" length="32">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fund" type="string">
+            <column name="fund" length="32">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="tc" type="java.lang.Integer">
+            <column name="tc">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="schemeNo" type="string">
+            <column name="scheme_no" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="accNo" type="string">
+            <column name="acc_no" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lcAccCode" type="string">
+            <column name="lc_acc_code" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="salesTaxNo" type="string">
+            <column name="sales_tax_no" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fromPeriod" type="date">
+            <column name="from_period" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="toPeriod" type="date">
+            <column name="to_period" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="vendorId" type="java.lang.Long">
+            <column name="vendor_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="indentNo" type="string">
+            <column name="indent_no" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="status">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finYearId" type="java.lang.Long">
+            <column name="fin_year_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="created_user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="created_post_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="updated_user_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="updated_post_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="long">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="receiptDate" type="timestamp">
+            <column name="receipt_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dedMonth" type="timestamp">
+            <column name="ded_month" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="rcvdByBankDate" type="timestamp">
+            <column name="rcvd_by_bank_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="demand" type="string">
+            <column name="demand" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="ddoCode" type="string">
+            <column name="ddo_code" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="receivedFlag" type="short">
+            <column name="received_flag" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="tinNo" type="java.lang.Long">
+            <column name="tin_no">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="recRev" type="java.lang.Integer">
+            <column name="rec_rev">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true">
+            </column>
+        </property>
+        <property name="active" type="short">
+            <column name="active" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="stmpDiscountAmt" type="java.math.BigDecimal">
+            <column name="stmp_Discount_Amt" precision="12" scale="0">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="stmpGrossAmt" type="java.math.BigDecimal">
+            <column name="stmp_Gross_Amt" precision="12" scale="0">
+                <comment></comment>
+            </column>
+        </property>
+        
+    </class>
+</hibernate-mapping>

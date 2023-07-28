@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 10, 2008 4:25:53 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaGrantOrderDetail" table="SGVA_GRANT_ORDER_DETAIL" dynamic-update="true">
+    <cache usage="read-only" region="budgetCache"/>
+        <id name="orderDetailId" type="big_decimal">
+            <column name="ORDER_DETAIL_ID" precision="30" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="orderId" type="long">
+            <column name="ORDER_ID" precision="15" scale="0" not-null="true" />
+        </property>
+        <property name="finYearId" type="long">
+            <column name="FIN_YEAR_ID" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="planNonplan" type="string">
+            <column name="PLAN_NONPLAN" length="2" not-null="true" />
+        </property>
+        <property name="fromMonthCode" type="string">
+            <column name="FROM_MONTH_CODE" length="15" not-null="true" />
+        </property>
+        <property name="toMonthCode" type="string">
+            <column name="TO_MONTH_CODE" length="15" not-null="true" />
+        </property>
+        <property name="fileCreatorType" type="string">
+            <column name="FILE_CREATOR_TYPE" length="15" not-null="true" />
+        </property>
+        <property name="fromDeptId" type="string">
+            <column name="FROM_DEPT_ID" length="15" />
+        </property>
+        <property name="fromCoCode" type="string">
+            <column name="FROM_CO_CODE" length="15" />
+        </property>
+        <property name="toDeptId" type="string">
+            <column name="TO_DEPT_ID" length="15" />
+        </property>
+        <property name="toCoCode" type="string">
+            <column name="TO_CO_CODE" length="15" />
+        </property>
+        <property name="toDdoCode" type="string">
+            <column name="TO_DDO_CODE" length="15" />
+        </property>
+        <property name="deptId" type="string">
+            <column name="DEPT_ID" length="12" />
+        </property>
+        <property name="demandCode" type="string">
+            <column name="DEMAND_CODE" length="15" />
+        </property>
+        <property name="budmjrhdCode" type="string">
+            <column name="BUDMJRHD_CODE" length="15" />
+        </property>
+        <property name="budsubmjrhdCode" type="string">
+            <column name="BUDSUBMJRHD_CODE" length="15" />
+        </property>
+        <property name="budminhdCode" type="string">
+            <column name="BUDMINHD_CODE" length="15" />
+        </property>
+        <property name="budsubhdCode" type="string">
+            <column name="BUDSUBHD_CODE" length="15" />
+        </property>
+        <property name="grantAmountState" type="big_decimal">
+            <column name="GRANT_AMOUNT_STATE" precision="17" not-null="true" />
+        </property>
+        <property name="grantAmountStateGia" type="big_decimal">
+            <column name="GRANT_AMOUNT_STATE_GIA" precision="17" not-null="true" />
+        </property>
+        <property name="grantAmountCss" type="big_decimal">
+            <column name="GRANT_AMOUNT_CSS" precision="17" not-null="true" />
+        </property>
+        <property name="grantAmountCssGia" type="big_decimal">
+            <column name="GRANT_AMOUNT_CSS_GIA" precision="17" not-null="true" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" />
+        </property>
+        <property name="mergeId" type="java.lang.Long">
+            <column name="MERGE_ID" precision="15" scale="0" />
+        </property>
+        <property name="grantReleaseStatus" type="string">
+            <column name="GRANT_RELEASE_STATUS" length="1" not-null="true" />
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="7" not-null="true" />
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="15" not-null="true" />
+        </property>
+        <property name="lstUpdUsr" type="string">
+            <column name="LST_UPD_USR" length="15" />
+        </property>
+        <property name="lstUpdDt" type="date">
+            <column name="LST_UPD_DT" length="7" />
+        </property>
+        <property name="toDivisionId" type="string">
+            <column name="TO_DIVISION_ID" length="5" />
+        </property>
+        <property name="normalLc" type="java.lang.Boolean">
+            <column name="NORMAL_LC" precision="1" scale="0" />
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="DB_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="isNewData" type="string">
+            <column name="IS_NEW_DATA" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

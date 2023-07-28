@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.HstDcpsOfficeChanges" table="HST_DCPS_OFFICE_CHANGES" >
+  	<id name="dcpsOfficeChangesId" type="long">
+            <column name="DCPS_OFFICE_CHANGES_ID"  />
+            <generator class="assigned" />
+     </id>
+    <property name="dcpsChangesId" type="long">
+            <column name="DCPS_CHANGES_ID"  />
+  	</property>
+    <property name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID"  />
+  	</property>
+  	<property name="parentDept" type="string">
+            <column name="PARENT_DEPT" />
+  	</property>
+  	<property name="cadre" type="string">
+            <column name="CADRE" />
+  	</property>
+  	<property name="group" type="string">
+            <column name="EMP_GROUP" />
+  	</property>
+  	<property name="designation" type="string">
+            <column name="DESIGNATION" />
+  	</property>
+  	<property name="payCommission" type="string">
+            <column name="PAY_COMMISSION" />
+  	</property>
+  	<property name="payScale" type="string">
+            <column name="PAYSCALE"  />
+  	</property>
+  	<property name="reasonForPSChange" type="long">
+            <column name="reasonForPSChange"  />
+  	</property>
+  	<property name="otherReasonForPSChange" type="string">
+            <column name="otherReasonForPSchange"  />
+  	</property>
+  	<property name="withEffectFromDate" type="timestamp">
+            <column name="with_effect_from_date" />
+  	</property>
+ 	<property name="basicPay" type="double">
+            <column name="BASIC_PAY"  />
+  	</property>
+  	<property name="postId" type="long">
+            <column name="post_id" />
+    </property>    
+  	<property name="firstDesignation" type="string">
+            <column name="FIRST_DESIGNATION" />
+  	</property>
+  	<property name="appointmentDate" type="timestamp">
+            <column name="APPOINTMENT_DATE" />
+  	</property>
+  	<property name="currOff" type="string">
+            <column name="CURR_OFF" />
+  	</property>
+  	<property name="remarks" type="string">
+            <column name="REMARKS" />
+  	</property>
+  	<property name="currPostJoiningDate" type="timestamp">
+            <column name="CURR_POST_JOINING_DATE" length="19"/>
+  	</property>
+  	<property name="currCadreJoiningDate" type="timestamp">
+            <column name="CURR_CADRE_JOINING_DATE" length="19"/>
+  	</property>
+  	<property name="langId" type="long">
+            <column name="LANG_ID" />
+  	</property>
+  	<property name="locId" type="long">
+            <column name="LOC_ID"  not-null="false" />
+  	</property>
+  	<property name="dbId" type="long">
+            <column name="DB_ID"  not-null="false" />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	</property>
+	<property name="createdUserId" type="long">
+	        <column name="CREATED_USER_ID" />
+	</property>
+	<property name="createdPostId" type="long">
+	        <column name="CREATED_POST_ID"  />
+	</property>
+	<property name="updatedDate" type="timestamp">
+	        <column name="UPDATED_DATE" not-null="false" />
+	</property>
+	<property name="updatedUserId" type="long">
+	        <column name="UPDATED_USER_ID"  not-null="false" />
+	</property>
+	<property name="updatedPostId" type="long">
+	        <column name="UPDATED_POST_ID"   not-null="false" />
+	</property>
+  	
+  </class>
+</hibernate-mapping>

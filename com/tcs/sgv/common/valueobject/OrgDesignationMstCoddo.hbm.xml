@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 14, 2009 5:47:50 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.OrgDesignationMstCoddo" table="ORG_DESIGNATION_MST_CODDO"  dynamic-update="true">
+        <comment></comment>
+        <id name="dsgnId" type="java.lang.Long">
+            <column name="dsgn_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="dsgnName" type="string">
+            <column name="dsgn_name" length="200" not-null="true" unique="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dsgnShrtName" type="string">
+            <column name="dsgn_shrt_name" length="15" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="java.lang.Byte">
+            <column name="lang_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="start_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="end_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="activateFlag" type="java.lang.Byte">
+            <column name="activate_flag">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdByPost" type="java.lang.Integer">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedBy" type="java.lang.Integer">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedByPost" type="java.lang.Integer">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dsgnCode" type="string">
+            <column name="dsgn_code" length="45" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dsgnLevel" type="java.lang.Long">
+            <column name="dsgn_level" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="trn_counter" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

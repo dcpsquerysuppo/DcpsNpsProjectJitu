@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.tcs.sgv.gpf.valueobject.MstGpfEmpSubscription" table="MST_GPF_EMP_SUBSCRIPTION">
+		<id name="gpfEmpSubscriptionId" type="long">
+			<column name="GPF_EMP_SUBSCRIPTION_ID" precision="30" scale="0" />
+			<generator class="assigned" />
+		</id>
+		<property name="transactionId" type="string">
+			<column name="TRANSACTION_ID" length="30" />
+		</property>
+		<property name="gpfAccNo" type="string">
+			<column name="GPF_ACC_NO" length="30" />
+		</property>
+		<property name="monthlySubscription" type="double">
+			<column name="MONTHLY_SUBSCRIPTION" length="30" />
+		</property>
+		<property name="effectFromMonth" type="integer">
+			<column name="EFFECT_FROM_MONTH" length="3" />
+		</property>
+		<property name="applicationDate" type="timestamp">
+			<column name="APPLICATION_DATE" length="30" />
+		</property>
+		<property name="activeFlag" type="integer">
+			<column name="ACTIVE_FLAG" length="1" />
+		</property>
+		<property name="finYearId" type="long">
+			<column name="FIN_YEAR_ID" length="20" />
+		</property>
+		<property name="statusFlag" type="string">
+			<column name="STATUS_FLAG" length="30" />
+		</property>
+		<property name="changeType" type="string">
+			<column name="CHANGE_TYPE" length="3" />
+		</property>
+		<property name="approverRemarks" type="string">
+			<column name="APPROVER_REMARKS" length="200" />
+		</property>
+		<property name="hoRemarks" type="string">
+			<column name="HO_REMARKS" length="200" />
+		</property>
+		<property name="orderNo" type="string">
+			<column name="ORDER_NO" length="30" />
+		</property>
+		<property name="orderDate" type="timestamp">
+			<column name="ORDER_DATE" length="30" />
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" />
+		</property>
+		<property name="createdUserId" type="long">
+			<column name="CREATED_USER_ID" />
+		</property>
+		<property name="createdPostId" type="long">
+			<column name="CREATED_POST_ID" />
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE" not-null="false" />
+		</property>
+		<property name="updatedUserId" type="long">
+			<column name="UPDATED_USER_ID" not-null="false" />
+		</property>
+		<property name="updatedPostId" type="long">
+			<column name="UPDATED_POST_ID" not-null="false" />
+		</property>
+		<property name="deoActionDate" type="timestamp">
+            <column name="DEO_ACTION_DATE" not-null="false" />
+		</property>
+		<property name="verifierActionDate" type="timestamp">
+		    <column name="VERIFIER_ACTION_DATE" not-null="false" />
+		</property>
+		<property name="hoActionDate" type="timestamp">
+		    <column name="HO_ACTION_DATE" not-null="false" />
+		</property>
+		<property name="hoReceiveDate" type="timestamp">
+            <column name="HO_RECEIVE_DATE" not-null="false" />
+  		</property>
+  		<property name="dataEntry" type="string">
+            <column name="DATA_ENTRY" />
+ 		</property>
+	</class>
+
+</hibernate-mapping>

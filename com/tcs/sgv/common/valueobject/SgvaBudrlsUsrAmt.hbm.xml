@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 29, 2007 11:56:02 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaBudrlsUsrAmt" table="sgva_budrls_usr_amt" >
+        <comment></comment>
+        <id name="budrlsUsrAmtId" type="long">
+            <column name="BUDRLS_USR_AMT_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="fkDtlsId" type="long">
+            <column name="FK_DTLS_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="grantType" type="string">
+            <column name="GRANT_TYPE" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="proposedAmt" type="big_decimal">
+            <column name="PROPOSED_AMT" precision="17" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="400">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="approvedRejected" type="string">
+            <column name="APPROVED_REJECTED" length="1" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="string">
+            <column name="LANG_ID" length="5" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="string">
+            <column name="LOC_ID" length="5" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="100" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdUsr" type="string">
+            <column name="LST_UPD_USR" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdDt" type="date">
+            <column name="LST_UPD_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="applicationId" type="string">
+            <column name="APPLICATION_ID" length="10">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

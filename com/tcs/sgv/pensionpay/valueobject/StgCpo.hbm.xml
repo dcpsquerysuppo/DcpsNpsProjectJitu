@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2011 6:54:12 PM by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.StgCpo" table="STG_CPO">
+        <id name="stgCpoId" type="long">
+            <column name="STG_CPO_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="delvId"  type="long">
+            <column name="DELV_ID" not-null="true" />
+        </property>
+        <property name="caseStatus" type="string">
+            <column name="CASE_STATUS" length="20" />
+        </property>
+        <property name="pnsrFileNo" type="string">
+            <column name="PNSR_FILE_NO" length="25" />
+        </property>
+        <property name="applnNo" type="string">
+            <column name="APPLN_NO" length="25" />
+        </property>
+        <property name="pnsrPpoNo" type="string">
+            <column name="PNSR_PPO_NO" length="25" />
+        </property>
+        <property name="cpoNo" type="string">
+            <column name="CPO_NO" length="25" />
+        </property>
+        <property name="commAmt" type="string">
+            <column name="COMM_AMT" length="15" />
+        </property>
+        <property name="cvpAmt" type="string">
+            <column name="CVP_AMT" length="15" />
+        </property>
+        <property name="cpoSancAuNoCode" type="string">
+            <column name="CPO_SANC_AU_NO_CODE" length="25" />
+        </property>
+        <property name="cpoSancAuNo" type="string">
+            <column name="CPO_SANC_AU_NO" length="150" />
+        </property>
+        <property name="cpoAgoutNo" type="string">
+            <column name="CPO_AGOUT_NO" length="25" />
+        </property>
+        <property name="cpoAgoutDate" type="string">
+            <column name="CPO_AGOUT_DATE" length="12" />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="26" not-null="true" />
+        </property>
+        <property name="updatedBy" type="long">
+            <column name="UPDATED_BY" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="26" />
+        </property>
+    </class>
+</hibernate-mapping>

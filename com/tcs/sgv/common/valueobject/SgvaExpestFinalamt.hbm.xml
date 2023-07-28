@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 26, 2007 2:03:55 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaExpestFinalamt" table="sgva_expest_finalamt" >
+        <comment></comment>
+        <id name="expestFinalamtHdrId" type="long">
+            <column name="EXPEST_FINALAMT_HDR_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="finYrId" type="java.lang.Long">
+            <column name="FIN_YR_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="deptId" type="string">
+            <column name="DEPT_ID" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budbpnCode" type="string">
+            <column name="BUDBPN_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="buddemandCode" type="string">
+            <column name="BUDDEMAND_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budmjrhdCode" type="string">
+            <column name="BUDMJRHD_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budsubmjrhdCode" type="string">
+            <column name="BUDSUBMJRHD_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budminhdCode" type="string">
+            <column name="BUDMINHD_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budsubhdCode" type="string">
+            <column name="BUDSUBHD_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="buddtlhdCode" type="string">
+            <column name="BUDDTLHD_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budobjhdCode" type="string">
+            <column name="BUDOBJHD_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="chargVote" type="string">
+            <column name="CHARG_VOTE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="planNonplan" type="string">
+            <column name="PLAN_NONPLAN" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="formType" type="string">
+            <column name="FORM_TYPE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="levelId" type="java.lang.Long">
+            <column name="LEVEL_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lvlUntId" type="string">
+            <column name="LVL_UNT_ID" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="txnDtlId" type="java.lang.Long">
+            <column name="TXN_DTL_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstYrActual" type="big_decimal">
+            <column name="LST_YR_ACTUAL" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="curtYrBe" type="big_decimal">
+            <column name="CURT_YR_BE" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="curtYrRe" type="big_decimal">
+            <column name="CURT_YR_RE" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="nxtYrBe" type="big_decimal">
+            <column name="NXT_YR_BE" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="applId" type="string">
+            <column name="APPL_ID" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="string">
+            <column name="LANG_ID" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="string">
+            <column name="LOC_ID" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtDt" type="string">
+            <column name="CRT_DT" length="12">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="12">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdDt" type="string">
+            <column name="LST_UPD_DT" length="12">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdUsr" type="string">
+            <column name="LST_UPD_USR" length="12">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="hodId" type="java.lang.Long">
+            <column name="HOD_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="txnHdrId" type="java.lang.Long">
+            <column name="TXN_HDR_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="itmWorkId" type="java.lang.Long">
+            <column name="ITM_WORK_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="giaFlg" type="string">
+            <column name="GIA_FLG" length="2" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="recFlag" type="string">
+            <column name="REC_FLAG" length="1">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionproc.valueobject.TrnPnsnProcRevision" table="TRN_PNSNPROC_REVISION">
+        <id name="revisionId" type="java.lang.Long">
+           <column name="REVISION_ID" precision="20" scale="0" />
+           <generator class="assigned" />
+        </id>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="LOCATION_CODE" />
+        </property>
+        <property name="inwardPensionId" type="java.lang.Long">
+            <column name="INWARD_PENSION_ID" />
+        </property>     
+         <property name="sevaarthId" type="string">
+            <column name="sevaarth_id" precision="20" scale="0"  />
+        </property>
+         <property name="ppoNo" type="string">
+            <column name="ppo_no" precision="20" scale="0"  />
+        </property> 
+        <property name="cvpMonthAmnt" type="big_decimal">
+            <column name="CVP_MON_AMOUNT" />
+        </property>
+        <property name="diffCvpMonthAmnt" type="big_decimal">
+            <column name="DIFF_CVP_MON_AMOUNT" />
+        </property>       
+        <property name="cvpAmnt" type="big_decimal">
+            <column name="CVP_AMOUNT" />
+        </property>
+        <property name="diffCvpAmnt" type="big_decimal">
+            <column name="DIFF_CVP_AMOUNT" />
+        </property>
+        <property name="pensionerReducedAmnt" type="big_decimal">
+            <column name="PENSION_REDUCED_AMOUNT" />
+        </property>
+        <property name="diffPensionerReducedAmnt" type="big_decimal">
+            <column name="DIFF_PENSION_REDUCED_AMOUNT" />
+        </property>
+        <property name="pensionerTotalAmnt" type="big_decimal">
+            <column name="PENSION_TOTAL_AMOUNT" />
+        </property>
+        <property name="diffPensionerTotalAmnt" type="big_decimal">
+            <column name="DIFF_PENSION_TOTAL_AMOUNT" />
+        </property>
+        <property name="srvcGratuityAmnt" type="big_decimal">
+            <column name="SERVICE_GRATUITY_AMOUNT" />
+        </property>
+        <property name="diffSrvcGratuityAmnt" type="big_decimal">
+            <column name="DIFF_SERVICE_GRATUITY_AMOUNT" />
+        </property>
+        <property name="dcrgAmnt" type="big_decimal">
+            <column name="DCRG_AMOUNT" />
+        </property>
+        <property name="diffDcrgAmnt" type="big_decimal">
+            <column name="DIFF_DCRG_AMOUNT" />
+        </property>
+        <property name="fp1Amnt" type="big_decimal">
+            <column name="FP1_AMOUNT" />
+        </property>
+        <property name="diffFp1Amnt" type="big_decimal">
+            <column name="DIFF_FP1_AMOUNT" />
+        </property>        
+        <property name="fp2Amnt" type="big_decimal">
+            <column name="FP2_AMOUNT" />
+        </property>
+        <property name="diffFp2Amnt" type="big_decimal">
+            <column name="DIFF_FP2_AMOUNT" />
+        </property>
+        <property name="revisionNo" type="java.lang.Long">
+            <column name="REVISION_NO" precision="20" scale="0"  />
+        </property>
+        <property name="activeFlag" type="string">
+            <column name="ACTIVE_FLAG" precision="20" scale="0"  />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" />
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" />
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" />
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="UPDATED_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

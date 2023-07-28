@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.dcps.valueobject.InterestRate" table="MST_DCPS_INTEREST_RATE">
+  	
+  	<id name="interestRateIdPk" type="long">
+            <column name="DCPS_INTEREST_RATE_MST_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+     </id>
+     
+    <property name="interest" type="float">
+            <column name="INTEREST"  />
+  	</property>
+  	<property name="effectiveFromDate" type="timestamp">
+            <column name="EFFECTIVE_FROM"  />
+  	</property>
+  	<property name="applicableToDate" type="timestamp">
+            <column name="APPLICABLE_TO"  />
+  	</property>
+  	 <property name="status" type="long">
+            <column name="STATUS"  />
+  	</property>
+  	<property name="PostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  	</property>
+  	<property name="UserId" type="long">
+            <column name="CREATED_USER_ID"  />
+  	</property>
+  	<property name="CreatedDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  	</property>
+  	
+  	<property name="UpdatedPostId" type="long">
+            <column name="UPDATED_POST_ID"  />
+  	</property>
+  	<property name="UpdatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  />
+  	</property>
+  	<property name="UpdatedDate" type="timestamp">
+            <column name="UPDATED_DATE"  />
+  	</property>
+  	
+  	<property name="finYearId" type="long">
+            <column name="fin_year_id"  />
+  	</property>
+  	
+  </class>
+</hibernate-mapping>

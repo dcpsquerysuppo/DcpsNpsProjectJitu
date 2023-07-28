@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 01, 2012 12:41:59 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.HstTrnPensionSixpayfpArrear" table="HST_TRN_PENSION_SIXPAYFP_ARREAR">
+        <id name="arrearId" type="java.lang.Long">
+            <column name="ARREAR_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="pensionerCode" type="java.lang.String">
+            <column name="PENSIONER_CODE" />
+        </property>
+        <property name="arrearType" type="java.lang.Character">
+            <column name="ARREAR_TYPE" />
+        </property>
+        <property name="installmentNo" type="java.lang.Integer">
+            <column name="INSTALLMENT_NO" />
+        </property>
+        <property name="payInMonth" type="java.lang.String">
+            <column name="PAY_IN_MONTH" />
+        </property>
+        <property name="installmentAmnt" type="java.math.BigDecimal">
+            <column name="INSTALLMENT_AMNT" />
+        </property>
+        <property name="diffAmnt" type="java.math.BigDecimal">
+            <column name="DIFF_AMNT" />
+        </property>
+        <property name="paidFlag" type="java.lang.Character">
+            <column name="PAID_FLAG" />
+        </property>
+        <property name="activeFlag" type="java.lang.Character">
+            <column name="ACTIVE_FLAG" />
+        </property>
+        <property name="revisionCounter" type="java.lang.Character">
+            <column name="REVISION_COUNTER" />
+        </property>
+        <property name="createdUserId" type="java.math.BigDecimal">
+            <column name="CREATED_USER_ID" />
+        </property>
+        <property name="createdPostId" type="java.math.BigDecimal">
+            <column name="CREATED_POST_ID" />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="java.math.BigDecimal">
+            <column name="UPDATED_USER_ID" />
+        </property>
+        <property name="updatedPostId" type="java.math.BigDecimal">
+            <column name="UPDATED_POST_ID" />
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="UPDATED_DATE" />
+        </property>
+         <property name="remarks" type="java.lang.String">
+            <column name="REMARKS"  />
+        </property>
+        <property name="revision" type="java.lang.Long">
+        	<column name="REVISION"></column>
+        </property>
+    </class>
+</hibernate-mapping>

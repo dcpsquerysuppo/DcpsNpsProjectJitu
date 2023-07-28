@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.dcps.valueobject.RltDdoAsst" table="RLT_DCPS_DDO_ASST">
+  	
+  	<id name="rltDdoAsstId" type="long">
+            <column name="RLT_DCPS_DDO_ASST_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+     </id>
+     
+    <property name="asstPostId" type="long">
+            <column name="ASST_POST_ID"  />
+  	</property>
+  	<property name="ddoPostId" type="long">
+            <column name="DDO_POST_ID"  />
+  	</property>
+  	
+  	
+  </class>
+</hibernate-mapping>

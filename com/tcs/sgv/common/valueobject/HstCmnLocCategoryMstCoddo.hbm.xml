@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 1, 2009 2:32:44 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.HstCmnLocCategoryMstCoddo" table="HST_CMN_LOC_CATEGORY_MST_CODDO" dynamic-update="true">
+        <composite-id name="id" class="com.tcs.sgv.common.valueobject.HstCmnLocCategoryMstCoddoId">
+            <key-property name="locCategoryId" type="java.lang.Long">
+                <column name="LOC_CATEGORY_ID" precision="20" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" precision="3" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="locCategoryCode" type="java.lang.Long">
+            <column name="LOC_CATEGORY_CODE" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="locCategoryName" type="string">
+            <column name="LOC_CATEGORY_NAME" length="100" not-null="true" />
+        </property>
+        <property name="parentLocCategoryId" type="java.lang.Long">
+            <column name="PARENT_LOC_CATEGORY_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="langId" type="byte">
+            <column name="LANG_ID" precision="2" scale="0" not-null="true" />
+        </property>
+        <property name="activateFlag" type="long">
+            <column name="ACTIVATE_FLAG" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="createdByPost" type="long">
+            <column name="CREATED_BY_POST" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedBy" type="java.lang.Long">
+            <column name="UPDATED_BY" precision="10" scale="0" />
+        </property>
+        <property name="updatedByPost" type="java.lang.Long">
+            <column name="UPDATED_BY_POST" precision="10" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

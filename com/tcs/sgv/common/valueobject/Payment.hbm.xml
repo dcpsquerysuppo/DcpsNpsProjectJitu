@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 9, 2007 12:04:11 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.Payment" table="payment" >
+        <comment></comment>
+        <composite-id name="id" class="com.tcs.sgv.common.valueobject.PaymentId">
+            <key-property name="districtcode" type="java.lang.Integer">
+                <column name="districtcode" />
+            </key-property>
+            <key-property name="rcptdate" type="timestamp">
+                <column name="rcptdate" length="19" />
+            </key-property>
+            <key-property name="voucherno" type="java.lang.Integer">
+                <column name="voucherno" />
+            </key-property>
+            <key-property name="expenditure" type="java.lang.Integer">
+                <column name="expenditure" />
+            </key-property>
+            <key-property name="fund" type="java.lang.Integer">
+                <column name="fund" />
+            </key-property>
+            <key-property name="cardex" type="java.lang.Integer">
+                <column name="cardex" />
+            </key-property>
+            <key-property name="demand" type="java.lang.Integer">
+                <column name="demand" />
+            </key-property>
+            <key-property name="budget" type="java.lang.Integer">
+                <column name="budget" />
+            </key-property>
+            <key-property name="scheme" type="java.lang.Integer">
+                <column name="scheme" />
+            </key-property>
+            <key-property name="majorhead" type="java.lang.Integer">
+                <column name="majorhead" />
+            </key-property>
+            <key-property name="submajorhead" type="java.lang.Integer">
+                <column name="submajorhead" />
+            </key-property>
+            <key-property name="minorhead" type="java.lang.Integer">
+                <column name="minorhead" />
+            </key-property>
+            <key-property name="subminorhead" type="java.lang.Integer">
+                <column name="subminorhead" />
+            </key-property>
+            <key-property name="detailhead" type="string">
+                <column name="detailhead" length="4" />
+            </key-property>
+            <key-property name="objecthead" type="string">
+                <column name="objecthead" length="2" />
+            </key-property>
+            <key-property name="detailobjecthead" type="string">
+                <column name="detailobjecthead" length="4" />
+            </key-property>
+            <key-property name="sign" type="java.lang.Character">
+                <column name="sign" length="1" />
+            </key-property>
+            <key-property name="errorstr" type="string">
+                <column name="errorstr" length="500" />
+            </key-property>
+            <key-property name="yearcode" type="big_decimal">
+                <column name="yearcode" precision="22" scale="0" />
+            </key-property>
+            <key-property name="entryfrom" type="java.lang.Character">
+                <column name="entryfrom" length="1" />
+            </key-property>
+            <key-property name="paymentid" type="big_decimal">
+                <column name="paymentid" precision="22" scale="0" />
+            </key-property>
+            <key-property name="err" type="java.lang.Character">
+                <column name="err" length="1" />
+            </key-property>
+            <key-property name="vouno" type="big_decimal">
+                <column name="vouno" precision="22" scale="0" />
+            </key-property>
+            <key-property name="amount" type="big_decimal">
+                <column name="amount" precision="20" />
+            </key-property>
+            <key-property name="uploadby" type="java.lang.Integer">
+                <column name="uploadby" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

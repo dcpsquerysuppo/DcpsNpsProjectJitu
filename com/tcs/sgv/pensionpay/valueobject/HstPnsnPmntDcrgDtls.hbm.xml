@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.tcs.sgv.pensionpay.valueobject.HstPnsnPmntDcrgDtls" table="hst_pnsnpmnt_dcrg_dtls"  dynamic-update="true">
+
+	<id name="dcrgDtlsId" type="java.lang.Long">
+			<column name="DCRG_DTLS_ID" ></column>
+			<generator class="assigned"></generator>
+	</id>
+		
+		<property name="dbId" type="java.lang.Long">
+			<column name="DB_ID"  not-null="true"></column>
+		</property>
+		
+		<property name="locationCode" type="java.lang.Long">
+			<column name="LOCATION_CODE"  not-null="true" ></column>
+		</property>	
+		
+		<property name="pensionerCode" type="string">
+			<column name="PENSIONER_CODE" precision="20" not-null="true"></column>
+		</property>
+		
+		<property name="orderNo" type="string">
+			<column name="ORDER_NO" precision="30" ></column>
+		</property>
+		
+		<property name="orderDate" type="java.util.Date">
+			<column name="ORDER_DATE" ></column>
+		</property>
+		
+		<property name="totalOrderAmount" type="big_decimal">
+			<column name="TOTAL_ORDER_AMOUNT" precision="20" ></column>
+		</property>
+			
+		<property name="paidAmount" type="big_decimal">
+			<column name="PAID_AMOUNT" precision="20" ></column>
+		</property>
+		
+		<property name="voucherNo" type="string">
+			<column name="VOUCHER_NO" precision="30"></column>
+		</property>
+		
+		<property name="voucherDate" type="java.util.Date">
+			<column name="VOUCHER_DATE" ></column>
+		</property>	
+		
+		<property name="paymentAuthority" type="string">
+			<column name="PAYMENT_AUTHORITY" precision="100" ></column>
+		</property>
+		
+		<property name="createdUserId" type="java.lang.Long">
+			<column name="CREATED_USER_ID" ></column>
+		</property>
+		
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="CREATED_POST_ID" not-null="true"></column>
+		</property>	
+		
+		<property name="createdDate" type="java.util.Date">
+			<column name="CREATED_DATE" not-null="true"></column>
+		</property>	
+		
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="UPDATED_USER_ID"></column>
+		</property>
+		
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="UPDATED_POST_ID"></column>
+		</property>
+		
+		<property name="updatedDate" type="java.util.Date">
+			<column name="UPDATED_DATE"></column>
+		</property>
+		<property name="withHeldAmnt" type="big_decimal">
+			<column name="WITHHELD_AMOUNT" precision="20" ></column>
+		</property>
+		
+		<property name="totalRecoveryAmnt" type="big_decimal">
+			<column name="TOTAL_RECOVERY_AMOUNT" precision="20" ></column>
+		</property>
+		
+		<property name="amntAfterWithHeld" type="big_decimal">
+			<column name="AMOUNT_AFTER_WITHHELD" precision="20" ></column>
+		</property>
+		
+		<property name="billNo" type="java.lang.Long">
+            <column name="BILL_NO" length="20" />
+        </property>
+		 <property name="nameOfPayee" type="string">
+            <column name="NAME_OF_PAYEE" length="20" />
+        </property>
+        <property name="trsryForPayment" type="string">
+            <column name="TRSRY_FOR_PAYMENT" length="20" />
+        </property>
+        <property name="chequeNo" type="string">
+            <column name="CHEQUE_NO"  />
+        </property>
+         <property name="chequeDate" type="timestamp">
+			<column name="CHEQUE_DATE" length="19"></column>
+		</property> 
+</class>
+</hibernate-mapping>

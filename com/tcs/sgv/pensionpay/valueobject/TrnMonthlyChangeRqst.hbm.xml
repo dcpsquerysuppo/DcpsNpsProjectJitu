@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.tcs.sgv.pensionpay.valueobject.TrnMonthlyChangeRqst" table="TRN_MONTHLY_CHANGE_RQST" dynamic-update="true">
+	<id name="changeRqstId" type="long">
+            <column name="change_rqst_id" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="billType" type="string">
+            <column name="BILL_TYPE" length="20" />
+        </property>
+        <property name="billNo" type="long">
+            <column name="BILL_NO" length="20" />
+        </property>
+        <property name="changeRqstDate" type="timestamp">
+            <column name="change_rqst_date"  />
+        </property>
+        <property name="forMonth" type="java.lang.Integer">
+            <column name="FOR_MONTH" precision="6" scale="0" />
+        </property>
+         <property name="upToDate" type="timestamp">
+            <column name="up_to_date" />
+        </property>
+        <property name="bankCode" type="string">
+            <column name="BANK_CODE" length="20" />
+        </property>
+        <property name="branchCode" type="string">
+            <column name="BRANCH_CODE" length="20" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" />
+        </property>
+        <property name="grossAmount" type="big_decimal">
+            <column name="GROSS_AMOUNT" precision="20" default="0" not-null="true" />
+        </property>
+         <property name="recoveryAmount" type="big_decimal">
+            <column name="recovery_amount" precision="20" default="0" not-null="true" />
+        </property>
+        <property name="netAmount" type="big_decimal">
+            <column name="NET_AMOUNT" precision="20" default="0" not-null="true" />
+        </property>
+        <property name="deductionA" type="big_decimal">
+            <column name="DEDUCTION_A" precision="20" default="0" not-null="true" />
+        </property>
+        <property name="deductionB" type="big_decimal">
+            <column name="DEDUCTION_B" precision="20" default="0" not-null="true" />
+        </property>
+          <property name="status" type="string">
+            <column name="status" />
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="dbId" type="java.lang.Integer">
+            <column name="db_id" precision="6" scale="0" />
+        </property>
+        </class>
+</hibernate-mapping>

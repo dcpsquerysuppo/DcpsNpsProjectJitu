@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2007 10:45:40 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.RltLevelRole" table="RLT_LEVEL_ROLE" dynamic-update="true">
+        <comment></comment>
+        <id name="roleLevelId" type="long">
+            <column name="ROLE_LEVEL_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="moduleName" type="string">
+            <column name="MODULE_NAME" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="levelId" type="java.lang.Integer">
+            <column name="LEVEL_ID" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="roleId" type="java.lang.Integer">
+            <column name="ROLE_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="roleDesc" type="string">
+            <column name="ROLE_DESC" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="workFlow" type="string">
+            <column name="WORKFLOW" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="department" type="string">
+            <column name="DEPARTMENT">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

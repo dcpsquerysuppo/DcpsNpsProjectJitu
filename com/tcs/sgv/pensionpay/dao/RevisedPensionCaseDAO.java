@@ -1,0 +1,33 @@
+/* Copyright TCS 2011, All Rights Reserved.
+ * 
+ * 
+ ******************************************************************************
+ ***********************Modification History***********************************
+ *  Date   				Initials	     Version		Changes and additions
+ ******************************************************************************
+ * 	Jun 29, 2011		Anjana Suvariya								
+ *******************************************************************************
+ */
+package com.tcs.sgv.pensionpay.dao;
+
+import java.util.List;
+
+import com.tcs.sgv.core.dao.GenericDao;
+import com.tcs.sgv.pensionpay.valueobject.TrnPensionerRivisionDtls;
+
+
+
+/**
+ * Class Description - 
+ *
+ *
+ * @author Anjana Suvariya
+ * @version 0.1
+ * @since JDK 5.0
+ * Jun 29, 2011
+ */
+public interface RevisedPensionCaseDAO extends GenericDao{
+	
+	public List<TrnPensionerRivisionDtls> getTrnPensionerRevisionDtlsVO(String lStrPensionerCode,String lStrLocationCode)throws Exception;
+	
+}

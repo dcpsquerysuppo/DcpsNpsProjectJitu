@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+
+<class name="com.tcs.sgv.dcps.valueobject.MstSixPCArrears" table="MST_DCPS_SIXPC">
+  
+  <id name="dcpsSixPCId" type="long">
+            <column name="DCPS_SIXPC_ID"  />
+            <generator class="assigned" />
+  </id>
+     
+  <many-to-one name="dcpsEmpId"
+			class="com.tcs.sgv.dcps.valueobject.MstEmp" fetch="select">
+			<column name="DCPS_EMP_ID" precision="20" scale="0"></column>
+  </many-to-one>
+  
+  <property name="totalAmount" type="long">
+            <column name="TOTAL_AMOUNT" />
+  </property>
+  	
+  <property name="amountPaid" type="long">
+            <column name="AMOUNT_PAID"  />
+  </property>
+  
+  <property name="statusFlag" type="java.lang.Character">
+            <column name="status_flag"  />
+  </property>
+        
+  <property name="noOfInstallment" type="java.lang.Integer">
+            <column name="installment_left"  />
+  </property>
+  
+  <property name="fromDate" type="timestamp">
+            <column name="FROM_DATE"   not-null="false" />
+  </property>
+  
+  <property name="toDate" type="timestamp">
+            <column name="TO_DATE"   not-null="false" />
+  </property>
+        
+  <property name="remarks" type="java.lang.String">
+            <column name="remarks"  />
+  </property>
+  
+  <property name="langId" type="long">
+            <column name="LANG_ID" />
+  </property>
+  
+  <property name="locId" type="long">
+            <column name="LOC_ID" />
+  </property>
+  
+  <property name="dbId" type="long">
+            <column name="DB_ID"/>
+  </property>
+  
+  <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  </property>
+  
+  <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" />
+  </property>
+  
+  <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  </property>
+ 
+  <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE"/>
+  </property>
+  
+  <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" />
+  </property>
+  
+  <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" />
+  </property>
+  
+  <property name="orderNo" type="java.lang.String">
+            <column name="order_no"  />
+  </property>
+  <property name="orderDate" type="timestamp">
+            <column name="order_date"/>
+  </property>
+  <property name="statusOldSevaarth" type="java.lang.Character">
+            <column name="STATUS_OLD_SEVAARTH"  />
+  </property>
+  
+</class>
+</hibernate-mapping>

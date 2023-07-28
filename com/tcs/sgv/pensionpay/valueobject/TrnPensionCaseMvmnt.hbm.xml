@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 4, 2007 12:51:55 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnPensionCaseMvmnt" table="TRN_PENSION_CASE_MVMNT" dynamic-update="true">
+        <id name="trnPenionCaseMvmntId" type="long">
+            <column name="TRN_PENION_CASE_MVMNT_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="35"  not-null="true" />
+        </property>
+        <property name="pensionerCode" type="string">
+            <column name="pensioner_code" precision="20" not-null="true" />
+        </property>
+        <property name="orderNo" type="string">
+            <column name="order_no" precision="20" scale="0" />
+        </property>
+         <property name="orderDate" type="timestamp">
+            <column name="order_date" length="7" />
+        </property>
+        <property name="currentUserId" type="big_decimal">
+            <column name="CURRENT_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="currentPostId" type="big_decimal">
+            <column name="CURRENT_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="movementId" type="java.lang.Short">
+            <column name="MOVEMENT_ID" precision="3" scale="0" />
+        </property>
+        <property name="movementStatus" type="string">
+            <column name="MOVEMENT_STATUS" length="30" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="30" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" not-null="true" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" not-null="true"/>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="remarks" length="2000" />
+        </property>
+        <property name="roleId" type="java.lang.Long">
+            <column name="ROLE_ID" length="20"></column>
+        </property>
+    </class>
+</hibernate-mapping>

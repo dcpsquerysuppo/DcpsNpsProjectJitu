@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 1, 2008 5:18:15 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnPensionHeldReasonDtls" table="TRN_PENSION_HELD_REASON_DTLS">
+        <id name="rltPpoHeldId" type="long">
+            <column name="RLT_PPO_HELD_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" />
+        </property>
+        <property name="reasonDate" type="timestamp">
+            <column name="REASON_DATE" length="19" />
+        </property>
+        <property name="reason" type="string">
+            <column name="REASON" length="50" />
+        </property>
+        <property name="reasonCount" type="integer">
+            <column name="REASON_COUNT" precision="20" scale="0" />
+        </property>
+        <property name="reasonFlag" type="string">
+            <column name="REASON_FLAG" length="5" />
+        </property>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

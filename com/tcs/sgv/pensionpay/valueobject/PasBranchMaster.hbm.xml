@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.pensionpay.valueobject">
+	<class name="com.tcs.sgv.pensionpay.valueobject.PasBranchMaster" table="PAS_BRANCH_MASTER" dynamic-update="true">
+		<id name="pasBranchCode" type="long">
+            <column name="PAS_BRANCH_CODE" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="pasBankCode" type="java.lang.Long">
+            <column name="PAS_BANK_CODE" precision="20" scale="0"  />
+        </property>
+        <property name="pasBranchName" type="string">
+            <column name="PAS_BRANCH_NAME" length="20" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="20" />
+        </property>
+        <property name="ifmsBankCode" type="java.lang.Long">
+            <column name="IFMS_BANK_CODE" precision="20" scale="0"  />
+        </property>
+        <property name="ifmsBranchCode" type="java.lang.Long">
+            <column name="IFMS_BRANCH_CODE" precision="20" scale="0"  />
+        </property>
+  </class>
+</hibernate-mapping>

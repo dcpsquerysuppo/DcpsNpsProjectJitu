@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 29, 2007 11:23:36 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaBudrlsMonthMpg" table="sgva_budrls_month_mpg" >
+        <comment></comment>
+        <id name="monthMpgId" type="long">
+            <column name="MONTH_MPG_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="fkHdrId" type="long">
+            <column name="FK_HDR_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="monthId" type="string">
+            <column name="MONTH_ID" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="approvedRejected" type="string">
+            <column name="APPROVED_REJECTED" length="1" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="applicationId" type="string">
+            <column name="APPLICATION_ID" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="approvalDate" type="date">
+            <column name="APPROVAL_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="grntRlsFlag" type="string">
+            <column name="GRNT_RLS_FLAG" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="grntRlsDate" type="date">
+            <column name="GRNT_RLS_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="orderNo" type="string">
+            <column name="ORDER_NO" length="100">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

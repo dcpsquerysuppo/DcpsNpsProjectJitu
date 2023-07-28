@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 11, 2008 6:29:29 AM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.RltLevelStatus" table="RLT_LEVEL_STATUS" dynamic-update="true">
+    <cache usage="read-only" region="ecache_lookup"/>
+        <id name="levelStatusId" type="java.lang.Long">
+            <column name="LEVEL_STATUS_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="levelCode" type="short">
+            <column name="LEVEL_CODE" precision="3" scale="0" not-null="true">
+                <comment>Level Code of the User</comment>
+            </column>
+        </property>
+        <property name="levelDesc" type="string">
+            <column name="LEVEL_DESC" length="50" not-null="true">
+                <comment>Level Description</comment>
+            </column>
+        </property>
+        <property name="statusCode" type="short">
+            <column name="STATUS_CODE" precision="3" scale="0" not-null="true">
+                <comment>Status Code</comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true">
+                <comment>Created User Id</comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true">
+                <comment>Created Post Id</comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true">
+                <comment>Created Date</comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID" precision="20" scale="0">
+                <comment>DB Id</comment>
+            </column>
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="LOCATION_CODE" precision="20" scale="0">
+                <comment>Location Code</comment>
+            </column>
+        </property>
+        <property name="category" type="string">
+            <column name="CATEGORY" length="10">
+                <comment>Level Description</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

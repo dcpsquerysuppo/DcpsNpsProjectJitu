@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.pensionpay.valueobject">
+	<class name="com.tcs.sgv.pensionpay.valueobject.RltBankBranchTmp" table="RLT_BANK_BRANCH_TMP" dynamic-update="true">
+   		<id name="bankBranchId" type="long">
+            <column name="bank_branch_id" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+         <property name="bankCode" type="string">
+            <column name="BANK_CODE" precision="20" scale="0"  />
+        </property>
+        <property name="branchCode" type="java.lang.Long">
+            <column name="BRANCH_CODE" precision="20" scale="0"  />
+        </property>
+        <property name="branchName" type="string">
+            <column name="BRANCH_NAME" length="200" />
+        </property>
+        <property name="branchAddress" type="string">
+            <column name="BRANCH_ADDRESS" length="1000"/>
+        </property>
+        <property name="micrCode" type="string">
+			<column name="MICR_CODE" length="100" ></column>
+		</property>
+		<property name="ifscCode" type="string">
+            <column name="IFSC_CODE" length="30" />
+        </property>
+        <property name="contact" type="string">
+            <column name="contact" length="1000" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="100" />
+        </property>
+         <property name="district" type="string">
+            <column name="district" length="100" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="100" />
+        </property>
+        <property name="headOff" type="java.lang.Long">
+            <column name="HEAD_OFF" length="30" />
+        </property>
+		 <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+		</property>  
+		<property name="dbId" type="java.lang.Long">
+			<column name="DB_ID" precision="20" scale="0"></column>
+		</property>
+		<property name="langId" type="java.lang.Long">
+			<column name="LANG_ID" precision="20" scale="0"></column>
+		</property>
+		<property name="reportingBranchCode" type="java.lang.Long">
+			<column name="REPORTING_BRANCH_CODE" precision="20" scale="0"></column>
+		</property>
+		<property name="centerName" type="string">
+            <column name="CENTER_NAME" length="50" />
+        </property>
+        <property name="bsrCode" type="string">
+            <column name="BSR_CODE" length="20" />
+        </property>
+  </class>
+</hibernate-mapping>

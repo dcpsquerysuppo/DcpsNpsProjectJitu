@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.gpf.valueobject">
+  <class name="com.tcs.sgv.gpf.valueobject.RltGpfDdoVerifierHo" table="RLT_GPF_DDO_VERIFIER_HO" >
+  	<id name="rltGpfDdoVerifierHoId" type="long">
+            <column name="RLT_GPF_DDO_VERIFIER_HO_ID"  />
+            <generator class="assigned" />
+     </id>
+     
+  <property name="ddoPostId" type="long">
+            <column name="DDO_POST_ID"   not-null="false" />
+  </property>
+  
+  <property name="verifierPostId" type="long">
+            <column name="VERIFIER_POST_ID"   not-null="false" />
+  </property>
+  
+  <property name="hoPostId" type="long">
+            <column name="HO_POST_ID"   not-null="false" />
+  </property>
+  
+   </class>
+</hibernate-mapping>

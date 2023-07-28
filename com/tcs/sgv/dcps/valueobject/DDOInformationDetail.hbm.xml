@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.DDOInformationDetail" table="MST_DCPS_DDO_INFO" dynamic-update="true">
+  	<id name="ddoDetailId" type="long">
+            <column name="ddo_detail_id"  />
+            <generator class="assigned" />
+     </id>
+     
+  <property name="ddoCode" type="string">
+            <column name="ddo_code"  not-null="false" />
+  </property>
+  
+  <property name="administrativeDept" type="string">
+            <column name="administrative_dept"  not-null="false" />
+  </property>
+  
+  <property name="fieldHodDept" type="string">
+            <column name="field_hod_dept"  not-null="false" />
+  </property>
+  <property name="ddoName" type="string">
+            <column name="ddo_name"  not-null="false" />
+  </property>
+  <property name="ddoDesignation" type="string">
+            <column name="ddo_designation"  not-null="false" />
+  </property>
+  <property name="wefDate" type="timestamp">
+            <column name="wef_date"  not-null="false" />
+  </property>
+  <property name="tanNo" type="string">
+            <column name="tan_no" not-null="false" />
+  </property>
+  <property name="itawardcircle" type="string">
+            <column name="itawardcircle" not-null="false" />
+  </property>
+  <property name="bankName" type="string">
+            <column name="bank_name"  not-null="false" />
+  </property>
+  <property name="branchName" type="string">
+            <column name="branch_name" not-null="false" />
+  </property>
+  <property name="accountNo" type="string">
+            <column name="account_no"  not-null="false" />
+  </property>
+  <property name="remarks" type="string">
+            <column name="remarks"  not-null="false" />
+  </property>
+  <property name="createdDate" type="timestamp">
+            <column name="created_date"  />
+  </property>
+  <property name="createdBy" type="long">
+            <column name="created_by" />
+  </property>
+  <property name="createdByPost" type="long">
+            <column name="created_by_post"  />
+  </property>
+  <property name="updatedDate" type="timestamp">
+            <column name="updated_date" not-null="false" />
+  </property>
+  <property name="updatedBy" type="long">
+            <column name="updated_by"  not-null="false" />
+  </property>
+  <property name="updatedByPost" type="long">
+            <column name="updated_by_post"   not-null="false" />
+  </property>
+   <property name="ifscCode" type="java.lang.String"  >
+            <column name="IFSC_CODE" precision="20" />
+        </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.tcs.sgv.dcps.valueobject.RltOfficeDesig" table="RLT_DCPS_OFFICE_DESIG">
+  		
+  		<id name="designationId" type="long">
+            <column name="designation_id"/>
+            <generator class="assigned" />
+        </id>		
+  		  		
+  		 <property name="officeId" type="long">
+            <column name="office_id"/>
+         </property>
+        
+        <property name="designationName" type="string">
+            <column name="designation_name"/>
+        </property>
+        
+       
+</class>
+
+</hibernate-mapping>

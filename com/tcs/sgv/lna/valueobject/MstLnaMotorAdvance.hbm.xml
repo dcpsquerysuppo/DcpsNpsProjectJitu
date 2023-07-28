@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.lna.valueobject">
+  <class name="com.tcs.sgv.lna.valueobject.MstLnaMotorAdvance" table="MST_LNA_MOTOR_ADVANCE">
+  		<id name="motorAdvanceId" type="long">
+            <column name="MOTOR_ADVANCE_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="transactionId" type="string">
+            <column name="TRANSACTION_ID" />
+        </property>
+        <property name="sevaarthId" type="string">
+            <column name="SEVAARTH_ID" />
+        </property>
+        <property name="advanceType" type="long">
+            <column name="ADVANCE_TYPE"/>
+        </property>
+        <property name="advanceSubType" type="long">
+            <column name="ADVANCE_SUB_TYPE"/>
+        </property>
+        <property name="subCategory" type="string">
+            <column name="SUB_CATEGORY" />
+        </property>
+         <property name="payCommissionGR" type="long">
+            <column name="PAY_COMMISSION_GR" />
+        </property>
+        <property name="applicationDate" type="timestamp">
+            <column name="APPLICATION_DATE"/>
+        </property>
+        <property name="finYearId" type="long">
+            <column name="FIN_YEAR_ID" />
+        </property>
+        <property name="attachmentId" type="long">
+            <column name="ATTACHMENT_ID" />
+        </property>
+        <property name="amountRequested" type="long">
+            <column name="AMOUNT_REQUESTED" />
+        </property>
+        <property name="exshowroomPrice" type="long">
+            <column name="EXSHOWROOM_PRICE" />
+        </property>
+        <property name="requestDate" type="timestamp">
+            <column name="REQ_DATE" />
+        </property>
+        <property name="interestRate" type="float">
+            <column name="INTEREST_RATE" />
+        </property>
+        <property name="amountSanctioned" type="long">
+            <column name="AMOUNT_SANCTIONED"/>
+        </property>
+        <property name="interestAmount" type="double">
+            <column name="INTEREST_AMOUNT" />
+        </property>
+        <property name="sancCapitalInst" type="integer">
+            <column name="SANC_CAPITAL_INSTALLMENTS" />
+        </property>
+         <property name="sancInterestInst" type="integer">
+            <column name="SANC_INTEREST_INSTALLMENTS" />
+        </property>
+         <property name="cappitalInstAmtMonth" type="long">
+            <column name="CAPITAL_INST_AMT_MONTH" />
+        </property>
+        <property name="interestInstAmtMonth" type="double">
+            <column name="INTEREST_INST_AMT_MONTH"/>
+        </property>
+        <property name="capitalInstLeft" type="integer">
+            <column name="CAPITAL_INST_LEFT" />
+         </property>
+         <property name="InterestInstLeft" type="integer">
+            <column name="INTEREST_INST_LEFT" />
+        </property>
+        <property name="oddInstallment" type="long">
+            <column name="ODD_INSTALLMENT" />
+        </property>
+         <property name="oddInstallmentNumber" type="long">
+            <column name="ODD_INSTALLMENT_NO" />
+        </property>
+         <property name="oddInterestInstallment" type="long">
+            <column name="ODD_INTEREST_INSTALLMENT" />
+        </property>
+         <property name="oddInterestInstallmentNo" type="long">
+            <column name="ODD_INTEREST_INSTALLMENT_NO" />
+        </property>
+        <property name="recoveredAmount" type="long">
+            <column name="RECOVERED_AMOUNT"/>
+        </property>
+        <property name="outstandingAmount" type="long">
+            <column name="OUTSTANDING_AMOUNT" />
+         </property>
+         <property name="statusFlag" type="string">
+            <column name="STATUS_FLAG" />
+        </property>
+        <property name="recoveryStatus" type="integer">
+            <column name="RECOVERY_STATUS" length="1" />
+        </property>
+         <property name="sancAuthorityName" type="string">
+            <column name="SANC_AUTHORITY_NAME"/>
+        </property>
+         <property name="sanctionedDate" type="timestamp">
+            <column name="SANCTIONED_DATE" />
+        </property>
+        <property name="userRemarks" type="string">
+			<column name="USER_REMARKS" length="200" />
+		</property>
+		<property name="approverRemarks" type="string">
+			<column name="APPROVER_REMARKS" length="200" />
+		</property>
+		<property name="hoRemarks" type="string">
+			<column name="HO_REMARKS" length="200" />
+		</property>
+		<property name="orderNo" type="string">
+			<column name="ORDER_NO" length="50" />
+		</property>
+		<property name="orderDate" type="timestamp">
+			<column name="ORDER_DATE" length="30" />
+		</property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_POST_ID" />
+        </property>
+        <property name="createdPostId" type="long"  >
+            <column name="CREATED_USER_ID"/>
+        </property>
+        <property name="createdDate" type="timestamp" >
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="long"  >
+            <column name="UPDATED_POST_ID"/>
+        </property>
+        <property name="updatedPostId" type="long"  >
+            <column name="UPDATED_USER_ID" precision="10" />
+        </property>
+        <property name="updatedDate" type="timestamp" >
+            <column name="UPDATED_DATE" />
+        </property>
+        <property name="hodasstActionDate" type="timestamp" >
+            <column name="HODASST_ACTION_DATE" />
+        </property>
+         <property name="hodActionDate" type="timestamp" >
+            <column name="HOD_ACTION_DATE" />
+        </property>
+        <property name="lnaBillId" type="long"  >
+            <column name="LOAN_BILL_ID" precision="10" />
+        </property>
+        <property name="frwrdToRHO" type="string"  >
+            <column name="FRWDRD_TO_RHO_POST_ID"  />
+        </property>
+        <property name="fromPostId" type="string"  >
+            <column name="from_post_id" />
+        </property>
+        <property name="toPostID" type="string"  >
+            <column name="to_post_id" />
+        </property>
+        <property name="rhoRemarks" type="string"  >
+            <column name="rho_remarks" />
+        </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.tcs.sgv.pensionpay.valueobject.TrnBillChangeStmntMpg" table="TRN_BILL_CHANGE_STMNT_MPG" dynamic-update="true">
+		<id name="billChngStmntId" type="long">
+            <column name="BILL_CHNG_STMNT_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+   		 </id>
+     	<property name="billNo" type="long">
+            <column name="BILL_NO" length="20" />
+     	</property>
+     	<property name="chngStmntIdList" type="string">
+            <column name="CHNG_STMNT_ID_LIST" length="1000" />
+     	</property>
+     	<property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" />
+    	 </property>
+      	<property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="dbId" type="java.lang.Integer">
+            <column name="db_id" precision="6" scale="0" />
+        </property>
+         <property name="forMonth" type="java.lang.Integer">
+            <column name="FOR_MONTH" precision="6" scale="0" />
+        </property>
+         <property name="schemeCode" type="string">
+            <column name="scheme_code" length="20" />
+        </property>
+     </class>
+</hibernate-mapping>

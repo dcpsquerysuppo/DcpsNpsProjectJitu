@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.dcps.valueobject.SanctionedBudget" table="MST_DCPS_SANC_BUDGET">
+  	
+  	<id name="dcpsSanctionedBudgetIdPk" type="long">
+            <column name="DCPS_SANC_BUDGET_MST_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+     </id>
+     
+    <property name="dcpsSancBudgetOrgId" type="long">
+            <column name="ORG_ID"  />
+  	</property>
+  	<property name="dcpsSancBudgetSchemeCode" type="string">
+            <column name="SCHEME_CODE"  />
+  	</property>
+  	<property name="dcpsSancBudgetFinYear" type="long">
+            <column name="FIN_YEAR"  />
+  	</property>
+  	<property name="dcpsSancBudgetDate" type="timestamp">
+            <column name="SANC_DATE"  />
+  	</property>
+  	<property name="dcpsSancBudgetAmount" type="long">
+            <column name="SANC_BUDGET"  />
+  	</property>
+  
+  	<property name="totalBudget" type="long">
+            <column name="TOTAL_BUDGET"  />
+  	</property>
+  	
+  	<property name="dcpsSancBudgetType" type="string">
+            <column name="SANC_BUDGET_TYPE"  />
+  	</property>
+  	<property name="PostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  	</property>
+  	<property name="UserId" type="long">
+            <column name="CREATED_USER_ID"  />
+  	</property>
+  	<property name="CreatedDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  	</property>
+  	
+  	<property name="UpdatedPostId" type="long">
+            <column name="UPDATED_POST_ID"  />
+  	</property>
+  	<property name="UpdatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  />
+  	</property>
+  	<property name="UpdatedDate" type="timestamp">
+            <column name="UPDATED_DATE"  />
+  	</property>
+  	
+  </class>
+</hibernate-mapping>

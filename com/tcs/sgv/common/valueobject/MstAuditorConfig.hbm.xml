@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 17, 2009 12:41:48 PM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.MstAuditorConfig" table="MST_AUDITOR_CONFIG" dynamic-update="true">
+        <id name="mstAuditorId" type="long">
+            <column name="MST_AUDITOR_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="mbgcFlag" type="string">
+            <column name="MBGC_FLAG" length="5" />
+        </property>
+         <property name="priority" type="int">
+            <column name="PRIORITY" length="2" />
+        </property>
+        <property name="majorHead" type="string">
+            <column name="MAJOR_HEAD" length="4" />
+        </property>
+        <property name="billTypeGtrCode" type="string">
+            <column name="BILL_TYPE_GTR_CODE" length="8" />
+        </property>
+        <property name="goNgo" type="string">
+            <column name="GO_NGO" length="20" />
+        </property>
+        <property name="cardexNo" type="string">
+            <column name="CARDEX_NO" length="4" />
+        </property>
+        <property name="auditorPostId" type="java.lang.Long">
+            <column name="AUDITOR_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="branchCode" type="string">
+            <column name="BRANCH_CODE" length="20" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="20" />
+        </property>
+        <property name="activateFlag" type="java.lang.Boolean">
+            <column name="ACTIVATE_FLAG" precision="1" scale="0" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE"/>
+        </property>
+    </class>
+</hibernate-mapping>

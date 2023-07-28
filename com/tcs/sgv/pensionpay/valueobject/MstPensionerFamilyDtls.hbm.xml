@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 29, 2008 6:25:44 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.MstPensionerFamilyDtls" table="MST_PENSIONER_FAMILY_DTLS">
+        <id name="familyMemberId" type="long">
+            <column name="FAMILY_MEMBER_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="100" />
+        </property>
+        <property name="relationship" type="string">
+            <column name="RELATIONSHIP" length="40" />
+        </property>
+        <property name="dateOfBirth" type="timestamp">
+            <column name="DATE_OF_BIRTH" length="7" />
+        </property>
+        <property name="dateOfDeath" type="timestamp">
+            <column name="DATE_OF_DEATH" length="7" />
+        </property>
+        <property name="majorFlag" type="string">
+            <column name="MAJOR_FLAG" length="1" />
+        </property>
+        <property name="salary" type="big_decimal">
+            <column name="SALARY" precision="12" default="0" not-null="true"/>
+        </property>
+        <property name="handicapeFlag" type="string">
+            <column name="HANDICAPE_FLAG" length="1" />
+        </property>
+        <property name="guardianName" type="string">
+            <column name="GUARDIAN_NAME" length="100" />
+        </property>
+        <property name="trnCounter" type="integer">
+            <column name="TRN_COUNTER" precision="11" scale="0" />
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="accntNo" type="string">
+            <column name="ACCNT_NO" length="20" />
+        </property>
+        <property name="percentage" type="long">
+            <column name="PERCENTAGE" precision="5" />
+        </property>
+        <property name="marriedFlag" type="string">
+            <column name="MARRIED_FLAG" length="1" />
+        </property>
+        <property name="bankCode" type="string">
+            <column name="BANK_CODE" length="20" />
+        </property>
+        <property name="branchCode" type="string">
+            <column name="BRANCH_CODE" length="20" />
+        </property>
+        <property name="gender" type="string">
+            <column name="GENDER" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

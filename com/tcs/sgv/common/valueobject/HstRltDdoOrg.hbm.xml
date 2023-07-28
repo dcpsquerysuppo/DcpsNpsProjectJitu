@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 27, 2009 7:19:55 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.HstRltDdoOrg" table="HST_RLT_DDO_ORG" dynamic-update="true">
+        <composite-id name="id" class="com.tcs.sgv.common.valueobject.HstRltDdoOrgId">
+            <key-property name="ddoOrgId" type="java.lang.Long">
+                <column name="DDO_ORG_ID" precision="20" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" precision="11" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="activateFlag" type="java.lang.Long">
+            <column name="ACTIVATE_FLAG" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="START_DATE" length="7" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="7" />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID" precision="20" scale="0" />
+        </property>
+        <property name="ddoCode" type="string">
+            <column name="DDO_CODE" length="15" not-null="true" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" />
+        </property>
+      
+    </class>
+</hibernate-mapping>

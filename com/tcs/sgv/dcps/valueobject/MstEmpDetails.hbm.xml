@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.MstEmpDetails" table="MST_DCPS_EMP_DETAILS" >
+  	<id name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID"  />
+            <generator class="assigned" />
+     </id>
+     <property name="orgEmpMstId" type="long">
+            <column name="ORG_EMP_MST_ID"  />
+  	</property>
+    
+    <property name="dcpsId" type="string">
+            <column name="DCPS_ID"  />
+  	</property>
+     <property name="name" type="string">
+            <column name="EMP_NAME"  />
+  	</property>
+  	<property name="name_marathi" type="string">
+            <column name="EMP_NAME_MARATHI"  />
+  	</property>  
+  	<property name="father_or_husband" type="string">
+            <column name="FATHER_OR_HUSBAND"  />
+  	</property>
+  	<property name="salutation" type="string">
+            <column name="SALUTATION"  />
+  	</property>
+  	<property name="gender" type="java.lang.Character">
+            <column name="GENDER" />
+  	 </property>
+  	 <property name="dob" type="timestamp">
+            <column name="DOB"/>
+     </property>
+   	<property name="doj" type="timestamp">
+            <column name="DOJ"/>
+  	</property>
+  	<property name="designation" type="string">
+            <column name="DESIGNATION" />
+  	</property>
+  	<property name="payCommission" type="string">
+            <column name="PAY_COMMISSION" />
+  	</property>
+  	<property name="payScale" type="string">
+            <column name="PAYSCALE"  />
+  	</property>
+  	<property name="building_address" type="string">
+            <column name="ADDRESS_BUILDING" />
+  	</property>
+  	<property name="building_street" type="string">
+            <column name="ADDRESS_STREET"  />
+  	</property>
+  		<property name="landmark" type="string">
+            <column name="LANDMARK"  />
+  	</property>
+  		<property name="locality" type="string">
+            <column name="LOCALITY"  />
+  	</property>
+  		<property name="district" type="string">
+            <column name="DISTRICT"  />
+  	</property>
+  		<property name="state" type="string">
+            <column name="STATE"  />
+  	</property>
+  	<property name="pincode" type="long">
+            <column name="PINCODE"  />
+  	</property>
+  	<property name="cellNo" type="string">
+            <column name="CELL_NO"  />
+  	</property>
+  	<property name="cntctNo" type="string">
+            <column name="CNTCT_NO" />
+  	</property>
+  		<property name="emailId" type="string">
+            <column name="EMAIL_ID" />
+  	</property>
+  	<property name="parentDept" type="string">
+            <column name="PARENT_DEPT" />
+  	</property>
+  	<property name="reasonChangePFD" type="string">
+            <column name="REASON_CHANGE_PFD" />
+  	</property>
+  	<property name="cadre" type="string">
+            <column name="CADRE" />
+  	</property>
+  	<property name="group" type="string">
+            <column name="EMP_GROUP" />
+  	</property>
+  	<property name="firstDesignation" type="string">
+            <column name="FIRST_DESIGNATION" />
+  	</property>
+  	<property name="appointmentDate" type="timestamp">
+            <column name="APPOINTMENT_DATE" />
+  	</property>
+  	<property name="currOff" type="string">
+            <column name="CURR_OFF" />
+  	</property>
+  	<property name="remarks" type="string">
+            <column name="REMARKS" />
+  	</property>
+  	<property name="EIDNo" type="string">
+            <column name="EID_NO" />
+  	</property>
+  	<property name="UIDNo" type="string">
+            <column name="UID_NO" />
+  	</property>
+  	<property name="PANNo" type="string">
+            <column name="PAN_NO" />
+  	</property>
+  	<property name="bankName" type="string">
+            <column name="BANK_NAME" />
+  	</property>
+  	<property name="branchName" type="string">
+            <column name="BRANCH_NAME" />
+  	</property>
+  	<property name="IFSCCode" type="string">
+            <column name="IFSC_CODE" />
+  	</property>
+  	<property name="bankAccountNo" type="string">
+            <column name="BANK_ACNT_NO" />
+  	</property>
+  	<property name="photoAttachmentID" type="long">
+            <column name="PHOTO_ATTACHMENTID" />
+  	</property>
+  	<property name="signatureAttachmentID" type="long">
+            <column name="SIGNATURE_ATTACHMENTID" />
+  	</property>
+    <property name="ddoCode" type="string">
+            <column name="DDO_CODE"  />
+  	</property>
+  	<property name="langId" type="long">
+            <column name="LANG_ID" />
+  	</property>
+  	<property name="locId" type="long">
+            <column name="LOC_ID"  not-null="false" />
+  	</property>
+  	<property name="dbId" type="long">
+            <column name="DB_ID"  not-null="false" />
+  	</property>
+  	<property name="formStatus" type="long">
+            <column name="FORM_STATUS"  not-null="false" />
+  	</property>
+  	<property name="phyRcvdFormStatus" type="long">
+            <column name="PHY_RCVD_STATUS"  not-null="false" />
+  	</property>
+  	<property name="phyRcvdDate" type="timestamp">
+            <column name="PHY_RCVD_DATE"  not-null="false" />
+  	</property>
+  	<property name="regStatus" type="long">
+            <column name="REG_STATUS"  not-null="false" />
+  	</property>
+  	<property name="regStatusUpdtdDate" type="timestamp">
+            <column name="REG_STATUS_UPDTD_DATE"  not-null="false" />
+  	</property>
+  	<property name="approvalByDDODate" type="timestamp">
+            <column name="APPROVAL_BY_DDO_DATE"  not-null="false" />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+ 	</property>
+    <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" />
+    </property>
+    <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID"  />
+    </property>
+    <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" not-null="false" />
+    </property>
+    <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  not-null="false" />
+    </property>
+    <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID"   not-null="false" />
+    </property>
+    <property name="billGroupId" type="long">
+            <column name="BILLGROUP_ID"  />
+    </property>
+    <property name="sentBackRemarks" type="string">
+            <column name="SENTBACK_REMARKS" />
+    </property>
+    <property name="basicPay" type="double">
+            <column name="BASIC_PAY"  />
+    </property>
+    <property name="empOnDeptn" type="java.lang.Integer">
+            <column name="EMP_ON_DEPTN"  />
+    </property>
+   	<property name="acDcpsMaintainedBy" type="string">
+            <column name="AC_DCPS_MAINTAINED_BY" />
+  	</property> 
+    <property name="dcpsOrGpf" type="java.lang.Character">
+            <column name="DCPS_OR_GPF"  />
+    </property>
+     <property name="pfdChangedBySRKA" type="long">
+            <column name="PFD_CHANGED_BY_SRKA"  />
+    </property>
+    <property name="acNonSRKAEmp" type="string">
+            <column name="AC_NO_NONSRKA_EMP" />
+  	</property> 
+    <property name="acMntndByOthers" type="string">
+            <column name="AC_MNTND_BY_OTHERS" />
+  	</property> 
+  	<property name="reasonForPSChange" type="long">
+            <column name="REASONFORPSCHANGE"  />
+  	</property>
+  	<property name="otherReasonForPSChange" type="string">
+            <column name="OTHERREASONFORPSCHANGE"  />
+  	</property>
+  	<property name="withEffectFromDate" type="timestamp">
+            <column name="WITH_EFFECT_FROM_DATE" />
+  	</property>
+  	<property name="sevarthId" type="string">
+            <column name="SEVARTH_ID" />
+  	</property>
+    <property name="deselectionDate" type="timestamp">
+            <column name="DESELECTION_DATE" />
+    </property>
+    <property name="addressVTC" type="string">
+            <column name="ADDRESS_VTC" />
+  	</property>
+  	
+  	<!-- added by arpan-->
+  	<property name="PBuildingAddress" type="string">
+            <column name="PADDRESS_BUILDING" />
+  	</property>
+  	<property name="PBuildingStreet" type="string">
+            <column name="PADDRESS_STREET"  />
+  	</property>
+  		<property name="PLandmark" type="string">
+            <column name="PLANDMARK"  />
+  	</property>
+  		<property name="PLocality" type="string">
+            <column name="PLOCALITY"  />
+  	</property>
+  		<property name="PDistrict" type="string">
+            <column name="PDISTRICT"  />
+  	</property>
+  		<property name="PState" type="string">
+            <column name="PSTATE"  />
+  	</property>
+  	<property name="PPincode" type="long">
+            <column name="PPINCODE"  />
+  	</property>
+  	<property name="PCellNo" type="string">
+            <column name="PCELL_NO"  />
+  	</property>
+  	<property name="PCntctNo" type="string">
+            <column name="PCNTCT_NO" />
+  	</property>
+  	<property name="PAddressVTC" type="string">
+            <column name="PADDRESS_VTC" />
+  	</property>
+  	<property name="isAddressSame" type="string">
+            <column name="ISADDRESSSAME" />
+  	</property>
+  	
+   </class>
+</hibernate-mapping>

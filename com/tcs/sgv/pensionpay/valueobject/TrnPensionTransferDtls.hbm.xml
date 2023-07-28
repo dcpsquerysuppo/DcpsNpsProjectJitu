@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 28, 2008 10:38:56 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnPensionTransferDtls" table="TRN_PENSION_TRANSFER_DTLS" dynamic-update="true">
+        <id name="transferDtlsId" type="long">
+            <column name="TRANSFER_DTLS_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" not-null="true" />
+        </property>
+        <property name="transferDate" type="timestamp">
+            <column name="TRANSFER_DATE" length="7" />
+        </property>
+        <property name="receiveDate" type="timestamp">
+            <column name="RECEIVE_DATE" length="7" />
+        </property>
+        <property name="fromLocation" type="string">
+            <column name="FROM_LOCATION" length="10" />
+        </property>
+        <property name="toLocation" type="string">
+            <column name="TO_LOCATION" length="10" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="20" />
+        </property>
+        <property name="transferPostId" type="big_decimal">
+            <column name="TRANSFER_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="receivePostId" type="big_decimal">
+            <column name="RECEIVE_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" not-null="true" />
+        </property>
+        <property name="remarks" type="java.lang.String">
+            <column name="remarks"  />
+        </property>
+        <property name="agFlag" type="java.lang.Character"  >
+            <column name="ag_flag" />
+        </property>
+         <property name="registrationNo" type="string">
+            <column name="registration_no"  />
+        </property>
+        <property name="otherStateName" type="string">
+            <column name="otherstate_name"  />
+        </property>
+         <property name="ppoInwardDate" type="timestamp">
+            <column name="PPO_INWARD_DATE" length="7" />
+        </property>
+          <property name="ppoRegDate" type="timestamp">
+            <column name="PPO_REG_DATE" length="7" />
+        </property>
+        <property name="commensionDate" type="timestamp">
+            <column name="commencement_date" length="7" />
+        </property>
+        <property name="requestId" type="string">
+            <column name="request_id" length="20" />
+        </property>
+        <property name="lastPayMonthYear" type="java.lang.Integer">
+            <column name="LAST_PAY_MONTHYEAR"  precision="6" scale="0" />
+        </property>
+        <property name="lastPayAmount" type="big_decimal">
+            <column name="LAST_PAY_AMOUNT" precision="20" scale="0" />
+        </property>
+        <property name="applnReceiveDate" type="timestamp">
+            <column name="APPLN_RECEIVE_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

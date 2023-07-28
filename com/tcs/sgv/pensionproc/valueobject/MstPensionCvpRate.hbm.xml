@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 1, 2008 10:35:40 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionproc.valueobject.MstPensionCvpRate" table="MST_PENSION_CVP_RATE" dynamic-update="true" >
+        <id name="cvpRateId" type="long">
+            <column name="CVP_RATE_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        
+         <property name="age" type="big_decimal">
+            <column name="AGE" precision="20"  />
+        </property>
+        
+         <property name="cvpRate" type="big_decimal">
+            <column name="CVP_RATE" precision="20" />
+        </property>
+        
+        
+        <property name="payCommission" type="string">
+            <column name="PAY_COMMISSION" length="20" />
+        </property>
+
+	</class>
+	
+	
+</hibernate-mapping>

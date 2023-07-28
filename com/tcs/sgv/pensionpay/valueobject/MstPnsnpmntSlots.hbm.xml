@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.tcs.sgv.pensionpay.valueobject.MstPnsnpmntSlots" table="mst_pnsn_pmnt_slots">
+  		<id name="slotNo" type="java.lang.Integer">
+            <column name="slot_no" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="slotTime" type="string">
+            <column name="slot_time" length="50" />
+        </property>
+        <property name="createdBy" type="java.lang.Long">
+            <column name="created_by" precision="20" scale="0" />
+        </property>
+        <property name="createdByPost" type="java.lang.Long">
+            <column name="created_by_post" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="created_date"  />
+        </property>
+        <property name="updatedBy" type="java.lang.Long">
+            <column name="updated_by" precision="20" scale="0" />
+        </property>
+        <property name="updatedByPost" type="java.lang.Long">
+            <column name="updated_by_post" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="updated_date"  />
+        </property>
+  </class>
+</hibernate-mapping>

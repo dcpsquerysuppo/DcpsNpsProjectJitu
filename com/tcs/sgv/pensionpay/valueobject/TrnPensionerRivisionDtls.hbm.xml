@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 12, 2008 2:16:28 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+	<class	name="com.tcs.sgv.pensionpay.valueobject.TrnPensionerRivisionDtls"
+		table="TRN_PENSIONER_RIVISION_DTLS">
+		<id name="rivisionDtlsId" type="long">
+			<column name="RIVISION_DTLS_ID" precision="20" scale="0" />
+			<generator class="assigned" />
+		</id>
+		<property name="pensionRequestId" type="long">
+			<column name="PENSION_REQUEST_ID" precision="20" scale="0" />
+		</property>
+		<property name="pensionerCode" type="string">
+			<column name="PENSIONER_CODE" length="20" />
+		</property>
+		<property name="revisionCounter" type="java.lang.Byte">
+			<column name="REVISION_COUNTER" precision="2" scale="0" />
+		</property>
+		<property name="rivisionDate" type="timestamp">
+			<column name="RIVISION_DATE" length="7" />
+		</property>
+		<property name="basicPension" type="big_decimal">
+			<column name="BASIC_PENSION" precision="10" />
+		</property>
+		<property name="cvpAmount" type="big_decimal">
+			<column name="CVP_AMOUNT" precision="12" />
+		</property>
+		<property name="dcrgAmount" type="big_decimal">
+			<column name="DCRG_AMOUNT" precision="12" />
+		</property>
+		<property name="cvpMonthlyAmount" type="big_decimal">
+			<column name="CVP_MONTHLY_AMOUNT" precision="8" />
+		</property>
+		<property name="fp1Amount" type="big_decimal">
+			<column name="FP1_AMOUNT" precision="10" />
+		</property>
+		<property name="fp2Amount" type="big_decimal">
+			<column name="FP2_AMOUNT" precision="10" />
+		</property>
+		<property name="dpPercent" type="big_decimal">
+			<column name="DP_PERCENT" precision="5" />
+		</property>
+		<property name="tiPercent" type="big_decimal">
+			<column name="TI_PERCENT" precision="5" />
+		</property>
+		<property name="medicalAllowenceAmount" type="big_decimal">
+			<column name="MEDICAL_ALLOWENCE_AMOUNT" precision="6" />
+		</property>
+		<property name="activeFlag" type="string">
+			<column name="ACTIVE_FLAG" length="1" />
+		</property>
+		<property name="dbId" type="big_decimal">
+			<column name="DB_ID" precision="20" scale="0" />
+		</property>
+		<property name="locationCode" type="string">
+			<column name="LOCATION_CODE" length="10" />
+		</property>
+		<property name="createdUserId" type="big_decimal">
+			<column name="CREATED_USER_ID" precision="20" scale="0" />
+		</property>
+		<property name="createdPostId" type="big_decimal">
+			<column name="CREATED_POST_ID" precision="20" scale="0" />
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" length="7" />
+		</property>
+		<property name="updatedUserId" type="big_decimal">
+			<column name="UPDATED_USER_ID" precision="20" scale="0" />
+		</property>
+		<property name="updatedPostId" type="big_decimal">
+			<column name="UPDATED_POST_ID" precision="20" scale="0" />
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE" length="7" />
+		</property>
+		<property name="orgBf11156" type="big_decimal">
+			<column name="ORG_BF_1_11_56" precision="10" />
+		</property>
+		<property name="redBf11156" type="big_decimal">
+			<column name="RED_BF_1_11_56" precision="10" />
+		</property>
+		<property name="orgAf11156" type="big_decimal">
+			<column name="ORG_AF_1_11_56" precision="10" />
+		</property>
+		<property name="redAf11156" type="big_decimal">
+			<column name="RED_AF_1_11_56" precision="10" />
+		</property>
+		<property name="orgAf10560" type="big_decimal">
+			<column name="ORG_AF_1_05_60" precision="10" />
+		</property>
+		<property name="redAf10560" type="big_decimal">
+			<column name="RED_AF_1_05_60" precision="10" />
+		</property>
+		<property name="trnCounter" type="big_decimal">
+			<column name="TRN_COUNTER" precision="20" scale="0" />
+		</property>
+		<property name="daPercent" type="big_decimal">
+			<column name="DA_PERCENT" precision="10" scale="0" />
+		</property>
+		<property name="revisionOrderNo" type="string">
+			<column name="REVISION_ORDER_NO" length="30" />
+		</property>
+		<property name="revisionWEFDate" type="timestamp">
+			<column name="ReVISION_WEF_DATE" length="7" />
+		</property>
+		<property name="cvpPaidDate" type="timestamp">
+			<column name="CVP_PAID_DATE" length="7" />
+		</property>
+		<property name="cvpRestorationDate" type="timestamp">
+			<column name="CVP_RESTORATION_DATE" length="7" />
+		</property>
+		<property name="cvpRestorationAppDate" type="timestamp">
+			<column name="CVP_RESTORATION_APP_DATE" length="7" />
+		</property>
+		<property name="inwdDate" type="timestamp">
+			<column name="INWD_DATE" length="7" />
+		</property>
+		<property name="dcrgPaidDate" type="timestamp">
+			<column name="DCRG_PAID_DATE" length="7" />
+		</property>
+		<property name="fp2Date" type="timestamp">
+			<column name="FP2_DATE" length="7" />
+		</property>
+		<property name="fp1Date" type="timestamp">
+			<column name="FP1_DATE" length="7" />
+		</property>
+		<property name="cvpPayMode" type="string">
+			<column name="CVP_PAY_MODE" length="5" />
+		</property>
+		<property name="dcrgPayMode" type="string">
+			<column name="DCRG_PAY_MODE" length="5" />
+		</property>
+		<property name="revisionFlag" type="string">
+			<column name="REVISION_FLAG" length="15" />
+		</property>
+		<property name="ropType" type="string">
+			<column name="rop_type" length="10" />
+		</property>
+		<property name="agPPONo" type="string">
+			<column name="AG_PPO_NO" length="50" />
+		</property>
+		<property name="agPensionerName" type="string">
+			<column name="AG_PENSIONER_NAME" length="100" />
+		</property>
+		<property name="ifmsPPONo" type="string">
+			<column name="IFMS_PPO_NO" length="50" />
+		</property>
+		<property name="ifmsPensionerName" type="string">
+			<column name="IFMS_PENSIONER_NAME" length="100" />
+		</property>
+		<property name="ppoAcceptDate" type="timestamp">
+			<column name="PPO_ACCEPT_DATE" length="7" />
+		</property>
+		<property name="cvpOrderNo" type="string">
+			<column name="CVP_ORDER_NO" length="35" />
+		</property>
+		<property name="gpoOrderNo" type="string">
+			<column name="GPO_ORDER_NO" length="35" />
+		</property>
+	</class>
+</hibernate-mapping>

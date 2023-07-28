@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 21, 2008 6:54:12 AM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.tcs.sgv.common.valueobject.HstConfigAudCategory"
+		table="HST_CONFIG_AUD_CATEGORY">
+		<composite-id name="id"
+			class="com.tcs.sgv.common.valueobject.HstConfigAudCategoryId">
+			<key-property name="audCatId" type="java.lang.Long">
+				<column name="AUD_CAT_ID" precision="20" scale="0" />
+			</key-property>
+			<key-property name="trnCounter" type="java.lang.Integer">
+				<column name="TRN_COUNTER" precision="11" scale="0" />
+			</key-property>
+		</composite-id>
+		<property name="cardexNo" type="java.lang.Long">
+			<column name="CARDEX_NO" precision="20" scale="0" />
+		</property>
+		<property name="billType" type="java.lang.Long">
+			<column name="BILL_TYPE" precision="20" scale="0" />
+		</property>
+		<property name="majorHead" type="java.lang.Long">
+			<column name="MAJOR_HEAD" precision="20" scale="0" />
+		</property>
+		<property name="goNgo" type="java.lang.Long">
+			<column name="GO_NGO" precision="20" scale="0" />
+		</property>
+		<property name="createdUserId" type="java.lang.Long">
+			<column name="CREATED_USER_ID" precision="20" scale="0" />
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="CREATED_POST_ID" precision="20" scale="0" />
+		</property>
+		<property name="createdDate" type="java.util.Date">
+			<column name="CREATED_DATE" length="7" not-null="true" />
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="UPDATED_USER_ID" precision="20" scale="0" />
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="UPDATED_POST_ID" precision="20" scale="0" />
+		</property>
+		<property name="updatedDate" type="java.util.Date">
+			<column name="UPDATED_DATE" length="7" />
+		</property>
+		<property name="dbId" type="java.lang.Long">
+			<column name="DB_ID" precision="20" scale="0" />
+		</property>
+		<property name="branchCode" type="string">
+			<column name="BRANCH_CODE" length="20" />
+		</property>
+		<property name="officeCode" type="string">
+			<column name="OFFICE_CODE" length="10" />
+		</property>
+		<property name="locationCode" type="string">
+			<column name="LOCATION_CODE" length="10" />
+		</property>
+		<property name="deptCode" type="java.lang.Long">
+			<column name="DEPT_CODE" precision="20" scale="0" />
+		</property>
+		<property name="activeMapping" type="java.lang.Short">
+			<column name="ACTIVE_MAPPING" precision="1" scale="0" />
+		</property>
+		<property name="activateFlag" type="java.lang.Short">
+			<column name="ACTIVATE_FLAG" precision="1" scale="0" />
+		</property>
+	</class>
+</hibernate-mapping>

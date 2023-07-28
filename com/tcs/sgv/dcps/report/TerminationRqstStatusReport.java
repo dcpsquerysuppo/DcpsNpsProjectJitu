@@ -1,0 +1,403 @@
+package com.tcs.sgv.dcps.report;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+import org.hibernate.Query;
+import org.hibernate.Session;
+
+import com.tcs.sgv.apps.common.valuebeans.ComboValuesVO;
+import com.tcs.sgv.common.business.reports.DefaultReportDataFinder;
+import com.tcs.sgv.common.exception.reports.ReportException;
+import com.tcs.sgv.common.helper.SessionHelper;
+import com.tcs.sgv.common.util.reports.IReportConstants;
+import com.tcs.sgv.common.valuebeans.reports.ReportParameterVO;
+import com.tcs.sgv.common.valuebeans.reports.ReportVO;
+import com.tcs.sgv.common.valuebeans.reports.StyleVO;
+import com.tcs.sgv.common.valuebeans.reports.StyledData;
+import com.tcs.sgv.common.valuebeans.reports.URLData;
+import com.tcs.sgv.core.service.ServiceLocator;
+
+public class TerminationRqstStatusReport  extends DefaultReportDataFinder 
+
+{
+	private static final Logger gLogger = Logger.getLogger(TerminationRqstStatusReport.class);
+	ServiceLocator serviceLocator = null;
+	Map requestAttributes = null;
+	public Collection findReportData(ReportVO report, Object criteria)
+	throws ReportException 
+	{
+		ArrayList tabledata = new ArrayList();
+		String langId = report.getLangId();
+		String locId = report.getLocId();
+		String lStrSevaarthId="";
+		String lStrEmpName="";
+		String pranNo="";
+		ArrayList td;
+		try
+		{
+			Map sessionKeys = (Map) ((Map) criteria).get(IReportConstants.SESSION_KEYS);
+			Map loginDetail = (HashMap) sessionKeys.get("loginDetailsMap");
+			requestAttributes = (Map) ((Map) criteria).get(IReportConstants.REQUEST_ATTRIBUTES);
+			serviceLocator = (ServiceLocator) requestAttributes.get("serviceLocator");
+			Long locationId=0l;
+			Long userId=0l;
+			String userType="";
+			String sevaarthId="";
+		
+			if (loginDetail.get("locationId")!=null && !"".equalsIgnoreCase(loginDetail.get("locationId").toString()))
+			{
+				locationId=Long.parseLong(loginDetail.get("locationId").toString());
+				
+			}
+			
+		if (loginDetail.get("userId")!=null && !"".equalsIgnoreCase(loginDetail.get("userId").toString()))
+			{
+				userId =Long.parseLong(loginDetail.get("userId").toString());
+
+			}  
+			gLogger.info("user id is ###########################"+userId);  
+			if(report.getParameterValue("UserType")!=null && !"".equalsIgnoreCase(report.getParameterValue("UserType").toString()) )
+			{
+
+				 userType=report.getParameterValue("UserType").toString();
+			}
+			if(report.getParameterValue("sevaarthId")!=null && !"".equalsIgnoreCase(report.getParameterValue("sevaarthId").toString()) )
+			{
+
+				sevaarthId=report.getParameterValue("sevaarthId").toString();
+			}
+
+			StyleVO[] rowsFontsVO = new StyleVO[4];
+			rowsFontsVO[0] = new StyleVO();
+			rowsFontsVO[0].setStyleId(IReportConstants.ROWS_PER_PAGE);
+			rowsFontsVO[0].setStyleValue("26");
+			rowsFontsVO[1] = new StyleVO();
+			rowsFontsVO[1].setStyleId(IReportConstants.STYLE_FONT_SIZE);
+			rowsFontsVO[1].setStyleValue("10");
+			rowsFontsVO[2] = new StyleVO();
+			rowsFontsVO[2].setStyleId(IReportConstants.STYLE_FONT_FAMILY);
+			rowsFontsVO[2].setStyleValue("Shruti");
+			rowsFontsVO[3] = new StyleVO();
+			rowsFontsVO[3].setStyleId(IReportConstants.BACKGROUNDCOLOR);
+			rowsFontsVO[3].setStyleValue("white");
+			
+		
+			
+
+			report.setStyleList(rowsFontsVO);
+			report.initializeDynamicTreeModel();
+			report.initializeTreeModel();
+			String ddoCode="";
+			String dcpsEmpId="";
+			String treasuryCode="";
+			String status="";
+			String currentStat="";
+			String previouStat="";
+			String currDate="";
+			String updtDate="";
+			if (report.getReportCode().equals("9000510")) 
+			{
+				
+				 
+				List TableData = null;
+			
+				StringBuilder SBQuery = new StringBuilder();
+				
+				if(userType!=null && "DDO".equalsIgnoreCase(userType))
+				{   
+					ddoCode=getDDOCode(userId);
+				}
+				List TableData1= getEmpDtls(userType,sevaarthId,locationId,ddoCode);
+				for (int i=0;i<TableData1.size();i++)
+				{
+					Object[] tupleSub = (Object[]) TableData1.get(i);
+					td = new ArrayList();
+					td.add(i+1);
+					if (tupleSub[4] != null) 
+					{
+						status=tupleSub[4].toString();
+						if(tupleSub[5]!=null && tupleSub[7]!=null)
+						{
+							currDate=tupleSub[5].toString()+" (Date)"+tupleSub[7].toString()+" (Time)";
+						}
+						if(tupleSub[6]!=null && tupleSub[8]!=null)
+						{
+							updtDate=tupleSub[6].toString()+" (Date)"+tupleSub[8].toString()+" (Time)";
+						}
+						if(status.equalsIgnoreCase("60001"))
+						{
+							currentStat="Pending with DDO for generation of Form A";
+							previouStat="Details saved by DDO on "+ currDate;
+						}
+						if(status.equalsIgnoreCase("60002"))
+						{
+							currentStat="Pending with DDO for generation of Form B";
+							if(updtDate!=null && !"".equalsIgnoreCase(updtDate.trim()))
+							{
+								previouStat="Form A generated by DDO on "+ updtDate;
+							}
+							else
+							{
+								previouStat="Form A generated by DDO on "+ currDate;
+							}
+							
+						}
+						if(status.equalsIgnoreCase("60003"))
+						{
+							currentStat="Pending with TO for generation of Form D";
+							if(updtDate!=null && !"".equalsIgnoreCase(updtDate.trim()))
+							{
+								previouStat="Form B generated by DDO on "+ updtDate;
+							}
+							else
+							{
+								previouStat="Form B generated by DDO on "+ currDate;
+							}
+							
+						}
+						if(status.equalsIgnoreCase("60004"))
+						{
+							currentStat="Pending with DDO for generation of Form C";
+							if(updtDate!=null && !"".equalsIgnoreCase(updtDate.trim()))
+							{
+								previouStat="Form D generated by TO on "+ updtDate;
+							}
+							else
+							{
+								previouStat="Form D generated by TO on "+ currDate;
+							}
+							
+						}
+						if(status.equalsIgnoreCase("60006"))
+						{
+							currentStat="Pending with SRKA for generation of Form E";
+							if(updtDate!=null && !"".equalsIgnoreCase(updtDate.trim()))
+							{
+								previouStat="Form C generated by DDO on "+ updtDate;
+							}
+							else
+							{
+								previouStat="Form C generated by DDO on "+ currDate;
+							}
+							
+						}
+						if(status.equalsIgnoreCase("60008"))
+						{
+							currentStat="Termination Process Completed";
+							if(updtDate!=null && !"".equalsIgnoreCase(updtDate.trim()))
+							{
+								previouStat="Form E generated by SRKA on "+ updtDate;
+							}
+							else
+							{
+								previouStat="Form E generated by SRKA on "+ currDate;
+							}
+							
+						}
+						if(status.equalsIgnoreCase("60005"))
+						{
+							
+							if(updtDate!=null && !"".equalsIgnoreCase(updtDate.trim()))
+							{
+								previouStat="Rejected by TO "+ updtDate;
+							}
+							else
+							{
+								previouStat="Rejected by TO "+ currDate;
+							}
+							currentStat="Pending with DDO in Draft Requests";
+						}
+						if(status.equalsIgnoreCase("60007"))
+						{
+							
+							if(updtDate!=null && !"".equalsIgnoreCase(updtDate.trim()))
+							{
+								previouStat="Rejected by SRKA "+ updtDate;
+							}
+							else
+							{
+								previouStat="Rejected by SRKA "+ currDate;
+							}
+							currentStat="Pending with DDO in Draft Requests";
+						}
+						if(status.equalsIgnoreCase("60009"))
+						{
+							
+							if(updtDate!=null && !"".equalsIgnoreCase(updtDate.trim()))
+							{
+								previouStat="Deleted by DDO "+ updtDate;
+							}
+							else
+							{
+								previouStat="Deleted by DDO "+ currDate;
+							}
+							currentStat=previouStat;
+						}
+					}
+					
+					if (tupleSub[0] != null) 
+					{
+							td.add(tupleSub[0]);
+					}
+					else
+					{
+							td.add("-");
+					}
+					if (tupleSub[1] != null) 
+					{
+							td.add(tupleSub[1]);
+					}
+					else
+					{
+							td.add("-");
+					}
+					if (tupleSub[2] != null) 
+					{
+							td.add(tupleSub[2]);
+					}
+					else
+					{
+							td.add("-");
+					}
+					
+					if (tupleSub[3] != null) 
+					{
+							td.add(tupleSub[3]);
+					}
+					else
+					{
+							td.add("-");
+					}
+					td.add(previouStat);
+					td.add(currentStat);
+					
+				
+					tabledata.add(td);
+				}
+				
+				
+				
+	          }
+			
+			
+					
+				
+			
+			
+			
+			
+		}
+		catch (Exception e) 
+		{
+			gLogger.info("=====findReportData(): Exception is=====" + e, e);
+		}
+		return tabledata;
+	}
+	
+	
+	public List getEmpDtls(String userId,String lStrSevaarthId,Long locationId,String DdoCode) throws Exception{
+
+		
+		StringBuilder lSBQuery = new StringBuilder();
+		List SevarthIdList=null;
+		
+		try
+		{
+			lSBQuery.append(" SELECT t.TRANSACTION_ID,emp.EMP_NAME,emp.SEVARTH_ID,emp.DCPS_ID,t.STATUS,to_char(t.CREATED_DATE,'dd-MM-yyyy'),to_char(t.UPDATED_DATE,'dd-MM-yyyy'),TIME(t.CREATED_DATE),TIME(t.UPDATED_DATE) FROM TERN_TERMINATION_DTLS t inner join mst_dcps_emp emp on emp.SEVARTH_ID=t.SEVARTH_ID "); 
+			if(lStrSevaarthId!=null && !"".equalsIgnoreCase(lStrSevaarthId))
+			{
+				lSBQuery
+				.append(" and t.sevarth_id='"); 
+				lSBQuery
+				.append(lStrSevaarthId); 
+				lSBQuery
+				.append("' "); 
+			}
+				if(userId!=null && "TO".equalsIgnoreCase(userId))
+				{
+					lSBQuery
+					.append(" and substr(t.DDO_CODE,1,4)='"); 
+					lSBQuery
+					.append(locationId.toString()); 
+					lSBQuery
+					.append("' "); 
+				}
+				if(userId!=null && "DDO".equalsIgnoreCase(userId))
+				{
+					lSBQuery
+					.append(" and t.DDO_CODE ='"); 
+					lSBQuery
+					.append(DdoCode); 
+					lSBQuery
+					.append("' "); 
+				}
+			
+						
+			
+			Session ghibSession = ServiceLocator.getServiceLocator()
+			.getSessionFactorySlave().getCurrentSession();
+			Query lQuery = ghibSession.createSQLQuery(lSBQuery
+			.toString());
+			SevarthIdList= lQuery.list();
+		}
+		catch(Exception e){
+			gLogger.error(" Error in getEmpDtls " + e, e);
+			e.printStackTrace();
+			throw e;
+		}
+			
+			
+			return SevarthIdList;
+	
+		}
+	
+public String getDDOCode(Long userId) throws Exception{
+
+		
+		StringBuilder lSBQuery = new StringBuilder();
+		List SevarthIdList=null;
+		String ddoCode=null;
+		try
+		{
+			lSBQuery.append(" SELECT mst.DDO_CODE FROM ORG_DDO_MST mst inner join ORG_USERPOST_RLT u on u.POST_ID=mst.POST_ID "); 
+			
+				lSBQuery
+				.append(" where u.USER_ID="); 
+				lSBQuery
+				.append(userId); 
+				
+			
+			
+						
+				
+			Session ghibSession = ServiceLocator.getServiceLocator()
+			.getSessionFactorySlave().getCurrentSession();
+			Query lQuery = ghibSession.createSQLQuery(lSBQuery
+			.toString());
+			SevarthIdList= lQuery.list();
+			if(SevarthIdList!=null && SevarthIdList.size()>0 && SevarthIdList.get(0)!=null)
+			{
+				ddoCode=SevarthIdList.get(0).toString();
+			}
+		}
+		catch(Exception e){
+			gLogger.error(" Error in getDDOCode " + e, e);
+			e.printStackTrace();
+			throw e;
+		}
+			
+			
+			return ddoCode;
+	
+		}
+	
+	
+	
+	
+
+}

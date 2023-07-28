@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.pensionpay.valueobject">
+ <class name="com.tcs.sgv.pensionpay.valueobject.HstMstPensionerHdr" table="HST_MST_PENSIONER_HDR">
+ 		<composite-id name="id" class="com.tcs.sgv.pensionpay.valueobject.HstMstPensionerHdrId">
+            <key-property name="pensionerId" type="long">
+                <column name="pensioner_id" precision="20" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="integer">
+                <column name="TRN_COUNTER" precision="11" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" not-null="true" />
+        </property>
+        <property name="pnsrFileNo" type="string">
+            <column name="PNSR_FILE_NO"  not-null="true" />
+        </property>
+        <property name="applnNO" type="string">
+            <column name="APPLN_NO" not-null="true" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="FIRST_NAME" not-null="true" />
+        </property>
+        <property name="middleName" type="string">
+            <column name="MIDDLE_NAME" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="LAST_NAME" />
+        </property>
+        <property name="pensionerAddr" type="string">
+            <column name="PENSNER_ADDR" />
+        </property>
+        <property name="apenBRAddr" type="string">
+        	 <column name="APEN_BR_ADDR" />
+        </property>
+        <property name="stateCode" type="big_decimal">
+            <column name="STATE_CODE" precision="20" scale="0" />
+        </property>
+        <property name="districtCode" type="big_decimal">
+            <column name="DISTRICT_CODE" precision="20" scale="0" />
+        </property>
+        <property name="teleNo" type="string">
+            <column name="TELE_NO" length="12" />
+        </property>
+        <property name="dateOfBirth" type="timestamp">
+            <column name="DATE_OF_BIRTH" length="7" />
+        </property>
+        <property name="dateOfJoin" type="timestamp">
+            <column name="DATE_OF_JOIN" length="7" />
+        </property>
+        <property name="dateOfRetirement" type="timestamp">
+            <column name="DATE_OF_RETIREMENT" length="7" />
+        </property>
+        <property name="dateOfDeath" type="timestamp">
+            <column name="DATE_OF_DEATH" length="7" />
+        </property>
+        <property name="aliveFlag" type="string">
+            <column name="ALIVE_FLAG" length="1" />
+        </property>
+        <property name="panNo" type="string">
+            <column name="PAN_NO" length="15" />
+        </property>
+        <property name="payScale" type="string">
+            <column name="PAY_SCALE" length="50" />
+        </property>
+        <property name="lastPay" type="big_decimal">
+            <column name="LAST_PAY" precision="10" />
+        </property>
+        <property name="gender" type="string">
+            <column name="GENDER" length="30" />
+        </property>
+        <property name="officeAddr" type="string">
+            <column name="OFFICE_ADDR" />
+        </property>
+        <property name="deptCode" type="big_decimal">
+            <column name="DEPT_CODE" precision="20" scale="0" />
+        </property>
+        <property name="hodCode" type="big_decimal">
+            <column name="HOD_CODE" precision="20" scale="0" />
+        </property>
+        <property name="attachmentPhotoId" type="big_decimal">
+            <column name="ATTACHMENT_PHOTO_ID" precision="20" scale="0" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="classType" type="string">
+            <column name="CLASS_TYPE" length="30" />
+        </property>
+        <property name="cadreType" type="string">
+            <column name="CADRE_TYPE" length="30" />
+        </property>
+        <property name="designation" type="string">
+            <column name="DESIGNATION" length="30" />
+        </property>
+        <property name="caseStatus" type="string">
+            <column name="CASE_STATUS" length="10" />
+        </property>
+        <property name="identityMark" type="string">
+            <column name="IDENTITY_MARK" length="50" />
+        </property>
+        <property name="height" type="string">
+            <column name="HEIGHT" length="30" />
+        </property>
+        <property name="pnsnrEmailId" type="string">
+            <column name="PNSNR_EMAIL_ID" length="30" />
+        </property>
+        <property name="officeEmailId" type="string">
+            <column name="OFFICE_EMAIL_ID" length="30" />
+        </property>
+        <property name="pnsnrPrefix" type="string">
+            <column name="PNSNR_PREFIX" length="10" />
+        </property>
+        <property name="employmentOffice" type="string">
+            <column name="employment_office" length="10" />
+        </property>
+		<property name="pensionerPhotoId" type="big_decimal">
+            <column name="PENSIONER_PHOTO_ID" precision="20" scale="0" />
+        </property>
+         <property name="otherDesignation" type="string">
+            <column name="OTHER_DESIGNATION" length="200" />
+        </property>
+        <property name="pensionerSignId" type="big_decimal">
+            <column name="PENSIONER_SIGN_ID" precision="20" scale="0" />
+        </property>
+        <property name="moblileNo" type="string">
+            <column name="moblile_no" length="30" />
+        </property>
+        <property name="retiringDepartment" type="long">
+			<column name="retiring_department" length="20" />
+		</property>
+	    <property name="pnsnrAddr1" type="string">
+            <column name="pnsnr_addr1" length="150" />
+        </property>
+        <property name="pnsnrAddr2" type="string">
+            <column name="pnsnr_addr2" length="150" />
+        </property>
+         <property name="pnsnrAddrTown" type="string">
+            <column name="pnsnr_addr_town" length="50" />
+        </property>
+        <property name="pnsnrAddrLocality" type="string">
+            <column name="pnsnr_addr_locality" length="60" />
+        </property>
+        <property name="pinCode" type="integer">
+            <column name="pin_code" length="60" />
+        </property>
+        <property name="pnsnrNameInMarathi" type="string">
+        	 <column name="pnsnr_name_in_marathi" />
+        </property>
+        <property name="pnsnrFatherName" type="string">
+            <column name="pnsnr_father_name" length="60" />
+        </property>
+         <property name="guardianName" type="string">
+            <column name="guardian_name" length="60" />
+        </property>
+         <property name="guardianFatherName" type="string">
+            <column name="guardian_father_name" length="60" />
+        </property>
+         <property name="guardianAddr1" type="string">
+            <column name="guardian_addr1" length="150" />
+        </property>
+         <property name="guardianAddr2" type="string">
+            <column name="guardian_addr2" length="150" />
+        </property>
+         <property name="guardianAddrTown" type="string">
+            <column name="guardian_addr_town" length="60" />
+        </property>
+         <property name="guardianAddrLocality" type="string">
+            <column name="guardian_addr_locality" length="60" />
+        </property>
+       <property name="guardianAddrState" type="big_decimal">
+            <column name="guardian_addr_state" precision="20" scale="0" />
+        </property>
+        <property name="guardianAddrDistrict" type="big_decimal">
+            <column name="guardian_addr_district" precision="20" scale="0" />
+        </property>
+         <property name="guardianAddrPinCode" type="integer">
+            <column name="guardian_addr_pincode" length="60" />
+        </property>
+        <property name="guardianRelation" type="string">
+            <column name="guardian_relation" length="60" />
+        </property>
+         <property name="guardianAddr" type="string">
+            <column name="guardian_addr" length="150" />
+        </property>
+        <property name="isAddrSameFlag" type="string">
+            <column name="is_addr_same_flag" length="2" />
+        </property>
+    </class>
+</hibernate-mapping>

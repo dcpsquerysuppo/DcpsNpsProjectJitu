@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 18, 2009 3:52:57 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.OrgDdoMstCoddo" table="org_ddo_mst_coddo" dynamic-update="true">
+        <comment></comment>
+        <id name="ddoId" type="java.lang.Long">
+            <column name="ddo_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="ddoCode" type="string">
+            <column name="ddo_code" length="15" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="ddoName" type="string">
+            <column name="ddo_name" length="500">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="postId" type="java.lang.Integer">
+            <column name="post_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="attachmentId" type="java.lang.Long">
+            <column name="attachment_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="java.lang.Byte">
+            <column name="lang_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="start_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="end_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="activateFlag" type="java.lang.Byte">
+            <column name="activate_flag" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdByPost" type="java.lang.Integer">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedBy" type="java.lang.Integer">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedByPost" type="java.lang.Integer">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Short">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="shortName" type="string">
+            <column name="short_name" length="150">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="majorHead" type="string">
+            <column name="major_head" length="4">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="demand" type="string">
+            <column name="demand" length="3">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="ddoNo" type="java.lang.Short">
+            <column name="ddo_no">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="cardexNo" type="java.lang.Short">
+            <column name="cardex_no">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="trn_counter" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="adminFlag" type="java.lang.Byte">
+            <column name="admin_flag" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="officeCode" type="string">
+            <column name="office_code" length="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="location_code" length="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="deptLocCode" type="string">
+            <column name="dept_loc_code" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="hodLocCode" type="string">
+            <column name="hod_loc_code" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="isCo" type="java.lang.Byte">
+            <column name="is_co" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="isCs" type="java.lang.Byte">
+            <column name="is_cs" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="type" type="java.lang.Byte">
+            <column name="type" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="verified" type="java.lang.Integer">
+            <column name="VERIFIED" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dsgnCode" type="string">
+            <column name="DSGN_CODE" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dsgnName" type="string">
+            <column name="DSGN_NAME" length="400">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="ddoOffice" type="string">
+            <column name="DDO_OFFICE" length="300">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="verifiedDate" type="timestamp">
+            <column name="VERIFIED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="subOfficeCode" type="string">
+            <column name="SUB_OFFICE_CODE" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="attachedParentLocCode" type="string">
+            <column name="ATTACHED_PARENT_LOC_CODE" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="officeUniqueCode" type="string">
+            <column name="OFFICE_UNIQUE_CODE" length="50">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="remarks" type="string">
+            <column name="Remarks" length="200">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fixedid" type="java.lang.Long">
+            <column name="fixedid" length="200">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

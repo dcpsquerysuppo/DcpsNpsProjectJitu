@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.TrnDcpsDeputationContribution" table="TRN_DCPS_DEPUTATION_CONTRIBUTION" >
+  	<id name="dcpsDeptnContriId" type="long">
+            <column name="DCPS_DEPTN_CONTRI_ID"  />
+            <generator class="assigned" />
+    </id>
+    
+    <property name="dummyOfficeId" type="string">
+            <column name="DUMMYOFFICE_ID"  />
+  	</property>
+  	 <property name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID"  />
+  	</property>
+  	<property name="contribution" type="double">
+            <column name="CONTRIBUTION" />
+  	</property>
+  	<property name="contributionEmplr" type="double">
+            <column name="CONTRIBUTION_EMPLR" />
+  	</property>
+    <property name="finYearId" type="long">
+            <column name="FIN_YEAR_ID"  />
+  	</property>
+  	<property name="monthId" type="long">
+            <column name="MONTH_ID" />
+  	</property>
+  	<property name="challanNo" type="string">
+            <column name="CHALLAN_NO"/>
+    </property>
+    <property name="challanNoEmplr" type="string">
+            <column name="CHALLAN_NO_EMPLR"/>
+    </property>
+  	<property name="challanDate" type="date">
+            <column name="CHALLAN_DATE" />
+  	</property>
+  	  	<property name="challanDateEmplr" type="date">
+            <column name="CHALLAN_DATE_EMPLR" />
+  	</property>
+  	<property name="langId" type="long">
+            <column name="LANG_ID" />
+  	</property>
+  	<property name="locId" type="long">
+            <column name="LOC_ID"  not-null="false" />
+  	</property>
+  	<property name="dbId" type="long">
+            <column name="DB_ID"  not-null="false" />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	</property>
+	<property name="createdUserId" type="long">
+	            <column name="CREATED_USER_ID" />
+	</property>
+	<property name="createdPostId" type="long">
+	            <column name="CREATED_POST_ID"  />
+	</property>
+	<property name="updatedDate" type="timestamp">
+	            <column name="UPDATED_DATE" not-null="false" />
+	</property>
+	 <property name="isArrears" type="char">
+            <column name="IS_ARREARS"  />
+  </property>
+	<property name="updatedUserId" type="long">
+	            <column name="UPDATED_USER_ID"  not-null="false" />
+	</property>
+	<property name="updatedPostId" type="long">
+	            <column name="UPDATED_POST_ID"   not-null="false" />
+	</property>
+	<property name="treasury" type="java.lang.String">
+            <column name="TREASURY" />
+    </property>
+    
+    <property name="startDate" type="date">
+            <column name="startDate"   not-null="false" />
+  	</property>
+    <property name="endDate" type="date">
+            <column name="endDate"   not-null="false" />
+  	</property>
+  	<property name="payCommission" type="string">
+            <column name="PAY_COMMISSION"/>
+  	</property>
+  	<property name="typeOfPayment" type="string">
+            <column name="TYPE_OF_PAYMENT" />
+  	</property>
+  	<property name="basicPay" type="double">
+            <column name="BASIC_PAY" />
+  	</property>
+  	<property name="DP" type="double">
+            <column name="DP"  />
+  	</property>
+  	<property name="DA" type="double">
+            <column name="DA"  />
+  	</property>
+  	<property name="schemeCode" type="string">
+            <column name="SCHEME_CODE"/>
+  	</property>
+  	
+  </class>
+</hibernate-mapping>

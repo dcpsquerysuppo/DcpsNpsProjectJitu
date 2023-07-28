@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    
+    <!-- DB2 configuration --> 
+    
+		<!-- <property name="hibernate.connection.driver_class">com.ibm.db2.jcc.DB2Driver</property>     
+        <property name="hibernate.connection.password">ifms123</property>
+        <property name="hibernate.connection.url">jdbc:db2://172.17.92.116:33333/IFMSPROD</property>
+        <property name="hibernate.connection.username">ifms</property>
+        <property name="hibernate.connection.release_mode">auto</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.DB2Dialect</property>
+        <property name="default_schema">IFMS</property>-->
+       
+      <!-- near dr --> 
+      <property name="hibernate.connection.driver_class">com.ibm.db2.jcc.DB2Driver</property>    
+      <property name="hibernate.connection.password">Mahasevaarth@123</property>
+      <property name="hibernate.connection.url">jdbc:db2://10.34.82.226:60000/IFMSMIGR</property>
+      <property name="hibernate.connection.username">db2mahait</property>
+      <property name="hibernate.connection.release_mode">auto</property>
+      <property name="hibernate.dialect">org.hibernate.dialect.DB2Dialect</property>
+      <property name="default_schema">IFMSMIGR</property>
+      <property name="connection.pool_size">10</property>
+      <property name="hibernate.connection.release_mode">auto</property>
+       
+      <!-- <property name="hibernate.connection.driver_class">com.ibm.db2.jcc.DB2Driver</property>    
+      <property name="hibernate.connection.password">ifms1234</property>
+      <property name="hibernate.connection.url">jdbc:db2://100.70.201.168:50000/IFMSMIGR</property>
+      <property name="hibernate.connection.username">ifms</property>
+      <property name="hibernate.connection.release_mode">auto</property>
+      <property name="hibernate.dialect">org.hibernate.dialect.DB2Dialect</property>
+      <property name="default_schema">IFMSMIGR</property>
+      <property name="connection.pool_size">30</property>
+       <property name="hibernate.connection.release_mode">auto</property> -->
+       
+<!-- Oracle configuration  
+    
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>     
+        <property name="hibernate.connection.password">mahaifms</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@172.26.139.23:1521:mpdev</property>
+        <property name="hibernate.connection.username">mahaifms</property>
+        <property name="hibernate.connection.release_mode">auto</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
+        -->
+ 
+ <!-- MySQL configuration 
+        <property name="hibernate.connection.password">ifms2009</property>
+        <property name="hibernate.connection.url">jdbc:mysql://172.26.146.244:3309/ifms2009</property>
+        <property name="hibernate.connection.username">ifms2009</property>
+        <property name="hibernate.connection.release_mode">auto</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.gjt.mm.mysql.Driver</property>
+        <property name="hibernate.default_schema">ifms2009</property>
+        -->
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="com.tcs.sgv.pensionproc.valueobject.TrnPnsnProcPnsnrDtls" table="trn_pnsnproc_pnsnrdtls"  dynamic-update="true">
+  		<id name="pensionerDtlId" type="java.lang.Long">
+            <column name="pensionerdtl_id" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="dbId" type="java.lang.Long">
+            <column name="db_id" precision="20" scale="0"  />
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="location_code" precision="20" scale="0"  />
+        </property>
+         <property name="inwardPensionId" type="java.lang.Long" >
+            <column name="inward_pension_id" precision="20" scale="0"  >
+            </column>
+        </property>
+        <property name="pnsnrName" type="string">
+            <column name="pnsnr_name" precision="99" scale="0"  />
+        </property>
+           <property name="pnsnrNameInMarathi" type="string">
+            <column name="pnsnr_name_marathi" precision="99" scale="0"  />
+        </property>
+        <property name="birthDate" type="date">
+            <column name="birth_date" length="7" />
+        </property>
+        <property name="joiningDate" type="date">
+            <column name="joining_date" length="7" />
+        </property>
+        <property name="retirementDate" type="date">
+            <column name="retirement_date" length="7"  />
+        </property>
+        <property name="deathDate" type="date">
+            <column name="death_date" length="7" />
+        </property>
+        <property name="lostDate" type="date">
+            <column name="lost_date" length="7"  />
+        </property>
+        <property name="demandedRetirementDate" type="date">
+            <column name="demanded_retirement_date" length="7"  />
+        </property>
+        <property name="firDate" type="date">
+            <column name="fir_date" length="7"  />
+        </property>
+        <property name="genderFlag" type="java.lang.Character">
+            <column name="gender_flag"  />
+        </property>
+        <property name="groupLookupId" type="java.lang.Long">
+            <column name="group_lookupid" precision="20" scale="0"  />
+        </property>
+        <property name="designation" type="string">
+            <column name="DESIGNATION" length="30" />
+        </property>
+        <property name="heightFeet" type="integer">
+            <column name="height_feet" precision="20" scale="0"  />
+        </property>
+        <property name="heightInches" type="integer">
+            <column name="height_inches" precision="20" scale="0"  />
+        </property>
+         <property name="uId" type="string">
+            <column name="uid" precision="20" scale="0"  />
+        </property>
+        <property name="eId" type="string">
+            <column name="eid" precision="20" scale="0"  />
+        </property>
+        <property name="remarks" type="string">
+            <column name="remarks" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrFlat" type="string">
+            <column name="pnsnr_addr_flat" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrRoad" type="string">
+            <column name="pnsnr_addr_road" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrArea" type="string">
+            <column name="pnsnr_addr_area" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrDistCode" type="string">
+            <column name="pnsnr_addr_distcode" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrStateCode" type="java.lang.Long">
+            <column name="pnsnr_addr_statecode" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrPincode" type="java.lang.Long">
+            <column name="pnsnr_addr_pincode" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrMobileNo" type="string">
+            <column name="pnsnr_addr_mobileno" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrLandlineNo" type="string">
+            <column name="pnsnr_addr_landlineno" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrEmailAddr" type="string">
+            <column name="pnsnr_addr_emailaddr" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrRetFlag" type="java.lang.Character">
+            <column name="pnsnr_addr_ret_flag"  />
+        </property>
+        <property name="pnsnrAddrRetFlat" type="string">
+            <column name="pnsnr_addr_ret_flat" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrRetRoad" type="string">
+            <column name="pnsnr_addr_ret_road" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrRetArea" type="string">
+            <column name="pnsnr_addr_ret_area" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrRetDistCode" type="string">
+            <column name="pnsnr_addr_ret_distcode" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrRetStateCode" type="java.lang.Long">
+            <column name="pnsnr_addr_ret_statecode" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrRetPincode" type="java.lang.Long">
+            <column name="pnsnr_addr_ret_pincode" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrRetMobileNo" type="string">
+            <column name="pnsnr_addr_ret_mobileno" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrRetLandlineNo" type="string">
+            <column name="pnsnr_addr_ret_landlineno" precision="20" scale="0"  />
+        </property>
+        <property name="pnsnrAddrRetEmailAddr" type="string">
+            <column name="pnsnr_addr_ret_emailaddr" precision="20" scale="0"  />
+        </property>
+        <property name="departmentId" type="java.lang.Long">
+            <column name="department_id" precision="20" scale="0"  />
+        </property>
+        <property name="hooId" type="java.lang.Long">
+            <column name="hoo_id" precision="20" scale="0"  />
+        </property>
+        <property name="trsryPnsnComt" type="string">
+            <column name="TRSRY_PNSN_COMT" precision="20" scale="0"  />
+        </property>      
+        <property name="changeTrsryFlag" type="java.lang.Character">
+            <column name="change_trsry_flag"  />
+        </property>        
+        <property name="revisedReason" type="java.lang.Long">
+            <column name="revised_reason" precision="20" scale="0"  />
+        </property>
+        <property name="officeFlat" type="string">
+            <column name="office_flat" precision="20" scale="0"  />
+        </property>
+        <property name="officeRoad" type="string">
+            <column name="office_road" precision="20" scale="0"  />
+        </property>
+        <property name="officeArea" type="string">
+            <column name="office_area" precision="20" scale="0"  />
+        </property>
+        <property name="officeDistCode" type="string">
+            <column name="office_distcode" precision="20" scale="0"  />
+        </property>
+        <property name="officeStateCode" type="java.lang.Long">
+            <column name="office_statecode" precision="20" scale="0"  />
+        </property>
+        <property name="officePincode" type="java.lang.Long">
+            <column name="office_pincode" precision="20" scale="0"  />
+        </property>
+        <property name="officeMobileNo" type="string">
+            <column name="office_mobileno" precision="20" scale="0"  />
+        </property>
+        <property name="officeLandLineNo" type="string">
+            <column name="office_landlineno" precision="20" scale="0"  />
+        </property>
+        <property name="officeEmailAddr" type="string">
+            <column name="office_emailaddr" precision="20" scale="0"  />
+        </property>
+        <property name="bankName" type="string">
+            <column name="bank_name" precision="20" scale="0"  />
+        </property>
+        <property name="bankBranchName" type="string">
+            <column name="bank_branch_name" precision="20" scale="0"  />
+        </property>
+        <property name="bankAddress" type="string">
+            <column name="bank_address" precision="20" scale="0"  />
+        </property>
+        <property name="bankAccountNo" type="string">
+            <column name="bank_account_no" precision="20" scale="0"  />
+        </property>
+        <property name="bankIfscCode" type="string">
+            <column name="bank_ifsc_code" precision="20" scale="0"  />
+        </property>
+         <property name="photoAttachmentId" type="java.lang.Long">
+            <column name="photo_attachmentid" precision="20" scale="0"  />
+        </property>
+         <property name="signatureAttachmentId" type="java.lang.Long">
+            <column name="signature_attachmentid" precision="20" scale="0"  />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+		</property>
+		<property name="bnOrAn" type="string">
+            <column name="BN_OR_AN"  />
+        </property>
+        <property name="efpYear" type="java.lang.Character">
+            <column name="EFP_YEAR"  />
+        </property>
+        <property name="panNo" type="string">
+            <column name="PAN_NO"  />
+        </property>
+        <property name="ddoOfficeName" type="string">
+            <column name="DDO_OFFICE_NAME"  />
+        </property>
+  </class>
+</hibernate-mapping>

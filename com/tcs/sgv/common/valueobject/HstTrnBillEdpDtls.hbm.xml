@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 9, 2007 11:34:16 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.HstTrnBillEdpDtls" table="hst_trn_bill_edp_dtls" dynamic-update="true">
+        <comment></comment>
+        <composite-id name="id" class="com.tcs.sgv.common.valueobject.HstTrnBillEdpDtlsId">
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="trn_counter" />
+            </key-property>
+            <key-property name="billEdpId" type="long">
+                <column name="bill_edp_id" />
+            </key-property>
+        </composite-id>
+        <property name="billNo" type="long">
+            <column name="bill_no" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="typeEdpId" type="java.lang.Long">
+            <column name="type_edp_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="edpAmt" type="big_decimal">
+            <column name="edp_amt" precision="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="created_user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="created_post_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="created_date" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="updated_user_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="updated_post_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="updated_date" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true">
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="db_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="addDedFlag" type="string">
+            <column name="add_ded_flag" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="edpCategory" type="string">
+            <column name="edp_category" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="expRcpRec" type="string">
+            <column name="exp_rcp_rec" length="3">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="edpCode" type="string">
+            <column name="edp_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="autoAdd" type="string">
+            <column name="auto_add" length="1">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 19, 2007 11:16:57 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+	<class name="com.tcs.sgv.common.valueobject.HstTrnBillRegister"
+		table="hst_trn_bill_register" dynamic-update="true">
+		<comment></comment>
+		<composite-id name="id"
+			class="com.tcs.sgv.common.valueobject.HstTrnBillRegisterId">
+			<key-property name="billNo" type="long">
+				<column name="BILL_NO" precision="20" scale="0" />
+			</key-property>
+			<key-property name="trnCounter" type="java.lang.Integer">
+				<column name="TRN_COUNTER" precision="11" scale="0" />
+			</key-property>
+		</composite-id>
+		<property name="billCntrlNo" type="string">
+			<column name="BILL_CNTRL_NO" length="45">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="billDate" type="date">
+			<column name="BILL_DATE" length="10" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="subjectId" type="long">
+			<column name="SUBJECT_ID" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="tokenNum" type="java.lang.Long">
+			<column name="TOKEN_NUM">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="tcBill" type="string">
+			<column name="TC_BILL" length="30">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="phyBill" type="java.lang.Short">
+			<column name="PHY_BILL" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="demandCode" type="string">
+			<column name="DEMAND_CODE" length="3">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="budmjrHd" type="java.lang.String">
+			<column name="BUDMJR_HD" length="4">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="inwardDt" type="date">
+			<column name="INWARD_DT" length="10">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="prevBillNo" type="java.lang.Long">
+			<column name="PREV_BILL_NO">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="billGrossAmount" type="big_decimal">
+			<column name="BILL_GROSS_AMOUNT" precision="20">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="billNetAmount" type="big_decimal">
+			<column name="BILL_NET_AMOUNT" precision="20">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="principle" type="big_decimal">
+			<column name="PRINCIPLE" precision="20">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="grossInterest" type="big_decimal">
+			<column name="GROSS_INTEREST" precision="20">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="incomeTax" type="big_decimal">
+			<column name="INCOME_TAX" precision="20">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="createdUserId" type="java.lang.Long">
+			<column name="CREATED_USER_ID" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="CREATED_POST_ID" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" length="19" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="UPDATED_USER_ID">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="UPDATED_POST_ID">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="dbId" type="java.lang.Long">
+			<column name="DB_ID">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="exempted" type="string">
+			<column name="EXEMPTED" length="1">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="billCode" type="string">
+			<column name="BILL_CODE" length="30">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="goNgo" type="string">
+			<column name="GO_NGO" length="30">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="currBillStatus" type="java.lang.Short">
+			<column name="CURR_BILL_STATUS" length="3">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="finYearId" type="string">
+			<column name="FIN_YEAR_ID" length="10">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="audPostId" type="java.lang.Long">
+			<column name="AUD_POST_ID">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="attachmentId" type="java.lang.Long">
+			<column name="ATTACHMENT_ID">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="ddoCode" type="string">
+			<column name="DDO_CODE" length="15" />
+		</property>
+		<property name="currBillStatusDate" type="date">
+			<column name="CURR_BILL_STATUS_DATE" length="7" />
+		</property>
+		<property name="grantAmount" type="big_decimal">
+			<column name="GRANT_AMOUNT" precision="20" />
+		</property>
+		<property name="deptCode" type="string">
+			<column name="DEPT_CODE" length="10">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="tsryOfficeCode" type="string">
+			<column name="TSRY_OFFICE_CODE" length="10"></column>
+		</property>
+		<property name="locationCode" type="string">
+			<column name="LOCATION_CODE" length="10" not-null="true">
+			</column>
+		</property>
+		<property name="refNum" type="java.lang.Long">
+			<column name="REF_NUM" length="6"></column>
+		</property>
+		<property name="auditorNetAmount" type="big_decimal">
+			<column name="AUDITOR_NET_AMOUNT" precision="20">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="scannedDocId" type="java.lang.Long">
+			<column name="SCANNED_DOC_ID"></column>
+		</property>
+		<property name="ppoNo" type="string">
+			<column name="PPO_NO" length="50"></column>
+		</property>
+		<property name="receivedFlag" type="java.lang.Short">
+			<column name="RECEIVED_FLAG" length="5"></column>
+		</property>
+		<property name="bpnNo" type="string">
+			<column name="BPN_NO" length="45"></column>
+		</property>
+		<property name="budSubmjrHd" type="string">
+			<column name="BUD_SUBMJR_HD" length="2"></column>
+		</property>
+		<property name="budMinHd" type="string">
+			<column name="BUD_MIN_HD" length="3"></column>
+		</property>
+		<property name="budSubHd" type="string">
+			<column name="BUD_SUB_HD" length="45"></column>
+		</property>
+		<property name="budDtlHd" type="string">
+			<column name="BUD_DTL_HD" length="45"></column>
+		</property>
+		<property name="schemeNo" type="string">
+			<column name="SCHEME_NO" length="45"></column>
+		</property>
+		<property name="fund" type="string">
+			<column name="FUND" length="32"></column>
+		</property>
+		<property name="clsExp" type="string">
+			<column name="CLS_EXP" length="32"></column>
+		</property>
+		<property name="budType" type="java.lang.Short">
+			<column name="BUD_TYPE" length="2"></column>
+		</property>
+		<property name="voucherNo" type="java.lang.Long">
+			<column name="VOUCHER_NO" length="20"></column>
+		</property>
+		<property name="voucherDate" type="java.util.Date">
+			<column name="VOUCHER_DATE" length="10"></column>
+		</property>
+		<property name="auditDate" type="java.util.Date">
+			<column name="AUDIT_DATE" length="10"></column>
+		</property>
+		<property name="cardexNo" type="java.lang.Long">
+            <column name="CARDEX_NO"></column>
+        </property>
+		<property name="cardexVer" type="java.lang.Short">
+            <column name="CARDEX_VER" length="1">
+            </column>
+        </property>
+        <property name="hierarchyRefId" type="java.lang.Long">
+            <column name="HIERARCHY_REF_ID" length="10">
+            </column>
+        </property>
+        <property name="auditStatus" type="java.lang.Short">
+            <column name="AUDIT_STATUS" length="1" default="0">
+            </column>
+        </property>
+        <property name="inwardedPost" type="java.lang.Long">
+            <column name="INWARDED_POST">
+            </column>
+        </property>
+        <property name="deductionA" type="big_decimal">
+            <column name="DEDUCTION_A" precision="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="deductionB" type="big_decimal">
+            <column name="DEDUCTION_B" precision="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billDispDate" type="date">
+            <column name="BILL_DISP_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="tcAdvice" type="java.lang.Long">
+            <column name="TC_ADVICE">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="isAudit" type="java.lang.Short">
+            <column name="IS_AUDIT" length="1" default="0">
+            </column>
+        </property>
+         <property name="subtrsyVouchNo" type="java.lang.Long">
+            <column name="SUBTRSY_VOUCH_NO" length="20">
+            </column>
+        </property>
+         <property name="isUpdated" type="java.lang.Short">
+            <column name="IS_UPDATED" length="1" default="0">
+            </column>
+        </property>
+         <property name="audUserId" type="java.lang.Long">
+            <column name="AUD_USER_ID" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="inwardUserId" type="java.lang.Long">
+            <column name="INWARD_USER_ID" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="pensionHeadCode" type="java.lang.Integer">
+            <column name="PENSION_HEAD_CODE" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="branchCode" type="java.lang.String">
+            <column name="BRANCH_CODE" length="6">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="postAuditDate" type="date">
+        	<column name="POST_AUDIT_DATE" length="10">
+            	<comment></comment>
+          	</column>
+      	</property>
+      	<property name="postAuditUser" type="java.lang.Long">
+        	<column name="POST_AUDIT_USER" length="20">
+            	<comment></comment>
+          	</column>
+      	</property>
+      	<property name="postAuditPost" type="java.lang.Long">
+        	<column name="POST_AUDIT_POST" length="20">
+            	<comment></comment>
+          	</column>
+      	</property>
+      	<property name="releasedGrant" type="big_decimal">
+            <column name="RELEASED_GRANT" precision="20" />
+        </property>
+        <property name="totalExp" type="big_decimal">
+            <column name="TOTAL_EXP" precision="20" />
+        </property>
+        <property name="postAuditRecvDt" type="date">
+            <column name="POST_AUDIT_RECV_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+	</class>
+</hibernate-mapping>

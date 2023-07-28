@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 7, 2007 11:43:15 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.ChequeVitoRegister" table="cheque_vito_register" dynamic-update="true">
+        <comment></comment>
+        <id name="vitoId" type="long">
+            <column name="VITO_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="vitoCode" type="java.lang.String">
+            <column name="VITO_CODE" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="vitoType" type="java.lang.Short">
+            <column name="VITO_TYPE" length="2">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="chequeId" type="long">
+            <column name="CHEQUE_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+       <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10">
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="trnCounter" type="long">
+            <column name="TRN_COUNTER">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

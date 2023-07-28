@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.TrnIfmsArthwahiniIntegration" table="TRN_IFMS_ARTHWAHINI_INTEGRATION" dynamic-update="true">
+        <comment></comment>
+        <id name="ifmsArthwahiniIntegrationId" type="long">
+            <column name="IFMS_ARTHWAHINI_INTEGRATION_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="delvId" type="long">
+            <column name="DELV_ID">
+            </column>
+        </property>
+         <property name="authNo" type="string">
+            <column name="AUTH_NO" length="20">
+            </column>
+        </property>
+         <property name="dtlheadCode" type="string">
+            <column name="DTLHEAD_CODE" length="20">
+            </column>
+        </property>
+         <property name="billType" type="string">
+            <column name="BILL_TYPE" length="2">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="beamsBillType" type="string">
+            <column name="BEAMS_BILL_TYPE" length="2">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="voucherNo" type="string">
+            <column name="VOUCHER_NO" length="10">
+            </column>
+        </property>
+        <property name="voucherDate" type="string">
+            <column name="VOUCHER_DATE">
+            </column>
+        </property>
+        <property name="delvSuccessStatus" type="string">
+            <column name="DELV_SUCCESS_STATUS" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="isFetched" type="string">
+            <column name="IS_FETCHED" length="1">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="fetchDate" type="timestamp">
+            <column name="FETCH_DATE">
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Integer">
+            <column name="DB_ID">
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>  

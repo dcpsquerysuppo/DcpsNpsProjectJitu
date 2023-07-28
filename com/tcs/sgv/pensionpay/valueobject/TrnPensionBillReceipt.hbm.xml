@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 9, 2008 6:24:19 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnPensionBillReceipt" table="TRN_PENSION_BILL_RECEIPT" dynamic-update="true">
+        <id name="trnPensionBillReceiptId" type="long">
+            <column name="TRN_PENSION_BILL_RECEIPT_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="trnPensionBillHdrId" type="long">
+            <column name="TRN_PENSION_BILL_HDR_ID" precision="20" scale="0" />
+        </property>
+        <property name="typeEdpId" type="big_decimal">
+            <column name="TYPE_EDP_ID" precision="20" scale="0" />
+        </property>
+        <property name="edpCode" type="string">
+            <column name="EDP_CODE" length="10" />
+        </property>
+        <property name="majorHead" type="string">
+            <column name="MAJOR_HEAD" length="10" />
+        </property>
+        <property name="submajorHead" type="string">
+            <column name="SUBMAJOR_HEAD" length="10" />
+        </property>
+        <property name="minorHead" type="string">
+            <column name="MINOR_HEAD" length="10" />
+        </property>
+        <property name="subhead" type="string">
+            <column name="SUBHEAD" length="10" />
+        </property>
+        <property name="dedType" type="string">
+            <column name="DED_TYPE" length="1" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="20" default="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

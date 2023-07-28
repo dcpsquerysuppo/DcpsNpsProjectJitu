@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 19, 2011 12:25:59 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.dcps.valueobject.DcpsDdoInfo" table="mst_dcps_ddo_info" dynamic-update="true">
+        <id name="dcpsDdoDtlId" type="java.lang.Long" >
+            <column name="DDO_DETAIL_ID"  precision="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="ddoCode" type="java.lang.String"  >
+            <column name="DDO_CODE" precision="15" />
+        </property>
+        <property name="adminDept" type="java.lang.String" >
+            <column name="ADMINISTRATIVE_DEPT"  precision="20"/>
+        </property>
+        <property name="FieldDept" type="java.lang.String"  >
+            <column name="FIELD_HOD_DEPT" precision="20" />
+        </property>
+        <property name="ddoName" type="java.lang.String"  >
+            <column name="DDO_NAME" precision="30"  />
+        </property>
+        <property name="ddoDesig" type="java.lang.String"  >
+            <column name="DDO_DESIGNATION" precision="20" />
+        </property>
+        <property name="wefDate" type="java.util.Date"  >
+            <column name="WEF_DATE" />
+        </property>
+        <property name="tanNo" type="java.lang.String">
+            <column name="TAN_NO"  precision="20"  />
+        </property>
+        <property name="itAwrdCrcle" type="java.lang.String" >
+            <column name="ITAWARDCIRCLE"  precision="20"  />
+        </property>
+        <property name="bankName" type="java.lang.String" >
+            <column name="BANK_NAME"  precision="20" />
+        </property>
+        <property name="branchName" type="java.lang.String"  >
+            <column name="BRANCH_NAME"  precision="20" />
+        </property>
+        <property name="accNo" type="java.lang.String"  >
+            <column name="ACCOUNT_NO" precision="20" />
+        </property>
+        <property name="remarks" type="java.lang.String" >
+            <column name="REMARKS" precision="50"  />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_BY" precision="10"   />
+        </property>
+        <property name="createdPostId" type="java.lang.Long"  >
+            <column name="CREATED_BY_POST" precision="10"  />
+        </property>
+        <property name="createdDate" type="java.util.Date" >
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="java.lang.Long"  >
+            <column name="UPDATED_BY" precision="10" />
+        </property>
+        <property name="updatedPostId" type="java.lang.Long"  >
+            <column name="UPDATED_BY_POST" precision="10" />
+        </property>
+        <property name="updatedDate" type="java.util.Date" >
+            <column name="UPDATED_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

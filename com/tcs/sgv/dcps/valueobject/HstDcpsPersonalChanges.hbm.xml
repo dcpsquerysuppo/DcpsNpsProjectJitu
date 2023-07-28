@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.HstDcpsPersonalChanges" table="HST_DCPS_PERSONAL_CHANGES" >
+  	<id name="dcpsPersonalChangesId" type="long">
+            <column name="DCPS_PERSONAL_CHANGES_ID"  />
+            <generator class="assigned" />
+     </id>
+    <property name="dcpsChangesId" type="long">
+            <column name="DCPS_CHANGES_ID"  />
+  	</property>
+    <property name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID"  />
+  	</property>
+  	<property name="name" type="string">
+            <column name="EMP_NAME" />
+  	 </property>
+  	<property name="name_marathi" type="string">
+            <column name="EMP_NAME_MARATHI"  />
+  	</property>  
+  	<property name="father_or_husband" type="string">
+            <column name="FATHER_OR_HUSBAND"  />
+  	</property>
+  	<property name="salutation" type="string">
+            <column name="SALUTATION"  />
+  	</property>
+  	 <property name="gender" type="java.lang.Character">
+            <column name="GENDER"/>
+     </property>
+   	<property name="dob" type="timestamp">
+            <column name="DOB"/>
+  	</property>
+  	<property name="doj" type="timestamp">
+            <column name="DOJ" />
+  	</property>
+  	<property name="phychallanged" type="string">
+            <column name="PHY_CHALLANGED"  />
+  	</property>
+  	<property name="building_address" type="string">
+            <column name="ADDRESS_BUILDING" />
+  	</property>
+  	<property name="building_street" type="string">
+            <column name="ADDRESS_STREET"  />
+  	</property>
+  		<property name="landmark" type="string">
+            <column name="LANDMARK"  />
+  	</property>
+  		<property name="locality" type="string">
+            <column name="LOCALITY"  />
+  	</property>
+  		<property name="district" type="string">
+            <column name="DISTRICT"  />
+  	</property>
+  		<property name="state" type="string">
+            <column name="STATE"  />
+  	</property>
+  	<property name="pincode" type="long">
+            <column name="PINCODE"  />
+  	</property>
+  	<property name="cellNo" type="string">
+            <column name="CELL_NO"  />
+  	</property>
+  	<property name="cntctNo" type="string">
+            <column name="CNTCT_NO" />
+  	</property>
+  		<property name="emailId" type="string">
+            <column name="EMAIL_ID" />
+  	</property>
+  	<property name="UIDNo" type="string">
+            <column name="UID_NO" />
+  	</property>
+  	<property name="EIDNo" type="string">
+            <column name="EID_NO" />
+  	</property>
+  	<property name="PANNo" type="string">
+            <column name="PAN_NO" />
+  	</property>
+  	<property name="langId" type="long">
+            <column name="LANG_ID" />
+  	</property>
+  	<property name="locId" type="long">
+            <column name="LOC_ID"  />
+  	</property>
+  	<property name="dbId" type="long">
+            <column name="DB_ID" />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	  </property>
+	  <property name="createdUserId" type="long">
+	            <column name="CREATED_USER_ID" />
+	  </property>
+	  <property name="createdPostId" type="long">
+	            <column name="CREATED_POST_ID"  />
+	  </property>
+	  <property name="updatedDate" type="timestamp">
+	            <column name="UPDATED_DATE"/>
+	  </property>
+	  <property name="updatedUserId" type="long">
+	            <column name="UPDATED_USER_ID" />
+	  </property>
+	  <property name="updatedPostId" type="long">
+	            <column name="UPDATED_POST_ID" />
+	  </property>
+  	
+  		  	<!-- added by arpan  06/01-->
+  	<property name="PBuildingAddress" type="string">
+            <column name="PADDRESS_BUILDING" />
+  	</property>
+  	<property name="PBuildingStreet" type="string">
+            <column name="PADDRESS_STREET"  />
+  	</property>
+  		<property name="PLandmark" type="string">
+            <column name="PLANDMARK"  />
+  	</property>
+  		<property name="PLocality" type="string">
+            <column name="PLOCALITY"  />
+  	</property>
+  		<property name="PDistrict" type="string">
+            <column name="PDISTRICT"  />
+  	</property>
+  		<property name="PState" type="string">
+            <column name="PSTATE"  />
+  	</property>
+  	<property name="PPincode" type="long">
+            <column name="PPINCODE"  />
+  	</property>
+  	<property name="PCellNo" type="string">
+            <column name="PCELL_NO"  />
+  	</property>
+  	<property name="PCntctNo" type="string">
+            <column name="PCNTCT_NO" />
+  	</property>
+  	<property name="PAddressVTC" type="string">
+            <column name="PADDRESS_VTC" />
+  	</property>
+  	<property name="isAddressSame" type="string">
+            <column name="ISADDRESSSAME" />
+  	</property>
+  	
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   
+      <class name="com.tcs.sgv.common.valueobject.TrnNPSBeamsIntegration" table="TRN_NPS_BEAMS_INTEGRATION" dynamic-update="true">
+        <comment></comment>
+        <id name="npsBeamsIntegrationId" type="long">
+            <column name="NPS_BEAMS_INTEGRATION_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="billType" type="string">
+            <column name="BILL_TYPE" length="20" not-null="true">
+            </column>
+        </property>
+        <property name="paybillId" type="long">
+            <column name="PAYBILL_ID" not-null="true">
+            </column>
+        </property>
+         <property name="billNo" type="string">
+            <column name="BILL_NO" not-null="true">
+            </column>
+        </property>
+        <property name="billGrossAmt" type="big_decimal">
+            <column name="BILL_GROSS_AMT" precision="20" not-null="true">
+            </column>
+        </property>
+        <property name="totalRecoveryAmt" type="big_decimal">
+            <column name="TOTAL_RECOVERY_AMT" precision="20" not-null="true">
+            </column>
+        </property>
+         <property name="billNetAmt" type="big_decimal">
+            <column name="BILL_NET_AMT" precision="20" not-null="true">
+            </column>
+        </property>
+        <property name="schemeCode" type="string">
+            <column name="SCHEME_CODE" length="20" not-null="true">
+            </column>
+        </property>
+        <property name="dtlheadCode" type="string">
+            <column name="DTLHEAD_CODE" length="20" not-null="true">
+            </column>
+        </property>
+          <property name="ddoCode" type="string">
+            <column name="DDO_CODE" length="20">
+            </column>
+        </property>
+        <property name="billCreationDate" type="timestamp">
+            <column name="BILL_CREATION_DATE" length="10">
+            </column>
+        </property>
+         <property name="finYear1" type="string">
+            <column name="FIN_YEAR_1" length="4">
+            </column>
+        </property>
+        <property name="finYear2" type="string">
+            <column name="FIN_YEAR_2" length="4">
+            </column>
+        </property>
+        <property name="yearMonth" type="java.lang.Integer">
+            <column name="YEAR_MONTH" >
+            </column>
+        </property>
+        <property name="noOfBeneficiary" type="java.lang.Integer">
+            <column name="NO_OF_BENEFICIARY">
+            </column>
+        </property>
+        <property name="authNo" type="string">
+            <column name="AUTH_NO" length="20">
+            </column>
+        </property>
+        <property name="statusCode" type="string">
+            <column name="STATUS_CODE" length="20">
+            </column>
+        </property>
+        <property name="authSlip" type="blob">
+            <column name="AUTH_SLIP">
+            </column>
+        </property>
+        <property name="billValidSatus" type="string">
+            <column name="BILL_VALID_STATUS" length="20">
+            </column>
+        </property>
+        <property name="beamsBillStatus" type="string">
+            <column name="BEAMS_BILL_STATUS" length="20">
+            </column>
+        </property>
+        <property name="voucherNo" type="java.lang.Integer">
+            <column name="VOUCHER_NO" length="10">
+            </column>
+        </property>
+        <property name="voucherDate" type="timestamp">
+            <column name="VOUCHER_DATE">
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="20">
+            </column>
+        </property>
+         <property name="dbId" type="java.lang.Integer">
+            <column name="DB_ID">
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="beamsBillType" type="string" insert="false" update="false">
+            <column name="BILL_TYPE" length="2" >
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>        

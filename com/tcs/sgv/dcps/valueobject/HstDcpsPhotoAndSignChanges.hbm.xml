@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.HstDcpsPhotoAndSignChanges" table="HST_DCPS_OTHER_CHANGES" >
+  	<id name="dcpsPhotoAndSignChangesId" type="long">
+            <column name="DCPS_PHOTOANDSIGN_CHANGES_ID"  />
+            <generator class="assigned" />
+    </id>
+    <property name="dcpsChangesId" type="long">
+            <column name="DCPS_CHANGES_ID"  />
+  	</property>
+  	
+    <property name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID"  />
+  	</property>
+  	
+    <property name="photoAttachmentID" type="long">
+            <column name="PHOTO_ATTACHMENTID" />
+  	</property>
+  	
+  	<property name="signatureAttachmentID" type="long">
+            <column name="SIGNATURE_ATTACHMENTID" />
+  	</property>
+  	
+  	<property name="langId" type="long">
+            <column name="LANG_ID" />
+  	</property>
+  	<property name="locId" type="long">
+            <column name="LOC_ID"  not-null="false" />
+  	</property>
+  	<property name="dbId" type="long">
+            <column name="DB_ID"  not-null="false" />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	</property>
+	<property name="createdUserId" type="long">
+	            <column name="CREATED_USER_ID" />
+	</property>
+	<property name="createdPostId" type="long">
+	            <column name="CREATED_POST_ID"  />
+    </property>
+	<property name="updatedDate" type="timestamp">
+	            <column name="UPDATED_DATE" not-null="false" />
+	</property>
+	<property name="updatedUserId" type="long">
+	            <column name="UPDATED_USER_ID"  not-null="false" />
+	</property>
+    <property name="updatedPostId" type="long">
+	            <column name="UPDATED_POST_ID"   not-null="false" />
+	</property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.gpf.valueobject">
+  <class name="com.tcs.sgv.gpf.valueobject.MstGpfAdvance" table="MST_GPF_ADVANCE" >
+  	<id name="mstGpfAdvanceId" type="long">
+            <column name="MST_GPF_ADVANCE_ID"  />
+            <generator class="assigned" />
+     </id>
+     <property name="transactionId" type="string">
+            <column name="TRANSACTION_ID"  />
+  	</property>
+     <property name="gpfAccNo" type="string">
+            <column name="GPF_ACC_NO"  />
+  	</property>
+    
+    <property name="advanceType" type="string">
+            <column name="ADVANCE_TYPE"  />
+  	</property>
+     <property name="applicationDate" type="timestamp">
+            <column name="APPLICATION_DATE"  />
+  	</property>
+  	<property name="finYearId" type="long">
+            <column name="FIN_YEAR_ID"  />
+  	</property>
+  	<property name="attachmentId" type="long">
+            <column name="ATTACHMENT_ID"  />
+  	</property>  
+  	<property name="purposeCategory" type="long">
+            <column name="PURPOSE_CATEGORY"  />
+  	</property>
+  	<property name="subType" type="long">
+            <column name="SUB_TYPE"  />
+  	</property>
+  	<property name="otherPurpose" type="string">
+            <column name="OTHER_PURPOSE"  />
+  	</property>
+  	<property name="balance" type="double">
+            <column name="BALANCE_OUTSTANDING"  />
+  	</property>
+  	<property name="advanceAmt" type="double">
+            <column name="AMOUNT_REQUESTED" />
+ 	</property>
+ 	<property name="amountSanctioned" type="double">
+            <column name="AMOUNT_SANCTIONED" />
+ 	</property>
+ 	<property name="payableAmount" type="double">
+            <column name="PAYABLE_AMOUNT" />
+ 	</property>
+ 	<property name="noOfInstallments" type="int">
+            <column name="TOTAL_INSTALLMENTS" />
+ 	</property>
+ 	<property name="installmentsLeft" type="int">
+            <column name="INSTALLMENTS_LEFT" />
+ 	</property>
+ 	<property name="installmentAmount" type="double">
+            <column name="INSTALLMENT_AMOUNT" />
+ 	</property>
+ 	<property name="oddInstallment" type="double">
+            <column name="ODD_INSTALLMENT" />
+ 	</property>
+ 	<property name="oddInstallmentNo" type="long">
+            <column name="ODD_INSTALLMENT_NO" />
+ 	</property>
+ 	<property name="clubbedReqTrnId" type="string">
+            <column name="CLUBBED_REQ_TRN_ID" />
+ 	</property>
+ 	<property name="recoveredAmount" type="double">
+            <column name="RECOVERED_AMOUNT" />
+ 	</property>
+ 	<property name="outstandingAmount" type="double">
+            <column name="OUTSTANDING_AMOUNT" />
+ 	</property>
+ 	<property name="specialCase" type="char">
+            <column name="SPECIAL_CASE" />
+ 	</property>
+ 	<property name="statusFlag" type="string">
+            <column name="STATUS_FLAG" />
+ 	</property>
+ 	<property name="recoveryStatus" type="int">
+            <column name="RECOVERY_STATUS" />
+ 	</property>
+ 	<property name="sancAuthorityName" type="string">
+            <column name="SANC_AUTHORITY_NAME"  />
+	</property>
+ 	<property name="sanctionedDate" type="timestamp">
+            <column name="SANCTIONED_DATE"  />
+	</property>
+	<property name="orderNo" type="string">
+            <column name="ORDER_NO"  />
+  	</property>
+     <property name="orderDate" type="timestamp">
+            <column name="ORDER_DATE"  />
+  	</property>
+  	<property name="userRemarks" type="string">
+            <column name="USER_REMARKS"  />
+  	</property>
+  	<property name="verifierRemarks" type="string">
+            <column name="VERIFIER_REMARKS"  />
+  	</property>
+  	<property name="approverRemarks" type="string">
+            <column name="APPROVER_REMARKS" />
+ 	</property>
+ 	<property name="installment1" type="double">
+            <column name="INSTALLMENT_1" />
+ 	</property>
+ 	<property name="releaseDate1" type="timestamp">
+            <column name="RELEASE_DATE_1"  />
+	</property>
+	<property name="installment2" type="double">
+            <column name="INSTALLMENT_2" />
+ 	</property>
+ 	<property name="releaseDate2" type="timestamp">
+            <column name="RELEASE_DATE_2"  />
+	</property>
+	<property name="installment3" type="double">
+            <column name="INSTALLMENT_3" />
+ 	</property>
+ 	<property name="releaseDate3" type="timestamp">
+            <column name="RELEASE_DATE_3"  />
+	</property>
+	<property name="installment4" type="double">
+            <column name="INSTALLMENT_4" />
+ 	</property>
+ 	<property name="releaseDate4" type="timestamp">
+            <column name="RELEASE_DATE_4"  />
+	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	</property>
+  <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" />
+  </property>
+  <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  </property>
+  <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" not-null="false" />
+  </property>
+  <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  not-null="false" />
+  </property>
+  <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID"   not-null="false" />
+  </property>
+  <property name="deoActionDate" type="timestamp">
+            <column name="DEO_ACTION_DATE" not-null="false" />
+  </property>
+  <property name="verifierActionDate" type="timestamp">
+            <column name="VERIFIER_ACTION_DATE" not-null="false" />
+  </property>
+  <property name="hoActionDate" type="timestamp">
+            <column name="HO_ACTION_DATE" not-null="false" />
+  </property>
+  <property name="hoReceiveDate" type="timestamp">
+            <column name="HO_RECEIVE_DATE" not-null="false" />
+  </property>
+  
+  <property name="voucherNo" type="string">
+            <column name="VOUCHER_NO" />
+ 	</property>
+  
+  <property name="voucherDate" type="timestamp">
+            <column name="VOUCHER_DATE" not-null="false" />
+  </property>
+  
+  <property name="voucherNo2" type="string">
+            <column name="VOUCHER_NO2" />
+ 	</property>
+  <property name="voucherDate2" type="timestamp">
+            <column name="VOUCHER_DATE2" not-null="false" />
+  </property>
+  
+  <property name="voucherNo3" type="string">
+            <column name="VOUCHER_NO3" />
+ 	</property>
+  <property name="voucherDate3" type="timestamp">
+            <column name="VOUCHER_DATE3" not-null="false" />
+  </property>
+  
+  <property name="voucherNo4" type="string">
+            <column name="VOUCHER_NO4" />
+ 	</property>
+  <property name="voucherDate4" type="timestamp">
+            <column name="VOUCHER_DATE4" not-null="false" />
+  </property>
+  <property name="outstandingInstallmentPrevFinYear" type="int">
+            <column name="OUT_INSTLMNT_PREV" />
+  </property>
+  <property name="dataEntry" type="string">
+            <column name="DATA_ENTRY" />
+ 	</property>
+ 	<property name="sevaarthId" type="string">
+            <column name="sevaarth_id" />
+ 	</property>
+ 	<property name="specialCaseFor90Perc" type="java.lang.Character">
+            <column name="special_case_90_percent" />
+ 	</property>
+   </class>
+</hibernate-mapping>

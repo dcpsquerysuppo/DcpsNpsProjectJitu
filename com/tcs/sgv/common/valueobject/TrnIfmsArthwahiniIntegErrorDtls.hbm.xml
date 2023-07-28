@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.TrnIfmsArthwahiniIntegErrorDtls" table="TRN_IFMS_ARTHWAHINI_INTEG_ERROR_DTLS" dynamic-update="true">
+        <comment></comment>
+        <id name="ifmsArthwahiniIntegErrorDtlsId" type="long">
+            <column name="ARTHWAHINI_INTEG_ERROR_DTLS_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="delvId" type="long">
+            <column name="DELV_ID">
+            </column>
+        </property>
+        <property name="authNo" type="string">
+            <column name="AUTH_NO" length="20">
+            </column>
+        </property>
+        <property name="errorCode" type="string">
+            <column name="ERROR_CODE" length="20">
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping> 

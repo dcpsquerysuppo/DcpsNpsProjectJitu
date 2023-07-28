@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 21, 2007 7:19:54 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+	<sql-query name="tbp.billmvmnt.updateBillMvmnt">
+		<![CDATA[
+			UPDATE TRN_BILL_MVMNT BM, (SELECT BM1.BILL_NO BN, MAX(BM1.MOVEMNT_ID) BMID FROM TRN_BILL_MVMNT BM1
+			       WHERE BM1.BILL_NO IN (:LST_BILL_NO)
+			       GROUP BY BM1.BILL_NO
+			) TMP
+			SET BM.STATUS_UPDT_DATE = :DT, BM.UPDATED_DATE = :DT, BM.UPDATED_POST_ID = :POST, BM.UPDATED_USER_ID = :USER
+			WHERE BM.BILL_NO IN (:LST_BILL_NO) AND BM.BILL_NO = TMP.BN AND BM.MOVEMNT_ID = TMP.BMID
+		]]>
+	</sql-query>
+	<sql-query name="tbp.billmvmnt.updateBillMvmnt_poolRelease">
+		<![CDATA[
+			UPDATE TRN_BILL_MVMNT BM, (SELECT BM1.BILL_NO BN, MAX(BM1.MOVEMNT_ID) BMID FROM TRN_BILL_MVMNT BM1
+			       WHERE BM1.BILL_NO IN (:LST_BILL_NO)
+			       GROUP BY BM1.BILL_NO
+			) TMP
+			SET BM.STATUS_UPDT_DATE = :DT, BM.UPDATED_DATE = :DT, BM.UPDATED_POST_ID = :POST, BM.UPDATED_USER_ID = :USER, 
+			BM.STATUS_UPDT_POSTID = :POST, BM.STATUS_UPDT_USERID = :USER, BM.RECEIVING_USER_ID = :USER
+			WHERE BM.BILL_NO IN (:LST_BILL_NO) AND BM.BILL_NO = TMP.BN AND BM.MOVEMNT_ID = TMP.BMID
+		]]>
+	</sql-query>
+</hibernate-mapping>

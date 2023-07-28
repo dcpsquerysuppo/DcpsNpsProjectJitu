@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.tcs.sgv.dcps.valueobject.MstDcpsPayscale" table="MST_DCPS_PAYSCALE">
+  		
+  		<id name="payScaleId" type="long">
+            <column name="MST_DCPS_PAYSCALE_ID"/>
+            <generator class="assigned" />
+        </id>		
+  		  		
+  		 <property name="payDescription" type="string">
+            <column name="PAY_DESCRIPTION"/>
+         </property>
+        
+        <property name="effectiveFrom" type="string">
+            <column name="EFFECTIVE_FROM"/>
+        </property>
+        
+       
+        
+       
+</class>
+</hibernate-mapping>

@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 17, 2009 8:24:44 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.OrgDdoMst" table="ORG_DDO_MST" dynamic-update="true">
+    	<cache usage="nonstrict-read-write" region="ddoCache"/>
+        <id name="ddoId" type="java.lang.Long">
+            <column name="DDO_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="ddoCode" type="string">
+            <column name="DDO_CODE" length="15"  />
+        </property>
+        <property name="ddoName" type="string">
+            <column name="DDO_NAME"  />
+        </property>
+        <property name="postId" type="java.lang.Long">
+            <column name="POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="attachmentId" type="java.lang.Long">
+            <column name="ATTACHMENT_ID" precision="20" scale="0" />
+        </property>
+        <property name="langId" type="java.lang.Long">
+            <column name="LANG_ID" precision="20" scale="0"  />
+        </property>
+        <property name="startDate" type="date">
+            <column name="START_DATE" length="7"  />
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="7" />
+        </property>
+        <property name="activateFlag" type="java.lang.Long">
+            <column name="ACTIVATE_FLAG" precision="20" scale="0"  />
+        </property>
+        <property name="createdBy" type="java.lang.Long">
+            <column name="CREATED_BY" precision="20" scale="0"  />
+        </property>
+        <property name="createdByPost" type="java.lang.Long">
+            <column name="CREATED_BY_POST" precision="20" scale="0"  />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7"  />
+        </property>
+        <property name="updatedBy" type="java.lang.Long">
+            <column name="UPDATED_BY" precision="20" scale="0" />
+        </property>
+        <property name="updatedByPost" type="java.lang.Long">
+            <column name="UPDATED_BY_POST" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID" precision="20" scale="0"  />
+        </property>
+        <property name="shortName" type="string">
+            <column name="SHORT_NAME" />
+        </property>
+        <property name="majorHead" type="string">
+            <column name="MAJOR_HEAD" length="10" />
+        </property>
+        <property name="demand" type="string">
+            <column name="DEMAND" length="10" />
+        </property>
+        <property name="ddoNo" type="java.lang.Integer">
+            <column name="DDO_NO" precision="5" scale="0" />
+        </property>
+        <property name="cardexNo" type="java.lang.Integer">
+            <column name="CARDEX_NO" precision="5" scale="0" />
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER" precision="11" scale="0" />
+        </property>
+        <property name="adminFlag" type="boolean">
+            <column name="ADMIN_FLAG" precision="1" scale="0"  />
+        </property>
+        <property name="officeCode" type="string">
+            <column name="OFFICE_CODE" length="20" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="20" />
+        </property>
+        <property name="deptLocCode" type="string">
+            <column name="DEPT_LOC_CODE" length="20" />
+        </property>
+        <property name="hodLocCode" type="string">
+            <column name="HOD_LOC_CODE" length="20" />
+        </property>
+        <property name="isCo" type="boolean">
+            <column name="IS_CO" precision="1" scale="0"  />
+        </property>
+        <property name="isCs" type="boolean">
+            <column name="IS_CS" precision="1" scale="0"  />
+        </property>
+        <property name="type" type="java.lang.Short">
+            <column name="TYPE" precision="2" scale="0" />
+        </property>
+        
+        <property name="ddoPersonalName" type="string">
+            <column name="ddo_personal_name" length="20" />
+        </property>
+        
+         <property name="designCode" type="string">
+            <column name="DSGN_CODE" length="20" />
+        </property>
+        
+         <property name="designName" type="string">
+            <column name="DSGN_NAME" length="20" />
+        </property>
+        <property name="ddoOffice" type="string">
+            <column name="DDO_OFFICE" length="20" />
+        </property>
+        
+        <property name="Remarks" type="string">
+            <column name="Remarks" length="20" />
+        </property>
+        
+         <property name="tanNo" type="string">
+            <column name="tan_no" length="20" />
+        </property>
+        
+        <property name="itaWardNo" type="string">
+            <column name="itawardcircle" length="20" />
+        </property>
+        
+        <property name="bankName" type="string">
+            <column name="bank_name" length="20" />
+        </property>
+        
+          <property name="branchName" type="string">
+            <column name="branch_name" length="20" />
+        </property>
+        
+        <property name="accountNo" type="string">
+            <column name="account_no" length="20" />
+        </property>
+        
+        <property name="ifsCode" type="string">
+            <column name="ifs_Code" length="20" />
+        </property>
+        
+        <property name="ddoType" type="java.lang.Long">
+            <column name="DDO_TYPE" precision="20" scale="0"  />
+        </property>
+    </class>
+  
+</hibernate-mapping>

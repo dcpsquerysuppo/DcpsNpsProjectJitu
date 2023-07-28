@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 28, 2007 3:08:46 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.ConfigAudSelection" table="config_aud_selection"  dynamic-update="true">
+        <comment></comment>
+        <id name="audConfigId" type="long">
+            <column name="AUD_CONFIG_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="audCatId" type="long">
+            <column name="AUD_CAT_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="cardexNo" type="java.lang.String">
+            <column name="CARDEX_NO" length="6">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billType" type="java.lang.Long">
+            <column name="BILL_TYPE" length="3">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="majorHead" type="java.lang.String">
+            <column name="MAJOR_HEAD" length="6">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="goNgo" type="string">
+            <column name="GO_NGO" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="postId" type="java.lang.Long">
+            <column name="POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="java.lang.String">
+            <column name="LOCATION_CODE" not-null="true" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>        
+        <property name="deptCode" type="java.lang.String">
+            <column name="DEPT_CODE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="activateFlag" type="java.lang.Short">
+            <column name="ACTIVATE_FLAG" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER" length="11">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

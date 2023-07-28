@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.common.valueobject">
+  <class name="com.tcs.sgv.common.valueobject.MstAdviceRange" table="mst_advice_range" dynamic-update="true"> 
+  		<id name="adviceId" type="long">
+            <column name="ADVICE_ID" />
+            <generator class="assigned" />
+        </id>        
+        <property name="startAdviceNo" type="long">
+            <column name="START_ADVICE_NO" precision="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endAdviceNo" type="long">
+            <column name="END_ADVICE_NO" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="postId" type="long">
+            <column name="POST_ID" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 11, 2007 10:27:55 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaBudrlsMonthDtls" table="sgva_budrls_month_dtls" >
+        <comment></comment>
+        <id name="mnthDtlId" type="long">
+            <column name="MNTH_DTL_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="monthMpgId" type="long">
+            <column name="MONTH_MPG_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="monthId" type="string">
+            <column name="MONTH_ID" length="15" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

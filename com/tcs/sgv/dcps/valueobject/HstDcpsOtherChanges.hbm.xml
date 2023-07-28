@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.HstDcpsOtherChanges" table="HST_DCPS_OTHER_CHANGES" >
+  	<id name="dcpsOtherChangesId" type="long">
+            <column name="DCPS_OTHER_CHANGES_ID"  />
+            <generator class="assigned" />
+    </id>
+    <property name="dcpsChangesId" type="long">
+            <column name="DCPS_CHANGES_ID"  />
+  	</property>
+    <property name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID"  />
+  	</property>
+   	<property name="bankName" type="string">
+            <column name="BANK_NAME"/>
+  	</property>
+  	<property name="branchName" type="string">
+            <column name="BRANCH_NAME" />
+  	</property>
+  	<property name="bankAccountNo" type="string">
+            <column name="BANK_ACNT_NO" />
+  	</property>
+  	<property name="IFSCCode" type="string">
+            <column name="IFSC_CODE" />
+  	</property>
+  	<property name="langId" type="long">
+            <column name="LANG_ID" />
+  	</property>
+  	<property name="locId" type="long">
+            <column name="LOC_ID"  not-null="false" />
+  	</property>
+  	<property name="dbId" type="long">
+            <column name="DB_ID"  not-null="false" />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	</property>
+	<property name="createdUserId" type="long">
+	            <column name="CREATED_USER_ID" />
+	</property>
+	<property name="createdPostId" type="long">
+	            <column name="CREATED_POST_ID"  />
+    </property>
+	<property name="updatedDate" type="timestamp">
+	            <column name="UPDATED_DATE" not-null="false" />
+	</property>
+	<property name="updatedUserId" type="long">
+	            <column name="UPDATED_USER_ID"  not-null="false" />
+	</property>
+    <property name="updatedPostId" type="long">
+	            <column name="UPDATED_POST_ID"   not-null="false" />
+	</property>
+	
+	<property name="dcpsOrGpf" type="java.lang.Character">
+            <column name="DCPS_OR_GPF"  />
+    </property>
+    <property name="acDcpsMaintainedBy" type="string">
+            <column name="AC_DCPS_MAINTAINED_BY" />
+  	</property> 
+  	<property name="acNonSRKAEmp" type="string">
+            <column name="AC_NO_NONSRKA_EMP" />
+  	</property> 
+  	<property name="acMntndByOthers" type="string">
+            <column name="AC_MNTND_BY_OTHERS" />
+  	</property> 
+  	<property name="acMaintainedBy" type="string">
+            <column name="AC_MAINTAINED_BY"  />
+  	</property>
+  	<property name="pfSeries" type="string">
+            <column name="PF_SERIES"  />
+  	</property>
+  	<property name="pfSeriesDesc" type="string">
+            <column name="PF_SERIES_DESC"  />
+  	</property>
+  	<property name="pfAcNo" type="string">
+            <column name="PF_ACNO"  />
+  	</property>
+    
+  </class>
+</hibernate-mapping>

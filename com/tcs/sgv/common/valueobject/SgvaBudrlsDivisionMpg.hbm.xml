@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 29, 2007 11:57:59 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaBudrlsDivisionMpg" table="sgva_budrls_division_mpg" >
+        <comment></comment>
+        <id name="divisionMpgId" type="long">
+            <column name="DIVISION_MPG_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="divisionId" type="string">
+            <column name="DIVISION_ID" length="15" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="deptId" type="string">
+            <column name="DEPT_ID" length="12" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="200" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdUsr" type="string">
+            <column name="LST_UPD_USR" length="200">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdDt" type="date">
+            <column name="LST_UPD_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="applicationId" type="string">
+            <column name="APPLICATION_ID" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

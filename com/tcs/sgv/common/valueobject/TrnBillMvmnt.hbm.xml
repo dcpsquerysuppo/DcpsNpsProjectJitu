@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 28, 2007 3:41:57 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.TrnBillMvmnt" table="trn_bill_mvmnt" dynamic-update="true">
+        <comment></comment>
+        <id name="billMvmtId" type="long">
+            <column name="BILL_MVMT_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="movemntId" type="java.lang.Long">
+            <column name="MOVEMNT_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billNo" type="java.lang.Long">
+            <column name="BILL_NO">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="statusUpdtUserid" type="java.lang.Long">
+            <column name="STATUS_UPDT_USERID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="statusUpdtDate" type="timestamp">
+            <column name="STATUS_UPDT_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="mvmntStatus" type="java.lang.Short">
+            <column name="MVMNT_STATUS">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="receivingUserId" type="java.lang.Long">
+            <column name="RECEIVING_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="receivedDate" type="timestamp">
+            <column name="RECEIVED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>       
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="statusUpdtPostid" type="java.lang.Long">
+            <column name="STATUS_UPDT_POSTID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true">
+            </column>
+        </property>
+        <property name="objRemarks" type="string">
+            <column name="OBJ_REMARKS" length="4000">
+            </column>
+        </property>
+        <property name="billRemarks" type="string">
+            <column name="BILL_REMARKS" length="4000">
+            </column>
+        </property>
+        <property name="roleId" type="java.lang.Long">
+            <column name="ROLE_ID" length="20"></column>
+        </property>
+    </class>
+    <sql-query name="tbp.mvmnt.getMaxMvmentByBillNos">
+		<return-scalar column="BNO" type="java.lang.Long" />
+		<return-scalar column="MID" type="java.lang.Long" />
+    	<![CDATA[
+	    	SELECT BM.BILL_NO BNO, MAX(BM.MOVEMNT_ID) MID
+			FROM TRN_BILL_MVMNT BM
+			WHERE BM.BILL_NO IN (:BILL_LIST)
+			GROUP BY BM.BILL_NO
+		]]>
+    </sql-query>
+    <sql-query name="tbp.mvmnt.getDispatchUser">
+		<return-scalar column="BNO" type="java.lang.Long" />
+		<return-scalar column="POST" type="java.lang.Long" />
+		<return-scalar column="MID" type="java.lang.Long" />
+    	<![CDATA[
+	    	SELECT BM.BILL_NO BNO, BM.STATUS_UPDT_POSTID POST, MAX(BM.MOVEMNT_ID) MID 
+			FROM TRN_BILL_MVMNT BM
+			WHERE BM.BILL_NO IN (:BILL_LIST) AND BM.MVMNT_STATUS = 120 
+			GROUP BY BM.BILL_NO, BM.STATUS_UPDT_POSTID
+		]]>
+    </sql-query>
+    <sql-query name="tbp.billmvmnt.updateBillMvmnt_New">
+		<![CDATA[
+			UPDATE TRN_BILL_MVMNT BM
+			SET BM.STATUS_UPDT_DATE = :DT, BM.UPDATED_DATE = :DT, BM.UPDATED_POST_ID = :POST, BM.UPDATED_USER_ID = :USER
+			WHERE BM.BILL_NO = :BILL_NO AND BM.MOVEMNT_ID = :BMID
+		]]>
+	</sql-query>
+	<sql-query name="tbp.billmvmnt.updateBillMvmnt_poolRelease_New">
+		<![CDATA[
+			UPDATE TRN_BILL_MVMNT BM
+			SET BM.STATUS_UPDT_DATE = :DT, BM.UPDATED_DATE = :DT, BM.UPDATED_POST_ID = :POST, BM.UPDATED_USER_ID = :USER, 
+			BM.STATUS_UPDT_POSTID = :POST, BM.STATUS_UPDT_USERID = :USER, BM.RECEIVING_USER_ID = :USER
+			WHERE BM.BILL_NO = :BILL_NO AND BM.MOVEMNT_ID = :BMID
+		]]>
+	</sql-query>
+</hibernate-mapping>

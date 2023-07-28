@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 18, 2008 9:40:33 AM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.RltBillEmdChallan" table="RLT_BILL_EMD_CHALLAN" dynamic-update="true">
+        <id name="billEmdChallanId" type="java.lang.Long">
+            <column name="BILL_EMD_CHALLAN_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="billNo" type="java.lang.Long">
+            <column name="BILL_NO" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="chlnSrNo" type="java.lang.Long">
+            <column name="CHLN_SR_NO" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="trnEmdChallanDetlId" type="java.lang.Long">
+            <column name="TRN_EMD_CHALLAN_DETL_ID" precision="20" scale="0"/>
+        </property>
+        <property name="chlAmount" type="big_decimal">
+            <column name="CHL_AMOUNT" precision="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.pensionpay.valueobject">
+	<class name="com.tcs.sgv.pensionpay.valueobject.HstReEmploymentDtls" table="hst_re_employment_dtls" dynamic-update="true">
+   		<id name="reEmploymentId" type="long">
+            <column name="re_employment_id" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+         <property name="dbId" type="java.lang.Long">
+            <column name="db_id" precision="20" scale="0"  />
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="location_code" precision="20" scale="0"  />
+        </property>
+        <property name="pensionerCode" type="string">
+            <column name="pensioner_code" length="20" />
+        </property>
+        <property name="fromDate" type="timestamp">
+            <column name="from_date" length="7"/>
+        </property>
+        <property name="toDate" type="timestamp">
+			<column name="to_date" precision="20" scale="0" ></column>
+		</property>
+		<property name="daInPensionSalary" type="string">
+            <column name="da_in_pension_salary" length="20" />
+        </property>
+		 <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+		</property> 
+		<property name="employeeOrderNo" type="string">
+            <column name="EMPLOYEE_ORDER_NO" length="20" />
+        </property> 
+        <property name="employeeOrderDate" type="timestamp">
+            <column name="EMPLOYEE_ORDER_DATE" length="7"/>
+        </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.pensionproc.valueobject">
+  <class name="TrnPnsnprocProvisionalPaid" table="TRN_PNSNPROC_PROVISIONAL_PAID"  dynamic-update="true">
+  		<id name="provisionalPaidId" type="java.lang.Long">
+            <column name="PROVISIONAL_PAID_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>       
+         <property name="locationCode" type="string">
+            <column name="location_code" precision="20" scale="0"  />
+        </property>
+        <property name="pensionerdtlId" type="java.lang.Long" >
+            <column name="PENSIONERDTL_ID" precision="20" scale="0" />
+        </property>
+        <property name="inwardPensionId" type="java.lang.Long" >
+            <column name="inward_pension_id" precision="20" scale="0" ></column>
+        </property>
+        <property name="provPensionSanctionAuthority" type="string">
+            <column name="SANCTION_AUTHO_NAME"  />
+        </property>
+         <property name="provPensionAuthorityNo" type="string">
+            <column name="SANCTION_AUTHO_NO" precision="20" scale="0"  />
+        </property>
+        <property name="provPensionAuthorityDate" type="timestamp">
+            <column name="SANCTION_DATE" precision="20" scale="0"  />
+        </property> 
+        <property name="appToDate" type="timestamp">
+			<column name="APP_FROM_DATE" precision="20" scale="0"></column>
+		</property>
+		<property name="appFromDate" type="timestamp">
+			<column name="APP_TO_DATE" precision="20" scale="0"></column>
+		</property>
+		<property name="billType" type="string">
+			<column name="BILL_TYPE" precision="20" scale="0"></column>
+		</property>
+		<property name="basicPensionAmount" type="java.lang.Long">
+			<column name="PENSION_AMOUNT" precision="20" scale="0"></column>
+		</property>
+		<property name="voucherNo" type="string">
+			<column name="VOUCHER_NO" precision="20" scale="0"></column>
+		</property>
+		<property name="voucherDate" type="timestamp">
+			<column name="VOUCHER_DATE" precision="20" scale="0"></column>
+		</property>
+        <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+		</property>
+        
+        
+        
+  </class>
+</hibernate-mapping>

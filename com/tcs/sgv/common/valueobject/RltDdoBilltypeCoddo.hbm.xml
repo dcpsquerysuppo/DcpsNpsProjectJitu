@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 14, 2009 5:49:09 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.RltDdoBilltypeCoddo" table="RLT_DDO_BILLTYPE_CODDO" dynamic-update="true">
+        <comment></comment>
+        <id name="rltDdobilltypeId" type="java.lang.Long">
+            <column name="rlt_ddobilltype_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="subjectId" type="java.lang.Byte">
+            <column name="subject_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdByPost" type="java.lang.Integer">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="trn_counter" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Short">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="ddoCode" type="string">
+            <column name="ddo_code" length="15" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

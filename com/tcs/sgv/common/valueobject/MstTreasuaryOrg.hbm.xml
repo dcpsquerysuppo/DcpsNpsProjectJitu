@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 28, 2007 3:50:36 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.MstTreasuaryOrg" table="mst_treasuary_org" dynamic-update="true" >
+        <comment></comment>
+        <id name="tsryId" type="long">
+            <column name="TSRY_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="distTalukaId" type="java.lang.Long">
+            <column name="DIST_TALUKA_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="address1" type="string">
+            <column name="ADDRESS_1" length="400" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="address2" type="string">
+            <column name="ADDRESS_2" length="400">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="contactPerson" type="string">
+            <column name="CONTACT_PERSON" length="400">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="contactNo" type="string">
+            <column name="CONTACT_NO" length="400">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="java.lang.Long">
+            <column name="LANG_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="activateFlag" type="short">
+            <column name="ACTIVATE_FLAG" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="startDate" type="date">
+            <column name="START_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true">
+            </column>
+        </property>
+        <property name="officeCode" type="string">
+            <column name="OFFICE_CODE" length="10" not-null="true">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

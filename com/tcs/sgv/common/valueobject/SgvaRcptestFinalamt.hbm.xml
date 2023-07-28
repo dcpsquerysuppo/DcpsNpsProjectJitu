@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 26, 2007 4:54:31 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaRcptestFinalamt" table="sgva_rcptest_finalamt" >
+        <comment></comment>
+        <id name="rcptestFinalamtHdrId" type="long">
+            <column name="RCPTEST_FINALAMT_HDR_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="finYrId" type="java.lang.Long">
+            <column name="FIN_YR_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="deptId" type="string">
+            <column name="DEPT_ID" length="25">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="branchId" type="string">
+            <column name="BRANCH_ID" length="25">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="hodId" type="java.lang.Long">
+            <column name="HOD_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budbpnCode" type="string">
+            <column name="BUDBPN_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="buddemandCode" type="string">
+            <column name="BUDDEMAND_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budmjrhdCode" type="string">
+            <column name="BUDMJRHD_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budsubmjrhdCode" type="string">
+            <column name="BUDSUBMJRHD_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budminhdCode" type="string">
+            <column name="BUDMINHD_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budsubhdCode" type="string">
+            <column name="BUDSUBHD_CODE" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="headIdentifier" type="string">
+            <column name="HEAD_IDENTIFIER" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="levelId" type="java.lang.Long">
+            <column name="LEVEL_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="txnDtlId" type="java.lang.Long">
+            <column name="TXN_DTL_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstYrActualRcpt" type="big_decimal">
+            <column name="LST_YR_ACTUAL_RCPT" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstYrActualDisb" type="big_decimal">
+            <column name="LST_YR_ACTUAL_DISB" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="curtYrBeRcpt" type="big_decimal">
+            <column name="CURT_YR_BE_RCPT" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="curtYrBeDisb" type="big_decimal">
+            <column name="CURT_YR_BE_DISB" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="curtYrReRcpt" type="big_decimal">
+            <column name="CURT_YR_RE_RCPT" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="curtYrReDisb" type="big_decimal">
+            <column name="CURT_YR_RE_DISB" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="nxtYrBeRcpt" type="big_decimal">
+            <column name="NXT_YR_BE_RCPT" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="nxtYrBeDisb" type="big_decimal">
+            <column name="NXT_YR_BE_DISB" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="applId" type="string">
+            <column name="APPL_ID" length="15">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="string">
+            <column name="LANG_ID" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="string">
+            <column name="LOC_ID" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="12">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdDt" type="date">
+            <column name="LST_UPD_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdUsr" type="string">
+            <column name="LST_UPD_USR" length="12">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="txnHdrId" type="java.lang.Long">
+            <column name="TXN_HDR_ID">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

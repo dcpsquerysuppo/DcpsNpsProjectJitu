@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.dcps.valueobject.Feedback" table="MST_DCPS_FEEDBACK">
+  	
+  	<id name="dcpsFeedbackIdPk" type="long">
+            <column name="DCPS_FEEDBACK_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+     </id>
+     
+    <property name="name" type="string">
+            <column name="NAME"  />
+  	</property>
+  	<property name="ddo" type="string">
+            <column name="DDO"  />
+  	</property>
+  	<property name="treasury" type="string">
+            <column name="TREASURY"  />
+  	</property>
+  	<property name="deptName" type="string">
+            <column name="DEPARTMENT"  />
+  	</property>
+  	<property name="comments" type="string">
+            <column name="COMMENTS"  />
+  	</property>
+  	<property name="langId" type="long">
+            <column name="LANG_ID" />
+  	</property>
+  	<property name="locId" type="long">
+            <column name="LOC_ID"  not-null="false" />
+  	</property>
+  	<property name="dbId" type="long">
+            <column name="DB_ID"  not-null="false" />
+  	</property>
+  	<property name="PostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  	</property>
+  	<property name="UserId" type="long">
+            <column name="CREATED_USER_ID"  />
+  	</property>
+  	<property name="CreatedDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  	</property>
+  	
+  	<property name="UpdatedPostId" type="long">
+            <column name="UPDATED_POST_ID"  />
+  	</property>
+  	<property name="UpdatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  />
+  	</property>
+  	<property name="UpdatedDate" type="timestamp">
+            <column name="UPDATED_DATE"  />
+  	</property>
+  	
+  	<property name="feedBackDate" type="timestamp">
+            <column name="feedback_date"  />
+  	</property>
+  	<property name="emailAddress" type="string">
+            <column name="email_address"  />
+  	</property>
+  	<property name="contactNo" type="long">
+            <column name="contact_no"  />
+  	</property>
+  	
+  </class>
+</hibernate-mapping>

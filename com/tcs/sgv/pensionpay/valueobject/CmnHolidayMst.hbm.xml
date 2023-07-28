@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false">
+	<class name="com.tcs.sgv.pensionpay.valueobject.CmnHolidayMst" table="cmn_holiday_mst"  dynamic-update="true">
+		<id name="srNo" type="java.lang.Long">
+			<column name="sr_no" precision="20" scale="0"></column>
+			<generator class="assigned"></generator>
+		</id>
+		<property name="hldyDt" type="java.util.Date">
+			<column name="hldy_dt"  not-null="true"></column>
+		</property>
+		<many-to-one name="hldyType" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="hldy_type" precision="20" scale="0" not-null="true">
+            </column>
+        </many-to-one>
+        <property name="hldyOccsn" type="string">
+			<column name="hldy_occsn"  not-null="true" length="45"></column>
+		</property>
+		<property name="langId" type="java.lang.Long">
+			<column name="lang_id"  not-null="true" precision="20" scale="0"></column>
+		</property>
+		<many-to-one name="locId" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" precision="20" scale="0" not-null="true">
+            </column>
+        </many-to-one>
+		<property name="createdBy" type="java.lang.Long">
+            <column name="created_by" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdByPost" type="java.lang.Long">
+            <column name="created_by_post" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="created_date"  not-null="true" />
+        </property>
+        <property name="updatedBy" type="java.lang.Long">
+            <column name="updated_by" precision="20" scale="0" />
+        </property>
+        <property name="updatedByPost" type="java.lang.Long">
+            <column name="updated_by_post" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="updated_date"  />
+        </property>
+        <property name="holidayCode" type="string">
+			<column name="holiday_code"  not-null="true" length="10"></column>
+		</property>
+		<property name="dbId" type="java.lang.Long">
+            <column name="db_id" precision="20" scale="0" not-null="true" />
+        </property>
+		<property name="hldyGreetingMsg" type="string">
+			<column name="hldy_greeting_msg" length="100"></column>
+		</property>
+	</class>
+</hibernate-mapping>
+        
+		
+		
+		

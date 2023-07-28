@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.StgCpoAlloc" table="STG_CPO_ALLOC" dynamic-update="true">
+        <id name="stgCpoAllocId" type="long">
+            <column name="STG_CPO_ALLOC_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="delvId" type="long">
+            <column name="DELV_ID" not-null="true" />
+        </property>
+        <property name="caseStatus" type="string">
+            <column name="CASE_STATUS" length="20" />
+        </property>
+        <property name="pnsrFileNo" type="string">
+            <column name="PNSR_FILE_NO" length="25" />
+        </property>
+        <property name="applnNo" type="string">
+            <column name="APPLN_NO" length="25" />
+        </property>
+        <property name="pnsrPpoNo" type="string">
+            <column name="PNSR_PPO_NO" length="25" />
+        </property>
+        <property name="cpoNo" type="string">
+            <column name="CPO_NO" length="25" />
+        </property>
+        <property name="alocFor" type="string">
+            <column name="ALOC_FOR" length="50" />
+        </property>
+        <property name="alocAmt" type="string">
+            <column name="ALOC_AMT" length="15" />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="26" not-null="true" />
+        </property>
+        <property name="updatedBy" type="long">
+            <column name="UPDATED_BY" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="26" />
+        </property>
+    </class>
+</hibernate-mapping>

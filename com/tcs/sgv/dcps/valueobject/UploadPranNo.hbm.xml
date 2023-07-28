@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="UploadPranNo" table="TRN_PRAN_UPLOAD_DTLS" >
+  
+  	<id name="uploadPranId" type="long">
+            <column name="PRAN_UPLOAD_ID"  />
+            <generator class="assigned" />
+    </id>
+    
+    <property name="fileName" type="string">
+            <column name="FILE_NAME"  />
+  	</property>
+  	
+  	 <property name="fileId" type="long">
+            <column name="FILE_ID"  />
+  	</property>
+  
+    	<property name="ppan" type="string">
+	            <column name="PPAN" />
+	</property>
+		<property name="pranNo" type="string">
+	            <column name="PRAN_NO" />
+	</property>
+		<property name="empName" type="string">
+	            <column name="emp_name" />
+	</property>
+	
+		<property name="pranGenDate" type="timestamp">
+	            <column name="pran_gen_date"/>
+	</property>
+	
+		<property name="doj" type="timestamp">
+	            <column name="doj"/>
+	</property>
+	
+	
+		<property name="dtoCode" type="long">
+            <column name=" DTO_REG_NO"/>
+    </property>
+   
+    <property name="ddoRegNo" type="string">
+            <column name="DDO_REG_NO" />
+  	</property>
+  	
+  	  <property name="status" type="int">
+            <column name="STATUS" />
+  	</property>
+  	  
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	</property>
+	
+	<property name="createdPostId" type="long">
+	            <column name="CREATED_BY_POST"  />
+	</property>
+	<property name="updatedDate" type="timestamp">
+	            <column name="UPDATED_DATE"/>
+	</property>
+	
+	<property name="updatedPostId" type="long">
+	            <column name="UPDATED_BY_POST" />
+	</property>
+	
+		<property name="isPranUpdated" type="int">
+	            <column name="IS_PRAN_UPDATED" />
+	</property>
+	
+		<property name="attachId" type="long">
+	            <column name="ATTACH_ID" />
+	</property>
+	
+	  <property name="attachDesc" type="string">
+            <column name="ATTACH_DESC" />
+  	</property>
+	
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 2, 2009 5:54:26 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnPensionSupplyBillDtls" table="TRN_PENSION_SUPPLY_BILL_DTLS" dynamic-update="true">
+        <id name="pensionSupplyBillId" type="long">
+            <column name="PENSION_SUPPLY_BILL_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="billType" type="string">
+            <column name="BILL_TYPE" length="30" />
+        </property>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" />
+        </property>
+        <property name="billNo" type="long">
+            <column name="BILL_NO" length="20" />
+        </property>
+        <property name="partyName" type="string">
+            <column name="PARTY_NAME" />
+        </property>
+        <property name="differenceAmount" type="big_decimal">
+            <column name="DIFFERENCE_AMOUNT" precision="20" default="0" not-null="true" />
+        </property>
+        <property name="percentage" type="big_decimal">
+            <column name="PERCENTAGE" precision="5" />
+        </property>
+        <property name="grossAmount" type="big_decimal">
+            <column name="GROSS_AMOUNT" precision="20" default="0" not-null="true" />
+        </property>
+        <property name="deductionA" type="big_decimal">
+            <column name="DEDUCTION_A" precision="20"  not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="deductionB" type="big_decimal">
+            <column name="DEDUCTION_B" precision="20"  not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="netAmount" type="big_decimal">
+            <column name="NET_AMOUNT" precision="20" default="0" not-null="true" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" not-null="false" />
+        </property>
+        <property name="headCode" type="big_decimal">
+            <column name="HEAD_CODE" precision="20" scale="0" />
+        </property>
+        <property name="paidAmount" type="big_decimal">
+            <column name="PAID_AMOUNT" precision="20" scale="0" />
+        </property>
+        <property name="status" type="java.lang.Short">
+            <column name="STATUS" length="3" />
+        </property>
+        <property name="groupId" type="java.lang.Long">
+            <column name="GROUP_ID" precision="20" scale="0" />
+        </property>
+        <property name="branchCode" type="string">
+            <column name="BRANCH_CODE" length="20" />
+        </property>
+        <property name="accountNo" type="string">
+            <column name="ACCOUNT_NO" length="20" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" />
+        </property>
+        <property name="cvpOrderNo" type="string">
+            <column name="CVP_ORDER_NO" length="35" />
+        </property>
+        <property name="cvpOrderDate" type="timestamp">
+            <column name="CVP_ORDER_DATE" length="7" />
+        </property>
+        <property name="gpoNo" type="string">
+            <column name="GPO_NO" length="35" />
+        </property>
+         <property name="gpoDate" type="timestamp">
+            <column name="GPO_DATE" length="7" />
+        </property>
+        <property name="totalCvpAmount" type="big_decimal">
+            <column name="TOTAL_CVP_AMOUNT" precision="20" scale="0" />
+        </property>
+        <property name="pensionAmount" type="big_decimal">
+            <column name="PENSION_AMOUNT" precision="20" scale="0" />
+        </property>
+        <property name="adpAmount" type="big_decimal">
+            <column name="ADP_AMOUNT" precision="20" scale="0" />
+        </property>
+        <property name="dpAmount" type="big_decimal">
+            <column name="DP_AMOUNT" precision="20" scale="0" />
+        </property>
+        <property name="ir1Amount" type="big_decimal">
+            <column name="IR1_AMOUNT" precision="20" scale="0" />
+        </property>
+        <property name="ir2Amount" type="big_decimal">
+            <column name="IR2_AMOUNT" precision="20" scale="0" />
+        </property>
+        <property name="ir3Amount" type="big_decimal">
+            <column name="IR3_AMOUNT" precision="20" scale="0" />
+        </property>
+        <property name="daAmount" type="big_decimal">
+            <column name="DA_AMOUNT" precision="20" scale="0" />
+        </property>
+        <property name="peonAllowance" type="big_decimal">
+            <column name="PEON_ALLOWANCE" precision="20" scale="0" />
+        </property>
+        <property name="medicalAllowance" type="big_decimal">
+            <column name="MEDICAL_ALLOWANCE" precision="20" scale="0" />
+        </property>
+        <property name="gallantryAmount" type="big_decimal">
+            <column name="GALLANTRY_AMOUNT" precision="20" scale="0" />
+        </property>
+        <property name="otherBenefit" type="big_decimal">
+            <column name="OTHER_BENEFIT" precision="20" scale="0" />
+        </property>
+        <property name="arrearPension" type="big_decimal">
+            <column name="ARREAR_PENSION" precision="20" scale="0" />
+        </property>
+        <property name="arrearDA" type="big_decimal">
+            <column name="ARREAR_DA" precision="20" scale="0" />
+        </property>
+        <property name="arrearDiffComtPnsn" type="big_decimal">
+            <column name="ARREAR_DIFF_COMT_PNSN" precision="20" scale="0" />
+        </property>
+        <property name="arrearAnyOtherDiff" type="big_decimal">
+            <column name="ARREAR_ANY_OTHER_DIFF" precision="20" scale="0" />
+        </property>
+        <property name="arrear6PC" type="big_decimal">
+            <column name="ARREAR_6PC" precision="20" scale="0" />
+        </property>
+        <property name="bankCode" type="string">
+            <column name="BANK_CODE" length="20" />
+        </property>
+        <property name="schemeCode" type="string">
+            <column name="SCHEME_CODE" length="20" />
+        </property>
+        <property name="pensionerName" type="string">
+            <column name="PENSIONER_NAME" length="100" />
+        </property>
+         <property name="requestNo" type="string">
+            <column name="REQUEST_NO"/>
+        </property>
+        <property name="micrCode" type="long">
+            <column name="MICR_CODE" length="20" />
+        </property>
+        <property name="payMode" type="string">
+            <column name="PAY_MODE"/>
+        </property>
+        <property name="arrearDtls" type="string">
+            <column name="ARREAR_DTLS"/>
+        </property>
+        <property name="calcArrearAmt" type="big_decimal">
+            <column name="CALC_ARREAR_AMT" precision="20" scale="0" />
+        </property>
+        <property name="purpose" type="string">
+            <column name="PURPOSE"/>
+        </property>
+         <property name="otherPurpose" type="string">
+            <column name="OTHER_PURPOSE"/>
+        </property>
+        <property name="ledgerNo" type="string">
+            <column name="LEDGER_NO"/>
+        </property>
+        <property name="pageNo" type="string">
+            <column name="PAGE_NO"/>
+        </property>
+    </class>
+</hibernate-mapping>

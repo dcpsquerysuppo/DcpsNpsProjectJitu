@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 10, 2007 2:52:28 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.RltBillParty" table="RLT_BILL_PARTY" dynamic-update="true">
+        <id name="billPartyId" type="long">
+            <column name="BILL_PARTY_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="billNo" type="long">
+            <column name="BILL_NO" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="partyCode" type="string">
+            <column name="PARTY_CODE" length="20" />
+        </property>
+        <property name="partyAmt" type="big_decimal">
+            <column name="PARTY_AMT" precision="20" not-null="true"/>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true"/>
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updtaedDate" type="timestamp">
+            <column name="UPDTAED_DATE" length="19" />
+        </property>
+        <property name="dbId" type="long">
+            <column name="DB_ID" precision="20" scale="0" />
+        </property>
+        <property name="partyName" type="string">
+            <column name="PARTY_NAME" />
+        </property>
+        <property name="partyAddr" type="string">
+            <column name="PARTY_ADDR" />
+        </property>
+        <property name="accntNo" type="string">
+            <column name="ACCNT_NO" length="15" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true" />
+        </property>
+        <property name="micrCode" type="long">
+            <column name="MICR_CODE" precision="20" scale="0" />
+        </property>
+        <property name="paymentMode" type="string">
+            <column name="PAYMENT_MODE" length="10"/>
+        </property>
+        <property name="bankCode" type="string">
+            <column name="BANK_CODE" length="10"/>
+        </property>
+        <property name="branchCode" type="string">
+            <column name="BRANCH_CODE" length="10"/>
+        </property>
+        <property name="chequeNo" type="java.lang.Long">
+            <column name="CHEQUE_NO"></column>
+        </property>
+        <property name="chequeDate" type="date">
+            <column name="CHEQUE_DATE" length="10" ></column>
+        </property>
+    </class>
+</hibernate-mapping>

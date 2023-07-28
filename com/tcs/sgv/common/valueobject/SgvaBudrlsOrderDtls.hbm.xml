@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 29, 2007 11:25:21 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaBudrlsOrderDtls" table="sgva_budrls_order_dtls" >
+        <comment></comment>
+        <id name="rlsOrderDtlsId" type="long">
+            <column name="RLS_ORDER_DTLS_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="fkMonthMpgId" type="long">
+            <column name="FK_MONTH_MPG_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="divisionId" type="string">
+            <column name="DIVISION_ID" length="15" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finalStateGovtAmt" type="big_decimal">
+            <column name="FINAL_STATE_GOVT_AMT" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finalCentralGovtAmt" type="big_decimal">
+            <column name="FINAL_CENTRAL_GOVT_AMT" precision="17">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="approvedRejected" type="string">
+            <column name="APPROVED_REJECTED" length="1" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="400">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="string">
+            <column name="LANG_ID" length="5" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="string">
+            <column name="LOC_ID" length="5" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="100" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdUsr" type="string">
+            <column name="LST_UPD_USR" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdDt" type="date">
+            <column name="LST_UPD_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="applicationId" type="string">
+            <column name="APPLICATION_ID" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- Generated Feb 6, 2008 7:51:25 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+	<class name="com.tcs.sgv.pensionpay.valueobject.TrnProvisionalPensionDtls"
+		table="TRN_PRVOSIONAL_PENSION_DTLS">
+		<id name="provisionalPensionDtlsId" type="long">
+			<column name="PRVOSIONAL_PENSION_DTLS_ID" precision="20"
+				scale="0" />
+			<generator class="assigned" />
+		</id>
+		<property name="pensionerCode" type="string">
+			<column name="PENSIONER_CODE" length="20" />
+		</property>
+		<property name="ppoNo" type="string">
+			<column name="PPO_NO" length="35" />
+		</property>
+		<property name="commensionDate" type="timestamp">
+			<column name="COMMENSION_DATE" length="7" />
+		</property>
+		<property name="dcrgAmount" type="big_decimal">
+			<column name="DCRG_AMOUNT" precision="12" />
+		</property>
+		<property name="dcrgDate" type="timestamp">
+			<column name="DCRG_DATE" length="7" />
+		</property>
+		<property name="basicPensionAmount" type="big_decimal">
+			<column name="BASIC_PENSION_AMOUNT" precision="10" />
+		</property>
+		<property name="paidDate" type="timestamp">
+			<column name="PAID_DATE" length="7" />
+		</property>
+		<property name="fp1Date" type="timestamp">
+			<column name="FP1_DATE" length="7" />
+		</property>
+		<property name="fp1Amount" type="big_decimal">
+			<column name="FP1_AMOUNT" precision="10" />
+		</property>
+		<property name="fp2Date" type="timestamp">
+			<column name="FP2_DATE" length="7" />
+		</property>
+		<property name="fp2Amount" type="big_decimal">
+			<column name="FP2_AMOUNT" precision="10" />
+		</property>
+		<property name="trnCounter" type="big_decimal">
+			<column name="TRN_COUNTER" precision="20" scale="0" />
+		</property>
+		<property name="dbId" type="big_decimal">
+			<column name="DB_ID" precision="20" scale="0" />
+		</property>
+		<property name="locationCode" type="string">
+			<column name="LOCATION_CODE" length="10" />
+		</property>
+		<property name="createdUserId" type="big_decimal">
+			<column name="CREATED_USER_ID" precision="20" scale="0" />
+		</property>
+		<property name="createdPostId" type="big_decimal">
+			<column name="CREATED_POST_ID" precision="20" scale="0" />
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" length="7" />
+		</property>
+		<property name="updatedUserId" type="big_decimal">
+			<column name="UPDATED_USER_ID" precision="20" scale="0" />
+		</property>
+		<property name="updatedPostId" type="big_decimal">
+			<column name="UPDATED_POST_ID" precision="20" scale="0" />
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE" length="7" />
+		</property>
+		<property name="pensionRequestId" type="big_decimal">
+			<column name="PENSION_REQUEST_ID" precision="20" scale="0"
+				not-null="true" />
+		</property>
+		<property name="cvpAmount" type="big_decimal">
+			<column name="CVP_AMOUNT" precision="12" />
+		</property>
+		<property name="cvpDate" type="timestamp">
+			<column name="CVP_DATE" length="7" />
+		</property>
+		<property name="cvpRestorationDate" type="timestamp">
+			<column name="CVP_RESTORATION_DATE" length="7" />
+		</property>
+		<property name="provisionalPensionFlag" type="string">
+			<column name="provisional_pension_flag" length="10" />
+		</property>
+		<property name="provPensionToDate" type="date">
+			<column name="prov_pension_to_date" length="7" />
+		</property>
+		<property name="provPensionTotalAmountPaid" type="big_decimal">
+			<column name="prov_pension_total_amount_paid" precision="20"
+				scale="0" />
+		</property>
+		<property name="provPensionSanctionAuthority" type="string">
+			<column name="prov_pension_sanction_authority" length="60" />
+		</property>
+		<property name="provPensionAuthorityNo" type="string">
+			<column name="prov_pension_authority_no" length="60" />
+		</property>
+		<property name="provPensionAuthorityDate" type="date">
+			<column name="prov_pension_authority_date" length="7" />
+		</property>
+		<property name="provGratuityFlag" type="string">
+			<column name="prov_gratuity_flag" length="10" />
+		</property>
+		<property name="gratuityAmount" type="big_decimal">
+			<column name="gratuity_amount" precision="20"
+				scale="0" />
+		</property>
+		<property name="gratuityActualAmountPaid" type="big_decimal">
+			<column name="gratuity_actual_amount_paid" precision="20"
+				scale="0" />
+		</property>
+		<property name="gratuityPaymentDate" type="date">
+			<column name="gratuity_payment_date" length="7" />
+		</property>
+		<property name="gratuitySanctionAuthority" type="string">
+			<column name="gratuity_sanction_authority" length="60" />
+		</property>
+		<property name="gratuityAuthorityNo" type="string">
+			<column name="gratuity_authority_no" length="60" />
+		</property>
+		<property name="gratuityAuthorityDate" type="date">
+			<column name="gratuity_authority_date" length="7" />
+		</property>
+		<property name="gratuityVoucherNo" type="string">
+			<column name="gratuity_voucher_no" length="60" />
+		</property>
+		<property name="gratuityVoucherDate" type="date">
+			<column name="gratuity_voucher_date" length="7" />
+		</property>
+		<property name="voucherChargedVotedFlag" type="string">
+			<column name="voucher_charged_voted_flag" length="10" />
+		</property>
+		<property name="billType" type="string">
+			<column name="bill_type" length="10" />
+		</property>
+	</class>
+</hibernate-mapping>

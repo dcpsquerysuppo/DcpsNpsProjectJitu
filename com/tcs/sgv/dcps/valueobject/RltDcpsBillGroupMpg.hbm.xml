@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 12, 2012 1:10:05 PM by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.dcps.valueobject.RltDcpsBillGroupMpg"  table="RLT_DCPS_BILL_GROUP_MPG">
+        <id name="rltDcpsBillGroupId" type="long">
+            <column name="RLT_DCPS_BILL_GROUP_ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="mstDcpsBillGroup" class="com.tcs.sgv.dcps.valueobject.MstDcpsBillGroup" fetch="select">
+            <column name="BILL_GROUP_ID" not-null="true" unique="true" />
+        </many-to-one>
+        <property name="fromDate" type="timestamp">
+            <column name="FROMDATE" length="26" />
+        </property>
+        <property name="toDate" type="timestamp">
+            <column name="TODATE" length="26" />
+        </property>
+        <property name="orderNo" type="string">
+            <column name="ORDERNO" length="100" />
+        </property>
+        <property name="orderDate" type="timestamp">
+            <column name="ORDERDATE" length="26" />
+        </property>
+    </class>
+</hibernate-mapping>

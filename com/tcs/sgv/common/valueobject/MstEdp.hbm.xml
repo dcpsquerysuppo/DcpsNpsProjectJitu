@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2007 6:26:09 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.MstEdp" table="mst_edp">
+        <comment></comment>
+        <id name="edpId" type="long">
+            <column name="edp_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="edpCode" type="string">
+            <column name="edp_code" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="edpDesc" type="string">
+            <column name="edp_desc" length="200" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="receiptEdp" type="string">
+            <column name="receipt_edp" length="1" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budmjrhdCode" type="string">
+            <column name="budmjrhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budsubmjrhdCode" type="string">
+            <column name="budsubmjrhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budminhdCode" type="string">
+            <column name="budminhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budsubhdCode" type="string">
+            <column name="budsubhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="buddtlhdCode" type="string">
+            <column name="buddtlhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budobjhdCode" type="string">
+            <column name="budobjhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="long">
+            <column name="lang_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="activateFlag" type="string">
+            <column name="activate_flag" length="1" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finYearId" type="long">
+            <column name="fin_year_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="edpCategory" type="string">
+            <column name="edp_category" length="1">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="shortDesc" type="string">
+            <column name="short_desc" length="30" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

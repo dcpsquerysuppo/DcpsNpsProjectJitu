@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.gpf.valueobject">
+  <class name="com.tcs.sgv.gpf.valueobject.TrnEmpGpfAcc" table="TRN_EMP_GPF_ACC">
+  		<id name="trnEmpGpfAccId" type="long">
+            <column name="TRN_EMP_GPF_ACC_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>        
+        <property name="sevaarthId" type="string">
+            <column name="SEVAARTH_ID" />
+        </property>
+        <property name="gpfAccNo" type="string">
+            <column name="GPF_ACC_NO" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" />
+        </property>
+        <property name="statusFlag" type="string">
+            <column name="STATUS_FLAG" />
+        </property>
+        <property name="deoRemarks" type="string">
+        	<column name="DEO_REMARKS"/>
+        </property>
+        <property name="ddoRemarks" type="string">
+        	<column name="DDO_REMARKS"/>
+        </property>        
+  </class>
+</hibernate-mapping>

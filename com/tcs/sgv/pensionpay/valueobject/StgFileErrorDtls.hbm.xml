@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="com.tcs.sgv.pensionpay.valueobject.StgFileErrorDtls" table="STG_FILE_ERROR_DTLS" >
+ 		<id name="stgFileErrorDtlsId" type="long">
+            <column name="STG_FILE_ERROR_DTLS_ID" precision="20" scale="0"/>
+            <generator class="assigned" />
+        </id>
+        <property name="delvId" type="java.lang.Long">
+            <column name="DELV_ID" />
+        </property>
+        <property name="fileId" type="java.lang.Long">
+            <column name="FILE_ID"/>
+        </property>
+        <property name="transactionId" type="java.lang.Long">
+            <column name="TRNSACTION_ID"/>
+        </property>
+        <property name="errorCode" type="java.lang.Long">
+            <column name="ERROR_CODE"/>
+        </property>
+        <property name="applnNo" type="string">
+            <column name="APPLN_NO"/>
+        </property>	
+        <property name="uploadBy" type="java.lang.Long">
+			<column name="UPLOAD_BY"  ></column>
+		</property>
+		<property name="uploadDate" type="timestamp">
+			<column name="UPLOAD_DATE" ></column>
+		</property>
+		 <property name="errorFlag" type="string">
+            <column name="ERROR_FLAG" length="2" />
+        </property>
+  </class>
+
+</hibernate-mapping>

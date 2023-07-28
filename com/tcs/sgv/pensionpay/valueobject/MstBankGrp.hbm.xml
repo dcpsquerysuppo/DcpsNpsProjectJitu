@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.MstBankGrp" table="mst_bank_grp" dynamic-update="true" >
+        <id name="bankGrpId" type="long">
+            <column name="BANK_GRP_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="groupName" type="string">
+            <column name="GROUP_NAME" length="20"  not-null="true">
+            </column>
+        </property>
+        <property name="auditorPostId" type="long">
+            <column name="AUDITOR_POST_ID"  not-null="true">
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE"  not-null="true">
+            </column>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" not-null="true">
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+            </column>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" >
+            </column>
+        </property>
+         <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" >
+            </column>
+        </property>
+         <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" >
+            </column>
+        </property>
+        <property name="dbId" type="long">
+            <column name="DB_ID" >
+            </column>
+        </property>
+      </class>
+</hibernate-mapping>

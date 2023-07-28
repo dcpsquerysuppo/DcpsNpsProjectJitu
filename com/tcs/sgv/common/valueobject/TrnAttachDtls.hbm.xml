@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 27, 2007 12:49:45 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.TrnAttachDtls" table="trn_attach_dtls">
+        <comment></comment>
+        <id name="attachDtlsId" type="long">
+            <column name="ATTACH_DTLS_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="attachId" type="long">
+            <column name="ATTACH_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="applicationId" type="string">
+            <column name="APPLICATION_ID" length="100" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="attachFile" type="binary">
+            <column name="ATTACH_FILE">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fileName" type="string">
+            <column name="FILE_NAME" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fileExt" type="string">
+            <column name="FILE_EXT" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="attachDesc" type="string">
+            <column name="ATTACH_DESC" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="big_decimal">
+            <column name="LOC_ID" precision="20" scale="0">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="DB_ID" precision="20" scale="0">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

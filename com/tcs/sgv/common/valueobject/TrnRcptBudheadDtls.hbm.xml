@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 1, 2007 2:07:03 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.TrnRcptBudheadDtls" table="trn_rcpt_budhead_dtls" dynamic-update="true">
+        <comment></comment>
+        <id name="rcptBudId" type="long">
+            <column name="rcpt_bud_id" />
+            <generator class="assigned" />
+        </id>        
+        <property name="budMajorHead" type="string">
+            <column name="bud_major_head" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budSubmjrHead" type="string">
+            <column name="bud_submjr_head" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budMinHead" type="string">
+            <column name="bud_min_head" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budSubHead" type="string">
+            <column name="bud_sub_head" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="amount" type="java.math.BigDecimal">
+            <column name="amount" precision="12" scale="0" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finYearId" type="java.lang.Long">
+            <column name="fin_year_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="created_user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="created_post_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="updated_user_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="updated_post_id">
+                <comment></comment>
+            </column>
+        </property>
+       
+        <property name="dbId" type="long">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="budObjectCode" type="string">
+            <column name="bud_object_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="budEdpCode" type="string">
+            <column name="bud_edp_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budDetailHead" type="string">
+            <column name="bud_detail_head" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10">
+            </column>
+        </property>
+        <property name="receiptDetailId" type="long">
+            <column name="receipt_detail_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

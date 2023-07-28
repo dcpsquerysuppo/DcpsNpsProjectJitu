@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 11, 2008 12:03:11 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.RltPensionHeadcodeRate" table="RLT_PENSION_HEADCODE_RATE" dynamic-update="true">
+        <id name="pensionHeadcodeRateId" type="long">
+            <column name="PENSION_HEADCODE_RATE_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="headCode" type="big_decimal">
+            <column name="HEAD_CODE" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="fieldType" type="string">
+            <column name="FIELD_TYPE" length="20" not-null="true" />
+        </property>
+        <property name="effectiveFromDate" type="timestamp">
+            <column name="EFFECTIVE_FROM_DATE" length="7" />
+        </property>
+        <property name="effectiveToDate" type="timestamp">
+            <column name="EFFECTIVE_TO_DATE" length="7" />
+        </property>
+        <property name="rate" type="big_decimal">
+            <column name="RATE" precision="7" />
+        </property>
+        <property name="minAmount" type="big_decimal">
+            <column name="MIN_AMOUNT" precision="14" />
+        </property>
+        <property name="uptoBasic" type="big_decimal">
+            <column name="UPTO_BASIC" precision="10" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="grNo" type="string">
+            <column name="GR_NO" length="20" />
+        </property>
+        <property name="grDate" type="timestamp">
+            <column name="GR_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

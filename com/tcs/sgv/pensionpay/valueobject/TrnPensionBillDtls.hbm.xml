@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 5, 2008 12:02:32 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnPensionBillDtls" table="TRN_PENSION_BILL_DTLS">
+        <id name="trnPensionBillDtlsId" type="long">
+            <column name="TRN_PENSION_BILL_DTLS_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" not-null="true" />
+        </property>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" not-null="true" />
+        </property>
+        <property name="incomeTaxCutAmount" type="big_decimal">
+            <column name="INCOME_TAX_CUT_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="pensnCutAmount" type="big_decimal">
+            <column name="PENSN_CUT_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="specialCutAmount" type="big_decimal">
+            <column name="SPECIAL_CUT_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="cvpMonthAmount" type="big_decimal">
+            <column name="CVP_MONTH_AMOUNT" precision="8" default="0" not-null="true"/>
+        </property>
+        <property name="pensionAmount" type="big_decimal">
+            <column name="PENSION_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="dpAmount" type="big_decimal">
+            <column name="DP_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="tiAmount" type="big_decimal">
+            <column name="TI_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="medicalAllowenceAmount" type="big_decimal">
+            <column name="MEDICAL_ALLOWENCE_AMOUNT" precision="12" default="0" not-null="true"/>
+        </property>
+        <property name="arrearAmount" type="big_decimal">
+            <column name="ARREAR_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="recoveryAmount" type="big_decimal">
+            <column name="RECOVERY_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="reducedPension" type="big_decimal">
+            <column name="REDUCED_PENSION" precision="14" default="0" not-null="true"/>
+        </property>
+        <property name="accountNo" type="string">
+            <column name="ACCOUNT_NO" length="20" />
+        </property>
+        <property name="trnPensionBillHdrId" type="long">
+            <column name="TRN_PENSION_BILL_HDR_ID" precision="20" scale="0" />
+        </property>
+        <property name="pensionerName" type="string">
+            <column name="PENSIONER_NAME" />
+        </property>
+        <property name="allcationBf11156" type="big_decimal">
+            <column name="ALLCATION_BF_1_11_56" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="allcationAf11156" type="big_decimal">
+            <column name="ALLCATION_AF_1_11_56" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="allcationAf10560" type="big_decimal">
+            <column name="ALLCATION_AF_1_05_60" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="personalPensionAmount" type="big_decimal">
+            <column name="PERSONAL_PENSION_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="irAmount" type="big_decimal">
+            <column name="IR_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="moCommission" type="big_decimal">
+            <column name="MO_COMMISSION" precision="8" default="0" not-null="true"/>
+        </property>
+        <property name="tiArrearAmount" type="big_decimal">
+            <column name="TI_ARREAR_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="omr" type="big_decimal">
+            <column name="OMR" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="otherBenefits" type="big_decimal">
+            <column name="OTHER_BENEFITS" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="lta" type="big_decimal">
+            <column name="LTA" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="trnCounter" type="integer">
+            <column name="TRN_COUNTER" precision="11" scale="0" />
+        </property>
+        <property name="payForMonth" type="java.lang.Integer">
+            <column name="PAY_FOR_MONTH" precision="6" scale="0" />
+        </property>
+        <property name="adpAmount" type="big_decimal">
+            <column name="ADP_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="fromDate" type="timestamp">
+            <column name="FROM_DATE" length="7" />
+        </property>
+        <property name="toDate" type="timestamp">
+            <column name="TO_DATE" length="7" />
+        </property>
+         <property name="ir1Amount" type="big_decimal">
+            <column name="ir1_amount" precision="10" default="0" not-null="true" />
+        </property>
+         <property name="ir2Amount" type="big_decimal">
+            <column name="ir2_amount" precision="10" default="0" not-null="true" />
+        </property>
+         <property name="ir3Amount" type="big_decimal">
+            <column name="ir3_amount" precision="10" default="0" not-null="true" />
+        </property>
+        <property name="allcationBf1436" type="big_decimal">
+            <column name="allcation_bf_1_4_36" precision="10" default="0" not-null="true" />
+        </property>
+        <property name="allcationAfZp" type="big_decimal">
+            <column name="allcation_af_zp" precision="10" default="0" not-null="true" />
+        </property>
+         <property name="netAmount" type="big_decimal">
+            <column name="NET_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+         <property name="grossAmount" type="big_decimal">
+            <column name="GROSS_AMOUNT" precision="10" default="0" not-null="true"/>
+        </property>
+         <property name="headCode" type="big_decimal">
+            <column name="head_code" precision="10" default="0" />
+        </property>
+         <property name="daRate" type="big_decimal">
+            <column name="da_rate" precision="10" default="0" not-null="true"/>
+        </property>
+         <property name="ledgerNo" type="string">
+            <column name="ledger_no" length="10" />
+        </property>
+        <property name="pageNo" type="string">
+            <column name="page_no" length="10" />
+        </property>
+        <property name="arrearDtls" type="string">
+            <column name="arrear_dtls" length="1200">
+            </column>
+        </property>
+         <property name="other2" type="big_decimal">
+            <column name="OTHER_2" precision="10" default="0" not-null="true"/>
+        </property>
+         <property name="other3" type="big_decimal">
+            <column name="OTHER_3" precision="10" default="0" not-null="true"/>
+        </property>
+         <property name="ecsRejectedFlag" type="string">
+            <column name="ecs_Rejected_Flag" length="20" />
+        </property>
+         <property name="peonAllowance" type="big_decimal">
+            <column name="peon_allowance" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="other1" type="big_decimal">
+            <column name="OTHER_1" precision="10" default="0" not-null="true"/>
+        </property>
+        <property name="totalArrearAmt" type="big_decimal">
+            <column name="total_arrear_amt" precision="12" default="0" not-null="true"/>
+        </property>
+        <property name="withHeldAmnt" type="big_decimal">
+			<column name="WITHHELD_AMOUNT" precision="20" ></column>
+		</property>
+		 <property name="gallantryAmount" type="big_decimal">
+			<column name="GALLANTRY_AMOUNT" precision="20" default="0"></column>
+		</property>
+		<property name="ropType" type="string">
+            <column name="ROP_TYPE" precision="10"/>
+        </property>
+		 <property name="arrear6PC" type="big_decimal">
+			<column name="ARREAR_6PC" precision="20" default="0"></column>
+		</property>
+		 <property name="arrearCommutation" type="big_decimal">
+			<column name="ARREAR_COMMUTATION" precision="20" default="0"></column>
+		</property>
+		 <property name="arrearOthrDiff" type="big_decimal">
+			<column name="ARREAR_OTHR_DIFF" precision="20" default="0"></column>
+		</property>
+		 <property name="arrearLC" type="big_decimal">
+			<column name="ARREAR_LC" precision="20" default="0"></column>
+		</property>
+		 <property name="punishmentCutAmt" type="big_decimal">
+			<column name="PUNISHMENT_CUT_AMT" precision="20" default="0"></column>
+		</property>
+  </class>
+		<sql-query name="pension.billDtls.pnsnrDtlsFrmBill">
+		<![CDATA[
+			SELECT D.PENSIONER_CODE,D.FROM_DATE
+          	FROM TRN_PENSION_BILL_DTLS D, TRN_PENSION_BILL_HDR H
+         	WHERE D.TRN_PENSION_BILL_HDR_ID = H.TRN_PENSION_BILL_HDR_ID  
+         	AND H.BILL_TYPE IN ('PENSION','Monthly') 
+         	AND D.PAY_FOR_MONTH = H.FOR_MONTH AND H.BILL_NO IN (:BILL_LIST)
+		]]>
+	</sql-query>
+	<sql-query name="pension.billDtls.pnsnrRedPnsn">
+		<![CDATA[
+			SELECT D.PENSIONER_CODE,D.REDUCED_PENSION,D.PAY_FOR_MONTH,BR.BILL_NO,BR.SUBJECT_ID,BR.CURR_BILL_STATUS
+			FROM TRN_PENSION_BILL_DTLS D JOIN TRN_PENSION_BILL_HDR H ON D.TRN_PENSION_BILL_HDR_ID=H.TRN_PENSION_BILL_HDR_ID AND H.REJECTED != 1 AND H.FOR_MONTH = D.PAY_FOR_MONTH
+			JOIN TRN_BILL_REGISTER BR ON BR.BILL_NO = H.BILL_NO AND D.PENSIONER_CODE IN (:PENSIONER_CODE_LIST) AND ((BR.SUBJECT_ID = 9 AND BR.PPO_NO IS NOT NULL) OR BR.SUBJECT_ID = 44) AND ((BR.CURR_BILL_STATUS BETWEEN 90 AND 160) OR BR.CURR_BILL_STATUS = -1)
+			ORDER BY PENSIONER_CODE,PAY_FOR_MONTH DESC
+		]]>
+	</sql-query>
+</hibernate-mapping>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="com.tcs.sgv.pensionproc.valueobject.TrnPnsnprocAvgPayCalc" table="trn_pnsnproc_avg_pay_calc"  dynamic-update="true">
+	  <id name="avgPayCalcId" type="java.lang.Long">
+	       <column name="avg_pay_calc_id" precision="20" scale="0" />
+	       <generator class="assigned" />
+	  </id>
+	  <property name="dbId" type="java.lang.Long">
+            <column name="db_id" precision="20" scale="0"  />
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="location_code" precision="20" scale="0"  />
+        </property>
+       <property name="pensionerdtlId" type="java.lang.Long">
+            <column name="pensionerdtl_id" precision="20" scale="0" >
+            </column>
+        </property>
+        <property name="inwardPensionId" type="java.lang.Long">
+            <column name="inward_pension_id" precision="20" scale="0" >
+            </column>
+        </property>
+        <property name="fromDate" type="date">
+            <column name="from_date" length="7"  />
+        </property>
+     <!--    <property name="toDate" type="date">
+            <column name="to_date" length="7"  />
+        </property>  -->
+         <property name="basic" type="big_decimal">
+            <column name="basic" precision="20" scale="0"  />
+        </property>  
+        <property name="dp" type="big_decimal">
+            <column name="DP" precision="20" scale="0"  />
+        </property> 
+        <property name="npa" type="big_decimal">
+            <column name="NPA" precision="20" scale="0"  />
+        </property>  
+         <property name="total" type="big_decimal">
+            <column name="total" precision="20" scale="0"  />
+        </property> 
+        <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+		</property>
+  </class>
+</hibernate-mapping>

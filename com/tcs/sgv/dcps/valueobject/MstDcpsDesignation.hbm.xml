@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2011 5:49:34 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.dcps.valueobject.MstDcpsDesignation" table="MST_DCPS_DESIGNATION">
+        <id  name="desigId" type="java.lang.Long">
+             <column name="DESIG_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="orgDesignationId" type="java.lang.Long">
+           <column name="ORG_DESIGNATION_ID" />
+        </property>
+        
+        <property name="dbId" type="java.lang.Long">
+           <column name="DB_ID" />
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="LOCATION_CODE" />
+        </property>
+        <property name="langId" type="java.lang.Long">
+            <column name="LANG_ID" />
+        </property>
+        <property name="fieldDeptId" type="java.lang.Long">
+            <column name="FIELD_DEPT_ID" />
+        </property>
+        <property name="desigCode" type="java.lang.Long">
+            <column name="DESIG_CODE" />
+        </property>
+        <property name="desigDesc" type="java.lang.String">
+            <column name="DESIG_DESC" />
+        </property>
+        <property name="cadreTypeId" type="java.lang.Long">
+            <column name="CADRE_TYPE_ID" />
+        </property>
+        <property name="payComsnId" type="java.lang.Long">
+            <column name="PAY_COMSN_ID" />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" />
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" />
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" />
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="UPDATED_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

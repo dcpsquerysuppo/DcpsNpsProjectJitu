@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<class name="com.tcs.sgv.gpf.valueobject.MstGpfInterestRate" table="mst_gpf_interest_rate">
+  		<id name="gpfInterestRateId" type="long">
+            <column name="MST_GPF_INTEREST_RATE_ID" precision="30" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="empGroup" type="long">
+            <column name="EMP_GROUP"/>
+        </property>
+        <property name="interest" type="float">
+            <column name="INTEREST" />
+        </property>
+         <property name="effectiveFromDate" type="timestamp">
+            <column name="EFFECTIVE_FROM_DATE"/>
+        </property>
+        <property name="applicableToDate" type="timestamp">
+            <column name="APPLICABLE_TO_DATE"/>
+        </property>
+        <property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" />
+		</property>
+		<property name="createdUserId" type="long">
+			<column name="CREATED_USER_ID" />
+		</property>
+		<property name="createdPostId" type="long">
+			<column name="CREATED_POST_ID" />
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE" />
+		</property>
+		<property name="updatedUserId" type="long">
+			<column name="UPDATED_USER_ID" />
+		</property>
+		<property name="updatedPostId" type="long">
+			<column name="UPDATED_POST_ID" />
+		</property>
+</class>
+
+</hibernate-mapping>

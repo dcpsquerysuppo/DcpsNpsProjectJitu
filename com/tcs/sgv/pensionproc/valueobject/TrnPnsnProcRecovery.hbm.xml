@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionproc.valueobject.TrnPnsnProcRecovery" table="TRN_PNSNPROC_RECOVERY">
+        <id name="pnsnrRecoveryId" type="java.lang.Long" >
+        <column name="PNSNR_RECOVERY_ID" />
+          <generator class="assigned" />
+        </id>
+        <property name="dbId" type="java.lang.Long">
+             <column name="DB_ID" />
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="LOCATION_CODE" />
+        </property>
+       <property name="inwardPensionId" type="java.lang.Long">
+            <column name="INWARD_PENSION_ID" />
+        </property>
+        <property name="pensionerdtlId" type="java.lang.Long">
+            <column name="PENSIONERDTL_ID" />
+        </property>
+        <property name="advanceFlag" type="java.lang.String">
+            <column name="ADVNCEBAL_FLAG " />
+        </property>
+        <property name="totalAdvanceAmount" type="big_decimal">
+            <column name="TOTAL_ADVANCE_AMOUNT " precision="20" scale="0"  />
+        </property>
+        <property name="overPaymentAmnt" type="big_decimal">
+            <column name="OVER_PAYMENT_AMNT" />
+        </property>
+        <property name="arrearsAmnt" type="big_decimal">
+            <column name="ARREARS_AMNT" />
+        </property>
+        <property name="govtAcmdtnRetAmnt" type="big_decimal">
+            <column name="GOVT_ACMDTN_RET_AMNT" />
+        </property>
+        <property name="assessedDuesdtlFlag" type="java.lang.String">
+            <column name="ASSESD_DUESDTL_FLAG" />
+        </property>
+         <property name="totalAssessedDues" type="big_decimal">
+            <column name="TOTAL_ASSESSED_DUES" precision="20" scale="0"  />
+        </property>
+        <property name="gratuityAmnt" type="big_decimal">
+            <column name="GRATUITY_AMNT" />
+        </property>
+        <property name="enquiryProposedFlag" type="java.lang.String">
+            <column name="ENQUIRY_PROPOSED_FLAG " />
+        </property>
+         <property name="enquiryPendingFlag" type="java.lang.String">
+            <column name="ENQUIRY_PENDING_FLAG " />
+        </property>
+        <!--<property name="invalidatingDate" type="java.util.Date">
+            <column name="INVALIDATING_DATE" />
+        </property>
+        <property name="lodgingDate" type="java.util.Date">
+            <column name="LODGING_DATE" />
+        </property>
+        <property name="policeCertificateNo" type="int">
+            <column name="POLICE_CERTIFICATE_NO" />
+        </property>
+        <property name="policeStationName" type="java.lang.String">
+            <column name="POLICE_STATION_NAME" />
+        </property>
+        <property name="policeCertificateDate" type="java.util.Date">
+            <column name="POLICE_CERTIFICATE_DATE" />
+        </property>
+        --><property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" />
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" />
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" />
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="UPDATED_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

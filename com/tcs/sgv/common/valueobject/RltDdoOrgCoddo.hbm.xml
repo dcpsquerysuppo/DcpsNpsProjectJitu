@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 14, 2009 5:50:14 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.RltDdoOrgCoddo" table="RLT_DDO_ORG_CODDO" dynamic-update="true">
+        
+        <id name="ddoOrgId" type="java.lang.Long">
+            <column name="ddo_org_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="activateFlag" type="java.lang.Byte">
+            <column name="activate_flag" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="start_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="end_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Integer">
+            <column name="created_user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Integer">
+            <column name="created_post_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Integer">
+            <column name="updated_user_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Integer">
+            <column name="updated_post_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Short">
+            <column name="db_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="ddoCode" type="string">
+            <column name="ddo_code" length="15" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="location_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="trn_counter">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

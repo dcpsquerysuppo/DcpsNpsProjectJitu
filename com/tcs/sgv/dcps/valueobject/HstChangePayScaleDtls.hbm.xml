@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.dcps.valueobject.HstChangePayScaleDtls" table="hst_change_payscale_dtls">
+  	
+  	<id name="changePayScaleDtlsId" type="long">
+            <column name="hst_change_payscale_dtls_id" precision="20" scale="0" />
+            <generator class="assigned" />
+    </id>
+    
+    <property name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID"  />
+  	</property>
+    <property name="oldPS" type="java.lang.String">
+            <column name="old_PS" />
+  	</property>
+    <property name="newPS" type="java.lang.String">
+            <column name="new_PS" />
+  	</property> 
+    <property name="oldPost" type="long">
+            <column name="old_Post" />
+  	</property>
+    <property name="newPost" type="long">
+            <column name="new_Post" />
+  	</property>
+ 	<property name="ddoCode" type="java.lang.String" >
+            <column name="ddo_code" />
+    </property>
+    <property name="reasonForPSChange" type="long">
+            <column name="reason_for_PS_change"  />
+  	</property>
+  	<property name="otherReasonForPSChange" type="java.lang.String">
+            <column name="other_reason_for_PS_Change"  />
+  	</property>
+  	<property name="withEffectFromDate" type="timestamp">
+            <column name="with_effect_from_date" />
+  	</property>
+    <property name="authorityLetterNo" type="java.lang.String" >
+            <column name="authority_Letter_No" />
+    </property>
+    <property name="authorityLetterDate" type="timestamp">
+            <column name="authority_Letter_Date"  />
+  	</property>
+  	<property name="langId" type="long">
+            <column name="LANG_ID" />
+  	</property>
+  	<property name="locId" type="long">
+            <column name="LOC_ID"   />
+  	</property>
+  	<property name="dbId" type="long">
+            <column name="DB_ID"/>
+  	</property>
+  	<property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  	</property>
+  	<property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID"  />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  	</property>
+  	<property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID"  />
+  	</property>
+  	<property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID"  />
+  	</property>
+  	<property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE"  />
+  	</property>
+  	
+  	<property name="oldBasic" type="double">
+            <column name="OLD_BASIC"  />
+    </property>
+    <property name="newBasic" type="double">
+            <column name="NEW_BASIC"  />
+    </property>
+  	
+  </class>
+</hibernate-mapping>

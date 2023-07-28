@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 9, 2007 10:17:29 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaBudcssMst" table="sgva_budcss_mst">
+        <comment></comment>
+        <composite-id name="id" class="com.tcs.sgv.common.valueobject.SgvaBudcssMstId">
+            <key-property name="budbpnCode" type="string">
+                <column name="budbpn_code" length="15" />
+            </key-property>
+            <key-property name="buddemandCode" type="string">
+                <column name="buddemand_code" length="15" />
+            </key-property>
+            <key-property name="budmjrhdCode" type="string">
+                <column name="budmjrhd_code" length="15" />
+            </key-property>
+            <key-property name="budsubmjrhdCode" type="string">
+                <column name="budsubmjrhd_code" length="15" />
+            </key-property>
+            <key-property name="budminhdCode" type="string">
+                <column name="budminhd_code" length="15" />
+            </key-property>
+            <key-property name="budsubhdCode" type="string">
+                <column name="budsubhd_code" length="15" />
+            </key-property>
+            <key-property name="planNonplan" type="string">
+                <column name="plan_nonplan" length="15" />
+            </key-property>
+            <key-property name="cssAmount" type="big_decimal">
+                <column name="css_amount" precision="17" />
+            </key-property>
+            <key-property name="finYrId" type="java.lang.Long">
+                <column name="fin_yr_id" />
+            </key-property>
+            <key-property name="langId" type="string">
+                <column name="lang_id" length="5" />
+            </key-property>
+            <key-property name="locId" type="string">
+                <column name="loc_id" length="5" />
+            </key-property>
+            <key-property name="crtDt" type="timestamp">
+                <column name="crt_dt" length="19" />
+            </key-property>
+            <key-property name="crtUsr" type="string">
+                <column name="crt_usr" length="12" />
+            </key-property>
+            <key-property name="lstUpdDt" type="timestamp">
+                <column name="lst_upd_dt" length="19" />
+            </key-property>
+            <key-property name="lstUpdUsr" type="string">
+                <column name="lst_upd_usr" length="12" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 28, 2007 3:09:55 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.MstAttachment" table="mst_attachment" >
+        <comment></comment>
+        <id name="attachId" type="long">
+            <column name="ATTACH_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="attachDesc" type="string">
+            <column name="ATTACH_DESC" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="attachType" type="long">
+            <column name="ATTACH_TYPE" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="java.lang.Long">
+            <column name="LANG_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="activateFlag" type="long">
+            <column name="ACTIVATE_FLAG" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="startDate" type="date">
+            <column name="START_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="java.lang.Long">
+            <column name="LOC_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 6, 2007 5:51:40 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnPensionItCutDtls" table="TRN_PENSION_IT_CUT_DTLS" dynamic-update="true">
+        <id name="pensionItCutDtlsId" type="long">
+            <column name="PENSION_IT_CUT_DTLS_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="pensionRequestId" type="long">
+            <column name="PENSION_REQUEST_ID" precision="20" scale="0" />
+        </property>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" />
+        </property>
+        <property name="typeFlag" type="string">
+            <column name="TYPE_FLAG" length="30" />
+        </property>
+        <property name="fromMonth" type="java.lang.Integer">
+            <column name="FROM_MONTH" precision="6" scale="0" />
+        </property>
+        <property name="toMonth" type="java.lang.Integer">
+            <column name="TO_MONTH" precision="6" scale="0" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="10" default="0" not-null="true" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" />
+        </property>
+        <property name="trnCounter" type="integer">
+            <column name="TRN_COUNTER" precision="11" scale="0" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="otherPartyId" type="long">
+            <column name="OTHER_PARTY_ID" precision="20" />
+        </property>
+    </class>
+</hibernate-mapping>

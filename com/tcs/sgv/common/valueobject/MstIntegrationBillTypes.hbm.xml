@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 22, 2007 11:50:43 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.MstIntegrationBillTypes" table="mst_integration_bill_types" dynamic-update="true" >
+        <comment></comment>
+        <id name="integBillTypeId" type="long">
+            <column name="INTEG_BILL_TYPE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="detailHead" type="string">
+            <column name="DETAIL_HEAD" length="2" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billType" type="string">
+            <column name="BILL_TYPE" length="2" >
+                <comment></comment>
+            </column>
+        </property>
+         <property name="billDesc" type="string">
+            <column name="BILL_DESC" length="300" >
+                <comment></comment>
+            </column>
+        </property>
+         <property name="formId" type="string">
+            <column name="FORM_ID" length="20" >
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.tcs.sgv.dcps.valueobject.RltDcpsPayrollEmpDetails" table="RLT_DCPS_PAYROLL_EMP_DETAILS">
+
+	<id name="dcpsPayrollEmpId" type="java.lang.Long">
+            <column name="DCPS_PAYROLL_EMP_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+    </id>
+    
+    <property name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID"  />
+  	</property>
+	
+	<property name="currPostJoiningDate" type="timestamp">
+            <column name="CURR_POST_JOINING_DATE" length="19"/>
+  	</property>
+  	
+  	<property name="currCadreJoiningDate" type="timestamp">
+            <column name="CURR_CADRE_JOINING_DATE" length="19"/>
+  	</property>
+  	
+  	<property name="acMaintainedBy" type="string">
+            <column name="AC_MAINTAINED_BY"  />
+  	</property>
+  	
+  	<property name="pfSeries" type="string">
+            <column name="PF_SERIES"  />
+  	</property>
+  	
+  	<property name="pfSeriesDesc" type="string">
+            <column name="PF_SERIES_DESC"  />
+  	</property>
+  	
+  	<property name="pfAcNo" type="string">
+            <column name="PF_ACNO"  />
+  	</property>
+  	
+  	<property name="phychallanged" type="string">
+            <column name="phy_challanged"  />
+  	</property>
+  	
+  	<property name="postId" type="java.lang.Long">
+            <column name="post_id" />
+    </property>    
+  	
+  	<property name="langId" type="java.lang.Long">
+            <column name="LANG_ID" length="10" />
+    </property>       
+    
+    <property name="dbId" type="java.lang.Long">
+            <column name="db_id" precision="20" scale="0"  />
+    </property>
+    
+    <property name="locId" type="java.lang.Long">
+            <column name="loc_id" precision="20" scale="0"  />
+    </property>
+        
+    <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+	</property>
+	
+	<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+	</property>
+	
+	<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+	</property>
+	
+	<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+	</property>
+	
+	<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+	</property>
+	
+	<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+	</property>               
+
+
+</class>
+</hibernate-mapping>

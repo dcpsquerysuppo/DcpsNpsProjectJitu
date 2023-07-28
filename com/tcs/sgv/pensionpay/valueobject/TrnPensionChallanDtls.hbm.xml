@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 28, 2008 10:30:23 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnPensionChallanDtls" table="TRN_PENSION_CHALLAN_DTLS">
+        <id name="trnPensionChallanId" type="long">
+            <column name="TRN_PENSION_CHALLAN_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="challanNo" type="string">
+            <column name="CHALLAN_NO" length="20" />
+        </property>
+        <property name="inwardDate" type="timestamp">
+            <column name="INWARD_DATE" length="7" />
+        </property>
+        <property name="trnCounter" type="integer">
+            <column name="TRN_COUNTER" precision="20" scale="0" />
+        </property>
+         <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+         <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true"/>
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID"/>
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID"/>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19"/>
+        </property>        
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID"/>
+        </property>
+		 <property name="status" type="string">
+            <column name="STATUS" length="20" />
+        </property>
+		<property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10"  />
+        </property>
+         <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="50"/>
+        </property>
+        <property name="bank" type="string">
+            <column name="BANK" length="50"/>
+        </property>
+        <property name="branch" type="string">
+            <column name="BRANCH" length="100"/>
+        </property>
+        <property name="accountNumber" type="string">
+            <column name="ACCOUNT_NUMBER" length="20" />
+        </property>
+         <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" />
+        </property>
+         <property name="totalAmountTorecover" type="big_decimal">
+            <column name="TOTAL_AMOUNT_TORECOVER" precision="15" />
+        </property>
+          <property name="amountRecovered" type="big_decimal">
+            <column name="AMOUNT_RECOVERED" precision="15" />
+        </property>
+         <property name="deathDate" type="timestamp">
+            <column name="death_date" length="7" />
+        </property>
+         <property name="recoveryFromDate" type="timestamp">
+            <column name="recovery_from_date" length="7" />
+        </property>
+         <property name="recoveryToDate" type="timestamp">
+            <column name="recovery_to_date" length="7" />
+        </property>
+         <property name="schemeCode" type="string">
+            <column name="scheme_code" length="20" />
+        </property>
+         <property name="payOrderNo" type="string">
+            <column name="payorder_no" length="20" />
+        </property>
+         <property name="payOrderDate" type="timestamp">
+            <column name="payorder_date" length="7" />
+        </property>
+         <property name="challanDate" type="timestamp">
+            <column name="challan_date" length="7" />
+        </property>
+          <property name="requestId" type="string">
+            <column name="request_id" length="20" />
+        </property>
+        <property name="payOrderAmnt" type="big_decimal">
+            <column name="PAYORDER_AMNT" precision="15" />
+        </property>
+        
+   
+    </class>
+</hibernate-mapping>

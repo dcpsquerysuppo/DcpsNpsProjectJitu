@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+   <class name="com.tcs.sgv.pensionproc.valueobject.TrnPnsnProcInwardPension" table="trn_pnsnproc_inwardpension"  dynamic-update="true" >
+  		 <id name="inwardPensionId" type="java.lang.Long">
+            <column name="inward_pension_id" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="dbId" type="java.lang.Long">
+            <column name="db_id" precision="20" scale="0"  />
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="location_code" precision="20" scale="0"  />
+        </property>
+        <property name="inwardNo" type="string">
+            <column name="inward_no" precision="20" scale="0"  />
+        </property>
+        <property name="inwardDate" type="date">
+            <column name="inward_date" length="7"/>
+        </property>
+        <property name="caseType" type="string">
+            <column name="CASE_TYPE" precision="20" scale="0"  />
+        </property>
+        <property name="sevaarthId" type="string">
+            <column name="sevaarth_id" precision="20" scale="0"  />
+        </property>
+         <property name="comments" type="string">
+            <column name="comments" precision="20" scale="0"  />
+        </property>
+        <property name="ddoCode" type="java.lang.Long">
+            <column name="ddo_code" precision="20" scale="0"  />
+        </property>
+         <property name="ppoNo" type="string">
+            <column name="ppo_no" precision="20" scale="0"  />
+        </property>
+        <property name="ppoDate" type="date">
+            <column name="ppo_date" length="7"/>
+        </property>
+        <property name="documentCount" type="java.lang.Long">
+			<column name="document_count" length="20" ></column>
+		</property>
+		<property name="revisionNo" type="java.lang.Long">
+			<column name="revision_no" length="20" ></column>
+		</property>
+		<property name="payCommission" type="string">
+            <column name="PAY_COMMISSION" precision="20" scale="0"  />
+        </property>
+        <property name="commuateFlag" type="java.lang.Character">
+            <column name="commute_flag"  />
+        </property>
+        <property name="commuteVal" type="double">
+            <column name="commute_val" precision="20" scale="0"  />
+        </property>
+        <property name="pensionType" type="string">
+            <column name="pension_type" precision="20" scale="0"  />
+        </property>
+        <property name="pensionerType" type="string">
+            <column name="PENSIONER_TYPE" precision="20" scale="0"  />
+        </property>
+        <property name="manualComputationFlag" type="java.lang.Character">
+            <column name="manual_computation_flag"  />
+        </property>
+        <property name="caseStatus" type="string">
+            <column name="CASE_STATUS" precision="20" scale="0"  />
+        </property>
+        <property name="draftFlag" type="java.lang.Character">
+            <column name="draft_flag"  />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+		</property>
+		<property name="commensionDate" type="timestamp">
+            <column name="commencement_date" length="7" />
+        </property>
+        <property name="agOfficePension" type="string">
+            <column name="AG_OFFICE_PENSION" precision="20" scale="0"  />
+        </property>        
+         <property name="trsryIdPension" type="java.lang.Long">
+            <column name="TRSRY_ID_PENSION" precision="20" scale="0"  />
+        </property>        
+         <property name="trsryIdAftrFirstPay" type="java.lang.Long">
+            <column name="TRSRY_ID_AFTR_FIRST_PAY" precision="20" scale="0"  />
+        </property>        
+         <property name="agOfficeAftrFirstPay" type="string">
+            <column name="AG_OFFICE_AFTR_FIRST_PAY" precision="20" scale="0"  />
+        </property>
+         <property name="otherPnsnrType" type="string">
+            <column name="OTHER_PNSNR_TYPE" precision="20" scale="0"  />
+        </property>
+        <property name="outwardNo" type="string">
+            <column name="OUTWARD_NO"  scale="0"  />
+        </property>
+        <property name="outwardDate" type="timestamp">
+            <column name="OUTWARD_DATE" />
+        </property>
+     
+  </class>
+</hibernate-mapping>

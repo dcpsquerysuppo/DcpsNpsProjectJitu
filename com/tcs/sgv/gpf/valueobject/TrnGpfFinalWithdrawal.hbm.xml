@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<class name="com.tcs.sgv.gpf.valueobject.TrnGpfFinalWithdrawal" table="trn_gpf_final_withdrawal">
+  		<id name="trnGpfFinalWithdrawalId" type="long">
+			<column name="TRN_GPF_FINAL_WITHDRAWAL_ID" precision="30" scale="0" />
+			<generator class="assigned" />
+		</id>
+		<property name="transactionId" type="string">
+			<column name="TRANSACTION_ID" length="30" />
+		</property>
+		<property name="gpfAccNo" type="string">
+			<column name="GPF_ACC_NO" length="30" />
+		</property>
+		<property name="applicationDate" type="timestamp">
+			<column name="APPLICATION_DATE" length="30" />
+		</property>
+		<property name="finalAmount" type="long">
+			<column name="FINAL_AMOUNT" length="30" />
+		</property>
+		<property name="amountSanctioned" type="double">
+			<column name="AMOUNT_SANCTIONED" length="30" />
+		</property>
+		<property name="balanceOutstanding" type="double">
+			<column name="BALANCE_OUTSTANDING" length="30" />
+		</property>
+		<property name="attachmentId" type="long">
+			<column name="ATTACHMENT_ID" length="30" />
+		</property>
+		<property name="userRemarks" type="string">
+			<column name="USER_REMARKS" length="200" />
+		</property>
+		<property name="approverRemarks" type="string">
+			<column name="APPROVER_REMARKS" length="200" />
+		</property>
+		<property name="hoRemarks" type="string">
+			<column name="HO_REMARKS" length="200" />
+		</property>
+		<property name="orderNo" type="long">
+			<column name="ORDER_NO" length="30" />
+		</property>
+		<property name="orderDate" type="timestamp">
+			<column name="ORDER_DATE" length="30" />
+		</property>
+		<property name="reqStatus" type="string">
+			<column name="REQ_STATUS" length="30" />
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" />
+		</property>
+		<property name="createdUserId" type="long">
+			<column name="CREATED_USER_ID" />
+		</property>
+		<property name="createdPostId" type="long">
+			<column name="CREATED_POST_ID" />
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE" not-null="false" />
+		</property>
+		<property name="updatedUserId" type="long">
+			<column name="UPDATED_USER_ID" not-null="false" />
+		</property>
+		<property name="updatedPostId" type="long">
+			<column name="UPDATED_POST_ID" not-null="false" />
+		</property>
+		<property name="deoActionDate" type="timestamp">
+            <column name="DEO_ACTION_DATE" not-null="false" />
+		</property>
+		<property name="verifierActionDate" type="timestamp">
+		    <column name="VERIFIER_ACTION_DATE" not-null="false" />
+		</property>
+		<property name="hoActionDate" type="timestamp">
+		    <column name="HO_ACTION_DATE" not-null="false" />
+		</property>
+		<property name="hoReceiveDate" type="timestamp">
+            <column name="HO_RECEIVE_DATE" not-null="false" />
+  		</property>
+  		<property name="reason" type="long">
+			<column name="REASON" length="30" />
+		</property>
+	</class>
+
+</hibernate-mapping>

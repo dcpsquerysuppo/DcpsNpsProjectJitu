@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.pensionpay.valueobject">
+  <class name="MstPensionChecklist" table="Mst_Pension_Checklist" dynamic-update="true">
+  		<id name="docId" type="long">
+            <column name="doc_id" precision="20" scale="0" />
+            <generator class="assigned" />
+       </id>
+       <property name="docDesc" type="string">
+            <column name="doc_desc" length="900" />
+        </property>
+         <property name="activeFlag" type="string">
+            <column name="active_flag" length="10" />
+        </property> 
+         <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="dbId" type="java.lang.Integer">
+            <column name="db_id" precision="6" scale="0" />
+        </property>
+        <property name="langId" type="java.lang.Integer">
+            <column name="LANG_ID" precision="10" scale="0" />
+        </property>
+  </class>
+</hibernate-mapping>

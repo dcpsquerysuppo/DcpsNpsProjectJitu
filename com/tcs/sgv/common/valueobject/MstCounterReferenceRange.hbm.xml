@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 11, 2008 10:07:43 AM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.MstCounterReferenceRange" table="MST_COUNTER_REFERENCE_RANGE" dynamic-update="true">
+        <id name="counterId" type="java.lang.Long">
+            <column name="COUNTER_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="startCounterNo" type="java.lang.Long">
+            <column name="START_COUNTER_NO" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="endCounterNo" type="java.lang.Long">
+            <column name="END_COUNTER_NO" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="postId" type="java.lang.Long">
+            <column name="POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="cretedDate" type="timestamp">
+            <column name="CRETED_DATE" length="19" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19" />
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID" precision="20" scale="0" />
+        </property>
+        <property name="counter" type="string">
+            <column name="COUNTER" length="10" />
+        </property>
+        <property name="userType" type="short">
+            <column name="USER_TYPE" length="2">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="currCounterNo" type="java.lang.Long">
+            <column name="CURR_COUNTER_NO" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

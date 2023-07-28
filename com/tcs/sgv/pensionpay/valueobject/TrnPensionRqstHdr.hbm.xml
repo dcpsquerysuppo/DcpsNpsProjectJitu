@@ -1,0 +1,498 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 1, 2008 10:35:40 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnPensionRqstHdr" table="TRN_PENSION_RQST_HDR" dynamic-update="true">
+        <id name="pensionRequestId" type="long">
+            <column name="PENSION_REQUEST_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" />
+        </property>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" not-null="true" />
+        </property>
+        <property name="ppoDate" type="timestamp">
+            <column name="PPO_DATE" length="7" />
+        </property>
+        <property name="ppoInwardDate" type="timestamp">
+            <column name="PPO_INWARD_DATE" length="7" />
+        </property>
+        <property name="inwardMode" type="string">
+            <column name="INWARD_MODE" length="30" />
+        </property>
+        <property name="pensionType" type="string">
+            <column name="PENSION_TYPE" length="75" />
+        </property>
+        <property name="schemeType" type="string">
+            <column name="SCHEME_TYPE" length="30" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="30" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="100" />
+        </property>
+        <property name="headCode" type="big_decimal">
+            <column name="HEAD_CODE" precision="20" scale="0" />
+        </property>
+        <property name="commensionDate" type="timestamp">
+            <column name="commencement_date" length="7" />
+        </property>
+        <property name="cvpOrderNo" type="string">
+            <column name="CVP_ORDER_NO" length="50" />
+        </property>
+        <property name="cvpAmount" type="big_decimal">
+            <column name="CVP_AMOUNT" precision="12" default="0" not-null="true" />
+        </property>
+        <property name="cvpDate" type="timestamp">
+            <column name="CVP_DATE" length="7" />
+        </property>
+        <property name="dcrgOrderNo" type="string">
+            <column name="DCRG_ORDER_NO" length="50" />
+        </property>
+        <property name="dcrgAmount" type="big_decimal">
+            <column name="DCRG_AMOUNT" precision="12" default="0" not-null="true" />
+        </property>
+        <property name="dcrgDate" type="timestamp">
+            <column name="DCRG_DATE" length="7" />
+        </property>
+        <property name="paidDate" type="timestamp">
+            <column name="PAID_DATE" length="7" />
+        </property>
+        <property name="pensionableAmount" type="big_decimal">
+            <column name="PENSIONABLE_AMOUNT" precision="12" default="0" not-null="true" />
+        </property>
+        <property name="dppfAmount" type="big_decimal">
+            <column name="DPPF_AMOUNT" precision="12" default="0" not-null="true" />
+        </property>
+        <property name="basicPensionAmount" type="big_decimal">
+            <column name="BASIC_PENSION_AMOUNT" precision="10" default="0" not-null="true" />
+        </property>
+        <property name="dpPercent" type="big_decimal">
+            <column name="DP_PERCENT" precision="5" />
+        </property>
+        <property name="tiPercent" type="big_decimal">
+            <column name="TI_PERCENT" precision="5" />
+        </property>
+        <property name="cvpMonthlyAmount" type="big_decimal">
+            <column name="CVP_MONTHLY_AMOUNT" precision="8" default="0" not-null="true" />
+        </property>
+        <property name="medicalAllowenceAmount" type="big_decimal">
+            <column name="MEDICAL_ALLOWENCE_AMOUNT" precision="6" default="0" not-null="true" />
+        </property>
+        <property name="fp1Date" type="timestamp">
+            <column name="FP1_DATE" length="7" />
+        </property>
+        <property name="fp1Amount" type="big_decimal">
+            <column name="FP1_AMOUNT" precision="10" default="0" not-null="true" />
+        </property>
+        <property name="fp2Date" type="timestamp">
+            <column name="FP2_DATE" length="7" />
+        </property>
+        <property name="fp2Amount" type="big_decimal">
+            <column name="FP2_AMOUNT" precision="10" default="0" not-null="true" />
+        </property>
+        <property name="typeFlag" type="string">
+            <column name="TYPE_FLAG" length="1" />
+        </property>
+        <property name="cvpRestorationDate" type="timestamp">
+            <column name="CVP_RESTORATION_DATE" length="7" />
+        </property>
+        <property name="approveStatus" type="string">
+            <column name="APPROVE_STATUS" length="10" />
+        </property>
+        <property name="caseStatus" type="string">
+            <column name="CASE_STATUS" length="10" />
+        </property>
+        <property name="totalRecovery" type="big_decimal">
+            <column name="TOTAL_RECOVERY" precision="12" default="0"  />
+        </property>
+        <property name="pendingRecovery" type="big_decimal">
+            <column name="PENDING_RECOVERY" precision="12" default="0"  />
+        </property>
+        <property name="trnCounter" type="integer">
+            <column name="TRN_COUNTER" precision="11" scale="0" />
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="DB_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="caseOwner" type="big_decimal">
+            <column name="CASE_OWNER" precision="20" scale="0" />
+        </property>
+        <property name="auditorFlag" type="string">
+            <column name="AUDITOR_FLAG" length="1" />
+        </property>
+        <property name="totalSrvc" type="string">
+            <column name="TOTAL_SRVC" length="10" />
+        </property>
+        <property name="dcrgPaidFlag" type="string">
+            <column name="DCRG_PAID_FLAG" length="2" />
+        </property>
+        <property name="cvpPaidFlag" type="string">
+            <column name="CVP_PAID_FLAG" length="2" />
+        </property>
+        <property name="deptOrdNo" type="string">
+            <column name="DEPT_ORD_NO" length="15" />
+        </property>
+        <property name="orgBf11156" type="big_decimal">
+            <column name="ORG_BF_1_11_56" precision="12" default="0" not-null="true" />
+        </property>
+        <property name="redBf11156" type="big_decimal">
+            <column name="RED_BF_1_11_56" precision="12" default="0"  />
+        </property>
+        <property name="orgAf11156" type="big_decimal">
+            <column name="ORG_AF_1_11_56" precision="12" default="0" not-null="true" />
+        </property>
+        <property name="redAf11156" type="big_decimal">
+            <column name="RED_AF_1_11_56" precision="12" default="0"  />
+        </property>
+        <property name="orgAf10560" type="big_decimal">
+            <column name="ORG_AF_1_05_60" precision="12" default="0" not-null="true" />
+        </property>
+        <property name="redAf10560" type="big_decimal">
+            <column name="RED_AF_1_05_60" precision="12" default="0"  />
+        </property>
+        <property name="authority" type="string">
+            <column name="AUTHORITY" length="50" />
+        </property>
+        <property name="sanctionLetterNo" type="string">
+            <column name="SANCTION_LETTER_NO" length="50" />
+        </property>
+        <property name="personalPension" type="big_decimal">
+            <column name="PERSONAL_PENSION" precision="10" default="0" not-null="true" />
+        </property>
+        <property name="ir" type="big_decimal">
+            <column name="IR" precision="10" default="0" not-null="true" />
+        </property>
+        <property name="closedDate" type="timestamp">
+            <column name="CLOSED_DATE" length="7" />
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="END_DATE" length="7" />
+        </property>
+        <property name="dpFlag" type="string">
+            <column name="dp_flag" length="1" />
+        </property>
+        <property name="secondPpoNo" type="string">
+            <column name="SECOND_PPO_NO" length="50" />
+        </property>
+        
+        <property name="form22Issued" type="string">
+            <column name="FORM22_ISSUED" length="1" />
+        </property>
+        <property name="form22IssuedAuth" type="string">
+            <column name="FORM22_ISSUED_AUTH" length="50" />
+        </property>
+        
+        <property name="lpcIssued" type="string">
+            <column name="LPC_ISSUED" length="1" />
+        </property>
+        <property name="lpcIssuedAuth" type="string">
+            <column name="LPC_ISSUED_AUTH" length="50" />
+        </property>
+        <property name="lpcIssuedDate" type="timestamp">
+			<column name="LPC_ISSUED_DATE" length="7" />
+        </property>
+     	<property name="form22IssuedDate" type="timestamp">
+			<column name="FORM22_ISSUED_DATE" length="7" />
+		</property>
+		<property name="daPercent" type="big_decimal">
+			<column name="DA_PERCENT" length="10" />
+		</property>
+		<property name="caseRegisterNo" type="string">
+			<column name="CASE_REGISTER_NO" length="20" />
+		</property>
+		<property name="currCaseStatus" type="integer">
+			<column name="CURR_CASE_STATUS" length="10" />
+		</property>
+		<property name="isRop" type="string">
+			<column name="IS_ROP" length="5" />
+		</property>
+		<property name="calcType" type="string">
+			<column name="CALC_TYPE" length="5" />
+		</property>
+		<property name="caseRegDate" type="timestamp">
+			<column name="CASE_REGDATE" length="7" />
+		</property>
+		<property name="newDaprcnt" type="big_decimal">
+            <column name="NEW_DAPRCNT" precision="5" />
+        </property>
+		<property name="seenFlag" type="string">
+            <column name="SEEN_FLAG" length="1" />
+        </property>
+		<property name="appliedDate" type="timestamp">
+            <column name="APPLIED_DATE" length="7" />
+        </property>
+		<property name="omrType" type="string">
+            <column name="OMR_TYPE" length="2" />
+        </property>
+		<property name="caseForMronly" type="string">
+            <column name="CASE_FOR_MRONLY" length="2" />
+        </property>
+		<property name="lastPayTransfer" type="big_decimal">
+            <column name="LAST_PAY_TRANSFER" precision="12" default="0" not-null="true" />
+        </property>
+		<property name="transferTreasury" type="string">
+            <column name="TRANSFER_TREASURY" length="10" />
+        </property>
+		<property name="remarried" type="string">
+            <column name="REMARRIED" length="2" />
+        </property>
+		<property name="remarriedDate" type="timestamp">
+			<column name="REMARRIED_DATE" length="7" />
+		</property>
+		<property name="cvpPayMode" type="string">
+			<column name="CVP_PAY_MODE" length="5" />
+		</property>
+		<property name="dcrgPayMode" type="string">
+			<column name="DCRG_PAY_MODE" length="5" />
+		</property>
+		 <property name="lastPaidDate" type="timestamp">
+			<column name="LAST_PAID_DATE" length="7" />
+        </property>
+          <property name="lastPaidAmount" type="big_decimal">
+            <column name="LAST_PAID_AMOUNT" precision="10" default="0" not-null="true" />
+        </property>
+        <property name="form22IssuedOotherauth" type="string">
+            <column name="FORM22_ISSUED_OTHERAUTH" length="100" />
+        </property>
+        <property name="lpcIssuedOtherauth" type="string">
+            <column name="LPC_ISSUED_OTHERAUTH" length="100" />
+        </property>
+         <property name="provPpoNo" type="string">
+            <column name="PROV_PPO_NO" length="50" />
+        </property>
+        <property name="cvpEffectiveMonth" type="integer">
+			<column name="CVP_EFFECTIVE_MONTH" length="6" />
+		</property>
+		<property name="approvalLevel" type="integer">
+			<column name="APPROVAL_LEVEL" length="6" />
+		</property>
+		<property name="arrearAttacmentId" type="long">
+			<column name="ARREAR_ATTACMENT_ID" length="20" />
+		</property>
+		<property name="linkedPpoNo" type="string">
+            <column name="LINKED_PPO_NO" length="50" />
+        </property>
+        
+        <property name="pageNo" type="string">
+            <column name="PAGE_NO" length="10" />
+        </property>
+        <property name="ledgerNo" type="string">
+            <column name="LEDGER_NO" length="25" />
+        </property>
+        <property name="isFp1datechange" type="string">
+            <column name="IS_FP1DATECHANGE" length="2" />
+        </property>
+        <!--   
+        <property name="fpCvpPayMode" type="string">
+            <column name="FP_CVP_PAY_MODE" length="5" />
+        </property>
+        <property name="fpDCRGPayMode" type="string">
+            <column name="FP_DCRG_PAY_MODE" length="5" />
+        </property>
+        -->
+         <property name="fpPensionPayMode" type="string">
+            <column name="FP_PENSION_PAY_MODE" length="5" />
+        </property>
+        
+        
+        <!--  New fields -->
+         <property name="orgBf11136" type="big_decimal">
+            <column name="ORG_BF_1_11_36" precision="12" default="0" not-null="true" />
+        </property>
+        
+        <property name="orgAf11136" type="big_decimal">
+            <column name="ORG_AF_1_11_36" precision="12" default="0" not-null="true" />
+        </property>
+        
+        <property name="orgAfZp" type="big_decimal">
+            <column name="ORG_ZP_AF" precision="12" default="0" not-null="true" />
+        </property>
+        
+        <property name="redBf11136" type="big_decimal">
+            <column name="RED_BF_1_11_36" precision="12" default="0"  />
+        </property>
+        
+        <property name="redAf11136" type="big_decimal">
+            <column name="RED_AF_1_11_36" precision="12" default="0"  />
+        </property>
+        
+        <property name="redAfZp" type="big_decimal">
+            <column name="RED_ZP_AF" precision="12" default="0"  />
+        </property>
+        
+        <property name="ppoAGOutwardNo" type="string">
+            <column name="PPO_AGOUTWARD_NO" length="50"  />
+        </property>
+        
+         <property name="ppoAGOutwardDate" type="timestamp">
+            <column name="PPO_AGOUTWARD_DATE" length="7" />
+        </property>
+      	
+      	<property name="reducedPension" type="big_decimal">
+            <column name="REDUCED_PENSION" precision="12" default="0" />
+        </property>
+        <property name="adpAmount" type="big_decimal">
+            <column name="adp_amount" precision="12" default="0" />
+        </property>
+        <property name="arrearAmount" type="big_decimal">
+            <column name="arrear_amount" precision="12" default="0" />
+        </property>
+         <property name="recoveryFlag" type="string">
+            <column name="recovery_flag" length="3"  />
+        </property>
+         <property name="ropType" type="string">
+            <column name="rop_type" length="10"  />
+        </property>
+         <property name="cvpEffectiveDate" type="timestamp">
+            <column name="cvp_effective_date" length="7" />
+        </property>
+         <property name="ppoRegDate" type="timestamp">
+            <column name="ppo_reg_date" length="10" />
+        </property>
+         <property name="caseReceivedFrom" type="string">
+            <column name="case_received_from" length="60"  />
+        </property>
+        <property name="caseReceivedOffice" type="string">
+            <column name="case_received_office" length="100"  />
+        </property>
+        <property name="allocIndicatorFlag" type="string">
+            <column name="alloc_indicator_flag" length="1" />
+        </property>
+        <property name="reEmploymentFlag" type="string">
+            <column name="RE_EMPLOYMENT_FLAG" length="60"  />
+        </property>
+        <property name="reEmploymentFromDate" type="timestamp">
+            <column name="RE_EMPLOYMENT_FROM_DATE" length="7" />
+        </property>
+        <property name="reEmploymentToDate" type="timestamp">
+            <column name="RE_EMPLOYMENT_TO_DATE" length="7" />
+        </property>
+        <property name="daInPensionSalary" type="string">
+            <column name="DA_IN_PENSION_SALARY" length="30"  />
+        </property>
+        <property name="totalCvpAmount" type="big_decimal">
+            <column name="TOTAL_CVP_AMOUNT" precision="12" default="0" />
+        </property>
+        <property name="totalDcrgAmount" type="big_decimal">
+            <column name="TOTAL_DCRG_AMOUNT" precision="12" default="0" />
+        </property>
+        <property name="peonAllowanceAmount" type="big_decimal">
+            <column name="PEON_ALLOWANCE_AMOUNT" precision="12" default="0" />
+        </property>
+        <property name="PensionCut" type="big_decimal">
+            <column name="PENSION_CUT" precision="12" default="0" />
+        </property>
+        <property name="other1" type="big_decimal">
+            <column name="OTHER_1" precision="12" default="0" />
+        </property>
+        <property name="other2" type="big_decimal">
+            <column name="OTHER_2" precision="12" default="0" />
+        </property>
+        <property name="other3" type="big_decimal">
+            <column name="OTHER_3" precision="12" default="0" />
+        </property>
+        <property name="dcrgVoucherNo" type="string">
+            <column name="DCRG_VOUCHER_NO"  length="7" />
+        </property>
+        <property name="dcrgVoucherDate" type="timestamp">
+            <column name="DCRG_VOUCHER_DATE"  length="7" />
+        </property>
+        <property name="dcrgWithHeldAmnt" type="big_decimal">
+            <column name="DCRG_WITHHELD_AMNT" precision="12" default="0" />
+        </property>
+        <property name="dcrgPayingAuth" type="string">
+            <column name="DCRG_PAYING_AUTH"  length="7" />
+        </property>
+        <property name="cvpVoucherNo" type="string">
+            <column name="CVP_VOUCHER_NO"  length="20" />
+        </property>
+        <property name="cvpVoucherDate" type="timestamp">
+            <column name="CVP_VOUCHER_DATE"  length="7" />
+        </property>
+        <property name="dcrgAmntAfterWithHeld" type="big_decimal">
+            <column name="DCRG_AMOUNT_AFTER_WITHHELD" precision="12" default="0" />
+        </property>
+        <property name="dcrgTotalRecoveryAmnt" type="big_decimal">
+            <column name="DCRG_TOTAL_RECOVERY_AMOUNT" precision="12" default="0" />
+        </property>
+         <property name="daRateForState" type="big_decimal">
+            <column name="DA_RATE_FOR_STATE " precision="20" scale="0" />
+        </property>
+        <property name="orgBf10436Percent" type="big_decimal">
+            <column name="ORG_BF_1_04_36_PERCENT" precision="12" default="0"  />
+        </property>
+        <property name="orgAf10436Percent" type="big_decimal">
+            <column name="ORG_AF_1_04_36_PERCENT" precision="12" default="0"  />
+        </property>
+        <property name="orgAf11156Percent" type="big_decimal">
+            <column name="ORG_AF_1_11_56_PERCENT" precision="12" default="0"  />
+        </property>
+        <property name="orgAf10560Percent" type="big_decimal">
+            <column name="ORG_AF_1_05_60_PERCENT" precision="12" default="0"  />
+        </property>
+        <property name="orgZpAfPercent" type="big_decimal">
+            <column name="ORG_ZP_AF_PERCENT" precision="12" default="0"  />
+        </property>
+        <property name="fpAvailableFlag" type="string">
+            <column name="FP_AVAILABLE_FLAG"  length="20" />
+        </property>
+        <property name="pensionCutMonthYear" type="java.lang.Integer">
+            <column name="PENSION_CUT_MONTHYEAR" precision="6" scale="0" />
+        </property>
+         <property name="dcrgNameOfPayee" type="string">
+            <column name="DCRG_NAME_OF_PAYEE"  length="20" />
+        </property>
+        <property name="dcrgTrsryForPayment" type="string">
+            <column name="DCRG_TRSRY_FOR_PAYMENT"  length="20" />
+        </property>
+        <property name="cvpNameOfPayee" type="string">
+            <column name="CVP_NAME_OF_PAYEE"  length="20" />
+        </property>
+        <property name="cvpTrsryForPayment" type="string">
+            <column name="CVP_TRSRY_FOR_PAYMENT"  length="20" />
+        </property>
+        <property name="cvpAuthority" type="string">
+            <column name="CVP_AUTHORITY"  length="100" />
+        </property>
+         <property name="cvpStartDate" type="timestamp">
+            <column name="CVP_START_DATE"  length="7" />
+        </property>
+         <property name="cvpEndDate" type="timestamp">
+            <column name="CVP_END_DATE"  length="7" />
+        </property>
+	</class>
+	
+	<!-- Added by Soumya for Row Level Locking Pension Case -->
+	<sql-query name="pension.case.getLockOnPpoNosByCurrCaseStatus">
+    	<![CDATA[
+	    	SELECT * FROM TRN_PENSION_RQST_HDR WHERE PPO_NO IN (:CASE_LIST) AND CURR_CASE_STATUS = :STATUS FOR UPDATE
+		]]>
+    </sql-query>
+	
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.HrPaySubstituteEmpMpg" table="HR_PAY_SUBSTITUTE_EMP_MPG">
+  <id name="subEmpMapId" type="long">
+            <column name="SUBSTITUTE_EMP_MPG_ID"  />
+            <generator class="assigned" />
+     </id>
+     <property name="subLookupId" type="long">
+            <column name="SUBSTITUTE_LOOKUP_ID"  />
+  	</property>
+  	<property name="subPostId" type="long">
+            <column name="SUBSITUTE_POST_ID"  />
+  	</property>
+  	<property name="empPostId" type="long">
+            <column name="EMP_POST_ID"  />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"/>
+  	</property>
+  	<property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE"/>
+  	</property>
+  	<property name="activateFlag" type="int">
+            <column name="ACTIVATE_FLAG"  />
+  	</property>
+  	<property name="startDate" type="int">
+            <column name="START_DATE"  />
+  	</property>
+  	<property name="endDate" type="int">
+            <column name="END_DATE"  />
+  	</property>
+  	<property name="createdByUser" type="long">
+            <column name="UPDATED_BY_USER"  />
+  	</property>
+  	<property name="createdByPost" type="long">
+            <column name="UPDATED_BY_POST"  />
+  	</property>
+  </class>
+</hibernate-mapping>

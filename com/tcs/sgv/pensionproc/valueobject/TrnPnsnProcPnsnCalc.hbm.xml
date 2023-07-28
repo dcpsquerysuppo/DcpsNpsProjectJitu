@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionproc.valueobject.TrnPnsnProcPnsnCalc" table="TRN_PNSNPROC_PNSNCALC">
+        <id name="pensionCalcId" type="java.lang.Long">
+           <column name="PENSIONCALC_ID" precision="20" scale="0" />
+           <generator class="assigned" />
+        </id>
+       <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID" />
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="LOCATION_CODE" />
+        </property>
+        <property name="inwardPensionId" type="java.lang.Long">
+            <column name="INWARD_PENSION_ID" />
+        </property>
+        <property name="pensionerdtlId" type="java.lang.Long">
+            <column name="PENSIONERDTL_ID" />
+        </property>
+        <property name="cvpElgbltyDate" type="java.util.Date">
+            <column name="CVP_ELIGIBILITY_DATE" />
+        </property>
+        <property name="cvpMonthAmnt" type="big_decimal">
+            <column name="CVP_MON_AMOUNT" />
+        </property>
+        <property name="cvpRate" type="big_decimal">
+            <column name="CVP_RATE" />
+        </property>
+        <property name="cvpAmnt" type="big_decimal">
+            <column name="CVP_AMOUNT" />
+        </property>
+        <property name="pensionerReducedAmnt" type="big_decimal">
+            <column name="PENSION_REDUCED_AMOUNT" />
+        </property>
+        <property name="pensionerTotalAmnt" type="big_decimal">
+            <column name="PENSION_TOTAL_AMOUNT" />
+        </property>
+        <property name="srvcGratuityAmnt" type="big_decimal">
+            <column name="SERVICE_GRATUITY_AMOUNT" />
+        </property>
+        <property name="dcrgAmnt" type="big_decimal">
+            <column name="DCRG_AMOUNT" />
+        </property>
+        <property name="pvsnlPensionAmnt" type="big_decimal">
+            <column name="PVSNL_PENSION_AMOUNT" />
+        </property>
+        <property name="pvsnlPensionDate" type="java.util.Date">
+            <column name="PVSNL_PENSION_DATE" />
+        </property>
+        <property name="dcrgSnctndFlag" type="java.lang.Character">
+            <column name="PVSNL_DCRG_SNCTND_FLAG" />
+        </property>
+        <property name="pvsnlDcrgAmnt" type="big_decimal">
+            <column name="PVSNL_DCRG_AMOUNT" />
+        </property>
+        <property name="pvsnlPensionFlag" type="java.lang.Character">
+            <column name="PVSNL_PENSION_FLAG" />
+        </property>
+        <property name="documentCount" type="java.lang.Long">
+            <column name="DOC_COUNT" />
+        </property>
+        <property name="pnsnablePayFlag" type="java.lang.Character">
+            <column name="MANUAL_PNSNABLEPAY_FLAG" />
+        </property>
+        <property name="fp1Amnt" type="big_decimal">
+            <column name="FP1_AMOUNT" />
+        </property>
+        <property name="fp1Date" type="java.util.Date">
+            <column name="FP1_DATE" />
+        </property>
+        <property name="fp2Amnt" type="big_decimal">
+            <column name="FP2_AMOUNT" />
+        </property>
+        <property name="fp2Date" type="java.util.Date">
+            <column name="FP2_DATE" />
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" />
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" />
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" />
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="UPDATED_DATE" />
+        </property>
+         <property name="cpoNo" type="string">
+            <column name="CPO_NO" precision="20" scale="0"  />
+        </property>
+         <property name="gpoNo" type="string">
+            <column name="GPO_NO" precision="20" scale="0"  />
+        </property>
+         <property name="cpoDate" type="timestamp">
+            <column name="CPO_DATE" />
+        </property>
+         <property name="gpoDate" type="timestamp">
+            <column name="GPO_DATE" />
+        </property>
+        <property name="manualEditFlag" type="string">
+            <column name="MANUAL_EDIT_FLAG" precision="20" scale="0"  />
+        </property>
+         <property name="cvpAppDate" type="timestamp">
+            <column name="CVP_APPLICATION_DATE" />
+        </property>
+          <property name="witheldGratuity" type="java.lang.Long">
+            <column name="WITHELD_GRATUITY" />
+        </property>
+        <property name="dcrgAppDate" type="timestamp">
+            <column name="DCRG_APP_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

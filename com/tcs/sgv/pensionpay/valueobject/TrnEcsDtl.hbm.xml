@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 12, 2008 1:03:55 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.TrnEcsDtl" table="TRN_ECS_DTL" dynamic-update="true">
+        <id name="ecsDtlId" type="long">
+            <column name="ECS_DTL_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="ecsCode" type="long">
+            <column name="ECS_CODE" length="20" />
+        </property>
+        <property name="ecsAttachmentId" type="big_decimal">
+            <column name="ECS_ATTACHMENT_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPost" type="big_decimal">
+            <column name="CREATED_POST" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedUser" type="big_decimal">
+            <column name="UPDATED_USER" precision="20" scale="0" />
+        </property>
+        <property name="updatedPost" type="big_decimal">
+            <column name="UPDATED_POST" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="mandateSerialNo" type="big_decimal">
+            <column name="mandate_Serial_no" precision="20" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

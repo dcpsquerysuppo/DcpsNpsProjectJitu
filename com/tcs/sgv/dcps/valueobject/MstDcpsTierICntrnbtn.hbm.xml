@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="MstDcpsTierICntrnbtn" table="mst_dcps_tieri_cntrnbtn">
+  
+  <id name="tierICntrnbtnId" type="java.lang.Long">
+             <column name="tierI_cntrnbtn_id" precision="20" scale="0" />
+            <generator class="assigned" />
+     </id>
+    
+       <property name="dbId" type="java.lang.Long">
+            <column name="db_id" precision="20" scale="0"  />
+        </property>
+        <property name="locationCode" type="java.lang.Long">
+            <column name="location_code" precision="20" scale="0"  />
+        </property>
+        <property name="employeeId" type="java.lang.Long">
+            <column name="employee_id" precision="20" scale="0"  />
+        </property>
+        <property name="employeePensionId" type="java.lang.Long">
+            <column name="employee_pension_id" precision="20" scale="0"  />
+        </property>
+        <property name="statusFlag" type="java.lang.Character">
+            <column name="status_flag"  />
+        </property>
+        <property name="remarks" type="java.lang.String">
+            <column name="remarks"  />
+        </property>
+         <property name="employeeName" type="string">
+            <column name="employee_name" precision="20" scale="0"  />
+        </property>        
+         <property name="arrearstypeLookupid" type="java.lang.Long">
+            <column name="arrearstype_lookupid" precision="20" scale="0"  />
+        </property>
+                <property name="parentDepartmentId" type="java.lang.Long">
+            <column name="parent_department_id" precision="20" scale="0"  />
+        </property>
+                <property name="designationId" type="java.lang.Long">
+            <column name="designation_id" precision="20" scale="0"  />
+        </property>
+             <property name="tierICntrnbtnFromDate" type="date">
+            <column name="tierI_cntrnbtn_from_date" length="7"/>
+        </property>
+             <property name="tierICntrnbtnToDate" type="date">
+            <column name="tierI_cntrnbtn_to_date" length="7"/>
+        </property>
+         
+        <property name="totalAmount" type="big_decimal">
+            <column name="total_amount" precision="20" scale="0"  />
+        </property>
+         <property name="noOfInstlmnt" type="java.lang.Long">
+            <column name="no_of_instlmnt" precision="20" scale="0"  />
+        </property>
+        <property name="wholeMonthInstlmntAmount" type="big_decimal">
+            <column name="whole_month_instlmnt_amount" precision="20" scale="0"  />
+        </property>
+        <property name="firstOddInstlmntAmount" type="big_decimal">
+            <column name="first_odd_instlmnt_amount" precision="20" scale="0"  />
+        </property>
+        <property name="lastOddInstlmntAmount" type="big_decimal">
+            <column name="last_odd_instlmnt_amount" precision="20" scale="0"  />
+        </property>
+        
+         <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+		</property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.pensionproc.valueobject">
+  <class name="TrnPnsnprocForeignServ" table="TRN_PNSNPROC_FOREIGN_SERV"  dynamic-update="true">
+  		<id name="foreignServId" type="java.lang.Long">
+            <column name="FOREIGN_SER_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>       
+         <property name="locationCode" type="string">
+            <column name="location_code" precision="20" scale="0"  />
+        </property>    
+        <property name="inwardPensionId" type="java.lang.Long" >
+            <column name="inward_pension_id" precision="20" scale="0" ></column>
+        </property>   
+         <property name="toDate" type="date">
+            <column name="TO_DATE"  />
+        </property>
+         <property name="fromDate" type="date">
+            <column name="FROM_DATE"  />
+        </property>   
+         <property name="totalAmt" type="java.lang.Long" >
+            <column name="TOTAL_AMT" precision="20" scale="0" ></column>
+        </property>   
+         <property name="paidAmt" type="java.lang.Long" >
+            <column name="PAID_AMT" precision="20" scale="0" ></column>
+        </property>
+        <property name="challanNo" type="string">
+            <column name="CHALLAN_NO"/>
+        </property>
+        <property name="challanDate" type="date" >
+            <column name="CHALLAN_DATE" ></column>
+        </property>    
+         <property name="deptOffName" type="string">
+            <column name="DEPT_OFF_NAME"/>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+			<column name="created_user_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdPostId" type="java.lang.Long">
+			<column name="created_post_id" precision="20" scale="0" ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="created_date" length="19"></column>
+		</property>
+		<property name="updatedUserId" type="java.lang.Long">
+			<column name="updated_user_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedPostId" type="java.lang.Long">
+			<column name="updated_post_id" precision="20" scale="0"></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="updated_date" length="19"></column>
+		</property>
+  </class>
+</hibernate-mapping>

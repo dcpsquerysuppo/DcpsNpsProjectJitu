@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 4, 2008 5:38:18 AM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaExpestWrkMst" table="SGVA_EXPEST_WRK_MST">
+    <cache usage="read-only" region="budgetCache"/>
+        <composite-id name="id" class="com.tcs.sgv.common.valueobject.SgvaExpestWrkMstId">
+            <key-property name="expestWrkMstId" type="long">
+                <column name="EXPEST_WRK_MST_ID" precision="15" scale="0" />
+            </key-property>
+            <key-property name="langId" type="string">
+                <column name="LANG_ID" length="5" />
+            </key-property>
+        </composite-id>
+        <property name="expestWrkName" type="string">
+            <column name="EXPEST_WRK_NAME" length="500" />
+        </property>
+        <property name="wrkDesc" type="string">
+            <column name="WRK_DESC" length="4000" />
+        </property>
+        <property name="deptId" type="string">
+            <column name="DEPT_ID" length="5" />
+        </property>
+        <property name="bpnCode" type="string">
+            <column name="BPN_CODE" length="25" />
+        </property>
+        <property name="buddemandCode" type="string">
+            <column name="BUDDEMAND_CODE" length="15" />
+        </property>
+        <property name="budmjrhdCode" type="string">
+            <column name="BUDMJRHD_CODE" length="25" />
+        </property>
+        <property name="budsubmjrhdCode" type="string">
+            <column name="BUDSUBMJRHD_CODE" length="25" />
+        </property>
+        <property name="budminhdCode" type="string">
+            <column name="BUDMINHD_CODE" length="25" />
+        </property>
+        <property name="budsubhdCode" type="string">
+            <column name="BUDSUBHD_CODE" length="25" />
+        </property>
+        <property name="buddtlhdCode" type="string">
+            <column name="BUDDTLHD_CODE" length="400" />
+        </property>
+        <property name="budobjhdCode" type="string">
+            <column name="BUDOBJHD_CODE" length="400" />
+        </property>
+        <property name="chargVote" type="string">
+            <column name="CHARG_VOTE" length="15" />
+        </property>
+        <property name="planNonplan" type="string">
+            <column name="PLAN_NONPLAN" length="15" />
+        </property>
+        <property name="applnId" type="string">
+            <column name="APPLN_ID" length="15" />
+        </property>
+        <property name="locId" type="string">
+            <column name="LOC_ID" length="5" not-null="true" />
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="7" not-null="true" />
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="12" not-null="true" />
+        </property>
+        <property name="lstUpdDt" type="date">
+            <column name="LST_UPD_DT" length="7" />
+        </property>
+        <property name="lstUpdUsr" type="string">
+            <column name="LST_UPD_USR" length="12" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="15" not-null="true" />
+        </property>
+        <property name="terminatedYrId" type="java.lang.Long">
+            <column name="TERMINATED_YR_ID" precision="15" scale="0" />
+        </property>
+        <property name="formType" type="string">
+            <column name="FORM_TYPE" length="1" />
+        </property>
+        <property name="finYearId" type="java.lang.Long">
+            <column name="FIN_YEAR_ID" precision="15" scale="0" />
+        </property>
+        <property name="branchId" type="string">
+            <column name="BRANCH_ID" length="15" />
+        </property>
+        <property name="hodId" type="string">
+            <column name="HOD_ID" length="15" />
+        </property>
+        <property name="cssFlag" type="string">
+            <column name="CSS_FLAG" length="5" />
+        </property>
+        <property name="writeup" type="string">
+            <column name="WRITEUP" length="4000" />
+        </property>
+        <property name="distId" type="string">
+            <column name="DIST_ID" length="20" />
+        </property>
+        <property name="divId" type="string">
+            <column name="DIV_ID" length="20" />
+        </property>
+        <property name="locltyId" type="string">
+            <column name="LOCLTY_ID" length="20" />
+        </property>
+        <property name="workNo" type="big_decimal">
+            <column name="WORK_NO" precision="10" scale="3" />
+        </property>
+        <property name="plngcode" type="string">
+            <column name="PLNGCODE" length="6" />
+        </property>
+        <property name="schemeShrtName" type="string">
+            <column name="SCHEME_SHRT_NAME" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

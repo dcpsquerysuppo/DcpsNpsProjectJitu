@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.HstDcpsChanges" table="HST_DCPS_CHANGES" >
+  	<id name="dcpsChangesId" type="long">
+            <column name="DCPS_CHANGES_ID"  />
+            <generator class="assigned" />
+     </id>
+    
+    <property name="dcpsEmpId" type="long">
+            <column name="DCPS_EMP_ID"  />
+  	</property>
+     <property name="typeOfChanges" type="string">
+            <column name="TYPE_OF_CHANGES"  />
+  	</property>
+  	<property name="letterNo" type="long">
+            <column name="LETTER_NO" />
+  	 </property>
+  	 <property name="letterDate" type="date">
+            <column name="LETTER_DATE"/>
+     </property>
+     
+  	<property name="formStatus" type="long">
+            <column name="FORM_STATUS"  not-null="false" />
+  	</property>
+  	
+  	<property name="sentBackRemarks" type="string">
+            <column name="SENTBACK_REMARKS"/>
+     </property>
+     
+   	<property name="ddoCode" type="string">
+            <column name="DDO_CODE"/>
+     </property>
+  
+  	<property name="langId" type="long">
+            <column name="LANG_ID" />
+  	</property>
+  	<property name="locId" type="long">
+            <column name="LOC_ID"  not-null="false" />
+  	</property>
+  	<property name="dbId" type="long">
+            <column name="DB_ID"  not-null="false" />
+  	</property>
+  	<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+	  </property>
+	  <property name="createdUserId" type="long">
+	            <column name="CREATED_USER_ID" />
+	  </property>
+	  <property name="createdPostId" type="long">
+	            <column name="CREATED_POST_ID"  />
+	  </property>
+	  <property name="updatedDate" type="timestamp">
+	            <column name="UPDATED_DATE" not-null="false" />
+	  </property>
+	  <property name="updatedUserId" type="long">
+	            <column name="UPDATED_USER_ID"  not-null="false" />
+	  </property>
+	  <property name="updatedPostId" type="long">
+	            <column name="UPDATED_POST_ID"   not-null="false" />
+	  </property>
+	  
+  </class>
+</hibernate-mapping>

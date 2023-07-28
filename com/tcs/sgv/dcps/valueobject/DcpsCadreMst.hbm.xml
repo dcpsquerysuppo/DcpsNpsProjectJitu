@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="com.tcs.sgv.dcps.valueobject.DcpsCadreMst" table="mst_dcps_cadre" dynamic-update="true">
+
+       <id name="cadreId" type="java.lang.Long">
+            <column name="CADRE_ID"/>
+            <generator class="assigned" />
+        </id>
+        
+        <property name="fieldDeptId" type="java.lang.Long">
+            <column name="FIELD_DEPT_ID" length="10" />
+        </property>
+
+		  <property name="groupId" type="java.lang.String">
+            <column name="GROUP_ID" length="10" />
+        </property>
+        
+         <property name="cadreCode" type="java.lang.Long">
+            <column name="CADRE_CODE" length="20" />
+        </property>
+        
+         <property name="cadreName" type="java.lang.String">
+            <column name="CADRE_NAME" length="20" />
+        </property>                
+        
+         <property name="ministerialFlag" type="java.lang.String">
+            <column name="MINISTERIAL_FLAG" length="1" />
+        </property>
+        
+         <property name="superAntunAge" type="java.lang.Long">
+            <column name="SUPER_ANTUN_AGE" length="10" />
+        </property>
+        
+        <property name="cntrlFieldDeptId" type="java.lang.Long">
+            <column name="CNTRL_FIELD_DEPT_ID" length="10" />
+        </property>
+        
+         <property name="cadreCntrlFlag" type="java.lang.String">
+            <column name="CADRE_CNTRL_FLAG" length="1" />
+        </property>
+        
+              <property name="langId" type="java.lang.Long">
+            <column name="LANG_ID" length="10" />
+        </property>
+        
+        <property name="locId" type="java.lang.Long">
+            <column name="LOC_ID" length="10" />
+        </property>
+        
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID" length="10" />
+        </property>
+        
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" length="20" />
+        </property>
+        
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" length="20" />
+        </property>
+        
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE" />
+        </property>
+        
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" length="20" />
+        </property>
+        
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" length="20" />
+        </property>
+        
+        <property name="updatedDate" type="java.util.Date">
+            <column name="UPDATED_DATE" />
+        </property>
+</class>
+</hibernate-mapping>

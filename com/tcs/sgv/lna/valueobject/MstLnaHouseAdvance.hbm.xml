@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.lna.valueobject">
+  <class name="com.tcs.sgv.lna.valueobject.MstLnaHouseAdvance" table="MST_LNA_HOUSE_ADVANCE">
+  		<id name="houseAdvanceId" type="long">
+            <column name="HOUSE_ADVANCE_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="transactionId" type="string">
+            <column name="TRANSACTION_ID" />
+        </property>
+       <property name="sevaarthId" type="string">
+            <column name="SEVAARTH_ID" />
+        </property>
+        <property name="advanceType" type="long">
+            <column name="ADVANCE_TYPE"/>
+        </property>
+        <property name="advanceSubType" type="long">
+            <column name="ADVANCE_SUB_TYPE"/>
+        </property>
+           <property name="payCommissionGR" type="long">
+            <column name="PAY_COMMISSION_GR" />
+        </property>
+         <property name="payScale" type="long">
+            <column name="PAY_SCALE" />
+        </property>
+        <property name="basicPay" type="long">
+            <column name="BASIC_PAY" />
+        </property>
+        <property name="applicationDate" type="timestamp">
+            <column name="APPLICATION_DATE"/>
+        </property>
+        <property name="finYearId" type="long">
+            <column name="FIN_YEAR_ID" />
+        </property>
+        <property name="attachmentId" type="long">
+            <column name="ATTACHMENT_ID" />
+        </property>
+        <property name="amountRequested" type="long">
+            <column name="AMOUNT_REQUESTED" />
+        </property>
+        <property name="loanRepayCapacity" type="double">
+            <column name="LOAN_REPAYMENT_CAPACITY" />
+        </property>
+         <property name="requestedDate" type="timestamp">
+            <column name="REQUESTED_DATE"/>
+        </property>
+        <property name="interestRate" type="float">
+            <column name="INTEREST_RATE" />
+        </property>
+         <property name="disbursementOne" type="float">
+            <column name="DISBURSEMENT_ONE" />
+        </property>
+         <property name="releaseDateOne" type="timestamp">
+            <column name="RELEASE_DATE_ONE" />
+        </property>
+         <property name="disbursementTwo" type="float">
+            <column name="DISBURSEMENT_TWO" />
+        </property>
+         <property name="releaseDateTwo" type="timestamp">
+            <column name="RELEASE_DATE_TWO" />
+        </property>
+         <property name="disbursementThree" type="float">
+            <column name="DISBURSEMENT_THREE" />
+        </property>
+         <property name="releaseDateThree" type="timestamp">
+            <column name="RELEASE_DATE_THREE" />
+        </property>
+        <property name="disbursementFour" type="float">
+            <column name="DISBURSEMENT_FOUR" />
+        </property>
+         <property name="releaseDateFour" type="timestamp">
+            <column name="RELEASE_DATE_FOUR" />
+        </property>
+        <property name="amountSanctioned" type="long">
+            <column name="AMOUNT_SANCTIONED"/>
+        </property>
+       	<property name="sancPrinInst" type="integer">
+            <column name="SANC_PRINCIPAL_INSTALLMENTS" />
+        </property>
+         <property name="sancInterestInst" type="integer">
+            <column name="SANC_INTEREST_INSTALLMENTS" />
+        </property>
+         <property name="principalInstAmtMonth" type="long">
+            <column name="PRINCIPAL_INST_AMT_MONTH" />
+        </property>
+        <property name="interestInstAmtMonth" type="double">
+            <column name="INTEREST_INST_AMT_MONTH"/>
+        </property>
+        <property name="interestAmount" type="double">
+            <column name="INTEREST_AMOUNT"/>
+        </property>
+        <property name="principalInstLeft" type="integer">
+            <column name="PRINCIPAL_INST_LEFT" />
+         </property>
+         <property name="InterestInstLeft" type="integer">
+            <column name="INTEREST_INST_LEFT" />
+        </property>
+         <property name="oddInstallment" type="long">
+            <column name="ODD_INSTALLMENT" />
+        </property>
+         <property name="oddInstallmentNumber" type="long">
+            <column name="ODD_INSTALLMENT_NO" />
+        </property>
+         <property name="oddInterestInstallment" type="long">
+            <column name="ODD_INTEREST_INSTALLMENT" />
+        </property>
+         <property name="oddInterestInstallmentNo" type="long">
+            <column name="ODD_INTEREST_INSTALLMENT_NO" />
+        </property>
+        <property name="recoveredAmount" type="long">
+            <column name="RECOVERED_AMOUNT"/>
+        </property>
+        <property name="outstandingAmount" type="long">
+            <column name="OUTSTANDING_AMOUNT" />
+         </property>
+         <property name="statusFlag" type="string">
+            <column name="STATUS_FLAG" />
+        </property>
+        <property name="recoveryStatus" type="integer">
+            <column name="RECOVERY_STATUS" length="1" />
+        </property>
+         <property name="sancAuthorityName" type="string">
+            <column name="SANC_AUTHORITY_NAME"/>
+        </property>
+         <property name="sanctionedDate" type="timestamp">
+            <column name="SANCTIONED_DATE" />
+        </property>
+        <property name="userRemarks" type="string">
+			<column name="USER_REMARKS" length="200" />
+		</property>
+		<property name="approverRemarks" type="string">
+			<column name="APPROVER_REMARKS" length="200" />
+		</property>
+		<property name="hoRemarks" type="string">
+			<column name="HO_REMARKS" length="200" />
+		</property>
+		<property name="orderNo" type="string">
+			<column name="ORDER_NO" length="50" />
+		</property>
+		<property name="orderDate" type="timestamp">
+			<column name="ORDER_DATE" length="30" />
+		</property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_POST_ID" />
+        </property>
+        <property name="createdPostId" type="long"  >
+            <column name="CREATED_USER_ID"/>
+        </property>
+        <property name="createdDate" type="timestamp" >
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="updatedUserId" type="long"  >
+            <column name="UPDATED_POST_ID"/>
+        </property>
+        <property name="updatedPostId" type="long"  >
+            <column name="UPDATED_USER_ID" precision="10" />
+        </property>
+        <property name="updatedDate" type="timestamp" >
+            <column name="UPDATED_DATE" />
+        </property>
+        <property name="hodasstActionDate" type="timestamp" >
+            <column name="HODASST_ACTION_DATE" />
+        </property>
+         <property name="hodActionDate" type="timestamp" >
+            <column name="HOD_ACTION_DATE" />
+        </property>
+        <property name="empStatus" type="string">
+			<column name="EMP_STATUS" length="1" />
+		</property>
+		<property name="firstGuarantor" type="string">
+			<column name="FIRST_GUARANTOR" length="15" />
+		</property>
+		<property name="secondGuarantor" type="string">
+			<column name="SECOND_GUARANTOR" length="15" />
+		</property>
+		<property name="lnaBillId" type="long"  >
+            <column name="LOAN_BILL_ID" precision="10" />
+        </property>
+        <property name="frwrdToRHO" type="string"  >
+            <column name="FRWDRD_TO_RHO_POST_ID"  />
+        </property>
+        <property name="fromPostId" type="string"  >
+            <column name="from_post_id" />
+        </property>
+        <property name="toPostID" type="string"  >
+            <column name="to_post_id" />
+        </property>
+        <property name="rhoRemarks" type="string"  >
+            <column name="rho_remarks" />
+        </property>
+  </class>
+</hibernate-mapping>

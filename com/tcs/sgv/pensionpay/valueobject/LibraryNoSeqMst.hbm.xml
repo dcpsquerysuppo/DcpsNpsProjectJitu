@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="com.tcs.sgv.pensionpay.valueobject.LibraryNoSeqMst" table="LIBRARY_NO_SEQ_MST" dynamic-update="true">
+ 		<id name="librarySeqId" type="long">
+            <column name="LIBRARY_SEQ_ID" precision="19" scale="0" />
+            <generator class="assigned" />
+        </id>
+     
+        <property name="libraryNo" type="string">
+            <column name="LIBRARY_NO" />
+        </property>
+       <property name="generatedId" type="java.lang.Long">
+            <column name="GENERATED_ID"/>
+        </property>
+        <property name="pkLength" type="integer">
+            <column name="PK_LENGTH"/>
+        </property>
+        <property name="createdBy" type="java.lang.Long">
+			<column name="CREATED_BY"  ></column>
+		</property>
+		<property name="createdByPost" type="java.lang.Long">
+			<column name="CREATED_BY_POST"  ></column>
+		</property>
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" ></column>
+		</property>
+		<property name="updatedBy" type="java.lang.Long">
+			<column name="UPDATED_BY" ></column>
+		</property>
+		<property name="updatedByPost" type="java.lang.Long">
+			<column name="UPDATED_BY_POST" ></column>
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE" ></column>
+		</property>  
+		<property name="locationCode" type="string">
+            <column name="LOCATION_CODE"/>
+        </property>		
+        <property name="isReset" type="char">
+            <column name="IS_RESET"/>
+        </property>		
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2011 6:54:12 PM by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pensionpay.valueobject.StgPensioner" table="STG_PENSIONER">
+        <id name="stgPensionerId" type="long">
+            <column name="STG_PENSIONER_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="delvId" type="long">
+            <column name="DELV_ID" not-null="true" />
+        </property>
+        <property name="caseStatus" type="string">
+            <column name="CASE_STATUS" length="20" />
+        </property>
+        <property name="pnsrFileNo" type="string">
+            <column name="PNSR_FILE_NO" length="25" />
+        </property>
+        <property name="applnNo" type="string">
+            <column name="APPLN_NO" length="25" />
+        </property>
+        <property name="pnsrPpoNo" type="string">
+            <column name="PNSR_PPO_NO" length="25" />
+        </property>
+        <property name="penName" type="string">
+            <column name="PEN_NAME" length="50" />
+        </property>
+        <property name="penMname" type="string">
+            <column name="PEN_MNAME" length="25" />
+        </property>
+        <property name="penSurname" type="string">
+            <column name="PEN_SURNAME" length="25" />
+        </property>
+        <property name="apenBrAddr1" type="string">
+            <column name="APEN_BR_ADDR1" length="150" />
+        </property>
+        <property name="apenBrAddr2" type="string">
+            <column name="APEN_BR_ADDR2" length="150" />
+        </property>
+        <property name="apenBrAddr3" type="string">
+            <column name="APEN_BR_ADDR3" length="150" />
+        </property>
+        <property name="brCity" type="string">
+            <column name="BR_CITY" length="25" />
+        </property>
+        <property name="brState" type="string">
+            <column name="BR_STATE" length="25" />
+        </property>
+        <property name="apenBrPin" type="string">
+            <column name="APEN_BR_PIN" length="10" />
+        </property>
+        <property name="apenArAddr1" type="string">
+            <column name="APEN_AR_ADDR1" length="150" />
+        </property>
+        <property name="apenArAddr2" type="string">
+            <column name="APEN_AR_ADDR2" length="150" />
+        </property>
+        <property name="apenArAddr3" type="string">
+            <column name="APEN_AR_ADDR3" length="150" />
+        </property>
+        <property name="arCity" type="string">
+            <column name="AR_CITY" length="25" />
+        </property>
+        <property name="arState" type="string">
+            <column name="AR_STATE" length="25" />
+        </property>
+        <property name="apenArPin" type="string">
+            <column name="APEN_AR_PIN" length="10" />
+        </property>
+        <property name="dtBirth" type="string">
+            <column name="DT_BIRTH" length="10" />
+        </property>
+        <property name="dtExpiry" type="string">
+            <column name="DT_EXPIRY" length="10" />
+        </property>
+        <property name="dtAppointment" type="string">
+            <column name="DT_APPOINTMENT" length="10" />
+        </property>
+        <property name="dtRetirement" type="string">
+            <column name="DT_RETIREMENT" length="10" />
+        </property>
+        <property name="penSex" type="string">
+            <column name="PEN_SEX" length="10" />
+        </property>
+        <property name="penStartDate" type="string">
+            <column name="PEN_START_DATE" length="10" />
+        </property>
+        <property name="ppoAgoutwardNo" type="string">
+            <column name="PPO_AGOUTWARD_NO" length="25" />
+        </property>
+        <property name="gpoAgoutwardNo" type="string">
+            <column name="GPO_AGOUTWARD_NO" length="25" />
+        </property>
+        <property name="gpoAgoutwardDt" type="string">
+            <column name="GPO_AGOUTWARD_DT" length="10" />
+        </property>
+        <property name="ppoAgOutwardDt" type="string">
+            <column name="PPO_AG_OUTWARD_DT" length="10" />
+        </property>
+        <property name="gpoNo" type="string">
+            <column name="GPO_NO" length="25" />
+        </property>
+        <property name="sancAuthPenCode" type="string">
+            <column name="SANC_AUTH_PEN_CODE" length="25" />
+        </property>
+        <property name="sancAuthPen" type="string">
+            <column name="SANC_AUTH_PEN" length="150" />
+        </property>
+        <property name="lastOff" type="string">
+            <column name="LAST_OFF" length="150" />
+        </property>
+        <property name="apenBankName" type="string">
+            <column name="APEN_BANK_NAME" length="50" />
+        </property>
+        <property name="apenBankAcno" type="string">
+            <column name="APEN_BANK_ACNO" length="30" />
+        </property>
+        <property name="apenBranch" type="string">
+            <column name="APEN_BRANCH" length="50" />
+        </property>
+        <property name="treasuryDataCd" type="string">
+            <column name="TREASURY_DATA_CD" length="15" />
+        </property>
+        <property name="payScale" type="string">
+            <column name="PAY_SCALE" length="50" />
+        </property>
+        <property name="designation" type="string">
+            <column name="DESIGNATION" length="100" />
+        </property>
+        <property name="lastPay" type="string">
+            <column name="LAST_PAY" length="15" />
+        </property>
+        <property name="provGratuity" type="string">
+            <column name="PROV_GRATUITY" length="15" />
+        </property>
+        <property name="provPension" type="string">
+            <column name="PROV_PENSION" length="15" />
+        </property>
+        <property name="grossPension" type="string">
+            <column name="GROSS_PENSION" length="15" />
+        </property>
+        <property name="reducedPen" type="string">
+            <column name="REDUCED_PEN" length="15" />
+        </property>
+        <property name="penType" type="string">
+            <column name="PEN_TYPE" length="80" />
+        </property>
+        <property name="pensionAmt" type="string">
+            <column name="PENSION_AMT" length="15" />
+        </property>
+        <property name="efpAmt" type="string">
+            <column name="EFP_AMT" length="15" />
+        </property>
+        <property name="fpAmt" type="string">
+            <column name="FP_AMT" length="15" />
+        </property>
+        <property name="pnsnClass" type="string">
+            <column name="PNSN_CLASS" length="80" />
+        </property>
+        <property name="pnsnSeries" type="string">
+            <column name="PNSN_SERIES" length="10" />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="26" not-null="true" />
+        </property>
+        <property name="updatedBy" type="long">
+            <column name="UPDATED_BY" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="26" />
+        </property>
+        <property name="revisionFlag" type="string">
+            <column name="REVISION_FLAG" length="80" />
+        </property>
+    </class>
+</hibernate-mapping>

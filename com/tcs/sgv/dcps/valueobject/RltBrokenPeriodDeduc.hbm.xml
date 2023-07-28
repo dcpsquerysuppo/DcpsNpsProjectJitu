@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+
+<class name="com.tcs.sgv.dcps.valueobject.RltBrokenPeriodDeduc" table="rlt_dcps_broken_period_deduc">
+  
+  <id name="brokenPeriodDeducId" type="long">
+            <column name="broken_Period_Deduc_Id"  />
+            <generator class="assigned" />
+  </id>
+  
+  <many-to-one name="rltBrokenPeriodId"
+			class="com.tcs.sgv.dcps.valueobject.MstBrokenPeriodPay" fetch="select">
+			<column name="rlt_Broken_Period_Id" precision="20" scale="0"></column>
+  </many-to-one>
+  	
+  <property name="deducCode" type="long">
+            <column name="deduc_Code"  />
+  </property>
+  
+  <property name="deducValue" type="long">
+            <column name="deduc_Value"  />
+  </property>
+
+  <property name="langId" type="long">
+            <column name="LANG_ID" />
+  </property>
+  
+  <property name="locId" type="long">
+            <column name="LOC_ID" />
+  </property>
+  
+  <property name="dbId" type="long">
+            <column name="DB_ID"/>
+  </property>
+  
+  <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE"  />
+  </property>
+  
+  <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" />
+  </property>
+  
+  <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID"  />
+  </property>
+ 
+  <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE"/>
+  </property>
+  
+  <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" />
+  </property>
+  
+  <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" />
+  </property>
+  
+</class>
+</hibernate-mapping>

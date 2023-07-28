@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 3, 2007 3:39:11 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.TrnBillEdpDtls" table="trn_bill_edp_dtls" dynamic-update="true">
+        <comment></comment>
+        <id name="billEdpId" type="long">
+            <column name="bill_edp_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="billNo" type="long">
+            <column name="bill_no" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="typeEdpId" type="java.lang.Long">
+            <column name="type_edp_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="edpAmt" type="big_decimal">
+            <column name="edp_amt" precision="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="created_user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="created_post_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="updated_user_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="updated_post_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true">
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="db_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="trn_counter">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="addDedFlag" type="string">
+            <column name="add_ded_flag" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="edpCategory" type="string">
+            <column name="edp_category" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="expRcpRec" type="string">
+            <column name="exp_rcp_rec" length="3">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="edpCode" type="string">
+            <column name="edp_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="autoAdd" type="string">
+            <column name="auto_add" length="1">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="budmjrhdCode" type="string">
+            <column name="budmjrhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budsubmjrhdCode" type="string">
+            <column name="budsubmjrhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budminhdCode" type="string">
+            <column name="budminhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budsubhdCode" type="string">
+            <column name="budsubhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="buddtlhdCode" type="string">
+            <column name="buddtlhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budobjhdCode" type="string">
+            <column name="budobjhd_code" length="10">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

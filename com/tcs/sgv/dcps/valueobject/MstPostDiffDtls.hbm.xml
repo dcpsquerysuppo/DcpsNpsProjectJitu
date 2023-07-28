@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.dcps.valueobject">
+  <class name="com.tcs.sgv.dcps.valueobject.MstPostDiffDtls" table="MST_POST_DIFF_DTLS" >
+  	<id name="mstPostDiffDtlsId" type="long">
+            <column name="MST_POST_DIFF_DTLS_ID"  />
+            <generator class="assigned" />
+     </id>
+     <property name="ddoCode" type="string">
+            <column name="DDO_CODE"  />
+  	 </property>
+     <property name="totalPost" type="long">
+            <column name="TOTAL_POST"  />
+  	 </property>
+  	 <property name="permntPostEmpAtch" type="long">
+            <column name="PERMNT_POST_EMP_ATCH"  />
+  	 </property>
+     <property name="tempPostEmpAtch" type="long">
+            <column name="TEMP_POST_EMP_ATCH"  />
+  	 </property>
+     <property name="tempPostExpired" type="long">
+            <column name="TEMP_POST_EXPRD"  />
+  	 </property>
+  	 <property name="permntVacant" type="long">
+            <column name="PERMNT_VACANT"  />
+  	 </property>
+  	 <property name="tempVacant" type="long">
+            <column name="TEMP_VACANT"  />
+  	 </property>
+  	 <property name="activeEmp" type="long">
+            <column name="ACTIVE_EMP"  />
+  	 </property>
+  	 <property name="empSuperAnnutn" type="long">
+            <column name="EMP_SUPER_ANNUATN"  />
+  	 </property>
+  	 <property name="print" type="string">
+            <column name="PRINT"  />
+  	 </property>
+  	 <property name="rsnTotalPost" type="string">
+            <column name="RSN_TOTAL_POST"  />
+  	 </property>
+  	 <property name="rsnPermntPostEmpAtch" type="string">
+            <column name="RSN_PERMNT_POST_EMP_ATCH"  />
+  	 </property>
+     <property name="rsnTempPostEmpAtch" type="string">
+            <column name="RSN_TEMP_POST_EMP_ATCH"  />
+  	 </property>
+     <property name="rsnTempPostExpired" type="string">
+            <column name="RSN_TEMP_POST_EXPRD"  />
+  	 </property>
+  	 <property name="rsnPermntVacant" type="string">
+            <column name="RSN_PERMNT_VACANT"  />
+  	 </property>
+  	 <property name="rsnTempVacant" type="string">
+            <column name="RSN_TEMP_VACANT"  />
+  	 </property>
+  	 <property name="rsnActEmployee" type="string">
+            <column name="RSN_ACT_EMP"  />
+  	 </property>
+	 <property name="createdDate" type="timestamp">
+	           <column name="CREATED_DATE"  />
+	  </property>
+	  <property name="createdUserId" type="long">
+	        <column name="CREATED_USER_ID" />
+	  </property>
+	  <property name="createdPostId" type="long">
+	        <column name="CREATED_POST_ID"  />
+	  </property>
+	  <property name="updatedDate" type="timestamp">
+	        <column name="UPDATED_DATE" not-null="false" />
+	  </property>
+	  <property name="updatedUserId" type="long">
+	        <column name="UPDATED_USER_ID"  not-null="false" />
+	  </property>
+	  <property name="updatedPostId" type="long">
+	        <column name="UPDATED_POST_ID"   not-null="false" />
+	  </property>
+  
+   </class>
+</hibernate-mapping>
